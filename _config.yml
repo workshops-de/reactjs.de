@@ -1,0 +1,76 @@
+title: ReactJS.DE
+description: ""
+url: "https://reactjs.de"
+twitter_username: jekyllrb
+github_username:  jekyll
+ga_property: "xxx"
+permalink: /artikel/:slug/
+repository_url: "https://github.com/workshops-de/reactjs.de"
+ws_course_id: 17
+
+jekyll_timeago:
+  depth: 1 # Level of detail
+  today: 'Heute'
+  yesterday: 'Gestern'
+  tomorrow: 'Morgen'
+  and: 'und'
+  suffix: ''
+  prefix: 'vor'
+  suffix_future: ''
+  prefix_future: 'in'
+  years: 'Jahren'
+  year: 'Jahr'
+  months: 'Monaten'
+  month: 'Monat'
+  weeks: 'Wochen'
+  week: 'Woche'
+  days: 'Tagen'
+  day: 'Tag'
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: "_posts" # an empty string here means all files in the project
+    values:
+      layout: "post"
+      header_image: "header.jpg"
+      toc: true
+  - scope:
+      path: "_pages" # an empty string here means all files in the project
+    values:
+      layout: "page"
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/seite/:num/'
+  title: ':title - Seite :num von :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# Build settings
+markdown: kramdown
+sass:
+  style: :compressed
+  sass_dir: assets/css
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - .gitignore
+  - nginx.conf
+  - cloudbuild.yaml
+  - firebase-debug.log
+
+# webrick:
+#   headers:
+#     Content-Security-Policy: "style-src 'self'"

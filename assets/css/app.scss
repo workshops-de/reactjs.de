@@ -1,0 +1,46 @@
+---
+---
+// 🔝 those lines above are needed by jekyll
+
+$font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$navbar-brand-font-size: 1rem;
+
+$border-radius: 0;
+$border-radius-sm: 0;
+$border-radius-lg: 0;
+$line-height-base: 1.618;
+$headings-margin-bottom: 1.1rem;
+$card-cap-bg: #fff;
+
+$blue:   #0386c9;
+$green:  #43ac6a;
+$orange: #e99002;
+$red:    #f04124;
+$teal:   #5bc0de;
+
+// Imports
+//
+@import "fonts/font-source-sans";
+@import "fonts/font-awesome";
+@import "bootstrap";
+@import "mixins";
+@import "visibility";
+@import "navbar";
+@import "footer";
+@import "rouge-highlight";
+@import "google-search";
+@import "header";
+@import "sticky";
+@import "col-count";
+@import "post";
+@import "code";
+@import "img-utilities";
+@import "newsletter";
+@import "tutorials";
+@import "bootstrap-toc";
+@import "unsorted-crap";
+@import "course-landing";
+
+// Nothing else
+// Pay 10 Euros if you commit sth. here

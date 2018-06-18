@@ -1,0 +1,50 @@
+---
+layout: base
+title: Die deutsche Seite zu React
+description: Alles rund um React/JavaScript auf deutsch - Tutorials · Artikel · News · Schulungen.
+permalink: /
+---
+<main>
+  <div class="header header-homepage d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 col-sm-3 text-center mx-auto my-auto">
+          <img class="img-fluid img-rotation" alt="ReactJS.DE Logo"
+                src="/assets/img/atom-sign-x2.png">
+        </div>
+        <div class="col-sm-9 pt-3">
+          <div class="pl-lg-4 mr-lg-4">
+            <p class="lead align-self-center text-muted">
+              Seit 2015 Artikel und Tutorials zu React auf Deutsch!
+            </p>
+            <h1 class="header-homepage-title">Alles rund um React</h1>
+            <p class="mt-sm-2 pt-sm-2 mt-md-3 pt-md-3">
+              Stöbere durch unsere Artikel und Tutorials und informiere
+              dich über unsere
+              <a href="/schlungen/inhouse/">Schulungen!</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col-md-8">
+        {% for post in site.posts limit:4 %}
+          {% include _post.html %}
+        {% endfor %}
+        <a class="btn btn-block btn-secondary text-muted hidden-sm-up" href="/artikel/">weitere Artikel</a>      <br class="hidden-sm-up">
+        <br class="hidden-sm-up">
+      </div>
+
+      <div class="col-md-4">
+        <h2 class="h3">Tutorials</h2>
+        {% include _sidebar_posts.html contains='tutorial' %}
+
+      </div>
+    </div>
+  </div>
+
+</main>
