@@ -82,61 +82,21 @@ Zum Vergleich ein simpler Ablauf:
 - Markiere den zweiten und den fünften als erledigt.
 - Wechsle zwischen der Ansicht “Active”, “Completed” und “All”.
 
-<center>
-  <img style="width: 100%;" src="http://maerch.github.io/img/react-vdom/angular-react.gif">
-</center>
-
+![angular-react-vergleich](angular-react.gif)
 
 Schon der rein visuelle Vergleich zwischen React und Angular zeigt Unterschiede. Während sich das Hinzufügen von Einträgen zwischen React und Angular kaum unterscheidet, führt das Wechseln der Ansichten in Angular zu vielen DOM Manipulationen. Insbesondere der Wechsel zwischen der “Active” und “All” Filterung löst bei React nur zwei Updates von individuellen DOM Elementen aus, während Angular die gesamte Liste neu rendert.
 
 In den nackten Zahlen macht sich dies auch bemerkbar. 41 Events auf dem DOM werden durch diesen Testablauf in React ausgeführt. Angular braucht dafür 212. Selbst die reinen JavaScript Implementierungen (Vanilla JS und mit jQuery) brauchen ohne weitere Optimierungen 81 bzw. 53 Events.
 
-<div style="clear: both;"></div>
-<style>
-  table td {
-    padding: 10px;
-  }
-  table td.framework {
-    text-align: right;
-  }
-</style>
-<table style="margin: 0 auto;">
-    <tr>
-      <td class='framework'><b>Framework</b></td>
-      <td><b>DOM-Events</b></td>
-    </tr>
-
-    <tr>
-      <td class='framework'>Angular</td>
-      <td>212</td>
-    </tr>
-
-    <tr>
-      <td class='framework'>VanillaJS</td>
-      <td>81</td>
-    </tr>
-
-    <tr>
-      <td class='framework'>Ember</td>
-      <td>72</td>
-    </tr>
-
-    <tr>
-      <td class='framework'>Backbone</td>
-      <td>69</td>
-    </tr>
-
-    <tr>
-      <td class='framework'>jQuery</td>
-      <td>53</td>
-    </tr>
-
-    <tr>
-      <td class='framework'>React</td>
-      <td>41</td>
-    </tr>
-</table>
-
+{: .table}
+| Framework | DOM-Events |
+| --------: | ---------- |
+| Angular   | 212        |
+| VanillaJS | 81         |
+| Ember     | 72         |
+| Backbone  | 69         |
+| jQuery    | 53         |
+| React     | 41         |
 
 ## Fazit
 
