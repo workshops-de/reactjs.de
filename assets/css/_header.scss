@@ -84,9 +84,9 @@
 
 .header-workshop {
   background-color: #fcfcfc;
-    border-bottom: 1px solid #efefef;
-    color: #333;
-    padding-top: 100px;
+  border-bottom: 1px solid #efefef;
+  color: #333;
+  padding-top: 100px;
   padding-bottom: 100px;
   margin-bottom: 0px;
 
@@ -120,7 +120,6 @@
       background: linear-gradient(145deg,#0a387e,#126eb9);
     }
   }
-
 }
 
 .header-team, .header-workshop {
@@ -129,7 +128,6 @@
   background-position: center center;
   color: #fff;
 }
-
 
 @include media-breakpoint-up(sm) {
   .header {
