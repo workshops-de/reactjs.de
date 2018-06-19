@@ -9,13 +9,13 @@
     ],
     "redirects": [
       {
-        "source": "/posts/:id*",
-        "destination": "/artikel/:id",
+        "source": "/posts/react-tutorial",
+        "destination": "/artikel/react-tutorial-deutsch",
         "type": 301
       },
       {
-        "source": "/posts/react-tutorial",
-        "destination": "/artikel/react-tutorial-deutsch",
+        "source": "/posts/:id*",
+        "destination": "/artikel/:id",
         "type": 301
       }
     ],
