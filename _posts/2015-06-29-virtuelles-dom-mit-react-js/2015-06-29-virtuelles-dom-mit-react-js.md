@@ -30,9 +30,7 @@ An dieser Stelle betritt Reacts virtuelles DOM die Bühne. Solange wir unsere An
 
 Kurz und knapp passiert folgendes: Bei jeder Änderung der Daten erstellt React einen neuen virtuellen DOM. Ein stark optimierter und heuristischer Algorithmus vergleicht diesen neuen Baum mit den vorherigen und spuckt als Ausgabe eine Liste von minimalen Änderungen am richtigen DOM aus. Diese werden gesammelt und nicht direkt, sondern im Batch an den Browser weitergeleitet.
 
-<center>
-  <img style="width: 100%;" src="http://maerch.github.io/img/react-vdom/vdom.jpg">
-</center>
+![vdom](vdom.jpg)
 
 ## Diff-Algorithmus
 
