@@ -6,8 +6,8 @@ published_at: 2020-11-09 18:12:14
 categories: ""
 ---
 
-<!-- script src="https://fb.me/JSXTransformer-0.13.3.js"></script-->
-<!-- script src="https://fb.me/react-0.13.3.min.js"></script-->
+<script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+<script src="https://fb.me/react-0.13.3.min.js"></script>
 
 <style>
   .clearfix {
