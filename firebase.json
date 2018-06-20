@@ -14,6 +14,11 @@
         "type": 301
       },
       {
+        "source": "/posts/react-tutorial",
+        "destination": "/artikel/react-und-babel-mit-es6-und-es7",
+        "type": 301
+      },
+      {
         "source": "/posts/:id*",
         "destination": "/artikel/:id",
         "type": 301
