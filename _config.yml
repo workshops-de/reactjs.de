@@ -3,7 +3,7 @@ description: ""
 url: "https://reactjs.de"
 twitter_username: jekyllrb
 github_username:  jekyll
-ga_property: "xxx"
+ga_property: "UA-97181121-5"
 permalink: /artikel/:slug/
 repository_url: "https://github.com/workshops-de/reactjs.de"
 ws_course_id: 17
