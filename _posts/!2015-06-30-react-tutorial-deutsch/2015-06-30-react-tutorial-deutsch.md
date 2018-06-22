@@ -123,8 +123,10 @@ Reacts zentraler und einziger Baustein sind Komponenten. React-Komponenten ähne
 
 ### 1. Beispiel: eine einfache Komponente
 
-Unsere erste Komponente macht nicht viel mehr als einen Klick auf einen Button abzufangen. Interaktive Demo (auch auf [JSBin](http://jsbin.com/zaqimu/1/edit?html,js,console,output)):
+Unsere erste Komponente macht nicht viel mehr als einen Klick auf einen Button abzufangen.
+[Interaktive Demo auf JSBin](http://jsbin.com/zaqimu/1/edit?html,js,console,output):
 
+```html
 <div class='clearfix example'>
   <h4>1. Beispiel: Buttonkomponente</h4>
   <div class='half-width'>
@@ -136,28 +138,8 @@ Unsere erste Komponente macht nicht viel mehr als einen Klick auf einen Button a
     <div id='example-1-pseudo-console'></div>
   </div>
 </div>
-
-<script type='text/jsx'>
-  var Example1 = React.createClass({
-    pseudoConsole: document.querySelector('#example-1-pseudo-console'),
-
-    add: function() {
-      console.log('add 1!');
-      this.pseudoConsole.innerHTML += 'add 1!<br>'; // nicht-idiomatisches React, aber an dieser Stelle am einfachsten, um die Konsole anzuzeigen :)
-    },
-
-    render: function() {
-      return(
-        <div>
-          <h1>Counter</h1>
-          <button onClick={this.add}>+</button>
-        </div>
-      );
-    }
-  });
-
-  React.render(<Example1 />, document.querySelector('#example-1'));
 </script>
+```
 
 ```javascript
 var ButtonCounter = React.createClass({ // (1)
