@@ -9,6 +9,11 @@
     ],
     "redirects": [
       {
+        "source": "/posts/javascript-module-eine-einleitung",
+        "destination": "/artikel/javascript-module-einleitung/",
+        "type": 301
+      },
+      {
         "source": "/posts/react-tutorial",
         "destination": "/artikel/react-tutorial-deutsch/",
         "type": 301
