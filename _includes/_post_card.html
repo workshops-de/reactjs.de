@@ -1,11 +1,12 @@
 <div class="card shadow-sm" style="height: 100%;">
-  <div class="img-post"
-        style="height: 150px; background-image: url('/artikel/{{post.slug}}/{{ post.header_image }}');">
-  </div>
-  <div class="card-body">
+  <a class="img-post"
+        style="height: 150px; background-image: url('/artikel/{{post.slug}}/{{ post.header_image }}');"
+        href="{{ post.url }}">
+  </a>
+  <a class="card-body text-dark" href="{{ post.url }}">
     <div class="text-muted">{{ post.author }}</div>
     <span class="font-weight-bold">
     {{ post.title }}
     </span>
-  </div>
+  </a>
 </div>
