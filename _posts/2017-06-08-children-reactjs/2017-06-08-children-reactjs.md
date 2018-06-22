@@ -10,7 +10,7 @@ categories:
 
 Nehmen wir an, wir haben eine `<Grid />` Komponente, die `<Row />` Komponenten enthalten kann. Du würdest sie so verwenden:
 
-```javascript
+```html
 <Grid>
   <Row />
   <Row />
@@ -20,7 +20,7 @@ Nehmen wir an, wir haben eine `<Grid />` Komponente, die `<Row />` Komponenten e
 
 Diese drei `Row` Komponenten werden an die `Grid` Komponente als `props.children` übergeben. Mit einem *expression container* (das ist der technische Begriff für diese schnörkeligen Klammern in JSX) können parents Ihre children rendern.
 
-```javascript
+```jsx
 class Grid extends React.Component {
   render() {
     return <div>{this.props.children}</div>
@@ -30,7 +30,7 @@ class Grid extends React.Component {
 
 Parents können auch entscheiden, keine children zu rendern oder zu manipulieren. Diese `<Fullstop />` Komponente zum Beispiel rendert ihre children überhaupt nicht.
 
-```javascript
+```jsx
 class Fullstop extends React.Component {
   render() {
     return <h1>Hello world!</h1>
@@ -46,7 +46,7 @@ Hinweis: Das `<h1>` in dem Beispiel oben (ähnlich wie alle HTML-Primitiven) ren
 
 Children Zum Beispiel können wir unserer <Grid /> Komponente von oben einen Text übergeben und es wird perfekt funktionieren.
 
-```javascript
+```jsx
 <Grid>Hello world!</Grid>
 ```
 
@@ -54,7 +54,7 @@ JSX entfernt automatisch weiße Lücken am Anfang und Ende einer Zeile sowie auc
 
 Das bedeutet, dass alle diese Beispiele das Gleiche machen werden:
 
-```javascript
+```html
 <Grid>Hello world!</Grid>
 
 <Grid>
@@ -74,7 +74,7 @@ Das bedeutet, dass alle diese Beispiele das Gleiche machen werden:
 
 Du kannst auch mehrere Arten von children perfekt mischen und anpassen:
 
-```javascript
+```html
 <Grid>
   Here is a row:
   <Row />
@@ -86,7 +86,7 @@ Du kannst auch mehrere Arten von children perfekt mischen und anpassen:
 ## Funktion als ein child
 Wir können jede JavaScript Expression als children ausführen:
 
-```javascript
+```jsx
 class Executioner extends React.Component {
   render() {
     // See how we're calling the child as a function?
@@ -98,7 +98,7 @@ class Executioner extends React.Component {
 
 Du würdest diese Komponente so verwenden:
 
-```javascript
+```jsx
 <Executioner>
   {() => <h1>Hello World!</h1>}
 </Executioner>
@@ -108,7 +108,7 @@ Dieses spezifische Beispiel ist nicht sinnvoll, aber es zeigt die Idee.
 
 Stell dir vor, du müsstest einige Daten von einem Server abholen. Du könntest dies auf viele Arten tun, aber es ist mit diesem Funktion-als-ein-child Muster möglich:
 
-```javascript
+```jsx
 <Fetch url="api.myself.com">
   {(result) => <p>{result}</p>}
 </Fetch>
@@ -127,7 +127,7 @@ React bietet eine Reihe von Helfer-Funktionen, um das bearbeiten von children ei
 
 Die beiden offentsichtlichsten Helfer sind `React.Children.map` und `React.Children.forEach`. Sie arbeiten genau wie Ihre Feld-Counterparts, außer dass sie auch funktionieren, wenn eine Funktion, Objekt oder irgendetwas als children übergeben wird.
 
-```javascript
+```jsx
 class IgnoreFirstChild extends React.Component {
   render() {
     const children = this.props.children
