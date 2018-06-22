@@ -40,6 +40,10 @@ defaults:
       header_image: "header.jpg"
       toc: true
   - scope:
+      path:            "_posts/**/*.html"
+    values:
+      sitemap:         false
+  - scope:
       path: "_pages" # an empty string here means all files in the project
     values:
       layout: "page"

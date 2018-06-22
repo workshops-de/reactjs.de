@@ -82,13 +82,13 @@ categories: ""
   }
 </style>
 
-Einführung in React
-===================
+## Einführung in React
 
 *Dieses Tutorial soll React vorstellen und anhand kleiner Beispiele erste Schritte damit zeigen. Wir beginnen mit der Frage, was React ist und was die Motivation war es zu schreiben.
 Danach schauen wir uns die beiden wichtigsten Ideen hinter React an &ndash; die Komponentenarchitektur und den virtuellen DOM. Schließlich werden wir im Fazit Vor- und Nachteile von React betrachten und Kriterien bestimmen, wann sein Einsatz besonders sinnvoll ist.*
 
 ## Was ist React?
+
 React ist eine JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen. Es wurde 2013 von Facebook unter [BSD-Lizenz](https://de.wikipedia.org/wiki/BSD-Lizenz) veröffentlicht und schlägt seitdem immer größere Wellen und beeinflusst nachhaltig die gesamte JavaScript-Frontendlandschaft. Es wird verwendet von Facebook, Instagram, Whatsapp, Yahoo, AirBnB, dem Atom-Editor und [vielen anderen mehr](https://github.com/facebook/react/wiki/Sites-Using-React).
 
 React machte schnell vor allem wegen seines virtuellen DOMs und der hervorragenden Renderingperformanz von sich reden. Daneben bietet es eine modulare Komponentenarchitektur, die als Basis für modularen und leicht nachzuvollziehenden Frontendcode dient.
@@ -125,39 +125,7 @@ Reacts zentraler und einziger Baustein sind Komponenten. React-Komponenten ähne
 
 Unsere erste Komponente macht nicht viel mehr als einen Klick auf einen Button abzufangen. Interaktive Demo (auch auf [JSBin](http://jsbin.com/zaqimu/1/edit?html,js,console,output)):
 
-<div class='clearfix example'>
-  <h4>1. Beispiel: Buttonkomponente</h4>
-  <div class='half-width'>
-    <h5>Reactkomponente im DOM</h4>
-    <div id='example-1'></div>
-  </div>
-  <div class='half-width'>
-    <h5>Ausgabe in der JavaScript-Konsole</h4>
-    <div id='example-1-pseudo-console'></div>
-  </div>
-</div>
-
-<script type='text/jsx'>
-  var Example1 = React.createClass({
-    pseudoConsole: document.querySelector('#example-1-pseudo-console'),
-
-    add: function() {
-      console.log('add 1!');
-      this.pseudoConsole.innerHTML += 'add 1!<br>'; // nicht-idiomatisches React, aber an dieser Stelle am einfachsten, um die Konsole anzuzeigen :)
-    },
-
-    render: function() {
-      return(
-        <div>
-          <h1>Counter</h1>
-          <button onClick={this.add}>+</button>
-        </div>
-      );
-    }
-  });
-
-  React.render(<Example1 />, document.querySelector('#example-1'));
-</script>
+<iframe src="code/beispiel1.html" width="100%" height="250"></iframe>
 
 ```javascript
 var ButtonCounter = React.createClass({ // (1)
