@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="react-tutorial.css">
+<script src="JSXTransformer.js"></script>
+<script src="react.min.js"></script>
+
+<div class='example-wrapper'>
+  <div id='example-2'></div>
+</div>
+
+<script type='text/jsx'>
+  var Example2 = React.createClass({
+    getInitialState: function() {
+      return({count: 0});
+    },
+
+    add: function() {
+      this.setState({count: this.state.count + 1});
+    },
+
+    render: function() {
+      return(
+        <div>
+          <h1>Counter</h1>
+          <button onClick={this.add}>+</button>
+          <p>Count: {this.state.count}</p>
+        </div>
+      );
+    }
+  });
+
+  React.render(<Example2 />, document.querySelector('#example-2'));
+</script>
