@@ -165,19 +165,21 @@ Komponenten werden mit `React.createClass` **(1)** erzeugt. Die wichtigste Funkt
 Wie kommt es, dass wir mitten in der `render`-Funktion **(4)** auf einmal HTML schreiben können? React verwendet dazu [JSX](https://facebook.github.io/jsx), eine schlanke Syntaxerweiterung für JavaScript, mit der es leichter ist Markup zu schreiben.
 Die Verwendung von JSX ist optional, hat sich aber als Standard Templating-Lösung in React etabliert. JSX macht nichts weiter als die spitzen Klammern oben in folgende JavaScript-Funktionsaufrufe umzuwandeln ([JSBin](http://jsbin.com/qezomi/edit?html,js,console,output)):
 
-    React.DOM.div({},
-      React.DOM.h1({}, 'Counter'),
-      React.DOM.button({onClick: this.add}, '+'));
+```jsx
+React.DOM.div({},
+  React.DOM.h1({}, 'Counter'),
+  React.DOM.button({onClick: this.add}, '+'));
+```
 
-Dieser Code dient uns nur zur Illustration und wir können `React.DOM` zugunsten von JSX direkt wieder vergessen. Wir werden nachfolgend und in allen anderen Artikeln auf ReactJS.de JSX verwenden. Wichtig ist es, im Hinterkopf zu behalten, dass es unter der Haube zu reinem JavaScript umgewandelt wird. <a href='#footnote-1' id='footnote-1-anchor'>[1]</a>
+Dieser Code dient uns nur zur Illustration und wir können `React.DOM` zugunsten von JSX direkt wieder vergessen. Wir werden nachfolgend und in allen anderen Artikeln auf ReactJS.de JSX verwenden. Wichtig ist es, im Hinterkopf zu behalten, dass es unter der Haube zu reinem JavaScript umgewandelt wird.
+
 
 Um JSX schreiben zu können, wird es in der Regel mit [Babel](https://babeljs.io) in einem Kompilierungsschritt in JavaScript übersetzt. Zum Entwickeln kann man auch den [JSX Transformer](https://facebook.github.io/react/docs/tooling-integration.html#in-browser-jsx-transform) benutzen, so dass JSX innerhalb von `<script type='text/jsx'>`-Tags verwendet werden kann. Bei JSBin kann man für den JavaScript-Tab ein Babel-Plugin aktivieren.
 
 #### Bewertung
 > "If you're going to hate on React for some reason, make it something other than JSX"
-<div class='quote-source'>
+
   &mdash; [Alex Matchneer](https://twitter.com/machty), Mitglied des Ember.js Core Teams. [Quelle](https://docs.google.com/presentation/d/1afMLTCpRxhJpurQ97VBHCZkLbR1TEsRnd3yyxuSQ5YY/preview?usp=sharing&sle=true#slide=id.g380053cce\_1205).
-</span>
 
 JSX war mit dem Erscheinen von React für viele der erste Stein des Anstoßes. Warum keine schlankere Templating-Sprache wie HAML statt XML-artiger Syntax? Warum inline Eventhandler setzen? Und vor allem, warum bitte sollen wir auf einmal unser Markup in einer JavaScript-Datei schreiben, wo wir uns doch jahrelang die Trennung von HTML, CSS und JavaScript eingebläut haben?
 
