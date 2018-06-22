@@ -382,12 +382,14 @@ Mehr zur Implementierung des virtuellen DOMs in unserem Artikel [Virtuelles DOM 
 **<span id='footnote-1'>[1]</span>** [zurück zum Text](#footnote-1-anchor)
 Da JSX in JavaScript umgewandelt wird kann man z.B. folgendes Markup nicht damit erzeugen:
 
-    render: function() {
-      // invalides JSX!
-      return(
-        <h1>Hallo</h1>
-        <h2>Wie geht es dir?</h2>
-      );
+```jsx
+render: function() {
+  // invalides JSX!
+  return(
+    <h1>Hallo</h1>
+    <h2>Wie geht es dir?</h2>
+  );
+```
 
 Das resultierende Javascript würde versuchen aus `render` die Ausgabe von _zwei_ verschiedenen `React.DOM`-Aufrufen zurückzugeben. Da JavaScript-Funktionen aber nur einen Wert zurückgeben können, muss man in JSX immer noch ein umschließendes Element, wie ein `<div>`, hinzufügen.
 

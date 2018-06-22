@@ -29,22 +29,18 @@ permalink: /
     </div>
   </div>
 
-  <div class="container">
-    <div class="row mt-4">
-      <div class="col-md-8">
-        {% for post in site.posts limit:4 %}
-          {% include _post.html %}
+  <section style="background: #fefefe">
+    <div class="container py-5">
+      <h2>Die neusten Artikel</h2>
+      <div class="row">
+        {% for post in site.posts limit:8 %}
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+            {% include _post_card.html %}
+          </div>
         {% endfor %}
-        <a class="btn btn-block btn-secondary text-muted hidden-sm-up" href="/artikel/">weitere Artikel</a>      <br class="hidden-sm-up">
-        <br class="hidden-sm-up">
-      </div>
-
-      <div class="col-md-4">
-        <h2 class="h3">Tutorials</h2>
-        {% include _sidebar_posts.html contains='tutorial' %}
-
       </div>
     </div>
-  </div>
+  </section>
+
 
 </main>
