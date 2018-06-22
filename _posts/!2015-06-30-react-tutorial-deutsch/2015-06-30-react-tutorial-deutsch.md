@@ -6,6 +6,85 @@ published_at: 2020-11-09 18:12:14
 categories: ""
 ---
 
+<script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+<script src="https://fb.me/react-0.13.3.min.js"></script>
+
+<style>
+  .clearfix {
+    zoom: 1;
+  }
+  .clearfix:before, .clearfix:after {
+    content: ' ';
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  .clearfix:after {
+    clear: both;
+  }
+  .teaser h1 {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .main-column h1 {
+    display: none;
+  }
+  .main-column h2 {
+    font-weight: bold;
+    font-size: 33px;
+    margin-top: 40px;
+    margin-bottom: -5px;
+  }
+  .main-column h3 {
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .main-column h4 {
+    font-weight: 600;
+  }
+  .main-column h5 {
+    font-weight: 500;
+  }
+  .main-column img {
+    width: 100%;
+  }
+  .half-width {
+    width: 50%;
+    float: left;
+  }
+  .example-wrapper {
+    margin-top: 35px;
+    margin-bottom: 50px;
+    padding: 10px;
+    background: #fafafa;
+    border: 3px solid #666;
+  }
+  #example-1-pseudo-console {
+    width: 50%;
+    float: left;
+    border: 2px solid grey;
+    height: 150px;
+    font-family: monospace;
+    overflow: scroll;
+    padding: 2px 10px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  blockquote {
+    font-style: italic;
+  }
+  .quote-source {
+    font-style: normal;
+    margin-top: -10px;
+    font-size: 15px;
+  }
+  a {
+    color: #2FA8E6;
+  }
+</style>
+
+Einführung in React
+===================
+
 *Dieses Tutorial soll React vorstellen und anhand kleiner Beispiele erste Schritte damit zeigen. Wir beginnen mit der Frage, was React ist und was die Motivation war es zu schreiben.
 Danach schauen wir uns die beiden wichtigsten Ideen hinter React an &ndash; die Komponentenarchitektur und den virtuellen DOM. Schließlich werden wir im Fazit Vor- und Nachteile von React betrachten und Kriterien bestimmen, wann sein Einsatz besonders sinnvoll ist.*
 
@@ -42,7 +121,7 @@ Auf die ersten beiden Punkte möchte ich nun genauer eingehen. Der dritte Punkt 
 ## Komponentenarchitektur
 Reacts zentraler und einziger Baustein sind Komponenten. React-Komponenten ähneln Web Components oder Angular Directives.
 
-### Eine einfache Komponente
+### 1. Beispiel: eine einfache Komponente
 
 Unsere erste Komponente macht nicht viel mehr als einen Klick auf einen Button abzufangen.
 [Interaktive Demo auf JSBin](http://jsbin.com/zaqimu/1/edit?html,js,console,output):
@@ -82,7 +161,7 @@ var ButtonCounter = React.createClass({ // (1)
 
 Komponenten werden mit `React.createClass` **(1)** erzeugt. Die wichtigste Funktion einer Komponente ist `render` **(2)**, wo das Markup für die DOM-Repräsentation der Komponente definiert wird. Die `add`-Funktion **(3)** im Beispiel ist eine von uns ausgedachte, die gerade nicht viel mehr macht als Klickevents in die JavaScript Konsole des Browsers zu schreiben. Zu bemerken ist noch, dass React den ganz normalen `onClick`-Handler des Browsers verwendet, der als Attribut auf dem `<button>` gesetzt wird, statt beispielsweise durch CSS-Selektoren. Durch geschweifte Klammern (`{}`) können in JSX JavaScript-Ausdrücke eingebettet werden.
 
-## JSX
+### JSX
 Wie kommt es, dass wir mitten in der `render`-Funktion **(4)** auf einmal HTML schreiben können? React verwendet dazu [JSX](https://facebook.github.io/jsx), eine schlanke Syntaxerweiterung für JavaScript, mit der es leichter ist Markup zu schreiben.
 Die Verwendung von JSX ist optional, hat sich aber als Standard Templating-Lösung in React etabliert. JSX macht nichts weiter als die spitzen Klammern oben in folgende JavaScript-Funktionsaufrufe umzuwandeln ([JSBin](http://jsbin.com/qezomi/edit?html,js,console,output)):
 
@@ -97,30 +176,52 @@ Dieser Code dient uns nur zur Illustration und wir können `React.DOM` zugunsten
 
 Um JSX schreiben zu können, wird es in der Regel mit [Babel](https://babeljs.io) in einem Kompilierungsschritt in JavaScript übersetzt. Zum Entwickeln kann man auch den [JSX Transformer](https://facebook.github.io/react/docs/tooling-integration.html#in-browser-jsx-transform) benutzen, so dass JSX innerhalb von `<script type='text/jsx'>`-Tags verwendet werden kann. Bei JSBin kann man für den JavaScript-Tab ein Babel-Plugin aktivieren.
 
-### Bewertung
+#### Bewertung
 > "If you're going to hate on React for some reason, make it something other than JSX"
 
   &mdash; [Alex Matchneer](https://twitter.com/machty), Mitglied des Ember.js Core Teams. [Quelle](https://docs.google.com/presentation/d/1afMLTCpRxhJpurQ97VBHCZkLbR1TEsRnd3yyxuSQ5YY/preview?usp=sharing&sle=true#slide=id.g380053cce\_1205).
 
 JSX war mit dem Erscheinen von React für viele der erste Stein des Anstoßes. Warum keine schlankere Templating-Sprache wie HAML statt XML-artiger Syntax? Warum inline Eventhandler setzen? Und vor allem, warum bitte sollen wir auf einmal unser Markup in einer JavaScript-Datei schreiben, wo wir uns doch jahrelang die Trennung von HTML, CSS und JavaScript eingebläut haben?
 
-Die Macher von React halten die Aufteilung nach Technologien für kein gutes Kriterium für eine sinnvolle _separation of concerns_. Sie argumentieren stattdessen, dass wir zur Trennung der Aspekte unseres Frontendcodes besser Komponenten als Grundlage benutzen sollten. Daher ist es nur konsequent, wenn man allen Code, der zu einer Komponente gehört auch in eine Datei schreibt - egal ob HTML, JavaScript, oder CSS. Mehr hierzu in ["React: Rethinking best practices"](https://www.youtube.com/watch?v=x7cQ3mrcKaY) von [Pete Hunt](https://twitter.com/floydophone).
+Die Macher von React halten die Aufteilung nach Technologien für kein gutes Kriterium für eine sinnvolle _separation of concerns_. Sie argumentieren stattdessen, dass wir zur Trennung der Aspekte unseres Frontendcodes besser Komponenten als Grundlage benutzen sollten. Daher ist es nur konsequent, wenn man allen Code, der zu einer Komponente gehört auch in eine Datei schreibt - egal ob HTML, JavaScript, oder CSS. Mehr hierzu in ["React: Rethinking best practices"](https://www.youtube.com/watch?v=x7cQ3mrcKaY) von [Pete Hunt](https://twitter.com/floydophone) und unter <a href='#footnote-2' id='footnote-2-anchor'>[2]</a>.
 
 Ein weiterer Vorteil dieses Ansatzes ist es, dass React-Programmierer keine neue Templating-Sprache lernen müssen. JSX ist, wie angemerkt, nur eine sehr dünne syntaktische Abstraktion über normale JavaScript Funktionsaufrufe.
 Statt _logicless templates_ à la Handlebars, die einen schnell unnötig einschränken, wählt React genau den umgekehrten Ansatz und lässt uns zum Bauen unserer Templates den vollen Funktionsumfang von JavaScript nutzen.
 
-## Komponenten mit State
-
+<a id='beispiel-2'>
+### 2. Beispiel: eine einfache Komponente mit State
+</a>
 Es wird Zeit, dass unser `<button>` etwas Sinnvolleres macht ([JSBin](https://jsbin.com/wezupunego/1/edit?html,js,output)):
 
-```html
 <div class='example-wrapper'>
   <h4>2. Beispiel: Button mit Zähler</h4>
   <div id='example-2'></div>
 </div>
-```
 
-```jsx
+<script type='text/jsx'>
+  var Example2 = React.createClass({
+    getInitialState: function() {
+      return({count: 0});
+    },
+
+    add: function() {
+      this.setState({count: this.state.count + 1});
+    },
+
+    render: function() {
+      return(
+        <div>
+          <h1>Counter</h1>
+          <button onClick={this.add}>+</button>
+          <p>Count: {this.state.count}</p>
+        </div>
+      );
+    }
+  });
+
+  React.render(<Example2 />, document.querySelector('#example-2'));
+</script>
+
     var ButtonCounter = React.createClass({
       getInitialState: function() { // (1)
         return({count: 0});
@@ -143,20 +244,14 @@ Es wird Zeit, dass unser `<button>` etwas Sinnvolleres macht ([JSBin](https://js
       }
     });
 
-  React.render(<Example2 />, document.querySelector('#example-2'));
-```
-
 React Komponenten haben ein besonderes Attribut, den State, der Daten beinhaltet, die nur diese Komponente verwaltet und verändern kann. Der State unseres Buttons wird in getInitialState **(1)** mit einem JavaScript-Objekt initialisiert, das in seinem `count`-Attribut den Zählerstand festhält. `getInitialState` wird einmalig, beim Erstellen von Komponenteninstanzen aufgerufen.
 In der `add`-Funktion setzen wir dann mit `setState` einen neuen State: `count` wird um 1 erhöht. Durch den expliziten Aufruf von `setState` benötigt React kein dirty checking. React ruft nach Änderungen des States einer Komponente automatisch ihre `render`-Funktion auf - so wird der neue Zählerstand direkt angezeigt.
 
-## Komponenten mit Props
+### 3. Beispiel: drei farbige Buttons mit Props
 Neben State, der von einer Komponente verändert werden kann, gibt es noch Props, die von außen an Komponenten übergeben werden und innerhalb der Komponente nicht veränderlich sind. Die explizite Unterscheidung zwischen veränderlichem State und unveränderlichen Props macht es leichter das Verhalten von Komponenten nachzuvollziehen. Sie ist ein wichtiges Merkmal der Komponentenarchitektur und dient Facebooks ursprünglichem Ziel Code nachvollziehbarer zu machen. Fehlerhafte Änderungen am Zustand meiner Anwendung können nur von Stateänderungen, nie jedoch von Props herrühren.
-
-### Farbige Buttons mit Props
 
 Ein einfaches Beispiel für Props können wir sehen, wenn wir mehrere farbige Buttons haben:
 
-```jsx
     var ButtonCounter = React.createClass({
       // `getInitialState` und `add` wie gehabt
 
@@ -200,14 +295,12 @@ Ein einfaches Beispiel für Props können wir sehen, wenn wir mehrere farbige Bu
 
     React.render(<App />,
       document.querySelector('#react-container')); // (5)
-```
 
 [Interaktive Demo bei JSBin](http://jsbin.com/yesaka/edit?js,output)
 
 Zunächst haben wir hier erstmalig eine Komponentenverschachtelung **(1)**. Die neue `App`-Komponente ruft in ihrer `render`-Funktion die `ButtonCounter`-Komponente auf - und zwar für jede ihrer drei Farben **(2)**.
 Die `colour`-Prop wird von `App` wie ein HTML-Attribut an die `ButtonCounter` übergeben **(1)**. Innerhalb der `ButtonCounter` ist die jeweilige `colour` über `this.props.colour` verfügbar **(3)**. Props sind in Komponenten nur les-, nicht schreibbar. Das heißt jedoch nicht, dass der Farbwert eines Buttons in unserer Anwendung _absolut_ unveränderlich ist. Die `ButtonCounter`-Komponente selbst kann ihre Farbe nicht verändern, aber die umgebende `App`-Komponente setzt ja von außen die Farbe der `ButtonCounter`. Da die Farben in `App` Teil des States sind, können wir sie auch verändern:
 
-```jsx
     App = React.createClass({
 
       // Rest wie gehabt
@@ -222,19 +315,15 @@ Die `colour`-Prop wird von `App` wie ein HTML-Attribut an die `ButtonCounter` ü
         }, 500);
       }
     });
-```
 
 `componentDidMount` **(1)** ist eine von Reacts Lifecycle-Hook-Funktionen. Sie wird einmalig ausgeführt, wenn eine Komponente in den DOM gerendert wird. Um zu veranschaulichen, dass die `colour` Prop der `ButtonCounter` von _außen_ verändert werden kann, tauschen wir sie alle 500ms **(2)** indem wir mit `setState` den State der `App`-Komponente verändern **(3)**.
 Props sind immer nur _für die jeweilige Komponente_, aber nicht absolut unveränderlich, denn die Eltern der Komponente setzen ja die Props und können dynamisch neue Werte an eine Unterkomponente geben. Sobald sich der State auf `App` ändert, wird automatisch ihre `render`-Methode neu aufgerufen. Die Unterkomponenten bekommen dabei neue Props übergeben und rendern ebenfalls neu.
 
-## State aus Parent-Komponenten
+### 4. Beispiel: State aus Komponenten herausgezogen in Mutterkomponente
 Die Verschachtelung von Komponenten wird interessant, wenn der Zustand einer Komponente den Zustand einer anderen beeinflusst oder wir den Zustand mehrerer Komponenten auf einmal von außen steuern wollen. Die einfachste Art solche State-Abhängigkeiten abzubilden ist den State in die Mutterkomponente umzuziehen und die Unterkomponenten nur noch Props empfangen zu lassen. Wenn eine Unterkomponente eine Userinteraktion empfängt fertigt sie diese dann nicht mehr selbst ab, sondern ruft einen Callback auf der Mutterkomponenten aus.
-
-### State aus Komponenten herausgezogen
 
 Ein simples Beispiel hierfür sind aufklappbare Textblöcke. Durch Klicken auf die Überschrift wird ein Fließtext ein- oder ausgeblendet. Soweit ließe sich alles noch über State innerhalb der `CollapsibleBlock`-Komponente regeln. Spannend wird es, wenn wir außerhalb der Komponenten einen "Toggle all"-Knopf hinzufügen, der den Zustand aller `CollapsibleBlocks` umkehrt. Neben dem Knopf können nach wie vor noch über die Überschriften Texte auf- und zugeklappt werden.
 
-```jsx
     var BOOKS = { // (1)
       ulysses: {
         slug: 'ulysses',
@@ -310,7 +399,6 @@ Ein simples Beispiel hierfür sind aufklappbare Textblöcke. Durch Klicken auf d
     });
 
     React.render(<App books={BOOKS} />, document.getElementById('react-main')); // (2)
-```
 
 Wir beginnen mit der Definition einer Datenstruktur mit Buchdaten **(1)**, die am Ende des Codebeispiels als Prop an `App` übergeben werden **(2)**. Zu Beginn ist "Ulysses" aufgeklappt und "Seize the Day" zugeklappt **(3)**.
 In `Apps` `render`-Funktion wird der "Toggle all"-Button erstellt **(4)**. Die klappbaren Textblöcke werden mit `CollapsibleBlock`-Komponenten erstellt, die in der `toggableBooks`-Funktion **(5)** mit Props aus dem State der `App`-Komponente initialisiert werden.
@@ -318,6 +406,9 @@ Die `CollapsibleBlock`-Komponente hat nun gar keinen State mehr **(6)**. Wenn ih
 `toggleHandler` und `toggleAll` in `App` sind die einzigen Funktionen, die State modifizieren. Nach jedem Aufruf von `setState` wird automatisch neu gerendert.
 
 Einen ähnlichen Ansatz würde man wählen, wenn Komponenten-State voneinander abhängig ist - etwa wenn man nur ein Element aus einer Liste auswählen darf. Sobald eine Komponente einen Klick empfängt muss sie ggf. eine zuvor ausgewählte Schwesternkomponente deaktivieren. Auch hier würde man am besten in der Mutterkomponente nachhalten welches Unterelement gerade ausgewählt ist und in einem Klickhandler der Mutterkomponente entscheiden welches Kind de-/aktiviert werden muss.
+
+### Zwischenfazit
+Anhand einfacher Beispiele haben wir einen ersten Einblick in das Arbeiten mit React Komponenten bekommen und gesehen wie React mit JSX und JavaScript Benutzeroberflächen modelliert. Im letzten Beispiel haben wir gelernt wie man einfach Komponenten-Zustände koordinieren kann. Der gezeigte Lösungsweg ist jedoch immer weniger geeignet je weiter die zu koordinierenden Komponenten in unserer Komponentenhierarchie voneinander entfernt liegen. Einen Clickhandler von Kind- zu Mutterkomponente zu reichen ist leicht, aber was machen wir wenn es über 3 Hierarchieebenen passieren soll? React bietet hierfür keine Lösung mehr, da es sich auf das Bauen von UI-Elementen beschränkt und für komplexere Koordinationen keinen Weg vorgeben möchte. Facebooks Lösung dazu heißt Flux, verfolgt die gleichen Ziele und hält sich an die gleichen Ideale wie React. Flux stellen wir euch in einem kommenden Artikel vor, man kann React aber schon heute als Renderingschicht in eine bestehende Backbone-Architektur integrieren. [Hier]() zeigen wir euch wie das geht.
 
 ## Virtueller DOM
 Wir hatten an verschiedenen Stellen in den Beispielen gesehen, dass React nach Aufruf von `setState` automatisch den DOM neu rendert und unsere Datenänderungen wie von Geisterhand in unserer Benutzeroberfläche zu sehen sind. In diesem Abschnitt möchten wir verstehen, wie genau das vonstatten geht.
@@ -335,13 +426,16 @@ Das React Entwicklungsteam wollte das Problem der DOM-Synchronisierung ein für 
 
 Nur wie soll man das jemals bauen können ohne sich von akzeptabler Renderingperformanz zu verabschieden? Die ersten Schritt waren in der Tat ernüchternd. In Prototypen bei denen Komponenten in festen Zeitintervallen neu gerendert wurden flackerten, verloren die Scrollposition, oder den Zustand von Eingabefeldern. Zum Glück ließ sich das Team davon nicht abschrecken. Der Vorteil nicht mehr über Rendering nachdenken zu müssen war zu verlockend, um vorschnell die Flinte ins Korn zu werfen.
 
+Der Schlüssel zum Erfolg war die Adaptierung einer Idee aus der Spieleindustrie, die dort schon lange eingesetzt wird. Hier ein Diagramm der Doom 3 Renderingengine (in scharz-weiß) mit den React-Entsprechungen darüber (blau-weiß).
+
+![Diagramm der Doom 3 Renderingengine](https://raw.githubusercontent.com/paulwittmann/blog-posts/master/images/doom3-react.png)
+
 Mit React kann ich so arbeiten als würde die `render`-Funktion aller Komponenten aufgerufen werden &ndash; bei jedem Aufruf von `setState` an irgend einer Stelle meines Codes. Ich muss mir um DOM-Anpassungen keine Gedanken mehr machen.
 Aber wie kann das gut gehen? Das Geheimnis heißt virtueller DOM. Die `render`-Funktionen von React-Komponenten modifizieren nicht den tatsächlichen DOM, sondern erzeugen lediglich eine Repräsentation des DOMs.
 Ein Aufruf von `React.DOM.div` beziehungsweise dem JSX `<div>` allein führt zu keiner Änderung im DOM. Beides sind reine Funktionen, die lediglich eine Repräsentation des DOMs zurückgeben &ndash; z.B. ein Buttonelement mit einer bestimmten Farbe, abhängig von den Datenstrukturen (State und Props) mit denen wir den Zustand unserer Anwendung modellieren.
 
 Diese Repräsentationen sind nichts weiter als normale JavaScript-Objekte, die z.B. so aussehen (Demo wie man diese Objekte sehen kann [hier](http://jsbin.com/lugudu/edit?html,js,console)):
 
-```json
     {
       "type": "div",
       [...]
@@ -374,7 +468,6 @@ Diese Repräsentationen sind nichts weiter als normale JavaScript-Objekte, die z
         [...]
       }
     }
-```
 
 Echte DOM-Anpassungen sind meist _der_ Flaschenhals bei der Renderingperformanz und _können_ derzeit nicht bei jeder Datenänderung ausgelöst werden, wenn man eine nutzbare Seite haben möchte. Was jedoch dank performanten JavaScript-Engines heutzutage geht, ist es die Repräsentation des DOMs mit einer früheren zu vergleichen, um so minimale Änderungen zu bestimmen, die auf dem echten DOM vorgenommen werden.
 
@@ -389,13 +482,35 @@ Hier ein Beispiel bei dem links React und rechts Backbone auf eine Texteingabe r
 Mehr zur Implementierung des virtuellen DOMs in unserem Artikel [Virtuelles DOM mit React.js](http://reactjs.de/posts/virtuelles-dom-mit-react-js).
 
 ## Fazit
-Anhand einfacher Beispiele haben wir einen ersten Einblick in das Arbeiten mit React Komponenten bekommen und gesehen wie React mit JSX und JavaScript Benutzeroberflächen modelliert. Im letzten Beispiel haben wir gelernt wie man einfach Komponenten-Zustände koordinieren kann. Der gezeigte Lösungsweg ist jedoch immer weniger geeignet je weiter die zu koordinierenden Komponenten in unserer Komponentenhierarchie voneinander entfernt liegen. Einen Clickhandler von Kind- zu Mutterkomponente zu reichen ist leicht, aber was machen wir wenn es über 3 Hierarchieebenen passieren soll? React bietet hierfür keine Lösung mehr, da es sich auf das Bauen von UI-Elementen beschränkt und für komplexere Koordinationen keinen Weg vorgeben möchte. Facebooks Lösung dazu heißt Flux, verfolgt die gleichen Ziele und hält sich an die gleichen Ideale wie React.
+_Folgt in Kürze._
 
-### Die Leute hinter React
+## Die Leute hinter React
 + [Jordan Walke](https://twitter.com/jordwalke)
 + [Pete Hunt](https://twitter.com/floydophone)
 + [Christopher Chedeau](https://twitter.com/vjeux)
 + [Jing Chen](https://twitter.com/jingc?lang=en)
 
+## Anhang
+
+### Fußnoten
+**<span id='footnote-1'>[1]</span>** [zurück zum Text](#footnote-1-anchor)
+Da JSX in JavaScript umgewandelt wird kann man z.B. folgendes Markup nicht damit erzeugen:
+
+    render: function() {
+      // invalides JSX!
+      return(
+        <h1>Hallo</h1>
+        <h2>Wie geht es dir?</h2>
+      );
+
+Das resultierende Javascript würde versuchen aus `render` die Ausgabe von _zwei_ verschiedenen `React.DOM`-Aufrufen zurückzugeben. Da JavaScript-Funktionen aber nur einen Wert zurückgeben können, muss man in JSX immer noch ein umschließendes Element, wie ein `<div>`, hinzufügen.
+
+**<span id='footnote-2'>[2]</span>** [zurück zum Text](#footnote-2-anchor)
+Die Bestrebungen gehen hier sogar so weit, dass man optional CSS direkt in der Komponente schreiben kann, das dann per Inline-Styles (!) eingebunden wird. Die Vorteile dieses Ansatzes zeigt [Christopher Chedeau](https://twitter.com/vjeux) in ["React: CSS in your JS"](https://vimeo.com/116209150"). Unterstützung für einige CSS Features wie Media Queries oder `:before`- und `:after`-Elemente sind mit Inline-Styles nicht möglich, hierfür gibt es aber Webpack-Plugins.
+Wenn CSS in JavaScript geschrieben wird, wird kein CSS-Präprozessor wie SASS oder LESS mehr benötigt.
+
 ### Links
 + ["Legal"-Datei zur Lizenz](https://code.facebook.com/posts/1639473982937255/updating-our-open-source-patent-grant)
+
+### Bildquellen
+Titelfoto: "The Rolling Stones". Riksarkivet (National Archives of Norway). Flickr Commons. [https://www.flickr.com/photos/national\_archives\_of\_norway/18425297304](https://www.flickr.com/photos/national_archives_of_norway/18425297304).
