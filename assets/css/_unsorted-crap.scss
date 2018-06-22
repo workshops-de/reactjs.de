@@ -129,3 +129,23 @@ blockquote {
   }
 }
 
+.card-hover-overlay {
+  .card-img-overlay {
+    display: none;
+  }
+
+  &:hover {
+    .card-img-overlay {
+      display: block;
+    }
+
+  }
+}
+
+.bg-light-transparent {
+  background: rgba(#fff, 0.95);
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
