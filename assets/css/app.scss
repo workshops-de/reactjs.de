@@ -26,6 +26,8 @@ $spacer: 1rem;
 $navbar-padding-y:                  ($spacer * 0.8) !default;
 $navbar-light-color:                rgba($black, .8) !default;
 $navbar-dark-color:                 rgba($white, .9) !default;
+$navbar-dark-toggler-border-color:  rgba($white, .5) !default;
+$navbar-light-toggler-border-color: rgba($black, .5) !default;
 
 // Imports
 //
