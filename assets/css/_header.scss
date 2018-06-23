@@ -53,13 +53,13 @@
   &.header-homepage {
     background-color: #fcfcfc;
     border-bottom: 1px solid #efefef;
-    color: #333;
+    color: $body-color;
     padding-bottom: 15px;
     padding-top: 100px;
     background: url('/assets/img/header_tris-1.png');
     background-size: cover;
     background-position: center center;
-    color: #333;
+    color: $body-color;
     padding: $spacer*8 0 $spacer*6;
 
     .header-homepage-title {
@@ -161,28 +161,5 @@
       font-size: 3rem;
       line-height: 3.0rem;
     }
-  }
-}
-
-.clients-list {
-  position: relative;
-  border-bottom: 1px solid rgba(63,66,83,.1);
-  position: relative;
-  &:after {
-    content: 'Unsere Kunden';
-    position: absolute;
-    -webkit-transform: translate(-50%,0);
-    -ms-transform: translate(-50%,0);
-    transform: translate(-50%,0);
-    bottom: -12px;
-    left: 50%;
-    background: #fff;
-    padding: 0 10px;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 13px;
-    color: rgba(63,66,83,.7);
-    letter-spacing: 3px;
-    text-align: center;
   }
 }
