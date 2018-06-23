@@ -6,14 +6,14 @@ description: Alles rund um React/JavaScript auf deutsch - Tutorials Â· Artikel Â
 permalink: /
 ---
 <main>
-  <div class="header header-homepage d-flex align-items-center">
+  <div class="header header-homepage d-flex align-items-center mb-5">
     <div class="container">
-      <div class="row">
-        <div class="col-3 col-sm-3 text-center mx-auto my-auto">
+      <div class="row justify-content-md-center">
+        <div class="col-3 col-sm-2 text-center">
           <img class="img-fluid img-rotation" alt="ReactJS.DE Logo"
                 src="/assets/img/atom-sign-x2.png">
         </div>
-        <div class="col-sm-9 pt-3">
+        <div class="col-sm-7 pt-3">
           <div class="pl-lg-4 mr-lg-4">
             <p class="lead align-self-center text-muted">
               Seit 2015 Artikel und Tutorials zu React auf Deutsch!
@@ -32,16 +32,20 @@ permalink: /
     </div>
   </div>
 
-  <section style="background: #fefefe">
-    <div class="container py-5">
-      <h2>Die neusten Artikel</h2>
-      <div class="row">
-        {% for post in site.posts limit:6 %}
-          <div class="col-sm-6 col-md-4 col-lg-4 mb-4">
-            {% include _post_card.html %}
-          </div>
-        {% endfor %}
+  <div class="container">
+    <h2 class="text-center mb-5">Die neusten Artikel</h2>
+    <div class="row">
+      {% for post in site.posts limit:6 %}
+        <div class="col-sm-6 col-md-4 col-lg-4 mb-4">
+          {% include _post_card.html %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="row justify-content-md-center mt-5">
+      <div class="col-sm-12 col-md-4 col-lg-4 mb-4">
+        <a href="/artikel/" class="btn btn-outline-secondary btn-block">Weitere Artikel anzeigen</a>
       </div>
     </div>
-  </section>
+  </div>
 </main>
