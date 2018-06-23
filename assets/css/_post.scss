@@ -27,7 +27,8 @@
   }
 
   a:not(.btn) {
-    @include underline($link-color);
+    @include underline($body-color);
+    color: $body-color;
 
     &:hover {
       @include underline($link-hover-color);

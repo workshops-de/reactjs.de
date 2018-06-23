@@ -30,6 +30,12 @@ $navbar-dark-color:                 rgba($white, .9) !default;
 $navbar-dark-toggler-border-color:  rgba($white, .5) !default;
 $navbar-light-toggler-border-color: rgba($black, .5) !default;
 
+$pagination-border-width: 0;
+$pagination-padding-y: 1rem;
+$pagination-padding-x: 1rem;
+
+$code-color: #212529;
+
 // Imports
 //
 @import "fonts/font-source-sans";
