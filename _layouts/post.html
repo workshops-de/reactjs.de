@@ -25,20 +25,26 @@ layout: base
       <div class="col-lg-2 hidden-md-down">
         <div class="sticky sticky-under-navbar pt-1">
           <div class="h5 text-muted">Inhalt</div>
-          <nav id="toc" data-toggle="toc">
-
-          </nav>
+          <nav id="toc" data-toggle="toc"></nav>
         </div>
       </div>
       <div class="col-md-12 col-lg-8 mb-2 add-anchor-fixed-header-styles">
         <p class="text-muted">
           <small>
-          {% for category in page.categories %}
-            <span class="text-uppercase">{{category}}</span>
-            {% unless forloop.last %}•{% endunless %}
-          {% endfor %}
-          |
-          {{ page.author }} • <time>{{ page.published_at | date: "%d.%m.%Y" }}</time>
+            {% for category in page.categories %}
+              <span class="text-uppercase">{{category}}</span>
+              {% unless forloop.last %}<span class="ml-1 mr-1">•</span>{% endunless %}
+            {% endfor %}
+            <span class="ml-1 mr-1">|</span>
+            {{ page.author }} <span class="ml-1 mr-1">•</span> <time>{{ page.published_at | date: "%d.%m.%Y" }}</time>
+            <span class="ml-1 mr-1">|</span>
+
+            {% assign words = page.content | number_of_words %}
+            {% if words < 360 %}
+              1 Minute
+            {% else %}
+              {{ words | divided_by:180 }} Minuten
+            {% endif %}
           </small>
         </p>
 
