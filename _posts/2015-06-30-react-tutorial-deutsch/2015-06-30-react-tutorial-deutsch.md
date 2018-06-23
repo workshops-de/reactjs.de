@@ -2,8 +2,9 @@
 title: "React Einsteiger Tutorial"
 description: "Die Ideen hinter React anhand von Beispielen vorgestellt."
 author: "Paul Kögel"
+header: light
 published_at: 2020-11-09 18:12:14
-categories: ""
+categories: [react, tutorial]
 ---
 
 ## Einführung in React
