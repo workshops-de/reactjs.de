@@ -33,19 +33,13 @@ permalink: /
   </div>
 
   <div class="container">
-    <h2 class="text-center mb-5">Die neusten Artikel</h2>
+    <h2>Die neusten Artikel</h2>
     <div class="row">
       {% for post in site.posts limit:6 %}
         <div class="col-sm-6 col-md-4 col-lg-4 mb-4">
           {% include _post_card.html %}
         </div>
       {% endfor %}
-    </div>
-
-    <div class="row justify-content-md-center mt-5">
-      <div class="col-sm-12 col-md-4 col-lg-4 mb-4">
-        <a href="/artikel/" class="btn btn-outline-secondary btn-block">Weitere Artikel anzeigen</a>
-      </div>
     </div>
   </div>
 </main>
