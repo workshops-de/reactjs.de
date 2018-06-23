@@ -1,5 +1,4 @@
 ---
-header_image: "header.png"
 title: "ReactJS & TypeScript"
 description: "Lerne wie du eine ReactJS mit TypeScript nutzt"
 author: "Jack Franklin"

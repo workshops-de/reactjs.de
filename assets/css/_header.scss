@@ -3,7 +3,7 @@
 
   .page-header {
     color: #eee;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, .15);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, .30);
   }
 
   a:hover {
@@ -39,9 +39,11 @@
     min-height: 200px;
 
     .header-post-title {
+      margin-top: 40px;
       color: #fff;
       padding-top: 15px;
-      font-size: 250%;
+      font-size: 300%;
+      max-width: 40rem;
     }
     .header-post-author {
       margin-bottom: 30px;
@@ -130,7 +132,7 @@
 @include media-breakpoint-up(sm) {
   .header {
     &.header-post {
-      min-height: 400px;
+      min-height: 350px;
       .text-wrapper {
         position: absolute; bottom: 0; left: 0; right: 0;
       }

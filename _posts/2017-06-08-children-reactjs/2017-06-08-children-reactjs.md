@@ -1,9 +1,9 @@
 ---
-header_image: "header.png"
 title: "Children in ReactJS"
 description: "Lerne wie Children in ReactJS funktionieren"
 author: "Max Stoiber"
 published_at: 2017-06-08 15:00:00.000000Z
+header_source: https://unsplash.com/photos/OO89_95aUC0
 categories:
   - reactjs
 ---
