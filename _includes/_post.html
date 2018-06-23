@@ -4,10 +4,10 @@
     <div class="col-md-4">
       <a href="{{ post.url }}" class="img-post"
         style="background-image: url('/artikel/{{post.slug}}/{{ post.header_image }}');">
-        <span class="sr-only">{{post.title}}</span>
+        <span class="sr-only">{{ post.title }}</span>
         <span class="c-post-categories ml-2">
           {% for category in post.categories %}
-            <span class="text-uppercase">{{category}}</span>
+            <span class="text-uppercase">{{ category }}</span>
             {% unless forloop.last %}<span class="ml-1 mr-1">•</span>{% endunless %}
           {% endfor %}
         </span>
