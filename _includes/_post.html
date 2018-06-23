@@ -1,21 +1,74 @@
 
 <script type="application/ld+json">{"url":"{{post.url}}","publisher":"ReactJS.DE","image":{"width":920,"url":"{{post.header_image}}","height":270,"@type":"ImageObject"},"headline":"{{post.title}}","description":"{{post.description}}","datePublished":"2017-01-12","dateModified":"2017-02-05","author":"{{post.author}}","@type":"Article","@context":"http://schema.org"}</script>
 
-<article class="card mb-4">
+<article class="card c-hover-shadow mb-4">
+<div class="row">
+  <div class="col-md-4">
+    <a href="{{ post.url }}" class="img-post"
+      style="background-image: url('/artikel/{{post.slug}}/{{ post.header_image }}');">
+      <span class="sr-only">{{post.title}}</span>
+    </a>
+  </div>
+  <div class="col-md-8">
+    <div class="py-4 px-2">
+      <h2 class="h3 pb-1 mb-1" style="border-bottom: 1px solid #eee;"><a href="{{ post.url }}">{{post.title}}</a></h2>
+      <small class="text-muted">
+        {{ post.author }} <span class="ml-1 mr-1">•</span> <time>{{ post.published_at | date: "%d.%m.%Y" }}</time>
+        <span class="ml-1 mr-1">|</span>
+        {% assign words = post.content | number_of_words %}
+        {% if words < 360 %}
+          1 Minute
+        {% else %}
+          {{ words | divided_by:180 }} Minuten
+        {% endif %}
+      </small>
+
+      <p class="mb-4 mt-3">
+        {{post.description}}
+      </p>
+      <a class="btn btn-secondary btn-sm px-4" href="{{ post.url }}">Artikel <span class="sr-only">{{post.title}}</span> lesen</a>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="media">
   <a href="{{ post.url }}" class="img-post"
      style="background-image: url('/artikel/{{post.slug}}/{{ post.header_image }}');">
      <span class="sr-only">{{post.title}}</span>
   </a>
-  <div class="card-body">
-    <h2 class="mt-1 mb-0"><a href="{{ post.url }}">{{post.title}}</a></h2>
-    <small class="text-muted">von {{post.author}} <time>({{ post.published_at | timeago }})</time></small>
+  <div class="media-body p-4">
+    <h2 class="h3 mb-1"><a href="{{ post.url }}">{{post.title}}</a></h2>
+    <small class="text-muted">
+      {{ post.author }} <span class="ml-1 mr-1">•</span> <time>{{ post.published_at | date: "%d.%m.%Y" }}</time>
+      <span class="ml-1 mr-1">|</span>
+      {% assign words = post.content | number_of_words %}
+      {% if words < 360 %}
+        1 Minute
+      {% else %}
+        {{ words | divided_by:180 }} Minuten
+      {% endif %}
+    </small>
+
     <p class="mb-4 mt-3">
       {{post.description}}
     </p>
-    <a class="btn btn-outline-secondary float-left px-4" href="{{ post.url }}">Artikel lesen</a>
-    <small class="float-right">
-      <span class="text-muted" style="position: relative; top: 14px;">{% include _reading_time.html %}</span>
-    </small>
-    <div class="clearfix mb-2"></div>
+    <a class="btn btn-secondary btn-sm px-4" href="{{ post.url }}">Artikel lesen</a>
   </div>
+</div> -->
+
+  <!-- <a href="{{ post.url }}" class="img-post"
+     style="background-image: url('/artikel/{{post.slug}}/{{ post.header_image }}');">
+     <span class="sr-only">{{post.title}}</span>
+  </a>
+  <a class="card-img-overlay p-4" href="{{ post.url }}">
+    <div class="row">
+      <div class="col-9">
+        <div class="bg-white h-100">
+          <div class="card-body">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </a> -->
 </article>

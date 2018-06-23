@@ -1,5 +1,5 @@
 ---
-title: "Erstellen einer React App mit einem Express Backend"
+title: "Create React App mit einem Express Backend"
 description: "Lerne wie du eine React App mit einem Express Backend erstellst"
 author: "Dave Ceddia"
 published_at: 2017-05-12 16:00:00.000000Z
