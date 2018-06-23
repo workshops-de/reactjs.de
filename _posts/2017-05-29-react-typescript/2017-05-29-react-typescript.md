@@ -3,7 +3,7 @@ title: "ReactJS & TypeScript"
 description: "Lerne wie du eine ReactJS mit TypeScript nutzt"
 author: "Jack Franklin"
 published_at: 2017-05-29 15:00:00.000000Z
-categories: [react, tutorial]
+categories: [react]
 ---
 
 Ich bin neulich auf den Geschmack von TypeScript gekommen und habe darüber in vielen Blogs von [Tom Dale](https://medium.com/@tomdale/glimmer-js-whats-the-deal-with-typescript-f666d1a3aad0)
