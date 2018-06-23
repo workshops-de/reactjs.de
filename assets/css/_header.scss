@@ -71,42 +71,30 @@
 }
 
 .header-workshop {
-  background-color: #fcfcfc;
-  border-bottom: 1px solid #efefef;
   color: #333;
   padding-top: 100px;
-  padding-bottom: 100px;
-  margin-bottom: 0px;
-
-  .btn {
-    border-radius: .25rem;
-  }
-
-  .header-btn-call-to-action {
-    font-size: 1.4rem;
-    font-weight: 300;
-  }
 
   .header-intro {
     font-size: 1.4rem
   }
-
-  h1, h2 {
-    color: #fff;
-  }
 }
 
-.header-team, .header-workshop {
-  background: url('/assets/img/workshops/workshop-attendees.jpg');
+.header-workshop {
+  background: url('/assets/img/headers/course.jpg');
   background-size: cover;
   background-position: center center;
-  color: #fff;
+}
+
+.header-team {
+  background: url('/assets/img/headers/team.jpg');
+  background-size: cover;
+  background-position: center center;
 }
 
 @include media-breakpoint-up(sm) {
   .header {
     &.header-post {
-      min-height: 350px;
+      min-height: 400px;
       .text-wrapper {
         position: absolute; bottom: 0; left: 0; right: 0;
       }
@@ -135,5 +123,42 @@
       font-size: 3rem;
       line-height: 3.0rem;
     }
+  }
+}
+
+// basic settings for headers
+.c-header {
+  position: relative;
+  min-height: 15rem;
+}
+
+@include media-breakpoint-up(sm) {
+  .c-header {
+    min-height: 20rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .c-header {
+    min-height: 25rem;
+  }
+}
+
+// colors
+.c-header-light {
+  color: $dark;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark;
+    text-shadow: 1px 1px 0px $light;
+  }
+}
+
+.c-header-dark {
+  color: $light;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $light;
+    text-shadow: 1px 1px 0px $dark;
   }
 }

@@ -1,4 +1,4 @@
-<nav data-headroom-top="" class="navbar navbar-light navbar-ajs navbar-expand-md fixed-top headroom headroom--top headroom--not-bottom">
+<nav class="navbar c-navbar-{% if page.header %}{{page.header}}{% else %}dark{% endif %} navbar-expand-md">
   <div class="container">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -14,8 +14,8 @@
         <li class="nav-item {% if page.url contains '/schulungen' %}active{% endif %}">
           <a class="nav-link" href="/schulungen/inhouse/">Schulung</a>
         </li>
-        <li class="nav-item {% if page.url contains '/ueber-uns' %}active{% endif %}">
-          <a class="nav-link" href="/ueber-uns/">Team</a>
+        <li class="nav-item {% if page.url contains '/team' %}active{% endif %}">
+          <a class="nav-link" href="/team/">Team</a>
         </li>
       </ul>
       <!--<form class="form-inline mr-auto" action="/suche/" method="GET" autocomplete="off">
@@ -23,7 +23,7 @@
       </form>-->
     </div>
     <a class="navbar-brand order-md-12" href="/">
-      react<span class="text-muted">js.de</span>
+      reactjs.de
     </a>
   </div><!-- .container -->
 </nav>

@@ -3,6 +3,7 @@ title: Artikelübersicht
 permalink: /artikel/alle/
 noindex: true
 sitemap: false
+header: light
 ---
 
 {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}

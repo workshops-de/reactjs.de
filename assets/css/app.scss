@@ -20,6 +20,9 @@ $warning:#e99002;
 $danger: #f04124;
 $info:   #5bc0de;
 
+$spacer: 1rem;
+$navbar-padding-y:                  ($spacer * 0.75) !default;
+
 // Imports
 //
 @import "fonts/font-source-sans";
