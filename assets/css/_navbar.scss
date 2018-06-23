@@ -1,35 +1,4 @@
-.c-navbar-light {
-  @extend .navbar-light;
-  @extend .fixed-top;
-  position: absolute;
-
-  background-color: rgba(#fff, 0);
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    @extend .navbar-light;
-    background-color: rgba(#fff, 1);
-  }
-}
-
-.c-navbar-dark {
-  @extend .navbar-dark;
-  @extend .fixed-top;
-  position: absolute;
-
-  background-color: rgba(#fff, 0);
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    @extend .navbar-light;
-    background-color: rgba(#fff, 1);
-  }
-}
-
-
-.navbar-ajs {
-  // background-color: #fff;
-  border-bottom: 1px solid #eee;
+.c-navbar-underline {
 
   .nav-link {
     position: relative;
@@ -60,5 +29,80 @@
       visibility: visible;
       transform: scaleX(0.8);
     }
+  }
+}
+
+.c-navbar-light {
+  @extend .navbar-light;
+  @extend .c-navbar-underline-light;
+  @extend .fixed-top;
+  position: absolute;
+
+  background-color: rgba(#fff, 0);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba(#fff, 1);
+  }
+}
+
+.c-navbar-dark {
+  @extend .navbar-dark;
+  @extend .c-navbar-underline-dark;
+  @extend .fixed-top;
+  position: absolute;
+
+  background-color: rgba(#fff, 0);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    @extend .navbar-light;
+    @extend .c-navbar-underline-light;
+    background-color: rgba(#fff, 1);
+  }
+}
+
+
+.c-navbar-underline {
+  .nav-link {
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 6px;
+      left: 0;
+      visibility: hidden;
+      transform: scaleX(0);
+      transition: all 0.2s ease-in-out 0s;
+    }
+
+    &:hover:before {
+      visibility: visible;
+      transform: scaleX(0.8);
+    }
+  }
+
+  .nav-item.active {
+    .nav-link:before {
+      // background-color: $red;
+      visibility: visible;
+      transform: scaleX(0.8);
+    }
+  }
+}
+
+.c-navbar-underline-light {
+  .nav-link:before {
+    background-color: $navbar-light-active-color;
+  }
+}
+
+.c-navbar-underline-dark {
+  .nav-link:before {
+    background-color: $navbar-dark-active-color;
   }
 }
