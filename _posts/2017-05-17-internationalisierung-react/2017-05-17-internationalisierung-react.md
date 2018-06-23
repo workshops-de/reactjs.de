@@ -1,11 +1,10 @@
 ---
-header_image: "header.png"
 title: "Internationalisierung in ReactJS"
 description: "Lerne wie du eine ReactJS App richtig internationalisiert"
 author: "Preethi Kasireddy"
 published_at: 2017-05-17 12:00:00.000000Z
-categories:
-  - reactjs
+header_source: https://unsplash.com/photos/YeO44yVTl20
+categories: [reactjs]
 ---
 
 Internationalisierung ist ein großes Problem. Wenn du willst, dass deine Anwendung eine weltweite Reichweite hat, dann musst du dich mit Sprachbarrieren beschäftigen.
