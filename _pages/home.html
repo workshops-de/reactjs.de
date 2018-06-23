@@ -32,8 +32,8 @@ permalink: /
     </div>
   </div>
 
-  <div class="container">
-    <h2>Tutorials für Einsteiger</h2>
+  <div class="container mb-5">
+    <h2>Hier starten! - Tutorials für Einsteiger</h2>
     <div class="row mb-4">
       {% for post in site.categories.tutorial limit:2 %}
         <div class="col-sm-6 col-md-4 col-lg-6 mb-4">
@@ -41,14 +41,19 @@ permalink: /
         </div>
       {% endfor %}
     </div>
-
-    <h2>Die neusten Artikel</h2>
-    <div class="row">
-      {% for post in site.posts limit:6 %}
-        <div class="col-sm-6 col-md-4 col-lg-4 mb-4">
-          {% include _post_card.html %}
-        </div>
-      {% endfor %}
-    </div>
   </div>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2>Die neusten Artikel</h2>
+      <div class="row">
+        {% for post in site.posts limit:6 %}
+          <div class="col-sm-6 col-md-4 col-lg-4 mb-4">
+            {% include _post_card.html %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
 </main>
