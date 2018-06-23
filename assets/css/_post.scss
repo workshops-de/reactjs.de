@@ -1,27 +1,19 @@
 .post-content {
   > p,
   > ul {
-    font-size: 1.2rem;
-    line-height: 1.9rem;
-    //font-family: $font-family-serif;
-    margin-bottom: 30px;
-
     hyphens: auto;
 
     -webkit-hyphenate-limit-before: 2;
     -ms-hyphenate-limit-before: 2;
     -moz-hyphenate-limit-before: 2;
-    hyphenate-limit-before: 2;
 
     -webkit-hyphenate-limit-after: 3;
     -ms-hyphenate-limit-after: 3;
     -moz-hyphenate-limit-after: 3;
-    hyphenate-limit-after: 3;
 
     -webkit-hyphenate-limit-lines: 2;
     -ms-hyphenate-limit-lines: 2;
     -moz-hyphenate-limit-lines: 2;
-    hyphenate-limit-lines: 2;
   }
 
   > pre,
@@ -31,21 +23,14 @@
   > table,
   > img,
   > blockquote {
-    margin-bottom: 30px;
+    margin-bottom: $paragraph-margin-bottom;
   }
 
-  li {
-    margin-bottom: 10px;
-  }
+  a:not(.btn) {
+    @include underline($link-color);
 
-  a:not(.btn) { @include underline($link-color); }
-}
-
-.post-content {
-  font-size: 1.25rem;
-
-  blockquote {
-    font-size: 1.25rem;
-    font-weight: 300;
+    &:hover {
+      @include underline($link-hover-color);
+    }
   }
 }

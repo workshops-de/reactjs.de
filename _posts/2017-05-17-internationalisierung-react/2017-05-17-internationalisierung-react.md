@@ -273,8 +273,8 @@ Um das zu konvertieren, benutzen wir die **FormattedMessage** Komponente:
   defaultMessage={ 'Welcome to your dashboard, {name}!' }
   values={{ name: this.props.name }}
 />
-
 ```
+
 Die **FormattedMessage** Komponente verfügt über Requisiten, die mit einem „**Message Descriptor**“ in React Intl korrespondieren.
 
 Der **Message Descriptor** ist das Format, das verwendet wird, um Standartzeichen / Strings zu definieren und das ist nützlich für die Bereitstellung der Daten, die erforderlich sind, damit die Zeichenfolgen / Nachrichten übersetzt werden. Es enthält folgende Eigenschaften:

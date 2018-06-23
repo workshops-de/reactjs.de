@@ -68,18 +68,6 @@
     }
   }
 
-  &.header-gradient-overlay {
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-image: linear-gradient(to bottom, transparent, #333);
-      opacity: .4;
-    }
-  }
 }
 
 .header-workshop {
@@ -105,20 +93,6 @@
 
   h1, h2 {
     color: #fff;
-  }
-
-  &.header-workshop-gradient-overlay {
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: .9;
-      background-color: #0d47a1;
-      background: linear-gradient(145deg,#0a387e,#126eb9);
-    }
   }
 }
 

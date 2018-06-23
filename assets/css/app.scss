@@ -24,8 +24,8 @@ $info:   #5bc0de;
 //
 @import "fonts/font-source-sans";
 @import "fonts/font-awesome";
+@import "mixins/underline";
 @import "bootstrap";
-@import "mixins";
 @import "visibility";
 @import "navbar";
 @import "footer";
@@ -41,7 +41,6 @@ $info:   #5bc0de;
 @import "tutorials";
 @import "bootstrap-toc";
 @import "unsorted-crap";
-@import "course-landing";
 
 // Nothing else
 // Pay 10 Euros if you commit sth. here
