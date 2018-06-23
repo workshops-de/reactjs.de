@@ -23,13 +23,7 @@ h6,
   }
 }
 
-.user-thumbnail img { height: auto; }
-
-a.underlined {
-  @include underline($link-color);
-}
-
-img { max-width: 100% !important; }
+// img { max-width: 100% !important; }
 
 footer {
   color: #ccc;
@@ -48,35 +42,6 @@ p code {
   padding: 2px;
 }
 
-.body-grey {
-  background-color: #f8f8f8; //#fbfbfb;
-}
-
-$circleWidth: 200;
-$lineHeight: ($circleWidth / 2) + 15;
-
-.circled-logo-wrapper {
-  border-radius: 50%;
-  // border: 1px solid $gray-300;
-  line-height: $lineHeight + px;
-  // background-color: #fbfbfb;
-  width: $circleWidth + px;
-  height: $circleWidth + px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 6em;
-  padding: 40px;
-
-  .circled-logo {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-}
-
-
 .img-post {
   display: block;
   width: 100%;
@@ -87,29 +52,6 @@ $lineHeight: ($circleWidth / 2) + 15;
 }
 
 
-.newspaper {
-  // padding: $spacer;
-  column-count: 1;
-  column-gap: $spacer*2;
-  // column-rule: $hr-border-width solid $hr-border-color;
-}
-@include media-breakpoint-up(sm) {
-  .newspaper {
-    column-count: 2;
-  }
-}
-
-
-.icon-1 {
-  width: 64px;
-  margin-bottom: 25px;
-  opacity: 0.35;
-}
-
-.workshop-hint {
-  font-size: 1rem;
-}
-
 
 blockquote {
   padding: .5rem 1rem;
@@ -119,9 +61,6 @@ blockquote {
 }
 
 
-// #toc {
-//   max-width: 200px;
-// }
 
 /* Scroll with fixed header and anchor tag */
 .add-anchor-fixed-header-styles {
@@ -166,15 +105,15 @@ blockquote {
   position: absolute;
   left: $spacer;
   top: $spacer;
-
   display: inline-block;
   border-radius: $border-radius-sm;
-  color: #fff;
+  color: $white;
   padding: 2px 5px 3px;
   font-size: 70%;
   background: rgba(41,47,56,0.3);
   text-transform: uppercase;
   font-weight: $font-weight-bold;
   letter-spacing: 0.04em;
-  max-width: calc(100% - 32px);
+  max-width: calc(100% - $spacer*2);
 }
+
