@@ -1,11 +1,10 @@
 ---
-title: "Children in ReactJS"
+title: "Children in React"
 description: "Lerne wie Children in ReactJS funktionieren"
 author: "Max Stoiber"
 published_at: 2017-06-08 15:00:00.000000Z
 header_source: https://unsplash.com/photos/OO89_95aUC0
-categories:
-  - reactjs
+categories: [react]
 ---
 
 Nehmen wir an, wir haben eine `<Grid />` Komponente, die `<Row />` Komponenten enthalten kann. Du würdest sie so verwenden:

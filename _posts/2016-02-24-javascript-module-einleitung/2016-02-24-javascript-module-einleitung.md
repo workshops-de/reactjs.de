@@ -4,7 +4,7 @@ description: "Als JavaScript–Neuling kann man schnell überfordert sein von W�
 author: "Preethi Kasireddy"
 published_at: 2016-02-24 15:12:23
 header_source: https://unsplash.com/photos/o8cViW56BZQ
-categories: ""
+categories: [javascript, module, es6]
 ---
 
 Eine Übersetzung aus dem Englischen. Der Artikel im Original ist [HIER](https://medium.com/@preethikasireddy) zu finden.

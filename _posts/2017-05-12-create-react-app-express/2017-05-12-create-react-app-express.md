@@ -4,7 +4,7 @@ description: "Lerne wie du eine React App mit einem Express Backend erstellst"
 author: "Dave Ceddia"
 published_at: 2017-05-12 16:00:00.000000Z
 header_source: https://unsplash.com/photos/bAaeJ0XtiMI
-categories: [reactjs, tutorial]
+categories: [react, tutorial]
 ---
 
 Wenn du noch nicht davon gehört hast, [Create React App](https://github.com/facebookincubator/create-react-app) ist ein unglaublicher Weg um mit ReactJS zu starten. Es wird eine Projekt-Struktur für dich erstellt, komplett vorbereitet und bereit zum starten. Du kannst die Konfiguration von Webpack und Babel auslassen und direkt mit dem Schreiben deiner App beginnen.
