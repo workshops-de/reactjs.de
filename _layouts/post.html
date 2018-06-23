@@ -23,7 +23,7 @@ layout: base
 
     <div class="row justify-content-md-center">
       <div class="col-lg-2 hidden-md-down">
-        <div class="sticky sticky-under-navbar pt-3">
+        <div class="sticky sticky-under-navbar pt-1">
           <div class="h5">Inhalt</div>
           <nav id="toc" data-toggle="toc">
 
@@ -32,12 +32,14 @@ layout: base
       </div>
       <div class="col-md-12 col-lg-8 mb-2 add-anchor-fixed-header-styles">
         <p class="text-muted">
+          <small>
           {% for category in page.categories %}
             <span class="text-uppercase">{{category}}</span>
             {% unless forloop.last %}•{% endunless %}
           {% endfor %}
           |
           {{ page.author }} • <time>{{ page.published_at | date: "%d.%m.%Y" }}</time>
+          </small>
         </p>
 
 
