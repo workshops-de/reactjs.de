@@ -57,17 +57,13 @@ $spacers: map-merge((
 @import "navbar";
 @import "footer";
 @import "rouge-highlight";
-@import "google-search";
 @import "header";
 @import "sticky";
-@import "col-count";
 @import "post";
 @import "code";
 @import "img-utilities";
-@import "newsletter";
-@import "tutorials";
 @import "bootstrap-toc";
-@import "unsorted-crap";
+@import "misc";
 
 // Nothing else
 // Pay 10 Euros if you commit sth. here
