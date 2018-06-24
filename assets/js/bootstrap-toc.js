@@ -2,7 +2,7 @@
  * Bootstrap Table of Contents v0.4.1 (http://afeld.github.io/bootstrap-toc/)
  * Copyright 2015 Aidan Feldman
  * Licensed under MIT (https://github.com/afeld/bootstrap-toc/blob/gh-pages/LICENSE.md) */
-(function() {
+(function($) {
   'use strict';
 
   window.Toc = {
@@ -47,7 +47,7 @@
       },
 
       createNavList: function() {
-        return $('<ul class="nav flex-column"></ul>');
+        return $('<ul class="nav navbar-nav"></ul>');
       },
 
       createChildNavList: function($parent) {
@@ -159,4 +159,4 @@
 
     });
   });
-})();
+})(jQuery);

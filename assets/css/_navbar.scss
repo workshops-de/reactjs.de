@@ -1,4 +1,6 @@
-
+//
+// c-navbar-light
+//
 .c-navbar-light {
   @extend .navbar-light;
   @extend .c-navbar-underline-light;
@@ -29,7 +31,9 @@
   }
 }
 
-
+//
+// c-navbar-underline
+//
 .c-navbar-underline {
   .nav-link {
     position: relative;
@@ -55,7 +59,6 @@
 
   .nav-item.active {
     .nav-link:before {
-      // background-color: $red;
       visibility: visible;
       transform: scaleX(0.8);
     }
