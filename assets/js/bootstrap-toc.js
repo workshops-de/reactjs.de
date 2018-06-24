@@ -60,7 +60,7 @@
         var $a = $('<a class="nav-link"></a>');
         $a.attr('href', '#' + anchor);
         $a.text(text);
-        var $li = $('<li class="nav-item"></li>');
+        var $li = $('<li></li>');
         $li.append($a);
         return $li;
       },
