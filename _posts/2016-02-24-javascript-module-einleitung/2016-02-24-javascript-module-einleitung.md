@@ -172,6 +172,6 @@ Nächstes Mal erkläre ich euch das Module Bundling, unter anderem sprechen wir 
 - ECMASript’s Module Loader API
 - …und einiges mehr :)
 
- NOTE: Um alles so simpel wie möglich zu halten, habe ich einige fiese Details im Post ausgelassen. Falls dabei etwas Wichtiges und/oder Faszinierendes war, kommentiert bitte auf https://medium.freecodecamp.com/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.5m9z5hjhq – dort bitte in Englisch. Danke!
+ NOTE: Um alles so simpel wie möglich zu halten, habe ich einige fiese Details im Post ausgelassen. Falls dabei etwas Wichtiges und/oder Faszinierendes war, kommentiert bitte auf https://medium.freecodecamp.org/javascript-modules-a-beginner-s-guide-783f7d7a5fcc#.5m9z5hjhq – dort bitte in Englisch. Danke!
 
 

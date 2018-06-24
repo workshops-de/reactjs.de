@@ -369,7 +369,7 @@ Hier ein Beispiel bei dem links React und rechts Backbone auf eine Texteingabe r
 [React -vs- Backbone Performanzdemo](https://raw.githubusercontent.com/paulwittmann/blog-posts/master/images/monkeys-slow.gif)
 (Quelle: ["Hack Reactor"](http://joelburget.com/backbone-to-react/) &ndash; [Joel Burget](https://twitter.com/dino_joel))
 
-Mehr zur Implementierung des virtuellen DOMs in unserem Artikel [Virtuelles DOM mit React.js](http://reactjs.de/posts/virtuelles-dom-mit-react-js).
+Mehr zur Implementierung des virtuellen DOMs in unserem Artikel [Virtuelles DOM mit React.js](http://reactjs.de/artikel/vdom-react/).
 
 ## Die Leute hinter React
 + [Jordan Walke](https://twitter.com/jordwalke)

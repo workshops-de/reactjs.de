@@ -523,6 +523,6 @@ Der ganze Code für die Beispiel-Anwendung kann bei GitHub hier gefunden werden:
 
 #### Credits
 
-Original gepostet von [Preethi Kasireddy](https://twitter.com/iam_preethi) auf [FreeCodeCamp – Medium](https://medium.freecodecamp.com/internationalization-in-react-7264738274a0).
+Original gepostet von [Preethi Kasireddy](https://twitter.com/iam_preethi) auf [FreeCodeCamp – Medium](https://medium.freecodecamp.org/internationalization-in-react-7264738274a0).
 
 

@@ -9,6 +9,11 @@
     ],
     "redirects": [
       {
+        "source": "/posts/virtuelles-dom-mit-react-js",
+        "destination": "/artikel/vdom-react/",
+        "type": 301
+      },
+      {
         "source": "/posts/javascript-module-eine-einleitung",
         "destination": "/artikel/javascript-module-einleitung/",
         "type": 301
