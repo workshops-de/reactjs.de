@@ -395,7 +395,7 @@ render: function() {
 Das resultierende Javascript würde versuchen aus `render` die Ausgabe von _zwei_ verschiedenen `React.DOM`-Aufrufen zurückzugeben. Da JavaScript-Funktionen aber nur einen Wert zurückgeben können, muss man in JSX immer noch ein umschließendes Element, wie ein `<div>`, hinzufügen.
 
 **<span id='footnote-2'>[2]</span>** [zurück zum Text](#footnote-2-anchor)
-Die Bestrebungen gehen hier sogar so weit, dass man optional CSS direkt in der Komponente schreiben kann, das dann per Inline-Styles (!) eingebunden wird. Die Vorteile dieses Ansatzes zeigt [Christopher Chedeau](https://twitter.com/vjeux) in ["React: CSS in your JS"](https://vimeo.com/116209150"). Unterstützung für einige CSS Features wie Media Queries oder `:before`- und `:after`-Elemente sind mit Inline-Styles nicht möglich, hierfür gibt es aber Webpack-Plugins.
+Die Bestrebungen gehen hier sogar so weit, dass man optional CSS direkt in der Komponente schreiben kann, das dann per Inline-Styles (!) eingebunden wird. Die Vorteile dieses Ansatzes zeigt [Christopher Chedeau](https://twitter.com/vjeux) in ["React: CSS in your JS"](https://vimeo.com/116209150). Unterstützung für einige CSS Features wie Media Queries oder `:before`- und `:after`-Elemente sind mit Inline-Styles nicht möglich, hierfür gibt es aber Webpack-Plugins.
 Wenn CSS in JavaScript geschrieben wird, wird kein CSS-Präprozessor wie SASS oder LESS mehr benötigt.
 
 ### Links
