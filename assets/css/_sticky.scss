@@ -1,11 +1,6 @@
 // Sticky utilites
-// Used for course banner
 
-.sticky {
-  position: sticky;
-  display: block;
-}
-
-.sticky-under-navbar {
-  top: $spacer;
+// .c-top-x { top: ... }
+@each $size, $length in $spacers {
+  .c-top-#{$size} { top: $length; }
 }
