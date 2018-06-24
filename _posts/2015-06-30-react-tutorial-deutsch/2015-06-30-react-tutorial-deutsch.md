@@ -72,7 +72,7 @@ var ButtonCounter = React.createClass({ // (1)
 Komponenten werden mit `React.createClass` **(1)** erzeugt. Die wichtigste Funktion einer Komponente ist `render` **(2)**, wo das Markup für die DOM-Repräsentation der Komponente definiert wird. Die `add`-Funktion **(3)** im Beispiel ist eine von uns ausgedachte, die gerade nicht viel mehr macht als Klickevents in die JavaScript Konsole des Browsers zu schreiben. Zu bemerken ist noch, dass React den ganz normalen `onClick`-Handler des Browsers verwendet, der als Attribut auf dem `<button>` gesetzt wird, statt beispielsweise durch CSS-Selektoren. Durch geschweifte Klammern (`{}`) können in JSX JavaScript-Ausdrücke eingebettet werden.
 
 ### JSX
-Wie kommt es, dass wir mitten in der `render`-Funktion **(4)** auf einmal HTML schreiben können? React verwendet dazu [JSX](https://facebook.github.io/jsx), eine schlanke Syntaxerweiterung für JavaScript, mit der es leichter ist Markup zu schreiben.
+Wie kommt es, dass wir mitten in der `render`-Funktion **(4)** auf einmal HTML schreiben können? React verwendet dazu [JSX](https://facebook.github.io/jsx/), eine schlanke Syntaxerweiterung für JavaScript, mit der es leichter ist Markup zu schreiben.
 Die Verwendung von JSX ist optional, hat sich aber als Standard Templating-Lösung in React etabliert. JSX macht nichts weiter als die spitzen Klammern oben in folgende JavaScript-Funktionsaufrufe umzuwandeln ([JSBin](http://jsbin.com/qezomi/edit?html,js,console,output)):
 
 ```javascript

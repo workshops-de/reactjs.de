@@ -36,7 +36,7 @@ Offensichtlich ist das eine riesige Zeitverschwendung. Wäre es nicht viel besse
 
 # Wie kann man Module integrieren?
 
-Es gibt viele Arten, wie man Module in Programme integrieren kann. Lasst uns einge davon betrachten:
+Es gibt viele Arten, wie man Module in Programme integrieren kann. Lasst uns einige davon betrachten:
 
 ## Module Pattern
 Das Module Pattern wird genutzt, um das Konzept von Klassen (da JavaScript von natur aus keine Klassen unterstützt) nachzuahmen, sodass wir sowohl öffentliche als auch nichtöffentliche Methoden und Variablen innerhalb eines einzigen Objekts lagern können – ebenso wie Klassen in anderen Sprachen wie Python oder Java genutzt werden. Dadurch können wir eine öffentliche API entwerfen für Methoden die wir exponieren wollen, während wir die nichtöffentlichen Variablen und Methoden in einem abgeschlossenen Bereich behalten.

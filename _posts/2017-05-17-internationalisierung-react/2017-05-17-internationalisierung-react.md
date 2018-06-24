@@ -129,7 +129,7 @@ Um das Babel Plugin seine Magie tatsächlich wirken zu lassen, müssen wir unser
 
 Dieses Babel Plugin extrahiert alle String Meldungen in deine Anwendung, die entweder mit **defineMessages**. **`<FormattedMessage>`**, oder **`<FormattedHTMLMessage>`** definiert sind.
 
-(Beachte, dass **defineMessages**, **`<FormattedMessage>`**, und **`<FormattedHTMLMessage>`** alle Exporte aus dem React Intl Packet sind).
+(Beachte, dass **defineMessages**, **`<FormattedMessage>`**, und **`<FormattedHTMLMessage>`** alle Exporte aus dem React Intl Paket sind).
 
 Sobald alles extrahiert ist, werden JSON Dateien generiert, die die String Meldungen enthalten und platziert sie in das Verzeichnis, das du im **messagesDir** Pfad oben definiert hast.
 
@@ -154,7 +154,7 @@ addLocaleData([...en, ...es, ...fr, ...it]);
 _Hinweis: Wenn deine App viel mehr unterstützt, empfiehlt es sich, die locale data basierend auf der Sprache des aktuellen Benutzers dynamisch zu laden. Lies die React Intl docs für weitere Informationen zu diesem Ansatz._
 
 #### Erstelle den i18n Kontext in deiner React Anwendlung
-Bisher haben wir das React Intl Packet installiert, unser **.babelrc** Plugin eingestellt und die entsprechenden locale data geladen.
+Bisher haben wir das React Intl Paket installiert, unser **.babelrc** Plugin eingestellt und die entsprechenden locale data geladen.
 
 Ein letzter Schritt besteht darin, einen i18n Kontext für alle unsere React-Komponenten zu erstellen, so dass die locale und die Übersetze Nachricht des derzeitigen Nutzers (auf dem Ort des Nutzers basierend) in die React Intl Komponente geladen werden kann, die du in deiner App definierst.
 
@@ -426,7 +426,7 @@ Wie oben erwähnt, liegt das daran, dass Safari zur Zeit keine Unterstützung f�
 Glücklicherweise gibt es trotzdem einen Weg, damit das auch für Safari Nutzer klappt. Was wir tun müssen, ist den **Intl Polyfill** zu benutzen. Es gibt einige Möglichkeiten, um das zu laden. Lass uns für dieses Beispiel weiterhin Webpack benutzen:
 
 
-Zuerst installieren wir das intl Packet von npm:
+Zuerst installieren wir das intl Paket von npm:
 
 ```shell
 npm install --save intl

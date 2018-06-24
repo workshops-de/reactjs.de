@@ -37,7 +37,7 @@ var TimerView = Backbone.View.extend({
 });
 ```
 
-Der Vorteil ist, dass wir ab dann direkt mit React-Komponten weiterarbeiten können. Ein wichtiger Hinweis: Es ist sinnvoll React-Komponenten anhand einer angemessenen Hierachie zu verschachteln. Zusätzlich nutzen wir ein [Mixin bei GitHub](https://github.com/magalhas/backbone-react-component), welches die render Methode bei Veränderung des Models oder Collection erneut aufruft.
+Der Vorteil ist, dass wir ab dann direkt mit React-Komponten weiterarbeiten können. Ein wichtiger Hinweis: Es ist sinnvoll React-Komponenten anhand einer angemessenen Hierarchie zu verschachteln. Zusätzlich nutzen wir ein [Mixin bei GitHub](https://github.com/magalhas/backbone-react-component), welches die render Methode bei Veränderung des Models oder Collection erneut aufruft.
 
 Folgendermaßen kann das Mixin mit einem Model benutzt werden...
 

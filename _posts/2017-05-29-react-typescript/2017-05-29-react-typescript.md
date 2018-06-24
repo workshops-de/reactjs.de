@@ -188,7 +188,7 @@ yarn add @types/react
 yarn add @types/react-dom
 ```
 
-Und damit verschwinden die Fehler. Immer wenn du eine Abhängigkeit installierst, kannst du immer versuchen das `@types` Packet auch zu installieren, oder wenn du sehen willst ob die Typen verfügbar sind, kannst du die [TypeSearch](https://microsoft.github.io/TypeSearch/) Webseite benutzen.
+Und damit verschwinden die Fehler. Immer wenn du eine Abhängigkeit installierst, kannst du immer versuchen das `@types` Paket auch zu installieren, oder wenn du sehen willst ob die Typen verfügbar sind, kannst du die [TypeSearch](https://microsoft.github.io/TypeSearch/) Webseite benutzen.
 
 ## Die Anwendung lokal ausführen
 
@@ -271,7 +271,7 @@ Zuerst erstelle ich ein TypeScript Interface für die Eigenschaften, welche die 
 
 ## Testen
 
-Zum Schluss wollte ich auch ein gutes Testing Setup mit TypeScript haben. Ich bin ein großer Fan von Facebooks [Jest](https://facebook.github.io/jest/) und habe ein bisschen gegooglet, um herauszufinden, ob ich es mit TypeScript starten kann. Es hat sich herausgestellt, dass es sehr gut möglich ist, und da gibt es sogar das [ts-jest](https://www.npmjs.com/package/ts-jest) Packet, dass all die schweren Arbeiten erledigt. Darüber hinaus gibt es da noch das `@types/jest` Packet, damit kannst du auch all deine Tests type-checken lassen kannst.
+Zum Schluss wollte ich auch ein gutes Testing Setup mit TypeScript haben. Ich bin ein großer Fan von Facebooks [Jest](https://facebook.github.io/jest/) und habe ein bisschen gegooglet, um herauszufinden, ob ich es mit TypeScript starten kann. Es hat sich herausgestellt, dass es sehr gut möglich ist, und da gibt es sogar das [ts-jest](https://www.npmjs.com/package/ts-jest) Paket, dass all die schweren Arbeiten erledigt. Darüber hinaus gibt es da noch das `@types/jest` Paket, damit kannst du auch all deine Tests type-checken lassen kannst.
 
 Großes Dankeschön an RJ Zaworski, [dessen Post über TypeScript und Jest](https://rjzaworski.com/2016/12/testing-typescript-with-jest) der mich in dieses Thema eingeführt hat. Sobald du `ts-jest` installiert hast, musst du Jest nur noch konfigurieren, das machst du in `package.json` mit diesen Einstellungen:
 
@@ -295,7 +295,7 @@ Damit kann ich einfach `jest` ausführen und alles läuft wie erwartet.
 
 ## Linting mit TSLint
 
-Obwohl TypeScript deinen Code auf viele Arten checkt, wollte ich trotzdem noch einen Linter, um einige weitere Code-Style- und Qualitätschecks zu ermöglichen. Ähnlich wie ESLint in JavaScript ist [TSLint](https://palantir.github.io/tslint/) die beste Option, um TypeScript Dateien zu überprüfen. Es funktioniert auf die gleiche Art wie ESLint – mit einer Reihe von Regeln die du aktivierst oder deaktivierst. Und es gibt auch ein [TSLint-React](https://github.com/palantir/tslint-react) Packet, mit dem du spezifische Regeln hinzufügen kannst.
+Obwohl TypeScript deinen Code auf viele Arten checkt, wollte ich trotzdem noch einen Linter, um einige weitere Code-Style- und Qualitätschecks zu ermöglichen. Ähnlich wie ESLint in JavaScript ist [TSLint](https://palantir.github.io/tslint/) die beste Option, um TypeScript Dateien zu überprüfen. Es funktioniert auf die gleiche Art wie ESLint – mit einer Reihe von Regeln die du aktivierst oder deaktivierst. Und es gibt auch ein [TSLint-React](https://github.com/palantir/tslint-react) Paket, mit dem du spezifische Regeln hinzufügen kannst.
 
 Du kannst TSLint über eine `tslint.json` Datei konfigurieren. Meine ist unten. Ich benutze beide, die `tslint:latest` und die `tslint-react` Presets, welche eine Reihe von Regeln ermöglichen. Ich bin jedoch mit einigen der Defaults nicht einverstanden, also überschreibe ich sie – du kannst das aber auch anders regeln – das liegt bei dir!
 
