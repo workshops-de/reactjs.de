@@ -1,4 +1,4 @@
-# reactjs.de
+# ReactJS.DE
 
 ## Installation
 
@@ -12,8 +12,3 @@ bundle install
 $ jekyll s --incremental
 ```
 
-## Build the dockerfile locally
-
-```
-$ docker build -t reactjs-de .
-```
