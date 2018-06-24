@@ -6,25 +6,20 @@ description: Alles rund um React/JavaScript auf deutsch - Tutorials · Artikel �
 permalink: /
 ---
 <main>
-  <div class="header header-homepage d-flex align-items-center mb-5">
+  <div class="header header-homepage d-flex align-items-center mb-6">
     <div class="container">
       <div class="row justify-content-md-center">
-        <div class="col-3 col-sm-2 text-center">
+        <div class="col-12 col-sm-3  text-center">
           <img class="img-fluid img-rotation" alt="ReactJS.DE Logo"
                 src="/assets/img/atom-sign-x2.png">
         </div>
         <div class="col-sm-7 pt-3">
           <div class="pl-lg-4 mr-lg-4">
-            <p class="lead align-self-center text-muted">
-              Seit 2015 Artikel und Tutorials zu React auf Deutsch!
-            </p>
             <h1 class="header-homepage-title">ReactJS.DE</h1>
-            <p class="mt-sm-2 pt-sm-2 mt-md-3 pt-md-3 text-muted">
-              Artikel
+            <p class="mt-sm-2 pt-sm-2 mt-md-3 pt-md-3 h3">
+              <a href="/artikel/">Artikel</a>
               <span class="ml-1 mr-1">•</span>
-              Tutorials
-              <span class="ml-1 mr-1">•</span>
-              Schulungen
+              <a href="/schulungen/inhouse/">Schulungen</a>
             </p>
           </div>
         </div>
@@ -32,7 +27,7 @@ permalink: /
     </div>
   </div>
 
-  <div class="container mb-5">
+  <div class="container mb-6">
     <h2>Hier starten! - Tutorials für Einsteiger</h2>
     <div class="row mb-4">
       {% for post in site.categories.tutorial limit:2 %}

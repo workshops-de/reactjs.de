@@ -15,7 +15,9 @@
     </div>
     <div class="col-md-8">
       <div class="py-4 px-2">
-        <h2 class="h3 pb-1 mb-1" style="border-bottom: 1px solid #eee;"><a href="{{ post.url }}">{{post.title}}</a></h2>
+        <h2 class="h3 pb-1 mb-1" style="border-bottom: 1px solid #eee;">
+          <a href="{{ post.url }}" class="text-body">{{post.title}}</a>
+        </h2>
         <small class="text-muted">
           {{ post.author }} <span class="ml-1 mr-1">•</span> <time>{{ post.published_at | date: "%d.%m.%Y" }}</time>
           <span class="ml-1 mr-1">|</span>
