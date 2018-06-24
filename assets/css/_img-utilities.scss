@@ -61,21 +61,21 @@
 }
 
 
-.img-trainer {
-  border-radius: 10%;
-  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.20);
+.c-img-post {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 5rem;
+  background-size: cover;
+  background-position: center;
 }
 
 @keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-.img-rotation {
+.c-img-rotation {
   display: inline-block;
   animation: rotating 100s linear infinite;
 }
