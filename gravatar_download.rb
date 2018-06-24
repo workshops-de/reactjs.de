@@ -7,7 +7,7 @@ puts "Downloading gravatars"
 
 def save_gravatar_image(gravatar_uid, size)
   puts "Writing UID #{gravatar_uid} in size #{size}"
-  image = Net::HTTP.get(URI.parse("http://www.gravatar.com/avatar/#{gravatar_uid}?s=#{size}"))
+  image = Net::HTTP.get(URI.parse("http://www.gravatar.com/avatar/#{gravatar_uid}?s=#{size}&d=mp"))
   File.write("assets/img/gravatars/#{gravatar_uid}-#{size}x#{size}.jpg", image)
 end
 
