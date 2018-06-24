@@ -8,7 +8,8 @@
   "search.exclude": {
     ".sass-cache": true,
     "_site": true,
-    "artikel/header_images": true
+    "_posts/**/header.jpg": true,
+    "assets/js/vendor": true
   },
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
