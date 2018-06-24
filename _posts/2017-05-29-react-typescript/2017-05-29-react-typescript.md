@@ -1,5 +1,5 @@
 ---
-title: "ReactJS & TypeScript"
+title: "React & TypeScript"
 description: "Lerne wie du eine ReactJS mit TypeScript nutzt"
 author: "Jack Franklin"
 published_at: 2017-05-29 15:00:00.000000Z

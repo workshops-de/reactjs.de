@@ -83,7 +83,7 @@ React.DOM.div({},
 
 Dieser Code dient uns nur zur Illustration und wir können `React.DOM` zugunsten von JSX direkt wieder vergessen. Wir werden nachfolgend und in allen anderen Artikeln auf ReactJS.de JSX verwenden. Wichtig ist es, im Hinterkopf zu behalten, dass es unter der Haube zu reinem JavaScript umgewandelt wird. <a href='#footnote-1' id='footnote-1-anchor'>[1]</a>
 
-Um JSX schreiben zu können, wird es in der Regel mit [Babel](https://babeljs.io) in einem Kompilierungsschritt in JavaScript übersetzt. Zum Entwickeln kann man auch den [JSX Transformer](https://facebook.github.io/react/docs/tooling-integration.html#in-browser-jsx-transform) benutzen, so dass JSX innerhalb von `<script type='text/jsx'>`-Tags verwendet werden kann. Bei JSBin kann man für den JavaScript-Tab ein Babel-Plugin aktivieren.
+Um JSX schreiben zu können, wird es in der Regel mit [Babel](https://babeljs.io) in einem Kompilierungsschritt in JavaScript übersetzt. Zum Entwickeln kann man auch den [JSX Transformer](https://reactjs.org/docs/try-react.html#in-browser-jsx-transform) benutzen, so dass JSX innerhalb von `<script type='text/jsx'>`-Tags verwendet werden kann. Bei JSBin kann man für den JavaScript-Tab ein Babel-Plugin aktivieren.
 
 #### Bewertung
 > "If you're going to hate on React for some reason, make it something other than JSX"

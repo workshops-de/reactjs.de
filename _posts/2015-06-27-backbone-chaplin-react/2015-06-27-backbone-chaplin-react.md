@@ -10,7 +10,7 @@ categories: [react, backbone, chaplin]
 
 Wenn man seine SPA allerdings auf Angular oder Ember umschreiben möchte, kommt das einem kompletten Rewrite gleich. Aus produkttechnischer und ökonomischer Sicht ist ein kompletter Rewrite eine ziemlich gefährliche Angelegenheit. Oft bleiben Features auf der Strecke, oder es werden Bugs eingeführt, so dass das Produkt gerne bei der Gelegenheit zur völligen Unbenutzbarkeit "verbessert" wird.
 
-Facebook hat die Bibliothek [React.js](http://facebook.github.io/react/) veröffentlicht. Im Gegensatz zu einem Framework, welches sich clientseitig um den kompletten Stack kümmert, bildet React.js lediglich den View-Teil ab. Man könnte React.js am ehesten mit den Directives von Angular.js vergleichen. Ziel dieses Blogposts ist das Refactoring einer Backbone / Chaplin View mittels React.js.
+Facebook hat die Bibliothek [React.js](https://reactjs.org/) veröffentlicht. Im Gegensatz zu einem Framework, welches sich clientseitig um den kompletten Stack kümmert, bildet React.js lediglich den View-Teil ab. Man könnte React.js am ehesten mit den Directives von Angular.js vergleichen. Ziel dieses Blogposts ist das Refactoring einer Backbone / Chaplin View mittels React.js.
 
 ## Refactoring der Backbone Views mit React.js
 

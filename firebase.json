@@ -50,7 +50,7 @@
         ]
       },
       {
-        "source": "feed.xml",
+        "source": "**/feed.xml",
         "headers": [
           {
             "key": "Content-Type",

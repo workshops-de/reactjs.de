@@ -9,6 +9,7 @@
     ".sass-cache": true,
     "_site": true,
     "_posts/**/header.jpg": true,
+    "_posts/**/code/*.js": true,
     "assets/js/vendor": true
   },
   "editor.tabSize": 2,
