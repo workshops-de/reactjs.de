@@ -48,6 +48,15 @@
             "value": "max-age=604800"
           }
         ]
+      },
+      {
+        "source": "feed.xml",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "application/rss+xml"
+          }
+        ]
       }
     ]
   }
