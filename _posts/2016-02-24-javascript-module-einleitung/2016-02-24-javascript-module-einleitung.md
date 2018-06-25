@@ -12,14 +12,14 @@ Eine Übersetzung aus dem Englischen. Der Artikel im Original ist [HIER](https:/
 *Anmerkung: Der Artikel ist in zwei Teile aufgeteilt: Teil 1 beschäftigt sich damit, was Module sind und wieso wir sie benutzen. Teil 2 erklärt euch, was es bedeutet Module zu bündeln und zeigt verschiedene Wege auf, wie dies geschehen kann.*
 
 
-# Teil 1: „Kann bitte noch mal jemand erklären, was Module sind?“
+## Teil 1: „Kann bitte noch mal jemand erklären, was Module sind?“
 
 **Gute Autoren teilen ihre Bücher in Kapitel ein; gute Programmierer teilen ihre Anwendungen in Module ein**.
 
 Wie ein Buchkapitel sind Module nur Sammlungen von Wörtern (hier natürlich eher Code).
 Gute Module sind dabei in sich geschlossen und haben eine distinktive Funktion, was es erlaubt, sie zu verschieben, zu entfernen oder hinzuzufügen – ohne dabei das bestehende System zu gefährden.
 
-# Wieso Module verwenden?
+## Wieso Module verwenden?
 
 Es gibt eine ganze Menge Gründe Module statt ausuferndem, verflochtenem Code zu benutzen. Meiner Meinung nach sind die Wichtigsten:
 
@@ -34,15 +34,15 @@ Wie wir später sehen werden, erlauben uns Module Namespace-Pollution zu vermeid
 Das ist auch absolut in Ordnung, aber wenn ihr einen besseren Weg findet, um einen Teil dieses Codes zu schreiben, müsstet ihr  euch erinnern, wo ihr ihn überall verwendet habt und ihn dort auch aktualisieren.
 Offensichtlich ist das eine riesige Zeitverschwendung. Wäre es nicht viel besser ein – jetzt kommt’s – Modul zu haben, das man immer und immer wieder verwenden kann?
 
-# Wie kann man Module integrieren?
+## Wie kann man Module integrieren?
 
 Es gibt viele Arten, wie man Module in Programme integrieren kann. Lasst uns einige davon betrachten:
 
-## Module Pattern
+### Module Pattern
 Das Module Pattern wird genutzt, um das Konzept von Klassen (da JavaScript von natur aus keine Klassen unterstützt) nachzuahmen, sodass wir sowohl öffentliche als auch nichtöffentliche Methoden und Variablen innerhalb eines einzigen Objekts lagern können – ebenso wie Klassen in anderen Sprachen wie Python oder Java genutzt werden. Dadurch können wir eine öffentliche API entwerfen für Methoden die wir exponieren wollen, während wir die nichtöffentlichen Variablen und Methoden in einem abgeschlossenen Bereich behalten.
 Es gibt viele Arten Modul Pattern zu verwenden. Im ersten Beispiel benutze ich eine anonyme Funktion. Das hilft uns, indem es unseren gesamten Code in eine anonyme Funktion steckt. Erinnert euch: in JavaScript sind Funktionen die einzige Möglichkeit einen neuen Geltungsbereich zu erstellen.
 
-## Beispiel 1: Anonyme Funktion
+### Beispiel 1: Anonyme Funktion
 
 <script src="https://gist.github.com/iam-peekay/088d6b37781c54a95b22.js"></script>
 
@@ -53,21 +53,21 @@ Das Schöne daran ist, dass man lokale Variablen innerhalb der Funktion benutzen
 
 Beachtet, dass die Klammern um die anonyme Funktion notwendig sind, denn Statements, die mit dem Keyword *function* beginnen werden immer als Funktionen einleitend angenommen (in JavaScript gibt es keine unbenannten Funktionsdeklarationen). Entsprechend erzeugen die umgebenden Klammern stattdessen eine Funktion. Wenn ihr neugierig seid, könnt ihr [hier](http://stackoverflow.com/questions/1634268/explain-javascripts-encapsulated-anonymous-function-syntax) mehr dazu lesen.
 
-## Beispiel 2: Globaler Import
+### Beispiel 2: Globaler Import
 Ein anderer beliebter Ansatz der von Bibliotheken wie jQuery genutzt wird ist der globale Import. Er ist der anonymen Funktion ähnlich, die wir eben betrachtet haben, nur dass wir jetzt globale  Variablen als Parameter eingeben:
 
 <script src="https://gist.github.com/iam-peekay/d04164e52be05f8cb107.js"></script>
 
 In diesem Beispiel ist **_globalVariable_** die einzige globale Variable. Der Vorteil dieser Methode gegenüber der anonymen Funktion ist, dass die globale Variable im Vorhinein deklariert wird und sie dadurch für Leute, die den Code betrachten, glasklar heraussticht.
 
-## Beispiel 3: Objekt Interface
+### Beispiel 3: Objekt Interface
 Noch ein weiterer Ansatz ist, Module zu anzulegen, indem man ein in sich geschlosseneres Objekt Interface benutzt:
 
 <script src="https://gist.github.com/iam-peekay/43b161aafe7df6218118.js"></script>
 
 Ihr könnte sehen, dass uns dieser Ansatz die Möglichkeit bietet zu entscheiden, welche Variablen/Methoden wir nicht öffentlich (**_myGrades_**) und welche Variablen/Methoden wir öffentlich exponieren wollen, indem wir sie in das *return* Statement geben (**_average & failing_**).
 
-## Beispiel 4: Offenlegen des Module Pattern
+### Beispiel 4: Offenlegen des Module Pattern
 Dieser Ansatz ist dem hierüber stehenden sehr ähnlich, bis auf die Tatsache, dass er sicherstellt, dass alle Methoden und Variablen nichtöffentlich bleiben, bis sie exponiert werden:
 
 <script src="https://gist.github.com/iam-peekay/3d29068bd0097c53af41.js"></script>
@@ -79,7 +79,7 @@ Das alles wirkt jetzt zwar recht umfangreich, es ist jedoch nur die Spitze des E
 [Adequately Good](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html) von Ben Cherry: eine nützliche Übersicht mit Beispielen fortgeschrittener Anwendung von Modulen.
 
 
-# CommonJS und AMD
+## CommonJS und AMD
 Die oben beschriebenen Ansätze haben eines gemeinsam: Die Nutzung einer einzigen globalen Variable, um ihren Code mit einer Funktion zu verpacken. Dadurch erschaffen sie einen globalen Namespace für sich selbst.
 Während jeder der Ansätze auf seine eigene Weise effektiv ist, haben sie auch alle ihre Schattenseiten.
 
@@ -89,7 +89,7 @@ Ein anderer Nachteil ist, dass es dennoch zu Namespace Problemen kommen kann. Wa
 Glücklicherweise lautet die Antwort: ja.
 Es gibt zwei beliebte und gut funktionierende Methoden: CommonJS und AMD.
 
-## CommonJS
+### CommonJS
 CommonJS ist eine Arbeitsgruppe, die ehrenamtlich JavaScript APIs zum deklarieren von Modulen designen und implementiert.
 Ein CommonJS Modul ist im Prinzip ein wiederverwendbares Stück JavaScript, das bestimmte Objekte exportiert und sie dadurch verfügbar macht für andere Module, die sie in Programmen per *require* importieren. Falls ihr schon mal mit Node.js programmiert habt, kennt ihr so etwas.
 Bei CommonJS speichert jede JavaScript Datei Module in ihrem eigenen Modulkontext. In diesem Bereich benutzen wir das *module.exports* Objekt um Module zu exponieren und *require* um sie zu importieren.
@@ -110,7 +110,7 @@ Außerdem ist die Syntax sehr kompakt, was mir persönlich sehr gut gefällt.
 Eine weitere Sache, die angemerkt werden sollte ist, dass CommonJS einen ‚server-first’ Ansatz verfolgt und synchron Module lädt. Das ist wichtig, denn wenn wir drei verschiedene Module haben, die wir *requiren*, dann lädt es sie nacheinander.
 Das funktioniert super bei Servern, macht es aber leider schwieriger, wenn man JavaScript für den Browser schreibt. Man braucht nicht extra zu erwähnen, dass es viel länger dauert, ein Modul aus dem Netz zu laden, als direkt von der Platte. Solange das Script zum Laden eines Moduls läuft, verhindert es, dass der Browser irgendetwas anders ausführt, bis es fertig geladen hat. Das macht es, weil die JavaScript Ausführung pausiert, solange der Code lädt (ich zeige euch im zweiten Teil, wie man dieses Problem umgehen kann, wenn wir weiter über Bundling sprechen. Bis hierhin genügt dies).
 
-## AMD
+### AMD
 CommonJS ist gut und schön, aber was, wenn wir Module asynchron laden wollen? Die Antwort heißt *asynchrone Modul Definition*, oder kurz AMD.
 Module mit AMD zu laden sieht in etwa so aus:
 
@@ -127,7 +127,7 @@ Anders als CommonJS, nutzt AMD einen browser-first Ansatz und asynchrones Verhal
 Neben Asynchronität ist ein weiterer Vorteil von AMD, dass unserer Module auch Objekte, Funktionen, Konstruktoren, Strings, JSON und vieles Anderes sein können, während CommonJS nur Objekte als Module unterstützt.
 AMD ist nicht kompatibel mit io, filesystem und anderen Server-orientierten Features die via CommonJS verfügbar sind. Außerdem ist die Funktions-wrappende Syntax ein wenig wortreicher als das einfache *require* Statement.
 
-## UMD
+### UMD
 Für Projekte, bei denen sowohl AMD als auch CommonJS Features benötigt werden, gibt es noch ein weiteres Format: die Universelle Modul Definition, UMD.
 UMD erschafft im Prinzip einen Weg, beide zu nutzen, während außerdem die globale Definition von Variablen unterstützt wird. Daher sind UMD Module in der Lage sowohl auf Servern als auch auf Clients zu laufen.
 Hier ist ein kurzer Vorgeschmack darauf, wie UMD funktioniert:
@@ -136,7 +136,7 @@ Hier ist ein kurzer Vorgeschmack darauf, wie UMD funktioniert:
 
 Für mehr Beispiele von UMD Formaten, schaut euch dieses [tolle Repo](https://github.com/umdjs/umd) auf Github an.
 
-## Native JS
+### Native JS
 Puh! Seid ihr noch da? Ich hoffe, ich habe euch unterwegs nicht irgendwo verloren. Denn es gibt noch **einen** weiteren Modultyp, den wir uns ansehen müssen, bevor wir fertig sind.
 Ihr habt bestimmt bemerkt, dass keines der Module bisher natives JavaScript war. Wir haben immer Wege gefunden, die Module zu emulieren; entweder über das Module Pattern, CommonJS oder AMD.
 Glücklicherweise haben die schlauen Köpfe von TC39 mit *ECMAScript 6* (ES6) eingebaute Module eingeführt.
@@ -163,7 +163,7 @@ Auf der anderen Seite kreiert ES6 eine live read-only Ansicht der Module, die wi
 Coole Sache, oder? Was ich wirklich ansprechend an live read-only Ansichten finde ist, dass sie uns erlauben die Module in kleinere Teile zu splitten, ohne an Funktionalität zu verlieren.
 Und man kann es wieder umkehren und sie wieder zusammenführen – kein Problem. Es funktioniert einfach.
 
-# Ausblick: Module bündeln
+## Ausblick: Module bündeln
 Wow, wie die Zeit vergeht! Das war eine wilde Fahrt, aber ich hoffe wirklich, dass es euch ein besseres Verständnis von Modulen in JavaScript vermittelt hat.
 Nächstes Mal erkläre ich euch das Module Bundling, unter anderem sprechen wir hierüber:
 
