@@ -27,8 +27,8 @@ layout: base
   </div>
 </div>
 
-<div class="container">
-  <main role="main">
+<main role="main">
+  <div class="container">
 
     <div class="row mb-5">
       <div class="col-lg-3 d-none d-lg-block">
@@ -75,10 +75,12 @@ layout: base
 
         <br>
 
-        <div class="d-print-none">
-          {% include _related_posts.html %}
-        </div>
       </div>
     </div>
-  </main>
-</div>
+
+  </div>
+
+  <div class="row d-print-none mx-0 my-5">
+    {% include _related_posts.html %}
+  </div>
+</main>

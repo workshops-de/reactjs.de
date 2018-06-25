@@ -53,7 +53,7 @@
   }
 
   img {
-    max-width: 100%;
+    @extend .img-fluid;
   }
 
   iframe {
