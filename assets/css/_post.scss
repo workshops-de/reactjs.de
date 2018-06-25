@@ -30,6 +30,7 @@
   > ol,
   > table,
   > img,
+  > iframe,
   > blockquote {
     margin-bottom: $paragraph-margin-bottom;
   }
@@ -44,13 +45,18 @@
   }
 
   blockquote {
-    padding: .5rem 1rem;
-    font-size: 1.25rem;
-    border-left: .25rem solid #eceeef;
+    padding: $spacer $spacer;
+    // font-size: 1.25rem;
+    border-left: .25rem solid $border-color;
+    p { margin: 0; }
   }
 
   img {
     max-width: 100%;
+  }
+
+  iframe {
+    border: $card-border-width solid $card-border-color;
   }
 
   pre {
