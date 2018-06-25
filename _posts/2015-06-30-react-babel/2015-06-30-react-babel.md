@@ -15,7 +15,7 @@ Da Babel nun _der_ Übersetzer für React ist, können wir neben JSX auch alle t
 
 Diese wollen wir uns hier einmal kurz angucken. Damit du den Artikel ganz verstehen kannst, solltest du zumindest schon einmal ein [Hello-World mit React](https://reactjs.org/docs/hello-world.html) gebaut haben, es reicht aber Kenntnis über die alte ES5-Variante.
 
-Falls ihr noch nichts mit React gemacht habt, guckt euch am besten die [Einführung in React](http://reactjs.de/artikel/react-tutorial-deutsch/) auf diesem Blog an.
+Falls ihr noch nichts mit React gemacht habt, guckt euch am besten die [Einführung in React](/artikel/react-tutorial-deutsch/) auf diesem Blog an.
 
 ## React-Komponente mit ES6
 

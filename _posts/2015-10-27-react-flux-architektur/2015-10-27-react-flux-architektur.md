@@ -2,7 +2,7 @@
 title: "Die Flux-Architektur und React"
 description: "Grundlegende Beschreibung der Flux-Architektur."
 author: "Sebastian Deutsch"
-published_at: 2015-10-27 13:21:42
+published_at: 2015-11-17 14:43:48
 header_source: "https://unsplash.com/photos/RTGdBD7kQkM"
 categories: [react, flux, architektur]
 ---
@@ -75,5 +75,5 @@ Allerdings gibt es unserer Meinung nach auch bisher keine bessere Architektur. D
 Die sehr gute Strukturierung des Codes, insbesondere durch eine klare Modularisierung der Anwendung, die sehr gut testbar sind und auch mit einem größeren Team bearbeitet werden kann, ist in anderen Frameworks nicht gegeben.
 
 Wer mehr über das Flux-Pattern wissen möchte, der sollte sich das Einführungsvideo von Facebook [anschauen](https://facebook.github.io/flux/).
-Die Wahl einer Flux-Implementierung wird in einem [separaten Post](http://reactjs.de/posts/wie-wahlt-man-die-beste-flux-implementierung) behandelt.
+Die Wahl einer Flux-Implementierung wird in einem [separaten Post](/artikel/flux-implementierung-auswaehlen/) behandelt.
 

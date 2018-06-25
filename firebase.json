@@ -9,6 +9,11 @@
     ],
     "redirects": [
       {
+        "source": "/posts/wie-wahlt-man-die-beste-flux-implementierung",
+        "destination": "/artikel/flux-implementierung-auswaehlen/",
+        "type": 301
+      },
+      {
         "source": "/posts/die-flux-architektur-und-react/",
         "destination": "/artikel/react-flux-architektur/",
         "type": 301
