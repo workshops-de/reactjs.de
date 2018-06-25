@@ -3,6 +3,7 @@
     margin-top: - $spacer;
     padding-top: $spacer * 2;
   }
+
   h3 {
     color: $text-muted;
   }
@@ -74,7 +75,6 @@
       display: block;
     }
   }
-
 
   a:not(.btn) {
     @include underline($body-color);
