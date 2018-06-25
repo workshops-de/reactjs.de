@@ -34,6 +34,36 @@
     margin-bottom: $paragraph-margin-bottom;
   }
 
+  // Code Tags
+  li code,
+  p code {
+    background-color: $light;
+    border-radius: $border-radius-sm;
+    padding: 4px;
+    white-space: pre-wrap;
+  }
+
+  blockquote {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    border-left: .25rem solid #eceeef;
+  }
+
+  pre {
+    background-color: #fafafa;
+    word-wrap: normal !important;
+    white-space: pre-wrap;
+    overflow: auto;
+    margin-bottom: $paragraph-margin-bottom;
+
+    code {
+      padding: 10px 10px;
+      white-space: pre !important;
+      display: block;
+    }
+  }
+
+
   a:not(.btn) {
     @include underline($body-color);
     color: $body-color;

@@ -39,13 +39,7 @@ layout: base
             <span class="ml-1 mr-1">|</span>
             {{ page.author }} <span class="ml-1 mr-1">•</span> <time>{{ page.published_at | date: "%d.%m.%Y" }}</time>
             <span class="ml-1 mr-1">|</span>
-
-            {% assign words = page.content | number_of_words %}
-            {% if words < 360 %}
-              1 Minute
-            {% else %}
-              {{ words | divided_by:180 }} Minuten
-            {% endif %}
+            {% include _reading_time.html text=page.content %}
           </small>
         </p>
 

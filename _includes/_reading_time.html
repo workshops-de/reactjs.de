@@ -1,4 +1,4 @@
-{% assign words = post.content | number_of_words %}
+{% assign words = include.text | number_of_words %}
 
 {% if words < 360 %}
   1 Minute

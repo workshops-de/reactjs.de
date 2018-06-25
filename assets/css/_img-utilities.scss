@@ -1,4 +1,4 @@
-.img-scale {
+.c-img-scale {
   transition: transform .3s;
 
   &:hover {
@@ -6,7 +6,7 @@
   }
 }
 
-.img-grayscale-100 {
+.c-img-grayscale-100 {
   -webkit-transition: all 300ms;
   -webkit-filter: #{ "grayscale(100%)" };
   -webkit-filter: #{ "grayscale(1)" };
@@ -24,7 +24,7 @@
   }
 }
 
-.img-grayscale-70 {
+.c-img-grayscale-70 {
   -webkit-transition: all 300ms;
   -webkit-filter: #{ "grayscale(50%)" };
   -webkit-filter: #{ "grayscale(0.5)" };
@@ -42,7 +42,7 @@
   }
 }
 
-.img-grayscale-50 {
+.c-img-grayscale-50 {
   -webkit-transition: all 300ms;
   -webkit-filter: #{ "grayscale(50%)" };
   -webkit-filter: #{ "grayscale(1)" };
@@ -60,16 +60,6 @@
   }
 }
 
-
-.c-img-post {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 5rem;
-  background-size: cover;
-  background-position: center;
-}
-
 @keyframes rotating {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -78,4 +68,13 @@
 .c-img-rotation {
   display: inline-block;
   animation: rotating 100s linear infinite;
+}
+
+.c-img-post {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 5rem;
+  background-size: cover;
+  background-position: center;
 }

@@ -21,15 +21,10 @@
         <small class="text-muted">
           {{ post.author }} <span class="ml-1 mr-1">•</span> <time>{{ post.published_at | date: "%d.%m.%Y" }}</time>
           <span class="ml-1 mr-1">|</span>
-          {% assign words = post.content | number_of_words %}
-          {% if words < 360 %}
-            1 Minute
-          {% else %}
-            {{ words | divided_by:180 }} Minuten
-          {% endif %}
+          {% include _reading_time.html text=post.content %}
         </small>
 
-        <p class="mb-4 mt-3">
+        <p class="mb-4 mt-3 text-muted">
           {{post.description}}
         </p>
         <a class="btn btn-secondary btn-sm px-4" href="{{ post.url }}">Artikel <span class="sr-only">{{post.title}}</span> lesen</a>
