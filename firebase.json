@@ -37,6 +37,21 @@
         "source": "/posts/:id*",
         "destination": "/artikel/:id/",
         "type": 301
+      },
+      {
+        "source": "/users*",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/jobs*",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/links*",
+        "destination": "/",
+        "type": 301
       }
     ],
     "headers": [
