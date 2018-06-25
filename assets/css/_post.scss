@@ -56,10 +56,12 @@
   }
 
   iframe {
+    @extend .shadow-sm;
     border: $card-border-width solid $card-border-color;
   }
 
   pre {
+    @extend .shadow-sm;
     background-color: #fafafa;
     word-wrap: normal !important;
     white-space: pre-wrap;
