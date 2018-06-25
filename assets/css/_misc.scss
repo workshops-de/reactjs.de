@@ -30,5 +30,7 @@
 .page-item.active {
   .page-link {
     background-color: $primary !important;
+    color: $white;
+    border-radius: $border-radius-sm;
   }
 }
