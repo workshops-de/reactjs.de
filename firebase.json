@@ -87,6 +87,11 @@
         "source": "/links/*",
         "destination": "/",
         "type": 301
+      },
+      {
+        "source": "/ueber-uns/",
+        "destination": "/team/",
+        "type": 301
       }
     ],
     "headers": [
