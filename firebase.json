@@ -9,6 +9,11 @@
     ],
     "redirects": [
       {
+        "source": "/posts/die-flux-architektur-und-react/",
+        "destination": "/artikel/react-flux-architektur/",
+        "type": 301
+      },
+      {
         "source": "/artikel/reactjs-typescript/",
         "destination": "/artikel/react-typescript/",
         "type": 301
