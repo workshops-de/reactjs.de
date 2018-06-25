@@ -9,6 +9,11 @@
     ],
     "redirects": [
       {
+        "source": "/artikel/reactjs-typescript/",
+        "destination": "/artikel/react-typescript/",
+        "type": 301
+      },
+      {
         "source": "/posts/virtuelles-dom-mit-react-js",
         "destination": "/artikel/vdom-react/",
         "type": 301
