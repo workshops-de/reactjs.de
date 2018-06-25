@@ -3,7 +3,8 @@
   "files.exclude": {
     ".sass-cache": true,
     "_site": true,
-    ".vscode": true
+    ".vscode": true,
+    ".jekyll-metadata": true
   },
   "search.exclude": {
     ".sass-cache": true,
