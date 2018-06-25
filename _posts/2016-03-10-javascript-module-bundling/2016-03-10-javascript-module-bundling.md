@@ -1,5 +1,5 @@
 ---
-title: "JavaScript Module Teil 2: Module Bundling"
+title: "JavaScript Module - Bundling (Teil 2)"
 description: "Im ersten Teil des Posts habe ich erklärt was Module sind, wieso Entwickler sie benutzen und habe verschiedene Wege gezeigt, sie in Programmen anzuwenden."
 author: "Preethi Kasireddy"
 published_at: 2016-03-10 12:04:14

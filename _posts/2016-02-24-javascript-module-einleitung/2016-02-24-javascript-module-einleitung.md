@@ -1,5 +1,5 @@
 ---
-title: "JavaScript Module - Eine Einleitung"
+title: "JavaScript Module - Einleitung (Teil 1)"
 description: "Als JavaScript–Neuling kann man schnell überfordert sein von Wörtern wie „Webpack vs. Browserify“ oder „AMD vs. CommonJS“. Ich erkläre diese für euch."
 author: "Preethi Kasireddy"
 published_at: 2016-02-24 15:12:23
