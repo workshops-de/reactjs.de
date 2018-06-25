@@ -24,6 +24,11 @@
         "type": 301
       },
       {
+        "source": "/artikel/virtuelles-dom-mit-react-js/",
+        "destination": "/artikel/vdom-react/",
+        "type": 301
+      },
+      {
         "source": "/posts/virtuelles-dom-mit-react-js",
         "destination": "/artikel/vdom-react/",
         "type": 301
