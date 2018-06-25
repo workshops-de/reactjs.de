@@ -9,6 +9,11 @@
     ],
     "redirects": [
       {
+        "source": "/artikel/backbone-chaplin-und-react/",
+        "destination": "/artikel/backbone-chaplin-react/",
+        "type": 301
+      },
+      {
         "source": "/posts/wie-wahlt-man-die-beste-flux-implementierung",
         "destination": "/artikel/flux-implementierung-auswaehlen/",
         "type": 301
