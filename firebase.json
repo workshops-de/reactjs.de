@@ -14,6 +14,11 @@
         "type": 301
       },
       {
+        "source": "/artikel/internationalisierung-react/",
+        "destination": "/artikel/react-i18n/",
+        "type": 301
+      },
+      {
         "source": "/posts/wie-wahlt-man-die-beste-flux-implementierung",
         "destination": "/artikel/flux-implementierung-auswaehlen/",
         "type": 301
