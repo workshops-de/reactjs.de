@@ -7,7 +7,7 @@ header_source: https://unsplash.com/photos/JfOT-WwO1Ig
 categories: [react, tutorial]
 ---
 
-## Einführung in React
+## Einführung in React für Einsteiger
 
 *Dieses Tutorial soll React vorstellen und anhand kleiner Beispiele erste Schritte damit zeigen. Wir beginnen mit der Frage, was React ist und was die Motivation war es zu schreiben.
 Danach schauen wir uns die beiden wichtigsten Ideen hinter React an &ndash; die Komponentenarchitektur und den virtuellen DOM. Schließlich werden wir im Fazit Vor- und Nachteile von React betrachten und Kriterien bestimmen, wann sein Einsatz besonders sinnvoll ist.*
