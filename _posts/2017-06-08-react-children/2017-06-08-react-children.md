@@ -1,5 +1,5 @@
 ---
-title: "Children in React"
+title: "Children in React verstehen"
 description: "Lerne wie Children in ReactJS funktionieren"
 author: "Max Stoiber"
 published_at: 2017-06-08 15:00:00.000000Z
