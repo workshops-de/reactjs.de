@@ -55,14 +55,14 @@ In den meisten Flux-Beispielen wird die Abhandlung von AJAX dezent verschwiegen.
 
 Ein Beispiel: Im klassischen TodoMVC gibt es folgende Beziehungen zwischen den Entitäten:
 
-```
+```javascript
 Users.hasMany(TodoLists)
 TodoLists.hasMany(Todos)
 ```
 
 Aus performance-technischen Gründen wäre es Unsinn diese Stores mit drei verschiedenen http-Requests (einen für den User, einen für die TodoLists und einen für die Todos) zu füllen. Oft geben viele APIs die Ressourcen inklusive der entsprechenden Relationen zurück. Bei Flux ist nun der Trick, nicht aus Sicht des Stores zu denken, sondern ein Event zu erstellen und alle drei Stores darauf lauschen zu lassen. Betrachten wir einmal folgendes JSON, das als Payload an den Store übergeben wird:
 
-```JavaScript
+```javascript
 {
   id: 1,
   username: "9elements",
