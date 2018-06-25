@@ -103,9 +103,9 @@ Du würdest diese Komponente so verwenden:
 </Executioner>
 ```
 
-Dieses spezifische Beispiel ist nicht sinnvoll, aber es zeigt die Idee.
+Dieses Beispiel ist nicht sonderlich sinnvoll, aber es zeigt die Idee.
 
-Stell dir vor, du müsstest einige Daten von einem Server abholen. Du könntest dies auf viele Arten tun, aber es ist mit diesem Funktion-als-ein-child Muster möglich:
+Stell dir vor, du müsstest einige Daten von einem Server abholen. Du könntest dies auf viele Arten tun, aber es ist mit dem Functin-as-a-child-Muster möglich:
 
 ```jsx
 <Fetch url="api.myself.com">
@@ -113,16 +113,14 @@ Stell dir vor, du müsstest einige Daten von einem Server abholen. Du könntest 
 </Fetch>
 ```
 
-Verbringe eine Minute, um mit [diesem Behälter](https://www.webpackbin.com/NymfRpcwf) zu spielen und schau mal, ob du herausfinden kannst, wie es funktioniert [(hier ist mein Ansatz)](https://www.webpackbin.com/NkoIz1owG)
-
-Mach dir keine Sorgen, wenn das über erstmals zu viel ist. Alles was ich will ist, dass du nicht überrascht bist, wenn du das da draußen siehst. Mit children ist alles möglich.
+Mach dir keine Sorgen, wenn das erstmal zu viel erscheint. Alles was ich will ist, dass du nicht überrascht bist, wenn du das da in fremdem Code siehst. Mit Children ist alles möglich.
 
 ## Children manipulieren
 
-Wenn du einen Blick auf die React Docs wirfst, wirst du sehen, dass „children eine *undurchsichtige Datenstruktur* sind“. Was sie uns im wesentlichen sagen, ist, dass `props.children` jeder Typ sein kann, eine Funktion, ein Objekt, ein Feld, etc. Da du alles übergeben kannst, weißt du es nie sicher.
+Wenn du einen Blick auf die React-Dokumentation wirfst, wirst du sehen, dass „children eine *intransparente Datenstruktur* sind“. Was sie uns im wesentlichen sagen, ist, dass `props.children` jeder Typ sein kann, eine Funktion, ein Objekt, ein Feld, etc. Da du alles übergeben kannst, weißt du es nie sicher.
 React bietet eine Reihe von Helfer-Funktionen, um das bearbeiten von children einfach und schmerzfrei zu machen. Diese sind bei `React.Children` erhältlich.
 
-## Über children loopen
+## Über children iterieren
 
 Die beiden offentsichtlichsten Helfer sind `React.Children.map` und `React.Children.forEach`. Sie arbeiten genau wie Ihre Feld-Counterparts, außer dass sie auch funktionieren, wenn eine Funktion, Objekt oder irgendetwas als children übergeben wird.
 
