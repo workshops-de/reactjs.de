@@ -1,25 +1,22 @@
 {% for user_hash in site.data.users %}{% assign user = user_hash[1] %}{% if user.name == include.name %}
 
-<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
-  <div class="card shadow-sm h-100">
-
-    <div class="card-body">
-      <div class="row">
-        <div class="col-4 text-center mb-2">
-          <img alt="{{ user.name }}" class="shadow-sm rounded img-fluid" height="130" src="/assets/img/gravatars/{{ user.gravatar_uid }}-300x300.jpg"
+<div class="card shadow-sm c-hover-shadow mb-4">
+  <a data-toggle="collapse" class="card-body" data-target=".user-{{ user.gravatar_uid }}" aria-expanded="true" aria-controls="collapseOne">
+    <div class="row">
+      <div class="col-2 mb-2">
+       <img alt="{{ user.name }}" class="shadow-sm rounded img-fluid" height="130" src="/assets/img/gravatars/{{ user.gravatar_uid }}-300x300.jpg"
                 width="130">
-        </div>
-        <div class="col-8 mb-2">
+      </div>
+      <div class="col-8 mb-2">
           <h2>{{ user.name }}</h2>
           <span class="text-muted">{{ user.intro }}</span>
-        </div>
       </div>
-
-      <hr>
-
-      {{ user.bio }}
     </div>
-  </div>
-</div>
+    <div class="user-{{ user.gravatar_uid }} collapse" data-parent="#accordion">
+        <hr>
+        {{ user.bio }}
+    </div>
+  </a>
 
+</div>
 {% endif %}{% endfor %}

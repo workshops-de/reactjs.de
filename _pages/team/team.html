@@ -4,6 +4,7 @@ title: Das Team von ReactJS.DE
 header: light
 description: Wir sind ein Team aus React-Enthusiasten. Lerne uns hier kennen!
 ---
+
 <main role="main">
   <div class="c-header c-header-dark header-team d-flex align-items-center mb-5">
     <div class="container">
@@ -14,11 +15,28 @@ description: Wir sind ein Team aus React-Enthusiasten. Lerne uns hier kennen!
   </div>
 
   <div class="container">
-    <div class="row">
-      {% include_relative _team_member.html name="Sebastian Deutsch" %}
-      {% include_relative _team_member.html name="Robin Böhm" %}
-      {% include_relative _team_member.html name="Britta Lenzen" %}
-      {% include_relative _course_ad.html %}
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div id="accordion">
+          {% include_relative _team_member.html name="Sebastian Deutsch" %}
+          {% include_relative _team_member.html name="Robin Böhm" %}
+          {% include_relative _team_member.html name="Britta Lenzen" %}
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <p class="h4 mb-5">Eine Kooperation von</p>
+        <p>
+          <a href="https://9elements.com" target="_blank" rel="noopener">
+            <img src="/assets/img/9elements-logo.svg" alt="9elements">
+          </a>
+        </p>
+        <p>
+          <a href="https://symetics.com" target="_blank" rel="noopener">
+            <img src="/assets/img/symetics-logo.svg" alt="symetics" height="48">
+          </a>
+        </p>
+      </div>
     </div>
   </div>
 </div>
