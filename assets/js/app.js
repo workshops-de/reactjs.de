@@ -1,45 +1,22 @@
-function fadeOut(_, element) {
+function adFader(_, element) {
   var elementTop = $(element).offset().top;
   var elementBottom = elementTop + $(element).outerHeight(true);
-  var offset = 300;
 
   function refresh() {
-    var scrollTop = $(window).scrollTop() + offset;
+    var scrollTop = $(window).scrollTop();
+    var scrollBottom = $(window).scrollTop() + $(window).height();
+    var topBottomCenter = (scrollBottom - scrollTop) / 2
+    var scrollCenter = scrollTop + topBottomCenter;
 
-    if (scrollTop  > elementBottom) {
-      var blub = scrollTop - elementBottom;
-      var value = Math.min(blub / offset, 1);
-
-      // console.log(value);
+    if (elementTop > scrollCenter) {
+      $(element).css('background-color', 'rgba(250, 250, 250, 1)')
+    } else if (elementBottom < scrollCenter) {
+      console.log('jo')
+      var blub = elementBottom - scrollTop;
+      var value = 1 - Math.min(blub / topBottomCenter, 1);
       $(element).css('background-color', 'rgba(220, 220, 220 , ' + value + ')')
     } else {
-      $(element).css('background-color', '#fff')
-    }
-  }
-
-  refresh()
-  $(window).scroll(refresh);
-}
-
-function fadeIn(_, element) {
-  var elementTop = $(element).offset().top;
-  var offset = 150;
-
-  function refresh() {
-    var scrollBottom = $(window).scrollTop() + $(window).height() - offset;
-    console.log(elementTop)
-    console.log(scrollBottom)
-
-    if (scrollBottom > elementTop) {
-      var blub = scrollBottom - elementTop;
-      console.log('blub', blub);
-      var value = 1- Math.max(blub / offset, 0);
-      console.log('value', value);
-
-      // console.log(value);
-      $(element).css('background-color', 'rgba(220, 220, 220 , ' + value + ')')
-    } else {
-      $(element).css('background-color', 'rgba(220, 220, 220, 1)')
+      $(element).css('background-color', 'rgba(220, 220, 220, 0)')
     }
   }
 
@@ -48,7 +25,6 @@ function fadeIn(_, element) {
 }
 
 $(document).ready(function () {
-  $('[data-fade-out]').each(fadeOut);
-  $('[data-fade-in]').each(fadeIn);
+  $('[ad-fader]').each(adFader);
 });
 
