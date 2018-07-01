@@ -69,7 +69,7 @@
 }
 
 .header-workshop {
-  color: $light;
+  // color: $light;
   padding-top: 100px;
 
   .header-intro {
@@ -85,9 +85,8 @@
       right: 0;
       bottom: 0;
       left: 0;
-      opacity: .95;
-      // background-color: #0d47a1;
-    background-image: linear-gradient(-180deg, #10161E 0%, #243348 100%);
+      opacity: .94;
+      background-image: linear-gradient(-180deg, #fefefe 0%, #efefef 100%);
     }
   }
 }
