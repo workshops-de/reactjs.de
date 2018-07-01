@@ -102,6 +102,11 @@
         "source": "/ueber-uns/",
         "destination": "/team/",
         "type": 301
+      },
+      {
+        "source": "/schulungen/inhouse/",
+        "destination": "/schulungen/react-intensiv/",
+        "type": 301
       }
     ],
     "headers": [
