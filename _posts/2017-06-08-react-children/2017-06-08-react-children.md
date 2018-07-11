@@ -7,7 +7,9 @@ header_source: https://unsplash.com/photos/iWr3xT8C6L4
 categories: [react, basics]
 ---
 
-Nehmen wir an, wir haben eine `<Grid />` Komponente, die `<Row />` Komponenten enthalten kann. Du würdest sie so verwenden:
+> Info: Wir haben den Begriff "Children" -Kinder, bewusst nicht übersetzt.
+
+Nehmen wir an, wir haben eine `<Grid />` Komponente, die `<Row />` Komponenten enthalten kann. Diese würdest du so verwenden:
 
 ```html
 <Grid>
@@ -17,7 +19,7 @@ Nehmen wir an, wir haben eine `<Grid />` Komponente, die `<Row />` Komponenten e
 </Grid>
 ```
 
-Diese drei `Row` Komponenten werden an die `Grid` Komponente als `props.children` übergeben. Mit einem *expression container* (das ist der technische Begriff für diese schnörkeligen Klammern in JSX) können parents Ihre children rendern.
+Diese drei `Row` Komponenten werden an die `Grid` Komponente als `props.children` übergeben. Mit einem *expression container* (das ist der technische Begriff für diese geschweiften Klammern in JSX) können Parents ihre Children rendern.
 
 ```jsx
 class Grid extends React.Component {
@@ -27,7 +29,7 @@ class Grid extends React.Component {
 }
 ```
 
-Parents können auch entscheiden, keine children zu rendern oder zu manipulieren. Diese `<Fullstop />` Komponente zum Beispiel rendert ihre children überhaupt nicht.
+Parents können auch entscheiden, keine Children zu rendern oder zu verändern. Diese `<Fullstop />` Komponente zum Beispiel rendert ihre Children überhaupt nicht.
 
 ```jsx
 class Fullstop extends React.Component {
@@ -37,21 +39,21 @@ class Fullstop extends React.Component {
 }
 ```
 
-Es spielt keine Rolle welche children du an diese Komponente übergibst, sie wird immer „Hello world!“ zeigen und nichts anderes.
+Es spielt keine Rolle, welche Children du an diese Komponente übergibst, sie wird immer „Hello world!“ zeigen und nichts anderes.
 
-Hinweis: Das `<h1>` in dem Beispiel oben (ähnlich wie alle HTML-Primitiven) rendert seine children nicht, in diesem Fall „Hello World!“.
+Hinweis: Das `<h1>` in dem Beispiel oben (ähnlich wie alle HTML-Primitiven) rendert seine Children nicht. In diesem Fall „Hello World!“.
 
-## Alles kann ein child sein
+## Alles kann ein Child sein
 
-Children Zum Beispiel können wir unserer <Grid /> Komponente von oben einen Text übergeben und es wird perfekt funktionieren.
+Children Zum Beispiel können wir unserer <Grid /> Komponente von oben einen Text übergeben und es wird problemlos funktionieren.
 
 ```jsx
 <Grid>Hello world!</Grid>
 ```
 
-JSX entfernt automatisch weiße Lücken am Anfang und Ende einer Zeile sowie auch Leerzeilen. Es verdichtet außerdem leere Zeilen in die Mitte von String-Literalen zu in einen Raum.
+JSX entfernt automatisch weiße Lücken am Anfang und Ende einer Zeile sowie auch Leerzeilen. Außerdem kürzt es leere Zeilen in die Mitte von Strings.
 
-Das bedeutet, dass alle diese Beispiele das Gleiche machen werden:
+Das bedeutet, dass folgende Beispiele das Gleiche machen werden:
 
 ```html
 <Grid>Hello world!</Grid>
@@ -71,7 +73,7 @@ Das bedeutet, dass alle diese Beispiele das Gleiche machen werden:
 </Grid>
 ```
 
-Du kannst auch mehrere Arten von children perfekt mischen und anpassen:
+Du kannst auch mehrere Arten von Children ohne Probleme mischen und anpassen:
 
 ```html
 <Grid>
@@ -82,8 +84,10 @@ Du kannst auch mehrere Arten von children perfekt mischen und anpassen:
 </Grid>
 ```
 
-## Funktion als ein child
-Wir können jede JavaScript Expression als children ausführen:
+
+## Funktion als Child
+
+Wir können jeden JavaScript-Ausdruck als Child ausführen:
 
 ```jsx
 class Executioner extends React.Component {
@@ -95,7 +99,7 @@ class Executioner extends React.Component {
 }
 ```
 
-Du würdest diese Komponente so verwenden:
+Diese Komponente würdest du dann so verwenden:
 
 ```jsx
 <Executioner>
@@ -105,7 +109,7 @@ Du würdest diese Komponente so verwenden:
 
 Dieses Beispiel ist nicht sonderlich sinnvoll, aber es zeigt die Idee.
 
-Stell dir vor, du müsstest einige Daten von einem Server abholen. Du könntest dies auf viele Arten tun, aber es ist mit dem Functin-as-a-child-Muster möglich:
+Stell dir vor, du müsstest Daten von einem Server abrufen. Du könntest dies auf viele Arten tun, aber es eben auch mit dem Functin-as-a-child-Muster in folgender Weise:
 
 ```jsx
 <Fetch url="api.myself.com">
@@ -113,16 +117,16 @@ Stell dir vor, du müsstest einige Daten von einem Server abholen. Du könntest 
 </Fetch>
 ```
 
-Mach dir keine Sorgen, wenn das erstmal zu viel erscheint. Alles was ich will ist, dass du nicht überrascht bist, wenn du das da in fremdem Code siehst. Mit Children ist alles möglich.
+Mach dir keine Sorgen, wenn das erstmal zu viel erscheint. Alles was ich will ist, dass du nicht überrascht bist, wenn du dies in fremdem Code siehst. Mit Children ist alles möglich.
 
 ## Children manipulieren
 
-Wenn du einen Blick auf die React-Dokumentation wirfst, wirst du sehen, dass „children eine *intransparente Datenstruktur* sind“. Was sie uns im wesentlichen sagen, ist, dass `props.children` jeder Typ sein kann, eine Funktion, ein Objekt, ein Feld, etc. Da du alles übergeben kannst, weißt du es nie sicher.
-React bietet eine Reihe von Helfer-Funktionen, um das bearbeiten von children einfach und schmerzfrei zu machen. Diese sind bei `React.Children` erhältlich.
+Wenn du einen Blick auf die React-Dokumentation wirfst, wirst du sehen, dass „Children eine *intransparente Datenstruktur* sind“. Was sie uns im wesentlichen sagen, ist, dass `props.children` jeder Typ sein kann - eine Funktion, ein Objekt, ein Feld, etc. Da du alles übergeben kannst, weißt du es nie sicher.
+React bietet eine Reihe von Helfer-Funktionen, um das Bearbeiten von Children einfach und schmerzfrei zu machen. Diese sind bei `React.Children` erhältlich.
 
-## Über children iterieren
+## Über Children iterieren
 
-Die beiden offentsichtlichsten Helfer sind `React.Children.map` und `React.Children.forEach`. Sie arbeiten genau wie Ihre Feld-Counterparts, außer dass sie auch funktionieren, wenn eine Funktion, Objekt oder irgendetwas als children übergeben wird.
+Die beiden offentsichtlichsten Helfer sind `React.Children.map` und `React.Children.forEach`. Sie arbeiten genau wie Ihre Feld-Counterparts, außer dass sie auch funktionieren, wenn eine Funktion, Objekt oder irgendetwas als Children übergeben wird.
 
 ```jsx
 class IgnoreFirstChild extends React.Component {
@@ -141,7 +145,7 @@ class IgnoreFirstChild extends React.Component {
 }
 ```
 
-Die `<IgnoreFirstChild />` Komponente katalogisiert alle ihre children, ignoriert das erste child und gibt alle anderen zurück.
+Die `<IgnoreFirstChild />` Komponente katalogisiert alle ihre Children, ignoriert das erste child und gibt alle anderen zurück.
 
 ```javascript
 <IgnoreFirstChild>
@@ -150,7 +154,7 @@ Die `<IgnoreFirstChild />` Komponente katalogisiert alle ihre children, ignorier
 </IgnoreFirstChild>
 ```
 
-In diesem Fall hätten wir auch `this.props.children.map` benutzt. Aber was wäre passiert, wenn jemand eine Funktion als child übergeben hätte? `this.props.children' wäre eine Funktion statt eines Felds gewesen, und wir hätten eine Fehlermeldung!
+In diesem Fall hätten wir auch `this.props.children.map` benutzt. Aber was wäre passiert, wenn jemand eine Funktion als Child übergeben hätte? `this.props.children' wäre eine Funktion statt eines Felds gewesen, und wir hätten eine Fehlermeldung!
 
 Mit der `React.Children.map` Funktion allerdings, ist das gar kein Problem:
 
@@ -163,7 +167,7 @@ Mit der `React.Children.map` Funktion allerdings, ist das gar kein Problem:
 
 ## Children zählen
 
-Da `this.props.children` jeder Typ sein kann, ist es relativ hard zu überprüfen, *wie viele* children eine Komponente hat! Naiv `this.props.children.length` auszuführen würde auseinanderfallen, wenn ein String oder eine Funktion übergeben würde. Wir hätten ein child, `“Hello World!“`, aber die `length` würde stattdessen als `12` gemeldet.
+Da `this.props.children` jeder Typ sein kann, ist es relativ schwer zu überprüfen, *wie viele* Children eine Komponente hat! Naiv `this.props.children.length` auszuführen würde nicht funktionieren, wenn ein String oder eine Funktion übergeben würde. Wir hätten nur ein Child, `“Hello World!“`, aber die Anzahl würde stattdessen `12` zeigen.
 
 ```javascript
 class ChildrenCounter extends React.Component {
@@ -173,7 +177,7 @@ class ChildrenCounter extends React.Component {
 }
 ```
 
-Es gibt die Anzahl der children wieder, egal welcher Art sie sind:
+Es gibt die Anzahl der Children wieder, egal welcher Art sie sind:
 
 ```javascript
 // Renders "1"
@@ -214,16 +218,17 @@ class Sort extends React.Component {
 </Sort>
 ```
 
-Das Beispiel oben rendert die Strings, aber sortiert:
+Das Beispiel oben rendert die Strings, aber sortiert.
+
 
 ## Children für jeden Bereich konvertieren
 
-Als letzten Ausweg, falls keine der oben gezeigten Methoden für dein Anliegen passend, kannst du children zu einem Array mit `React.Children.toArray` konvertieren. Das wäre nützlich, wenn du z.B. sortieren müsstest:
+Als letzten Ausweg, falls keine der oben gezeigten Methoden für dich passt, kannst du Children zu einem Array mit `React.Children.toArray` konvertieren. Das wäre nützlich, wenn du z.B. sortieren müsstest:
 
 
-## Ein einzelnes children durchsetzen
+## Ein einzelnes Children durchsetzen
 
-Wenn du an unsere `<Executioner />`  Komponente oben denkst, wird nur ein einziges child erwartet, das eine Funktion sein muss.
+Wenn du an unsere `<Executioner />`  Komponente oben denkst, wird nur ein einziges Child erwartet, das eine Funktion sein muss.
 
 ```javascript
 class Executioner extends React.Component {
@@ -233,8 +238,7 @@ class Executioner extends React.Component {
 }
 ```
 
-
-Wir könnten versuchen das mit `propTypes` zu erzwingen, das würde ungefähr so aussehen:
+Wir könnten versuchen das mit `propTypes` zu erzwingen, das würde so aussehen:
 
 ```javascript
 Executioner.propTypes = {
@@ -242,8 +246,7 @@ Executioner.propTypes = {
 }
 ```
 
-Das würde eine Nachricht an die Konsole protokollieren, was Entwickler ignorieren
-können. Stattdessen können wir `React.Children.only` in unserer `render` Methode zu nutzen!
+Das würde eine Nachricht an die Konsole im Browser ausgeben, was Entwickler ignorieren können. Stattdessen könnten wir auch `React.Children.only` in unserer `render` Methode zu nutzen!
 
 ```javascript
 class Executioner extends React.Component {
@@ -254,13 +257,13 @@ class Executioner extends React.Component {
 ```
 
 
-Das gibt dann ein einziges child in `this.props.children` zurück. Wenn es mehr als ein child gibt, spuckt es einen Error aus, also die Anwendung zu einem halt bring – perfekt, um zu verhindern, dass faule devs versuchen Unsinn mit unserer Komponente zu treiben.
+Das gibt dann ein einziges Child in `this.props.children` zurück. Wenn es mehr als ein child gibt, gibt es einen Fehler aus - die Anwendung bricht ab. Dies hindert faule Entwickler daran, Unsinn mit unserer Komponente zu treiben.
 
 ## Children editieren
 
-Wir können beliebige Komponenten als children rendern, aber sie immer noch sie immer noch von dem parent kontrollieren, anstelle von der Komponente von der wir sie gerendert haben. Um dies zu verdeutlichen, sagen wir mal wir haben eine `RadioGroup` Komponente, die eine Anzahl von `RadioButton` Komponenten beinhalten kann. (die eine `<input type="radio">` eine in ein `<label>` rendern
+Wir können beliebige Komponenten als Children rendern, aber sie immer noch von dem Parent kontrollieren lassen, anstelle von der Komponente von der wir sie gerendert haben. Um dies zu verdeutlichen, nehmen wir eine `RadioGroup` Komponente, die eine Anzahl von `RadioButton` Komponenten beinhalten kann. (die eine `<input type="radio">` eine in ein `<label>` rendern
 
-Die `RadioButton` s werden nicht von der `RadioGroup` selbst gerendert, sie werden als children benutzt. Das bedeutet irgendwo in unserer Anwendung haben wir diesen Code:
+Die `RadioButton` s werden nicht von der `RadioGroup` selbst gerendert, sie werden als Children benutzt. Das bedeutet irgendwo in unserer Anwendung haben wir diesen Code:
 
 ```javascript
 render() {
@@ -274,9 +277,7 @@ render() {
 }
 ```
 
-Es gibt jedoch ein Problem mit diesem Code. Die `input` s sind nicht gruppiert, was hierzu führt:
-
-Um input Tags zu gruppieren, brauchen sie alle das gleiche `name` Attribut. Wir könnten natürlich fortfahren und jedem einzelnen `RadioButton` einen `name` zuordnen:
+Es gibt jedoch ein Problem mit diesem Code. Die Eingabefelder sind nicht gruppiert. Um input Tags zu gruppieren, brauchen sie alle das gleiche `name`-Attribut. Wir könnten natürlich fortfahren und jedem einzelnen `RadioButton` ein `name`-Attribut zuordnen:
 
 ```javascript
 <RadioGroup>
@@ -286,11 +287,11 @@ Um input Tags zu gruppieren, brauchen sie alle das gleiche `name` Attribut. Wir 
 </RadioGroup>
 ```
 
-Aber das ist a) langweilig und b) fehleranfällig. Wir haben die ganze Macht von JavaScript in unseren Händen!  Können wir das nutzen, um unserer `RadioGroup` den `name` zu sagen, den alle children bekommen sollen und das ganze automatisch geschehen lassen?
+Aber das ist a) langweilig und b) fehleranfällig. Wir haben doch die ganze Macht von JavaScript in unseren Händen! Können wir das nutzen, um unserer `RadioGroup` das `name`-Attribut zuzuweisen, das allen Children übergeben wird?
 
-## Children Gerüst ändern
+## Children-Gerüst ändern
 
-In unserer `RadioGroup` fügen wir eine neue Methode namens `renderChildren` hinzu, wo wir die children props editieren:
+In unserer `RadioGroup` fügen wir eine neue Methode namens `renderChildren` hinzu, wo wir die Children-props editieren:
 
 ```javascript
 class RadioGroup extends React.Component {
@@ -316,7 +317,7 @@ class RadioGroup extends React.Component {
 }
 ```
 
-Beginnen wir mit dem Mapping über die children, um jedes individuelles child zu bekommen:
+Beginnen wir mit einem `.map()` über die children, um jedes individuelles Child zu bekommen:
 
 ```javascript
 renderChildren() {
@@ -331,7 +332,7 @@ Wie können wir ihre Eigenschaften bearbeiten?
 
 ## Unveränderbare klonende Elemente
 
-Hier kommt die letzte Helfer-Methode von heute ins Spiel. Wie der Name schon sagt, `React.cloneElement`  klont ein Element. Wir gebe ihm das Element, das wir als erstes klonen wollen als das erste Argument, und als zweites Argument können wir dann ein Objekt von props übergeben, das wir auf das geklonte Element setzen wollen:
+Hier kommt die letzte Hilfs-Methode von heute ins Spiel. Wie der Name schon sagt - `React.cloneElement` klont ein Element. Wir geben ihm das Element, das wir als erstes klonen wollen als erstes Argument. Als zweites Argument können wir dann ein Objekt von props übergeben, das wir auf das geklonte Element setzen wollen:
 
 ```javascript
 const cloned = React.cloneElement(element, {
@@ -339,9 +340,9 @@ const cloned = React.cloneElement(element, {
 })
 ```
 
-Das `cloned` Element wird jetzt die `new` prop auf `"yes!"` gesetzt haben.
+Das `cloned`-Element wird jetzt die `new` prop auf `"yes!"` gesetzt haben.
 
-Das ist genau was wir brauchen, um unsere `RadioGroup` zu beenden. Wir klonen jedes child und setzen die `name` prop des geklonten childs auf `this.props.name`:
+Das ist genau was wir brauchen, um unsere `RadioGroup` zu vollenden. Wir klonen jedes Child und setzen das `name`-Prop des geklonten childs auf `this.props.name`:
 
 ```javascript
 renderChildren() {
@@ -353,7 +354,7 @@ renderChildren() {
 }
 ```
 
-Der letzte Schritt ist es, einen eindeutigen `name` an unsere `RadioGroup` zu übergeben:
+Der letzte Schritt ist es, einen eindeutiges `name`-Attribut an unsere `RadioGroup` zu übergeben:
 
 ```javascript
 <RadioGroup name="g1">
@@ -363,8 +364,7 @@ Der letzte Schritt ist es, einen eindeutigen `name` an unsere `RadioGroup` zu ü
 </RadioGroup>
 ```
 
-
-Es funktioniert! Anstatt manuell jedes `name` Attribut auf jeden `RadioButton` zu setzen, sagen wir einfach unserer `Radiogroup`, welchen Namen wir wollen und es wird sich drum gekümmert.
+Es funktioniert! Anstatt manuell jedes `name`-Attribut auf jeden `RadioButton` zu setzen, sagen wir einfach unserer `Radiogroup`, welchen Namen wir wollen und es wird sich drum gekümmert.
 
 
 #### Credits
