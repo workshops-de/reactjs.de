@@ -1,7 +1,7 @@
 ---
 title: "Reactive 2015 - Interview mit Andre Staltz"
 description: "Die Leute haben oft Angst etwas Neues zu lernen"
-author: "Sebastian Deutsch"
+author: "Felix Rau"
 published_at: 2015-11-17 14:43:48
 header: light
 header_source: https://unsplash.com/photos/4TodkZIJkrY
