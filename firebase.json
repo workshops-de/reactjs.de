@@ -79,6 +79,11 @@
         "type": 301
       },
       {
+        "source": "/posts/reacteurope-summary",
+        "destination": "/artikel/reacteurope-2015/",
+        "type": 301
+      },
+      {
         "source": "/posts/:id*",
         "destination": "/artikel/:id/",
         "type": 301
