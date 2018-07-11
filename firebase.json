@@ -9,6 +9,11 @@
     ],
     "redirects": [
       {
+        "source": "/artikel/vdom-rect/",
+        "destination": "/artikel/vdom-react/",
+        "type": 301
+      },
+      {
         "source": "/artikel/backbone-chaplin-und-react/",
         "destination": "/artikel/backbone-chaplin-react/",
         "type": 301
