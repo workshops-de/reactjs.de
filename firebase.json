@@ -69,6 +69,11 @@
         "type": 301
       },
       {
+        "source": "/posts/Interview-Reactive-2015-Andre-Staltz",
+        "destination": "/artikel/interview-andre-staltz/",
+        "type": 301
+      },
+      {
         "source": "/posts/:id*",
         "destination": "/artikel/:id/",
         "type": 301
