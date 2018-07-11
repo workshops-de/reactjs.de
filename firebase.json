@@ -74,6 +74,11 @@
         "type": 301
       },
       {
+        "source": "/posts/Interview-Mark-Dalgleish-Reactive-2015",
+        "destination": "/artikel/interview-mark-dalgleish/",
+        "type": 301
+      },
+      {
         "source": "/posts/:id*",
         "destination": "/artikel/:id/",
         "type": 301
