@@ -25,6 +25,18 @@ $black:  #000;
 $white:  #fff;
 
 $spacer: 1rem;
+$spacers: ();
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 6)
+), $spacers);
+
+
 $navbar-brand-font-size: 1rem;
 $navbar-padding-y:                  ($spacer * 0.8);
 $navbar-light-color:                rgba($black, .8);
@@ -39,17 +51,6 @@ $pagination-padding-x: 1rem;
 $yiq-contrasted-threshold:  195;
 
 $code-color: #212529;
-
-$spacers: ();
-$spacers: map-merge((
-  0: 0,
-  1: ($spacer * .25),
-  2: ($spacer * .5),
-  3: $spacer,
-  4: ($spacer * 1.5),
-  5: ($spacer * 3),
-  6: ($spacer * 6)
-), $spacers);
 
 // Imports
 //
