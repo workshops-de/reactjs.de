@@ -3,7 +3,7 @@ GEM
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    autoprefixer-rails (8.6.2)
+    autoprefixer-rails (8.6.5)
       execjs
     bootstrap (4.1.1)
       autoprefixer-rails (>= 6.0.3)
