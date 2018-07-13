@@ -53,7 +53,6 @@ $navbar-light-toggler-border-color: rgba($black, .5);
 // Settings
 $headings-margin-bottom: 1.1rem;
 $paragraph-margin-bottom:   1.25rem !default;
-$code-color: #212529;
 
 // Imports
 //
@@ -64,7 +63,7 @@ $code-color: #212529;
 @import "navbar";
 @import "copy";
 @import "footer";
-@import "rouge-highlight";
+@import "highlight-colors";
 @import "header";
 @import "sticky";
 @import "content";
