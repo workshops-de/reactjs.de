@@ -2,20 +2,15 @@
 ---
 // 🔝 those lines above are needed by jekyll
 
-$font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-size-base: 1.1rem;
-
-
-
-$line-height-base: 1.618;
-$headings-margin-bottom: 1.1rem;
-$card-cap-bg: #fff;
-$card-border-color: #fff;
-
-$paragraph-margin-bottom:   1.25rem !default;
-
+// General
 $enable-shadows: true;
 
+// Font / Typographie
+$font-family-sans-serif:  "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 1.1rem;
+$line-height-base: 1.618;
+
+// Theme Colors
 $primary:#709cde; // #4eafca
 $success:#43ac6a;
 $warning:#e99002;
@@ -23,7 +18,9 @@ $danger: #f04124;
 $info: #61DAFB;
 $black:  #000;
 $white:  #fff;
+$yiq-contrasted-threshold:  195;
 
+// Spacers
 $spacer: 1rem;
 $spacers: ();
 $spacers: map-merge((
@@ -36,7 +33,16 @@ $spacers: map-merge((
   6: ($spacer * 6)
 ), $spacers);
 
+// Cards
+$card-cap-bg: $white;
+$card-border-color: $white;
 
+// Pagination
+$pagination-border-width: 0;
+$pagination-padding-y: 1rem;
+$pagination-padding-x: 1rem;
+
+// Navbar
 $navbar-brand-font-size: 1rem;
 $navbar-padding-y:                  ($spacer * 0.8);
 $navbar-light-color:                rgba($black, .8);
@@ -44,12 +50,9 @@ $navbar-dark-color:                 rgba($white, .9);
 $navbar-dark-toggler-border-color:  rgba($white, .5);
 $navbar-light-toggler-border-color: rgba($black, .5);
 
-$pagination-border-width: 0;
-$pagination-padding-y: 1rem;
-$pagination-padding-x: 1rem;
-
-$yiq-contrasted-threshold:  195;
-
+// Settings
+$headings-margin-bottom: 1.1rem;
+$paragraph-margin-bottom:   1.25rem !default;
 $code-color: #212529;
 
 // Imports
