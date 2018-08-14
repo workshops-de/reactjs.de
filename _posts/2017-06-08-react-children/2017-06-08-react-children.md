@@ -200,6 +200,10 @@ Es gibt die Anzahl der Children wieder, egal welcher Art sie sind:
 ```
 
 
+## Children für jeden Bereich konvertieren
+
+Als letzten Ausweg, falls keine der oben gezeigten Methoden für dich passt, kannst du Children zu einem Array mit `React.Children.toArray` konvertieren. Das wäre nützlich, wenn du z.B. sortieren müsstest:
+
 ```javascript
 class Sort extends React.Component {
   render() {
@@ -219,11 +223,6 @@ class Sort extends React.Component {
 ```
 
 Das Beispiel oben rendert die Strings, aber sortiert.
-
-
-## Children für jeden Bereich konvertieren
-
-Als letzten Ausweg, falls keine der oben gezeigten Methoden für dich passt, kannst du Children zu einem Array mit `React.Children.toArray` konvertieren. Das wäre nützlich, wenn du z.B. sortieren müsstest:
 
 
 ## Ein einzelnes Children durchsetzen
