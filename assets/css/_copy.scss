@@ -34,7 +34,8 @@
   color: $white;
 
   blockquote {
-  font-size: $font-size-base * 1.2;
+    font-size: $font-size-base * 1.2;
+    letter-spacing: 1px;
   }
 
   $testimonial-start: darken($primary, 10%);
