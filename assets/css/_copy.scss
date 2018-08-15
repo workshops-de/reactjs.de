@@ -24,7 +24,6 @@
   z-index: -1;
 }
 
-
 .copy-testimonials  {
   position: relative;
   background: url(/assets/img/courses/testimonial-annika-stille-adesso.jpg);
@@ -35,7 +34,6 @@
 
   blockquote {
     font-size: $font-size-base * 1.2;
-    letter-spacing: 1px;
   }
 
   $testimonial-start: darken($primary, 10%);
@@ -51,4 +49,18 @@
     background: -webkit-linear-gradient(left, rgba($testimonial-start,1) 0%,rgba($testimonial-end,0.85) 34%,rgba($testimonial-end,0.75) 55%,rgba($testimonial-end,0) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, rgba($testimonial-start,1) 0%,rgba($testimonial-end,0.85) 34%,rgba($testimonial-end,0.75) 55%,rgba($testimonial-end,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   }
+}
+
+.copy-section-book:before {
+  content: "";
+  background: url(/assets/img/courses/white-book.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
