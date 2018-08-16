@@ -221,7 +221,7 @@ Das bis zu dieser Stelle konfigurierte Beispiel-Projekt findet ihr auf dem Branc
 
 Die erste Konfiguration unseres Projektes ist damit abgeschlossen und wir können Webpack  aus dem Root-Verzeichnis unseres Projektes mit `./node_modules/bin/webpack` ausführen:
 
-![Starten von Webpack](run_webpack.png)
+![Starten von Webpack](run-webpack.png)
 
 Nach der Ausführung von Webpack findet ihr im `public/dist`-Verzeichnis die von Webpack erzeugten Dateien. Um die Beispiel-Anwendung auszuprobieren, könnt ihr die Datei `public/index.html` in Eurem Browser öffnen.
 
