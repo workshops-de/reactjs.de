@@ -11,7 +11,7 @@ Jekyll::Hooks.register :site, :after_init do |p|
     basename = File.basename(file, File.extname(file))
     if basename !~ /^[a-z0-9-]+$/
       puts "Image: #{basename}"
-      puts "Only use the following lowercase letter, numbers and hypen."
+      puts "Only use the following lowercase letter, numbers and hyphen."
       exit 1
     end
   end
