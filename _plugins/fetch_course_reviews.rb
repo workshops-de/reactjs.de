@@ -1,7 +1,8 @@
-# Jekyll::Hooks.register :site, :after_init do |site|
-#   require 'rest-client'
-#   puts "Fetching reviews..."
-#   response = RestClient.get('http://workshops.de/api/course/17')
-#   File.write('_includes/_course_reviews_jsonld.json', response.body)
-#   puts "Fetching reviews...done"
-# end
+Jekyll::Hooks.register :site, :after_init do |site|
+  require 'rest-client'
+  puts "Fetching course..."
+  #response = RestClient.get('https://workshops.de/api/course/17')
+  response = RestClient.get('http://localhost:4000/api/course/17')
+  File.write('_data/course.json', response.body)
+  puts "Fetching course...done"
+end
