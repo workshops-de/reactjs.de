@@ -1,3 +1,17 @@
+{% capture email_subject %}ReactJS.DE - Artikel-Idee{% endcapture %}
+{% capture email_body %}Hallo Robin,
+
+ich würde gerne einen Artikel auf ReactJS.DE veröffentlichen.
+
+Thema:
+
+Ein paar Zeilen über mich:
+
+Würde mich sehr über dein Feedback freuen!
+
+Liebe Grüße
+{% endcapture %}
+
 <section class="copy-section py-6" ad-fader="" id="how-to">
   <div class="container">
     <div class="row">
@@ -7,17 +21,15 @@
           So einfach funktioniert es.
         </p>
         <p>
-          Du kannst Robin (wir duzen uns) einfach eine E-Mail an <a href="mailto:robin@reactjs.de?subject=ReactJS.DE Artikel Idee&body=Hallo Robin,%0D%0A%0D%0Aich würde gerne einen Artikel auf ReactJS.DE veröffentlichen.%0D%0A%0D%0AThema:%0D%0A%0D%0AEin paar Zeilen über mich:%0D%0A%0D%0AWürde mich sehr über dein Feedback freuen!%0D%0ALiebe Grüße" target="_blank">robin@reactjs.de</a> mit deinem Thema schicken.<br>
-          Bist du schon weiter und hast du schon einen Entwurf? - Häng ihn einfach direkt an.
+          Du kannst Robin (wir duzen uns) einfach eine E-Mail mit deinem Thema schicken.<br>
+          Bist du schon weiter und hast du schon einen Entwurf? - Schicke ihn einfach direkt mit.<br>
+          <strong>Wir freuen uns auf deinen Artikel :)</strong>
+        </p>
+        <p class="mb-5">
+          <a href="/autor-leitfaden/" target="_blank">Leitfaden für Autoren &rsaquo;</a>
         </p>
         <p>
-          Wir schreiben unsere Texte in Markdown und sind dir gerne behilflich bei der Umformatierung.
-          Wenn du sehen möchtest, wie dein Artikel später aussehen wirst, kannst du es dir auch direkt angucken.
-          Unsere Seite benutzt Jekyll - der statische Seitengenerator, der auch bei GitHub Pages zum Einsatz kommt.
-        </p>
-        <p>
-          ReactJS.DE ist frei verfügbar unter <a href="https://github.com/symetics/reactjs.de" target="_blank">https://github.com/symetics/reactjs.de</a>.
-          Dort findest du auch die Installationsanleitung. Das ist natürlich optional.
+          <a href="mailto:robin@reactjs.de?subject={{ email_subject | uri_escape }}&body={{ email_body | uri_escape }}" target="_blank" class="btn btn-lg btn-primary">Jetzt E-Mail an Robin schicken &rsaquo;</a>
         </p>
     </div>
   </div>
