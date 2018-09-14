@@ -69,10 +69,10 @@ var ButtonCounter = React.createClass({ // (1)
 });
 ```
 
-Komponenten werden mit `React.createClass` **(1)** erzeugt. Die wichtigste Funktion einer Komponente ist `render` **(2)**, wo das Markup für die DOM-Repräsentation der Komponente definiert wird. Die `add`-Funktion **(3)** im Beispiel ist eine von uns ausgedachte, die gerade nicht viel mehr macht als Klickevents in die JavaScript Konsole des Browsers zu schreiben. Zu bemerken ist noch, dass React den ganz normalen `onClick`-Handler des Browsers verwendet, der als Attribut auf dem `<button>` gesetzt wird, statt beispielsweise durch CSS-Selektoren. Durch geschweifte Klammern (`{}`) können in JSX JavaScript-Ausdrücke eingebettet werden.
+Komponenten werden mit `React.createClass` (1) erzeugt. Die wichtigste Funktion einer Komponente ist `render` (2), wo das Markup für die DOM-Repräsentation der Komponente definiert wird. Die `add`-Funktion (3) im Beispiel ist eine von uns ausgedachte, die gerade nicht viel mehr macht als Klickevents in die JavaScript Konsole des Browsers zu schreiben. Zu bemerken ist noch, dass React den ganz normalen `onClick`-Handler des Browsers verwendet, der als Attribut auf dem `<button>` gesetzt wird, statt beispielsweise durch CSS-Selektoren. Durch geschweifte Klammern (`{}`) können in JSX JavaScript-Ausdrücke eingebettet werden.
 
 ### JSX
-Wie kommt es, dass wir mitten in der `render`-Funktion **(4)** auf einmal HTML schreiben können? React verwendet dazu [JSX](https://facebook.github.io/jsx/), eine schlanke Syntaxerweiterung für JavaScript, mit der es leichter ist Markup zu schreiben.
+Wie kommt es, dass wir mitten in der `render`-Funktion (4) auf einmal HTML schreiben können? React verwendet dazu [JSX](https://facebook.github.io/jsx/), eine schlanke Syntaxerweiterung für JavaScript, mit der es leichter ist Markup zu schreiben.
 Die Verwendung von JSX ist optional, hat sich aber als Standard Templating-Lösung in React etabliert. JSX macht nichts weiter als die spitzen Klammern oben in folgende JavaScript-Funktionsaufrufe umzuwandeln ([JSBin](http://jsbin.com/qezomi/edit?html,js,console,output)):
 
 ```javascript
@@ -127,7 +127,7 @@ var ButtonCounter = React.createClass({
 });
 ```
 
-React Komponenten haben ein besonderes Attribut, den State, der Daten beinhaltet, die nur diese Komponente verwaltet und verändern kann. Der State unseres Buttons wird in getInitialState **(1)** mit einem JavaScript-Objekt initialisiert, das in seinem `count`-Attribut den Zählerstand festhält. `getInitialState` wird einmalig, beim Erstellen von Komponenteninstanzen aufgerufen.
+React Komponenten haben ein besonderes Attribut, den State, der Daten beinhaltet, die nur diese Komponente verwaltet und verändern kann. Der State unseres Buttons wird in getInitialState (1) mit einem JavaScript-Objekt initialisiert, das in seinem `count`-Attribut den Zählerstand festhält. `getInitialState` wird einmalig, beim Erstellen von Komponenteninstanzen aufgerufen.
 In der `add`-Funktion setzen wir dann mit `setState` einen neuen State: `count` wird um 1 erhöht. Durch den expliziten Aufruf von `setState` benötigt React kein dirty checking. React ruft nach Änderungen des States einer Komponente automatisch ihre `render`-Funktion auf - so wird der neue Zählerstand direkt angezeigt.
 
 ### 3. Beispiel: drei farbige Buttons mit Props
@@ -183,8 +183,8 @@ React.render(<App />,
 
 [Interaktive Demo bei JSBin](http://jsbin.com/yesaka/edit?js,output)
 
-Zunächst haben wir hier erstmalig eine Komponentenverschachtelung **(1)**. Die neue `App`-Komponente ruft in ihrer `render`-Funktion die `ButtonCounter`-Komponente auf - und zwar für jede ihrer drei Farben **(2)**.
-Die `colour`-Prop wird von `App` wie ein HTML-Attribut an die `ButtonCounter` übergeben **(1)**. Innerhalb der `ButtonCounter` ist die jeweilige `colour` über `this.props.colour` verfügbar **(3)**. Props sind in Komponenten nur les-, nicht schreibbar. Das heißt jedoch nicht, dass der Farbwert eines Buttons in unserer Anwendung _absolut_ unveränderlich ist. Die `ButtonCounter`-Komponente selbst kann ihre Farbe nicht verändern, aber die umgebende `App`-Komponente setzt ja von außen die Farbe der `ButtonCounter`. Da die Farben in `App` Teil des States sind, können wir sie auch verändern:
+Zunächst haben wir hier erstmalig eine Komponentenverschachtelung (1). Die neue `App`-Komponente ruft in ihrer `render`-Funktion die `ButtonCounter`-Komponente auf - und zwar für jede ihrer drei Farben (2).
+Die `colour`-Prop wird von `App` wie ein HTML-Attribut an die `ButtonCounter` übergeben (1). Innerhalb der `ButtonCounter` ist die jeweilige `colour` über `this.props.colour` verfügbar (3). Props sind in Komponenten nur les-, nicht schreibbar. Das heißt jedoch nicht, dass der Farbwert eines Buttons in unserer Anwendung _absolut_ unveränderlich ist. Die `ButtonCounter`-Komponente selbst kann ihre Farbe nicht verändern, aber die umgebende `App`-Komponente setzt ja von außen die Farbe der `ButtonCounter`. Da die Farben in `App` Teil des States sind, können wir sie auch verändern:
 
 ```jsx
 App = React.createClass({
@@ -203,7 +203,7 @@ App = React.createClass({
 });
 ```
 
-`componentDidMount` **(1)** ist eine von Reacts Lifecycle-Hook-Funktionen. Sie wird einmalig ausgeführt, wenn eine Komponente in den DOM gerendert wird. Um zu veranschaulichen, dass die `colour` Prop der `ButtonCounter` von _außen_ verändert werden kann, tauschen wir sie alle 500ms **(2)** indem wir mit `setState` den State der `App`-Komponente verändern **(3)**.
+`componentDidMount` (1) ist eine von Reacts Lifecycle-Hook-Funktionen. Sie wird einmalig ausgeführt, wenn eine Komponente in den DOM gerendert wird. Um zu veranschaulichen, dass die `colour` Prop der `ButtonCounter` von _außen_ verändert werden kann, tauschen wir sie alle 500ms (2) indem wir mit `setState` den State der `App`-Komponente verändern (3).
 Props sind immer nur _für die jeweilige Komponente_, aber nicht absolut unveränderlich, denn die Eltern der Komponente setzen ja die Props und können dynamisch neue Werte an eine Unterkomponente geben. Sobald sich der State auf `App` ändert, wird automatisch ihre `render`-Methode neu aufgerufen. Die Unterkomponenten bekommen dabei neue Props übergeben und rendern ebenfalls neu.
 
 ### 4. Beispiel: State aus Komponenten herausgezogen in Mutterkomponente
@@ -289,9 +289,9 @@ var App = React.createClass({
 React.render(<App books={BOOKS} />, document.getElementById('react-main')); // (2)
 ```
 
-Wir beginnen mit der Definition einer Datenstruktur mit Buchdaten **(1)**, die am Ende des Codebeispiels als Prop an `App` übergeben werden **(2)**. Zu Beginn ist "Ulysses" aufgeklappt und "Seize the Day" zugeklappt **(3)**.
-In `Apps` `render`-Funktion wird der "Toggle all"-Button erstellt **(4)**. Die klappbaren Textblöcke werden mit `CollapsibleBlock`-Komponenten erstellt, die in der `toggableBooks`-Funktion **(5)** mit Props aus dem State der `App`-Komponente initialisiert werden.
-Die `CollapsibleBlock`-Komponente hat nun gar keinen State mehr **(6)**. Wenn ihre Überschrift geklickt wird ruft sie die `toggleHandler`-Funktion der `App` als Callback auf. Damit wir dort noch wissen auf was geklickt wurde übergeben wir den Slug des Buches and `toggleHandler`.
+Wir beginnen mit der Definition einer Datenstruktur mit Buchdaten (1), die am Ende des Codebeispiels als Prop an `App` übergeben werden (2). Zu Beginn ist "Ulysses" aufgeklappt und "Seize the Day" zugeklappt (3).
+In `Apps` `render`-Funktion wird der "Toggle all"-Button erstellt (4). Die klappbaren Textblöcke werden mit `CollapsibleBlock`-Komponenten erstellt, die in der `toggableBooks`-Funktion (5) mit Props aus dem State der `App`-Komponente initialisiert werden.
+Die `CollapsibleBlock`-Komponente hat nun gar keinen State mehr (6). Wenn ihre Überschrift geklickt wird ruft sie die `toggleHandler`-Funktion der `App` als Callback auf. Damit wir dort noch wissen auf was geklickt wurde übergeben wir den Slug des Buches and `toggleHandler`.
 `toggleHandler` und `toggleAll` in `App` sind die einzigen Funktionen, die State modifizieren. Nach jedem Aufruf von `setState` wird automatisch neu gerendert.
 
 Einen ähnlichen Ansatz würde man wählen, wenn Komponenten-State voneinander abhängig ist - etwa wenn man nur ein Element aus einer Liste auswählen darf. Sobald eine Komponente einen Klick empfängt muss sie ggf. eine zuvor ausgewählte Schwesternkomponente deaktivieren. Auch hier würde man am besten in der Mutterkomponente nachhalten welches Unterelement gerade ausgewählt ist und in einem Klickhandler der Mutterkomponente entscheiden welches Kind de-/aktiviert werden muss.
