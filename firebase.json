@@ -99,6 +99,11 @@
         "type": 301
       },
       {
+        "source": "/uploads/*",
+        "destination": "/",
+        "type": 301
+      },
+      {
         "source": "/jobs",
         "destination": "/",
         "type": 301
