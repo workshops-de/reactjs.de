@@ -9,6 +9,11 @@
     ],
     "redirects": [
       {
+        "source": "/artikel/react-und-babel-mit-es6-und-es7/",
+        "destination": "/artikel/react-babel/",
+        "type": 301
+      },
+      {
         "source": "/artikel/vdom-rect/",
         "destination": "/artikel/vdom-react/",
         "type": 301
@@ -61,11 +66,6 @@
       {
         "source": "/posts/react-anwendungen-mit-webpack-entwickeln/",
         "destination": "/artikel/react-webpack",
-        "type": 301
-      },
-      {
-        "source": "/posts/react-tutorial",
-        "destination": "/artikel/react-und-babel-mit-es6-und-es7/",
         "type": 301
       },
       {
