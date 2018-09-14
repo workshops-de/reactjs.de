@@ -1,6 +1,6 @@
 ---
 title: "Reactive 2015 - Interview mit Mark Dalgleish"
-description: "Die Leute haben oft Angst etwas Neues zu lernen"
+description: "Interview mit Mark Dalgleish: Entwickler müssen sich mit ihrer konfrontativen Kultur auseinandersetzen"
 author: "Felix Rau"
 published_at: 2015-10-06 14:43:48
 header: light

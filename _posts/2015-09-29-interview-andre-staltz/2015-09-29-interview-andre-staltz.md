@@ -1,6 +1,6 @@
 ---
 title: "Reactive 2015 - Interview mit Andre Staltz"
-description: "Die Leute haben oft Angst etwas Neues zu lernen"
+description: "Interview mit Speaker Andre Staltz: Die Leute haben oft Angst etwas Neues zu lernen"
 author: "Felix Rau"
 published_at: 2015-09-29 14:43:48
 header: light
