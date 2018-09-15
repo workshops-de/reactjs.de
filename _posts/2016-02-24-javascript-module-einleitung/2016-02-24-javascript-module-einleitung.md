@@ -141,7 +141,6 @@ Puh! Seid ihr noch da? Ich hoffe, ich habe euch unterwegs nicht irgendwo verlore
 Ihr habt bestimmt bemerkt, dass keines der Module bisher natives JavaScript war. Wir haben immer Wege gefunden, die Module zu emulieren; entweder über das Module Pattern, CommonJS oder AMD.
 Glücklicherweise haben die schlauen Köpfe von TC39 mit *ECMAScript 6* (ES6) eingebaute Module eingeführt.
 ES6 bietet einige Möglichkeiten Module zu im- und exportieren, was schon von anderen sehr schön erklärt wurde:
-- [jsmodules.io](http://jsmodules.io/cjs.html)
 - [exploringjs.com](http://exploringjs.com/es6/ch_modules.html)
 
 Das Großartige an ES6 Modulen im Vergleich zu CommonJS und AMD ist, wie es das Beste aus beiden Welten vereint: kompakte und deklarative Syntax *und* asynchrones Laden. Zusätzlich gibt es Vorteile wie bessere Unterstützung von zyklischen Abhängigkeiten.

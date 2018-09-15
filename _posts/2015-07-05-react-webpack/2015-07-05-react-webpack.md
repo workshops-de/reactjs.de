@@ -23,7 +23,7 @@ Daher erhaltet ihr an dieser Stelle einen Einstieg, wie ihr ohne Build-Tool und 
 
 [Webpack](http://webpack.github.io/) ist ein "Bundler", der aus einer Reihe von JavaScript-Dateien bzw -Modulen eine einzige "vollständige" JavaScript-Datei (ein "Bundle") erzeugt.
 
-Für die **Entwicklungszeit** stellt Webpack außerdem den sog. [Webpack Dev Server](http://webpack.github.io/docs/webpack-dev-server.html) zur Verfügung. Dabei handelt es sich um einen einfachen Webserver, über den ihr Eure Anwendung zum Testen ausliefern könnt. Ein großer Mehrwert dieses Tools kommt durch den "Hot"-Mode des Servers: in diesem Modus erkennt der Server Änderungen an Euren Quelldateien (sei es JavaScript, CSS, ...), transformiert diese automatisch und lädt Eure Webseite neu. Das geht zum einen sehr schnell, weil Webpack nicht die ganze Anwendung, sondern nur die veränderten Dateien neu übersetzt. Zum anderen wird damit das manuelle "Aktualisieren" der Anwendung im Browser obsolet. Ihr seht also unmittelbar beim Code schreiben, was das für Auswirkungen hat :-).
+Für die **Entwicklungszeit** stellt Webpack außerdem den sog. [Webpack Dev Server](https://webpack.js.org/configuration/dev-server/) zur Verfügung. Dabei handelt es sich um einen einfachen Webserver, über den ihr Eure Anwendung zum Testen ausliefern könnt. Ein großer Mehrwert dieses Tools kommt durch den "Hot"-Mode des Servers: in diesem Modus erkennt der Server Änderungen an Euren Quelldateien (sei es JavaScript, CSS, ...), transformiert diese automatisch und lädt Eure Webseite neu. Das geht zum einen sehr schnell, weil Webpack nicht die ganze Anwendung, sondern nur die veränderten Dateien neu übersetzt. Zum anderen wird damit das manuelle "Aktualisieren" der Anwendung im Browser obsolet. Ihr seht also unmittelbar beim Code schreiben, was das für Auswirkungen hat :-).
 
 Für die **Entwicklung von React-Anwendungen** bringt Webpack noch einen weiteren Vorteil mit: den spezialisierten "React Hot Loader". Dieser Loader sorgt dafür, dass der React State Eurer Anwendung auch über das Neuladen der veränderten Ressourcen hinaus erhalten bleibt. Ihr müsst also beispielsweise Formular-Eingaben, die ihr zum Testen gemacht habt und die in Eurem State abgelegt sind, nicht erneut eingeben, wenn ihr eine Formular-Komponente ändert. Das kann viel Zeit ersparen. Mit [`redux`](https://github.com/gaearon/redux) gibt es mittlerweile auch ein Flux-Framework, das expliziten Support für Hotloading auch von Flux-Komponenten (mittels des React Hot Loaders) verspricht.
 
@@ -131,20 +131,12 @@ Mit der oben gezeigten Konfiguration würde Webpack nun nach einer Datei mit dem
 
 Die `devtool`-Angabe schließlich veranlasst Webpack, Source Maps für das erzeugte Bundle-File zu erzeugen.
 
-Weitere Informationen zu den verwendeten Parametern findet ihr in der Webpack-Dokumentation:
-
-* [`entry`](http://webpack.github.io/docs/configuration.html#entry)
-
-* [`output`](http://webpack.github.io/docs/configuration.html#output)
-
-* [`resolve.extensions`](http://webpack.github.io/docs/configuration.html#resolve-extensions)
-
-* [`devtool`](http://webpack.github.io/docs/configuration.html#devtool)
+Weitere Informationen zu den verwendeten Parametern findet ihr in der [Webpack-Dokumentation](https://webpack.js.org/configuration/).
 
 
 ### Konfiguration der Webpack Loader
 
-Mit der oben gezeigten Konfigurationsdatei haben wir aber noch nicht viel gewonnen. Es fehlen nämlich noch die Angaben, wie Webpack unsere unterschiedlichen Datei-Typen verarbeiten soll, also die Konfiguration der [Webpack Loader](http://webpack.github.io/docs/loaders.html).
+Mit der oben gezeigten Konfigurationsdatei haben wir aber noch nicht viel gewonnen. Es fehlen nämlich noch die Angaben, wie Webpack unsere unterschiedlichen Datei-Typen verarbeiten soll, also die Konfiguration der [Webpack Loader](https://webpack.js.org/loaders/).
 
 Bevor ihr einen Loader verwenden könnt, müsst ihr diesen zunächst installieren. Dies geschieht wie gewohnt über die entsprechenden npm Pakete. Für unser Beispiel-Projekt sind die folgenden Loader installiert worden:
 
@@ -251,7 +243,7 @@ module.exports = {
 }
 ```
 
-Als nächstes fügen wir zwei Webpack [Plug-ins](https://webpack.github.io/docs/plugins.html) hinzu. Zum einen verwenden wir das `HotModuleReplacementPlugin`, mit dem das Reload-Feature aktiviert wird. Außerdem verwenden wir das `webpack.NoErrorsPlugin`. Dieses Plug-in sorgt dafür, das der Development Server keinen Code auf den Client pusht, der sich zuvor nicht übersetzen ließ. Wenn es beim Übersetzen Eures Codes also zu Fehlern kommt, seht ihr diese in der Terminal-Console aber nicht in Form einer kaputten Seite in Eurem Browser. Stattdessen wird Euer Browser erst dann aktualisiert, wenn ihr den Code repariert habt, so dass er erfolgreich übersetzt werden kann.
+Als nächstes fügen wir zwei Webpack [Plug-ins](https://webpack.js.org/plugins/) hinzu. Zum einen verwenden wir das `HotModuleReplacementPlugin`, mit dem das Reload-Feature aktiviert wird. Außerdem verwenden wir das `webpack.NoErrorsPlugin`. Dieses Plug-in sorgt dafür, das der Development Server keinen Code auf den Client pusht, der sich zuvor nicht übersetzen ließ. Wenn es beim Übersetzen Eures Codes also zu Fehlern kommt, seht ihr diese in der Terminal-Console aber nicht in Form einer kaputten Seite in Eurem Browser. Stattdessen wird Euer Browser erst dann aktualisiert, wenn ihr den Code repariert habt, so dass er erfolgreich übersetzt werden kann.
 
 ```javascript
 module.exports = {

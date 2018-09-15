@@ -11,7 +11,7 @@ categories: [reactjs, babel]
 
 React mit seinem JSX-Format erfordert einen Übersetzer in ein vom Browser ausführbares JavaScript. Während die passenden Werkzeuge dafür bisher von React mitgeliefert wurden, wird sich das im [nächsten Release ändern](https://reactjs.org/blog/2015/06/12/deprecating-jstransform-and-react-tools.html) ändern, so dass wir [dafür nur noch Babel](https://babeljs.io/docs/usage/jsx/) nutzen können.
 
-Da Babel nun _der_ Übersetzer für React ist, können wir neben JSX auch alle tollen neuen Eigenschaften von ECMAScript 2015 (auch bekannt als ES6) nutzen. Es hört aber nicht dort auf, [Babel unterstützt bereits jetzt eine ganze Reihe von ES7-Features](https://babeljs.io/docs/usage/experimental/), die gerade für React sehr praktisch sind und sogar [zum Teil von den React-Entwicklern kommen](https://github.com/sebmarkbage/ecmascript-rest-spread).
+Da Babel nun _der_ Übersetzer für React ist, können wir neben JSX auch alle tollen neuen Eigenschaften von ECMAScript 2015 (auch bekannt als ES6) nutzen. Es hört aber nicht dort auf, [Babel unterstützt bereits jetzt eine ganze Reihe von ES7-Features](https://babeljs.io/docs/en/plugins#experimental), die gerade für React sehr praktisch sind und sogar [zum Teil von den React-Entwicklern kommen](https://github.com/sebmarkbage/ecmascript-rest-spread).
 
 Diese wollen wir uns hier einmal kurz angucken. Damit du den Artikel ganz verstehen kannst, solltest du zumindest schon einmal ein [Hello-World mit React](https://reactjs.org/docs/hello-world.html) gebaut haben, es reicht aber Kenntnis über die alte ES5-Variante.
 
