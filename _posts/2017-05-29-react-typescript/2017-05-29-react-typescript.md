@@ -271,7 +271,7 @@ Zuerst erstelle ich ein TypeScript Interface für die Eigenschaften, welche die 
 
 ## Testen
 
-Zum Schluss wollte ich auch ein gutes Testing Setup mit TypeScript haben. Ich bin ein großer Fan von Facebooks [Jest](https://facebook.github.io/jest/) und habe ein bisschen gegooglet, um herauszufinden, ob ich es mit TypeScript starten kann. Es hat sich herausgestellt, dass es sehr gut möglich ist, und da gibt es sogar das [ts-jest](https://www.npmjs.com/package/ts-jest) Paket, dass all die schweren Arbeiten erledigt. Darüber hinaus gibt es da noch das `@types/jest` Paket, damit kannst du auch all deine Tests type-checken lassen kannst.
+Zum Schluss wollte ich auch ein gutes Testing Setup mit TypeScript haben. Ich bin ein großer Fan von Facebooks [Jest](https://jestjs.io/) und habe ein bisschen gegooglet, um herauszufinden, ob ich es mit TypeScript starten kann. Es hat sich herausgestellt, dass es sehr gut möglich ist, und da gibt es sogar das [ts-jest](https://www.npmjs.com/package/ts-jest) Paket, dass all die schweren Arbeiten erledigt. Darüber hinaus gibt es da noch das `@types/jest` Paket, damit kannst du auch all deine Tests type-checken lassen kannst.
 
 Großes Dankeschön an RJ Zaworski, [dessen Post über TypeScript und Jest](https://rjzaworski.com/2016/12/testing-typescript-with-jest) der mich in dieses Thema eingeführt hat. Sobald du `ts-jest` installiert hast, musst du Jest nur noch konfigurieren, das machst du in `package.json` mit diesen Einstellungen:
 
