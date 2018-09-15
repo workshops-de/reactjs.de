@@ -14,7 +14,7 @@ Eine Übersetzung aus dem Englischen. Der Artikel im Original ist [HIER](https:/
 
 ## Teil 1: „Kann bitte noch mal jemand erklären, was Module sind?“
 
-**Gute Autoren teilen ihre Bücher in Kapitel ein; gute Programmierer teilen ihre Anwendungen in Module ein**.
+> Gute Autoren teilen ihre Bücher in Kapitel ein; gute Programmierer teilen ihre Anwendungen in Module ein.
 
 Wie ein Buchkapitel sind Module nur Sammlungen von Wörtern (hier natürlich eher Code).
 Gute Module sind dabei in sich geschlossen und haben eine distinktive Funktion, was es erlaubt, sie zu verschieben, zu entfernen oder hinzuzufügen – ohne dabei das bestehende System zu gefährden.
