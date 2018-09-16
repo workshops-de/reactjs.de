@@ -11,7 +11,6 @@ function adFader(_, element) {
     if (elementTop > scrollCenter) {
       $(element).css('background-color', 'rgba(250, 250, 250, 1)')
     } else if (elementBottom < scrollCenter) {
-      console.log('jo')
       var blub = elementBottom - scrollTop;
       var value = 1 - Math.min(blub / topBottomCenter, 1);
       $(element).css('background-color', 'rgba(220, 220, 220 , ' + value + ')')
