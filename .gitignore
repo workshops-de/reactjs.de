@@ -4,4 +4,5 @@ _site
 .DS_Store
 _data/events.json
 _data/course.json
+_includes/_course_reviews.json
 firebase-debug.log
