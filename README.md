@@ -12,7 +12,7 @@ Website for the german React Community [ReactJS.de](https://reactjs.de/).
   [Windows](http://windows.github.com)); [GitHub's Guide to Installing
   Git](https://help.github.com/articles/set-up-git) is a good source of information.
 
-* [Ruby](https://www.ruby-l .org/en/)
+* [Ruby](https://www.ruby-lang.org/en/)
 
 ### 1. Getting the Sources
 
@@ -51,8 +51,8 @@ bundle exec jekyll serve --incremental
 ```
 
 ### 4. Pull Request
-Createa a (Pull Request)[https://help.github.com/articles/creating-a-pull-request/] to describe and propose your changes to this repository.
-If you don't know what Pull Requests(PR) all about you should check out (this article)[https://help.github.com/articles/about-pull-requests/].
+Createa a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) to describe and propose your changes to this repository.
+If you don't know what Pull Requests(PR) all about you should check out [this article](https://help.github.com/articles/about-pull-requests/).
 
 
 
