@@ -1,0 +1,13 @@
+<div>
+  <div class="stars text-center w-100">
+    <span class="star {% if include.stars >= 1 %}on{% endif %}"></span>
+    <span class="star {% if include.stars >= 2 %}on{% endif %}"></span>
+    <span class="star {% if include.stars >= 3 %}on{% endif %}"></span>
+    <span class="star {% if include.stars >= 4 %}on{% endif %}"></span>
+    <span class="star {% if include.stars >= 5 %}on{% endif %}"></span>
+  </div>
+  <div class="text-center quote">{{ include.quote }}</div>
+  <div class="text-muted text-center">
+    {{ include.date }}
+  </div>
+</div>
