@@ -1,12 +1,12 @@
-<div>
-  <div class="stars text-center w-100">
-    <span class="star {% if include.stars >= 1 %}on{% endif %}"></span>
-    <span class="star {% if include.stars >= 2 %}on{% endif %}"></span>
-    <span class="star {% if include.stars >= 3 %}on{% endif %}"></span>
-    <span class="star {% if include.stars >= 4 %}on{% endif %}"></span>
-    <span class="star {% if include.stars >= 5 %}on{% endif %}"></span>
+<div class="text-center mx-4 mb-4">
+  <div class="display-4 mb-2">
+    <span class="c-star {% if include.stars >= 1 %}c-star-on{% endif %}"></span>
+    <span class="c-star {% if include.stars >= 2 %}c-star-on{% endif %}"></span>
+    <span class="c-star {% if include.stars >= 3 %}c-star-on{% endif %}"></span>
+    <span class="c-star {% if include.stars >= 4 %}c-star-on{% endif %}"></span>
+    <span class="c-star {% if include.stars >= 5 %}c-star-on{% endif %}"></span>
   </div>
-  <div class="text-center quote">{{ include.quote }}</div>
+  <div class="mb-2">{{ include.quote }}</div>
   <div class="text-muted text-center">
     {{ include.date }}
   </div>
