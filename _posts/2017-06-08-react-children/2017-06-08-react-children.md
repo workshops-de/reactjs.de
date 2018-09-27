@@ -366,6 +366,6 @@ Der letzte Schritt ist es, einen eindeutiges `name`-Attribut an unsere `RadioGro
 Es funktioniert! Anstatt manuell jedes `name`-Attribut auf jeden `RadioButton` zu setzen, sagen wir einfach unserer `Radiogroup`, welchen Namen wir wollen und es wird sich drum gekümmert.
 
 
-#### Credits
+## Credits
 
 Original gepostet von [Max Stoiber](https://twitter.com/mxstbr) auf [mxstbr.blog](http://mxstbr.blog/2017/02/react-children-deepdive/).

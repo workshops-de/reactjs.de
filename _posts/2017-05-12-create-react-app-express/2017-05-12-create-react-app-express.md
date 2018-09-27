@@ -163,6 +163,6 @@ Create ReactJS App [beinhaltet](https://github.com/facebookincubator/create-reac
 
 Jetzt bist du ein Profi beim Anschließen einer CRA-generierten App an jegliche Backends. Hast du mehr Fragen? Willst du noch mehr über etwas anderes erfahren? Melde dich gerne für unseren Newsletter an.
 
-#### Credits
+## Credits
 
 [Original gepostet](https://daveceddia.com/create-react-app-express-backend/) von [Dave Ceddia](https://twitter.com/dceddia) auf [seinem Blog](https://daveceddia.com).
