@@ -5,6 +5,7 @@
 
     &:before {
       position: absolute;
+      color: $primary;
       content: "✓";
       left: -18px;
       font-weight: 600;
