@@ -1,0 +1,45 @@
+<section class="copy-section py-6" ad-fader="">
+  <div class="container">
+    {% include_relative _includes/_section_header.html cols="11"
+         feature="Trainer"
+         benefit="Lerne von den Besten."
+    %}
+
+    <div class="row mb-5">
+      <div class="col-10">
+        Wir schulen Entwickler zum Thema React. Um die bestmöglichen Schulungen zu geben, haben wir uns als Trainer-Team
+          zusammengeschlossen. Somit arbeiten wir gemeinsam an Materialien und Didaktik für unsere Teilnehmer.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div id="carouselTrainers" class="carousel slide" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner pb-4">
+            <div class="carousel-item active">
+              <div class="row justify-content-md-center">
+                {% include_relative _includes/_trainer.html name="Wojtek Gorecki" %}
+                {% include_relative _includes/_trainer.html name="Oleg Isonen" %}
+                <!-- {% include_relative _includes/_trainer.html name="Thomas Scharke" %} -->
+              </div>
+            </div>
+          </div>
+          <ol class="carousel-indicators">
+            <li data-target="#carouselTrainers" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselTrainers" data-slide-to="1"></li>
+          </ol>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <p class="mb-">
+          Unter anderem sind wir:
+        </p>
+        <ul class="c-checked-list">
+          <li>Erfahrene Softwareentwickler mit Fokus React</li>
+          <li>Aktive Mitglieder der React-Community</li>
+          <li>Organisatoren von Meetups und Konferenzen</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
