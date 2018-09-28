@@ -69,13 +69,14 @@
 }
 
 .header-workshop {
-  // color: $light;
   padding-top: 100px;
+  background: url('/assets/img/courses/header-bg.jpg');
+  background-size: cover;
+  background-position: center center;
 
   .header-intro {
     font-size: 1.4rem
   }
-
 
   &.header-workshop-gradient-overlay {
     &:before {
@@ -89,12 +90,6 @@
       background-image: linear-gradient(-180deg, #fefefe 0%, #efefef 100%);
     }
   }
-}
-
-.header-workshop {
-  background: url('/assets/img/courses/header-bg.jpg');
-  background-size: cover;
-  background-position: center center;
 }
 
 .header-team {
