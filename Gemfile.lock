@@ -1,27 +1,28 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    actionpack (5.2.3)
-      actionview (= 5.2.3)
-      activesupport (= 5.2.3)
+    actionpack (6.0.0)
+      actionview (= 6.0.0)
+      activesupport (= 6.0.0)
       rack (~> 2.0)
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
-      rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (5.2.3)
-      activesupport (= 5.2.3)
+      rails-html-sanitizer (~> 1.0, >= 1.2.0)
+    actionview (6.0.0)
+      activesupport (= 6.0.0)
       builder (~> 3.1)
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
-      rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    activesupport (5.2.3)
+      rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    activesupport (6.0.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+      zeitwerk (~> 2.1, >= 2.1.8)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
-    autoprefixer-rails (9.4.7)
+    autoprefixer-rails (9.6.1.1)
       execjs
     bootstrap (4.3.1)
       autoprefixer-rails (>= 9.1.0)
@@ -96,21 +97,21 @@ GEM
       forwardable-extended (~> 2.6)
     popper_js (1.14.5)
     public_suffix (3.1.1)
-    rack (2.0.6)
+    rack (2.0.7)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-html-sanitizer (1.0.4)
+    rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
-    railties (5.2.3)
-      actionpack (= 5.2.3)
-      activesupport (= 5.2.3)
+    railties (6.0.0)
+      actionpack (= 6.0.0)
+      activesupport (= 6.0.0)
       method_source
       rake (>= 0.8.7)
-      thor (>= 0.19.0, < 2.0)
-    rake (12.3.2)
+      thor (>= 0.20.3, < 2.0)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -119,7 +120,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rouge (3.5.1)
+    rouge (3.9.0)
     ruby_dep (1.5.0)
     safe_yaml (1.0.5)
     sass (3.7.4)
@@ -127,10 +128,9 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sassc (2.0.1)
+    sassc (2.1.0)
       ffi (~> 1.9)
-      rake
-    sassc-rails (2.1.0)
+    sassc-rails (2.1.2)
       railties (>= 4.0.0)
       sassc (>= 2.0)
       sprockets (> 3.0)
@@ -151,6 +151,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
+    zeitwerk (2.1.9)
 
 PLATFORMS
   ruby
@@ -166,7 +167,7 @@ DEPENDENCIES
   rest-client
 
 RUBY VERSION
-   ruby 2.5.0p0
+   ruby 2.6.3p62
 
 BUNDLED WITH
-   1.16.1
+   2.0.1
