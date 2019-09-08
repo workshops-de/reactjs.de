@@ -48,6 +48,13 @@
                         <span class="d-block d-lg-inline">
                           <span>in</span>
                           <span itemprop="location" content="{{event.location.address.addressLocality}} + Inhouse">{{event.location.address.addressLocality}}</span>
+                          <span>
+                            {% if event.language == "DE" %}
+                              🗣🇩🇪
+                            {% elsif event.language == "EN" %}
+                              🗣🇬🇧
+                            {% endif %}
+                          </span>
                         </span>
                         <meta itemprop="name" content="⚛️ React Intensiv Kurs">
                         <meta itemprop="url" content="{{ event.url }}">
