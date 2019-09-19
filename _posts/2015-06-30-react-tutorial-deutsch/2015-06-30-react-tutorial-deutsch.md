@@ -12,6 +12,28 @@ categories: [react, tutorial]
 *Dieses Tutorial soll React vorstellen und anhand kleiner Beispiele erste Schritte damit zeigen. Wir beginnen mit der Frage, was React ist und was die Motivation war es zu schreiben.
 Danach schauen wir uns die beiden wichtigsten Ideen hinter React an &ndash; die Komponentenarchitektur und den virtuellen DOM. Schließlich werden wir im Fazit Vor- und Nachteile von React betrachten und Kriterien bestimmen, wann sein Einsatz besonders sinnvoll ist.*
 
+<hr>
+<div class="workshop-hint">
+  <div class="h3">Keine Lust zu Lesen?</div>
+  <div class="row mb-2">
+    <div class="col-xs-12 col-md-6">
+      <p>
+        Nicht jeder lernt am besten aus Büchern und Artikeln. Lernen darf interaktiv sein und Spaß machen. Wir bieten euch auch
+        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=react.de&utm_campaign=tutorial&utm_medium=link&utm_content=text-top">React Intensiv Schulungen</a> an, falls Ihr tiefer in die Thematik einsteigen wollt.
+      </p>
+      <p class="">
+        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=react.de&utm_campaign=tutorial&utm_medium=button&utm_content=text-top">
+          <button class="btn btn-danger">Mehr Informationen zur Schulung</button>
+        </a>
+      </p>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <img class="img-fluid img-rounded" src="workshops-attendees.png" alt="Teilnehmer in der Veranstaltung React Intensiv Workshop/Schulung">
+    </div>
+  </div>
+</div>
+<hr>
+
 ## Was ist React?
 
 React ist eine JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen. Es wurde 2013 von Facebook unter [BSD-Lizenz](https://de.wikipedia.org/wiki/BSD-Lizenz) veröffentlicht und schlägt seitdem immer größere Wellen und beeinflusst nachhaltig die gesamte JavaScript-Frontendlandschaft. Es wird verwendet von Facebook, Instagram, Whatsapp, Yahoo, AirBnB, dem Atom-Editor und [vielen anderen mehr](https://github.com/facebook/react/wiki/Sites-Using-React).
@@ -376,6 +398,28 @@ Mehr zur Implementierung des virtuellen DOMs in unserem Artikel [Virtuelles DOM 
 + [Pete Hunt](https://twitter.com/floydophone)
 + [Christopher Chedeau](https://twitter.com/vjeux)
 + [Jing Chen](https://twitter.com/jingc?lang=en)
+
+<hr>
+<div class="workshop-hint">
+  <div class="h3">Keine Lust zu Lesen?</div>
+  <div class="row mb-2">
+    <div class="col-xs-12 col-md-6">
+      <p>
+        Nicht jeder lernt am besten aus Büchern und Artikeln. Lernen darf interaktiv sein und Spaß machen. Wir bieten euch auch
+        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=react.de&utm_campaign=tutorial&utm_medium=link&utm_content=text-bottom">React Intensiv Schulungen</a> an, falls Ihr tiefer in die Thematik einsteigen wollt.
+      </p>
+      <p class="">
+        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=react.de&utm_campaign=tutorial&utm_medium=button&utm_content=text-bottom">
+          <button class="btn btn-danger">Mehr Informationen zur Schulung</button>
+        </a>
+      </p>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <img class="img-fluid img-rounded" src="workshops-attendees.png" alt="Teilnehmer in der Veranstaltung React Intensiv Workshop/Schulung">
+    </div>
+  </div>
+</div>
+<hr>
 
 ## Anhang
 
