@@ -239,7 +239,7 @@ Du solltest `Hello world!` auf Port 3000 sehen, dann läuft TypeScript!
 
 ## Ein Modul eingeben
 
-Für ein Projekt an dem ich gearbeitet habe, wollte ich das [React Ace Modul](https://github.com/securingsincity/react-ace) verwenden, um einen Code Editor in mein Projekt einzufügen. Allerdings hat das Modul keine Typen dafür zur Verfügung gestellt und es gibt auch kein `@tyoes/react-ace`. In diesem Fall müssen wir Typen zu unserer Anwendung hinzufügen, damit TypeScript weiß, wie man es eingibt. Das mag vielleicht ärgerlich klingen, aber die Vorteile, dass TypeScript zumindest ein bisschen über alle Drittanbieter-Abhängigkeiten weiß, wird dir viel Debugging-Zeit ersparen.
+Für ein Projekt an dem ich gearbeitet habe, wollte ich das [React Ace Modul](https://github.com/securingsincity/react-ace) verwenden, um einen Code Editor in mein Projekt einzufügen. Allerdings hat das Modul keine Typen dafür zur Verfügung gestellt und es gibt auch kein `@types/react-ace`. In diesem Fall müssen wir Typen zu unserer Anwendung hinzufügen, damit TypeScript weiß, wie man es eingibt. Das mag vielleicht ärgerlich klingen, aber die Vorteile, dass TypeScript zumindest ein bisschen über alle Drittanbieter-Abhängigkeiten weiß, wird dir viel Debugging-Zeit ersparen.
 
 Um eine Datei zu definieren, die gerade Typen hat, hängst du ihr `.d.ts` (das „d“ steht für „declaration“) an. Du kannst darüber mehr auf den [TypeScript docs](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) lesen. TypeScript wird diese Dateien in deinem Projekt automatisch finden. Du musst sie nicht explizit importieren.
 
