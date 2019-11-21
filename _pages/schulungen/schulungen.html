@@ -1,0 +1,42 @@
+---
+layout: base
+header: dark
+title: Unsere Schulungen
+permalink: /schulungen/
+noindex: true
+---
+
+<div class="c-header c-header-dark header-training d-flex align-items-center mb-6">
+  <div class="container">
+    <h1 class="align-self-center text-center">
+      Unsere Schulungen
+    </h1>
+  </div>
+</div>
+
+<main role="main">
+  <div class="container">
+    <div class="row">
+      <p class="lead mb-4">
+        Der beste Weg mit einem neuen Framework zu starten!
+      </p>
+
+      <div class="list-group mb-5 container">
+        {% include_relative _schulung.html
+              permalink="react-intensiv"
+              title="React & TypeScript <strong>Intensiv</strong> Schulung"
+              description="Der beste Weg mit React zu starten! Du hast schon erste Erfahrungen im Web und möchtest möglichst schnell mit React starten ohne selber in alle Anfängerfehler reinzulaufen? Unsere Schulungen machen dich fit für den produktiven Einsatz von React."
+              logo="react-typescript"
+              pattern="1"
+          %}
+        <!--{% include_relative _schulung.html
+            permalink="react-native-intensiv"
+            title="React Native <strong>Intensiv</strong> Schulung"
+            description="Der beste Weg mit React Native zu starten! Du möchtest native Anwendungen für Android und iOS mit einer Codebasis entwickeln? In unserer Schulung zeigen wir dir wie schnell und effizient zu deiner Anwendung im AppStore kommst."
+            logo="react-native"
+            pattern="1"
+        %}-->
+      </div>
+    </div>
+  </div>
+</main>
