@@ -63,6 +63,11 @@
     .header-homepage-title {
       line-height: 4.5rem;
       font-weight: 600;
+      white-space: nowrap;
+
+      small {
+        font-size: 0.4em;
+      }
     }
   }
 
