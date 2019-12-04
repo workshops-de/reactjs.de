@@ -18,7 +18,7 @@ Wir könnten mit unseren bloßen Händen, viel Schweiß, JavaScript und vielleic
 
 Wir könnten aber auch wieder anfangen unsere Web-Server in Assembler zu schreiben.
 
-Die vielen JavaScript-Frameworks suchen also einen Kompromiss. Performance und Verwendung von altbewährten Entwurfsmustern, um diese Komplexität heutiger Apps zu bändigen (Two-way binding, dirty-checking, … etc.). Funktioniert mal mehr und mal [weniger](http://blog.scalyr.com/2013/10/angularjs-1200ms-to-35ms/) gut.
+Die vielen JavaScript-Frameworks suchen also einen Kompromiss. Performance und Verwendung von altbewährten Entwurfsmustern, um diese Komplexität heutiger Apps zu bändigen (Two-way binding, dirty-checking, … etc.). Funktioniert mal mehr und mal weniger gut.
 
 React versucht es mit einem einigermaßen extremen Ansatz, der in erster Linie die Einfachheit und nicht die Performanz in den Fokus stellt: Wir rendern bei jedem Update einfach alles neu.
 

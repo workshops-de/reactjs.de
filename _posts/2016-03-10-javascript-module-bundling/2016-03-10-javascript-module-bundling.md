@@ -7,7 +7,7 @@ header_source: https://unsplash.com/photos/B6yDtYs2IgY
 categories: [javascript, module, es6]
 ---
 
-*Den Artikel im Original von Preethi Kasireddy in Englischer Sprache gibt's [hier](https://medium.freecodecamp.org/javascript-modules-part-2-module-bundling-5020383cf306).*
+*Den Artikel im Original von Preethi Kasireddy in Englischer Sprache gibt's [hier](https://www.freecodecamp.org/news/javascript-modules-part-2-module-bundling-5020383cf306/).*
 
 
 Im [ersten Teil](/artikel/javascript-module-einleitung/) des Posts habe ich erklärt was Module sind, wieso Entwickler sie benutzen und habe verschiedene Wege gezeigt, sie in Programmen anzuwenden.

@@ -443,4 +443,4 @@ Die Bestrebungen gehen hier sogar so weit, dass man optional CSS direkt in der K
 Wenn CSS in JavaScript geschrieben wird, wird kein CSS-Präprozessor wie SASS oder LESS mehr benötigt.
 
 ### Links
-* ["Legal"-Datei zur Lizenz](https://code.fb.com/open-source/updating-our-open-source-patent-grant/)
+* ["Legal"-Datei zur Lizenz](https://engineering.fb.com/open-source/updating-our-open-source-patent-grant/)
