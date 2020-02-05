@@ -143,7 +143,11 @@
         "destination": "/schulungen/react-intensiv/",
         "type": 301
       },
-      {"source" : "/slack*", "destination" : "https://join.slack.com/t/workshops-de/shared_invite/enQtMzIyMjk5MzE3MTA5LWMxMzViMzFjNmIzY2U4NDU5YjY1NzY0YmU3ZDZkMDY2YTc2OGJlMTc1MzUwYTMwYzkxMTZiMWFjNWZlYzVjMWU", "type" : 301}
+      {
+        "source": "/slack*",
+        "destination": "https://join.slack.com/t/workshops-de/shared_invite/enQtOTI0OTUxOTQ4ODE4LTAzNmFlNDQyNWJiZTE1NmEyMDBhNmU3ZTNiMWUwOTAzNTI1MDE1ZWRhYmJjYjlhMjk5NmRlMTk2YjI0OGU3NDU",
+        "type": 301
+      }
     ],
     "headers": [
       {
