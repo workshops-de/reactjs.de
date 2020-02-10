@@ -9,7 +9,9 @@ categories: [react, microfrontends]
 
 Microfrontends sind mittlerweile ein fest etabliertes Muster um größere Frontend Applikationen in kleinere Teile aufzuspalten. Im Gegensatz zu klassischen Komponenten geht es bei Microfrontends nicht in erster Linie um die technische Basis, sondern eher um eine Zerteilung auf Feature-Ebene. Sie sind daher erst auf einer höheren Ebene anzustoßen.
 
-*Vorab*: Den kompletten Beispielcode könnt ihr auf GitHub erhalten. Ich habe ihn dort unter [FlorianRappl/mife-tutorial](https://github.com/FlorianRappl/mife-tutorial) abgelegt. Nutzt die Issues gerne für Fragen, Anmerkungen oder bei Problemen!
+(Anmerkung: Die Feature-Ebene ist nicht unbedingt die Domain-Ebene. Im Prinzip geht hier um Business Capabilities - wie genau das ausgelebt wird ist dem Implementierer überlassen. Wichtig ist nur, dass es nicht um technische Komponenten geht, sondern diese eine Ebene höher angesiedelt sind. Dies kann natürlich eine fachliche Domäne sein - muss aber keineswegs so gelebt werden.)
+
+_Vorab_: Den kompletten Beispielcode könnt ihr auf GitHub erhalten. Ich habe ihn dort unter [FlorianRappl/mife-tutorial](https://github.com/FlorianRappl/mife-tutorial) abgelegt. Nutzt die Issues gerne für Fragen, Anmerkungen oder bei Problemen!
 
 ## Entscheidungsmerkmale
 
@@ -29,42 +31,44 @@ Obwohl wir in diesem Tutorial im Prinzip ohne Application Shell auskommen, muss 
 Zunächst müssen wir eine Funktion bauen um die einzelnen Microfrontends zu laden. Diese Funktion brauchen wir unabhängig von möglichen serverseitigen Rendering. Der einzige Unterschied ist, dass beim Rendering durch den Server die verschiedenen Module möglicherweise bereits vorhanden sind.
 
 ```js
-function loadMicrofrontends() {
+function attachMicrofrontendFromUrl(url) {
+  return new Promise(resolve => {
+    const s = document.createElement("script");
+    s.src = url;
+    s.onerror = err => {
+      console.error(err);
+      resolve({
+        url,
+        Microfrontend: defaultMicrofrontend
+      });
+    };
+    s.onload = () => {
+      resolve({
+        url,
+        Microfrontend: s.App || defaultMicrofrontend
+      });
+    };
+    document.body.appendChild(s);
+  });
+}
+
+async function loadMicrofrontendsFromServer() {
   const defaultMicrofrontend = () => null;
+  const res = await fetch("./microfrontends.json");
+  const urls = await res.json();
+  return await Promise.all(urls.map(attachMicrofrontendFromUrl));
+}
+
+function loadMicrofrontends() {
   return Promise.resolve(
-    window.microfrontends ||
-      fetch("./microfrontends.json")
-        .then(res => res.json())
-        .then(urls =>
-          Promise.all(
-            urls.map(
-              url =>
-                new Promise(resolve => {
-                  const s = document.createElement("script");
-                  s.src = url;
-                  s.onerror = err => {
-                    console.error(err);
-                    resolve({
-                      url,
-                      Microfrontend: defaultMicrofrontend
-                    });
-                  };
-                  s.onload = () => {
-                    resolve({
-                      url,
-                      Microfrontend: s.App || defaultMicrofrontend
-                    });
-                  };
-                  document.body.appendChild(s);
-                })
-            )
-          )
-        )
+    window.microfrontends || loadMicrofrontendsFromServer()
   );
 }
 ```
 
 Die Adresse im Code oben ist willkürlich. In diesem Tutorial werden wir eine statische Map durch eine JSON Datei verwenden. In der Realität wäre bspw. ein dedizierter Service geschickter.
+
+Zur besseren Lesbarkeit wurde hier `await` / `async` verwendet. Eine kurze Erklärung findet Ihr [im Blog Post von Florian Strauß](https://orlyapps.de/blog/web/asyncawait-asynchrone-javascript-programmierung).
 
 Der eigentliche React Code in der Application Shell könnte in eine Komponente `AppShell` gepackt werden.
 
@@ -97,7 +101,9 @@ loadMicrofrontends().then(microfrontends => {
 });
 ```
 
-Anstelle von `render` nutzen wir `hydrate` um unseren Code auch effizient mit serverseitigem Rendering (SSR) ausführen zu können. Auch ohne SSR würde dieser Code halbwegs effizient ablaufen.
+Anstelle von `render` nutzen wir `hydrate` um unseren Code auch effizient mit serverseitigem Rendering (SSR) ausführen zu können. Auch ohne ausgeführtes SSR würde dieser Code halbwegs effizient ablaufen.
+
+Während bei `render` der existierende DOM Baum verworfen wird, schaut sich `hydrate` zunächst diesen an. Anschließend werden nur die Knoten ersetzt die sich tatsächlich vom vorgefunden Baum unterscheiden. Im Idealfall muss `hydrate` zunächst keine Änderungen am DOM Baum vornehmen. Bei beiden Varianten wird React "aktiviert", d. h. anschließende Änderungen reaktiv von React mit minimalisten DOM Änderungen ausgeführt. Im Langzeitverhalten sind daher beide Varianten identisch.
 
 ## Das erste Microfrontend
 
@@ -192,19 +198,19 @@ Eine mögliche Ordnerstruktur für unser Projekt sieht in diesem Fall so aus:
 
 ```plain
 + dist
-  index.html
-  app.js
-  microfrontends.json
-  mife-1.js
-  mife-2.js
-  ...
+| + index.html
+| + app.js
+| + microfrontends.json
+| + mife-1.js
+| + mife-2.js
+| + ...
 + packages
-  + app-shell
-  + mife-1
-  + mife-2
-  + ...
+| + app-shell
+| + mife-1
+| + mife-2
+| + ...
 + tools
-  build-all.js
+| + build-all.js
 ```
 
 Die Inhalte von `dist` werden über das Skript `build-all.js` erzeugt. Hierfür macht `build-all.js` nichts anderes als über die einzelnen Pakete (Ordner: `packages`) zu iterieren und diese dann mit `npm run build` zu bauen.
@@ -302,15 +308,15 @@ Schauen wir zunächst auf unsere Verzeichnisstruktur. Eine kleine Änderung bei 
 
 ```plain
 + dist
-  + static
-    ...
-  index.js
+| + static
+| + ...
+| + index.js
 + packages
-  + app-client
-  + app-common
-  + app-server
-  + ...
-...
+| + app-client
+| + app-common
+| + app-server
+| + ...
++ ...
 ```
 
 Die Applikation besteht nun aus einem Client und einem Server Teil. Die gemeinsame Logik platzieren wir in einem neuen Common Modul.
