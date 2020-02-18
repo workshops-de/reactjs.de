@@ -1,13 +1,16 @@
 <!DOCTYPE html>
+{% if post.language %}
+<html lang="{{ post.language }}">
+{% else %}
 <html lang="de">
+{% endif %}
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="keywords" content="">
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self' workshops.de http://*.hotjar.com:* https://*.hotjar.com:* http://*.hotjar.io https://*.hotjar.io wss://*.hotjar.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self' workshops.de www.google-analytics.com http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io 'unsafe-eval' 'unsafe-inline'; img-src 'self' data: www.google-analytics.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' workshops.de http://*.hotjar.com:* https://*.hotjar.com:* http://*.hotjar.io https://*.hotjar.io wss://*.hotjar.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self' workshops.de www.google-analytics.com http://*.hotjar.com https://*.hotjar.com http://*.hotjar.io https://*.hotjar.io 'unsafe-eval' 'unsafe-inline'; img-src 'self' data: www.google-analytics.com">
 
   <title>{{ site.title }} → {{ page.title }}</title>
   {% if page.description %}
@@ -18,6 +21,10 @@
   <meta name="robots" content="noindex, follow">
   {% else %}
   <link rel="canonical" href="{{ site.url }}{{ page.url}}">
+  {% endif %}
+
+  {% if post.canonical %}
+  <link rel="canonical" href="{{ post.canonical }}">
   {% endif %}
 
   {% include _social_meta_tags.html %}
@@ -42,9 +49,7 @@
 
   <!-- JavaScript -->
   <script src="/assets/js/vendor/jquery-3.2.1.slim.min.js"></script>
-  <script src="/assets/js/vendor/bootstrap-4.1.1.min.js"
-    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script>
+  <script src="/assets/js/vendor/bootstrap-4.1.1.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="/assets/js/app.js"></script>
   {% if page.toc %}
   <script src="/assets/js/vendor/bootstrap-toc-1.0.0.min.js"></script>
