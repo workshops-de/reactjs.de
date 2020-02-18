@@ -1,5 +1,5 @@
 ---
-title: "Microfrontends mit React"
+title: "Microfrontend-Architektur mit React"
 description: "Lerne, wie du mit React Microfrontend Applikationen bauen kannst"
 author: "Florian Rappl"
 published_at: 2020-02-08 12:00:00.000000Z
