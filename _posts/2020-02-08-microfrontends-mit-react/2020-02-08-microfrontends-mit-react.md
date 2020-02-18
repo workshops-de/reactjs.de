@@ -7,9 +7,9 @@ header_source: https://unsplash.com/photos/US9Tc9pKNBU
 categories: [react, microfrontends]
 ---
 
-Microfrontends sind mittlerweile ein fest etabliertes Muster um größere Frontend Applikationen in kleinere Teile aufzuspalten. Im Gegensatz zu klassischen Komponenten geht es bei Microfrontends nicht in erster Linie um die technische Basis, sondern eher um eine Zerteilung auf Feature-Ebene. Sie sind daher erst auf einer höheren Ebene anzustoßen.
+Microfrontends sind mittlerweile ein fest etabliertes Muster, um größere Frontend Applikationen in kleinere Teile aufzuspalten. Im Gegensatz zu klassischen Komponenten geht es bei Microfrontends nicht in erster Linie um die technische Basis, sondern eher um eine Zerteilung auf Feature-Ebene. Sie sind daher erst auf einer höheren Ebene anzustoßen.
 
-(Anmerkung: Die Feature-Ebene ist nicht unbedingt die Domain-Ebene. Im Prinzip geht hier um Business Capabilities - wie genau das ausgelebt wird ist dem Implementierer überlassen. Wichtig ist nur, dass es nicht um technische Komponenten geht, sondern diese eine Ebene höher angesiedelt sind. Dies kann natürlich eine fachliche Domäne sein - muss aber keineswegs so gelebt werden.)
+(Anmerkung: Die Feature-Ebene ist nicht unbedingt die Domain-Ebene. Im Prinzip geht hier um Business Capabilities - wie genau das ausgelebt wird ist dem jeweiligen Team überlassen. Wichtig ist nur, dass es nicht um technische Komponenten geht, sondern diese eine Ebene höher angesiedelt sind. Dies kann natürlich eine fachliche Domäne sein - muss aber keineswegs so gelebt werden.)
 
 _Vorab_: Den kompletten Beispielcode könnt ihr auf GitHub erhalten. Ich habe ihn dort unter [FlorianRappl/mife-tutorial](https://github.com/FlorianRappl/mife-tutorial) abgelegt. Nutzt die Issues gerne für Fragen, Anmerkungen oder bei Problemen!
 
