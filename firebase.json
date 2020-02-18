@@ -144,6 +144,11 @@
         "type": 301
       },
       {
+        "source": "/artikel/microfrontends-mit-react/",
+        "destination": "/artikel/microfrontend-architektur-mit-react/",
+        "type": 301
+      },
+      {
         "source": "/slack*",
         "destination": "https://join.slack.com/t/workshops-de/shared_invite/enQtOTI0OTUxOTQ4ODE4LTAzNmFlNDQyNWJiZTE1NmEyMDBhNmU3ZTNiMWUwOTAzNTI1MDE1ZWRhYmJjYjlhMjk5NmRlMTk2YjI0OGU3NDU",
         "type": 301
