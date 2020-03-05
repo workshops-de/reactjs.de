@@ -1,6 +1,7 @@
 _site
 .sass-cache
 .jekyll-metadata
+.jekyll-cache
 .DS_Store
 _data/events.json
 _data/course.json
