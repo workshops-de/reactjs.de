@@ -43,6 +43,7 @@ markdown: kramdown
 sass:
   style: :compressed
   sass_dir: assets/css
+  sourcemap: never
 plugins:
   - jekyll-feed
   - jekyll-sitemap
