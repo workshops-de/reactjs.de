@@ -1,60 +1,63 @@
-<nav
-  class="navbar c-navbar-underline c-navbar-{% if page.header %}{{page.header}}{% else %}dark{% endif %} navbar-expand-md">
-  <div class="container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a href="/slack" target="_blank" rel="noopener nofollow" class="d-xs-inline-block d-md-none">
-      <div class="slack">
-        <span class="dot dot--a"></span>
-        <span class="dot dot--b"></span>
-        <span class="dot dot--c"></span>
-        <span class="dot dot--d"></span>
-      </div>
-      <span class="slack-text">
-        <span class="slack-text-community d-lg-inline d-md-none">Community</span> Slack</span>
-    </a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/">ReactJS.DE</a>
-      </li>
-    </ul>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item {% if page.url contains '/artikel' %}active{% endif %}">
-          <a class="nav-link" href="/artikel/">Artikel</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/artikel/react-tutorial-deutsch/">Tutorial</a>
-        </li>
-        <li class="nav-item {% if page.url contains '/schulungen' %}active{% endif %}">
-          <a class="nav-link" href="/schulungen/">Schulungen</a>
-        </li>
-        <li class="nav-item {% if page.url contains '/team' %}active{% endif %}">
-          <a class="nav-link" href="/team/">Team</a>
-        </li>
-      </ul>
+<div class="c-navbar-wrapper">
+  {% include _navigation_banner.html %}
+  <nav
+    class="navbar c-navbar-underline c-navbar-{% if page.header %}{{page.header}}{% else %}dark{% endif %} navbar-expand-md">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="/slack" target="_blank" rel="noopener nofollow" class="d-xs-inline-block d-md-none">
+        <div class="slack">
+          <span class="dot dot--a"></span>
+          <span class="dot dot--b"></span>
+          <span class="dot dot--c"></span>
+          <span class="dot dot--d"></span>
+        </div>
+        <span class="slack-text">
+          <span class="slack-text-community d-lg-inline d-md-none">Community</span> Slack</span>
+      </a>
       <ul class="navbar-nav">
-        <li class="nav-item slack-nav-item d-sm-none d-md-inline-block">
-          <a href="/slack" target="_blank" rel="noopener nofollow">
-            <div class="slack">
-              <span class="dot dot--a"></span>
-              <span class="dot dot--b"></span>
-              <span class="dot dot--c"></span>
-              <span class="dot dot--d"></span>
-            </div>
-            <span class="slack-text">
-              <span class="slack-text-community d-lg-inline d-md-none">Community</span> Slack</span>
-          </a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="/autor-werden/">Neuer Artikel</a>
+          <a class="nav-link" href="/">ReactJS.DE</a>
         </li>
       </ul>
-      <!--<form class="form-inline mr-auto" action="/suche/" method="GET" autocomplete="off">
-        <input name="q" class="form-control navbar-search" type="text" placeholder="&#xF002;">
-      </form>-->
-    </div>
-  </div><!-- .container -->
-</nav>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item {% if page.url contains '/artikel' %}active{% endif %}">
+            <a class="nav-link" href="/artikel/">Artikel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/artikel/react-tutorial-deutsch/">Tutorial</a>
+          </li>
+          <li class="nav-item {% if page.url contains '/schulungen' %}active{% endif %}">
+            <a class="nav-link" href="/schulungen/">Schulungen</a>
+          </li>
+          <li class="nav-item {% if page.url contains '/team' %}active{% endif %}">
+            <a class="nav-link" href="/team/">Team</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item slack-nav-item d-sm-none d-md-inline-block">
+            <a href="/slack" target="_blank" rel="noopener nofollow">
+              <div class="slack">
+                <span class="dot dot--a"></span>
+                <span class="dot dot--b"></span>
+                <span class="dot dot--c"></span>
+                <span class="dot dot--d"></span>
+              </div>
+              <span class="slack-text">
+                <span class="slack-text-community d-lg-inline d-md-none">Community</span> Slack</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/autor-werden/">Neuer Artikel</a>
+          </li>
+        </ul>
+        <!--<form class="form-inline mr-auto" action="/suche/" method="GET" autocomplete="off">
+          <input name="q" class="form-control navbar-search" type="text" placeholder="&#xF002;">
+        </form>-->
+      </div>
+    </div><!-- .container -->
+  </nav>
+</div>

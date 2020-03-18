@@ -1,11 +1,25 @@
+.c-navbar-wrapper {
+  @extend .fixed-top;
+  position: absolute;
+}
+
+.c-navbar-banner {
+  font-size: 1rem;
+  text-align: center;
+  padding: .6rem 1.2rem;
+  background: #0e1e25;
+
+  a {
+    color: #fdfdfd;
+  }
+}
+
 //
 // c-navbar-light
 //
 .c-navbar-light {
   @extend .navbar-light;
   @extend .c-navbar-underline-light;
-  @extend .fixed-top;
-  position: absolute;
 
   background-color: rgba(#fff, 0);
   transition: background-color 0.8s ease;
@@ -18,8 +32,6 @@
 .c-navbar-dark {
   @extend .navbar-dark;
   @extend .c-navbar-underline-dark;
-  @extend .fixed-top;
-  position: absolute;
 
   background-color: rgba(#fff, 0);
   transition: background-color 0.8s ease;
