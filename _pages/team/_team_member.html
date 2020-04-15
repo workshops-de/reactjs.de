@@ -5,14 +5,16 @@
 
     <div class="card-body">
       <div class="row">
-        <div class="col-3 text-center mb-2">
+        <div class="col-3 mb-2">
           <img alt="{{ user.name }}" class="shadow-sm rounded img-fluid" height="130" src="/assets/img/gravatars/{{ user.gravatar_uid }}-300x300.jpg"
                 width="130">
         </div>
         <div class="col-9 mb-2">
           <h2 class="h3">{{ user.name }}</h2>
           <p>{{ user.intro }}</p>
-          <p class="text-muted">{{ user.bio }}</p>
+          {% if user.why_reactjs_de_team %}
+          <a class="text-muted" href="/team/{{user.permalink}}/">Mehr erfahren ...</a>
+          {% endif %}
         </div>
       </div>
 
