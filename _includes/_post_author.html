@@ -5,9 +5,8 @@
       <img alt="{{ author.name }}" class="shadow-sm rounded img-fluid"
       {% if author.gravatar_uid %}
       src="/assets/img/gravatars/{{ author.gravatar_uid }}-160x160.jpg"
-      {% endif %}
-      {% if author.image_url %}
-      src="{{author.image_url}}"
+      {% elsif author.avatar_name %}
+      src="/assets/img/avatars/{{author.avatar_name}}"
       {% endif %}
       >
     </span>

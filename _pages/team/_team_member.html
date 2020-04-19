@@ -6,8 +6,11 @@
     <div class="card-body">
       <div class="row">
         <div class="col-3 mb-2">
-          <img alt="{{ user.name }}" class="shadow-sm rounded img-fluid" height="130" src="/assets/img/gravatars/{{ user.gravatar_uid }}-300x300.jpg"
-                width="130">
+          {% if user.gravatar_uid %}
+          <img alt="{{ user.name }}" class="shadow-sm rounded img-fluid" height="130" src="/assets/img/gravatars/{{ user.gravatar_uid }}-300x300.jpg" width="130">
+          {% elsif user.avatar_name %}
+          <img alt="{{ user.name }}" class="shadow-sm rounded img-fluid" height="130" src="/assets/img/avatars/{{ user.avatar_name }}" width="130">
+          {% endif %}
         </div>
         <div class="col-9 mb-2">
           <h2 class="h3">{{ user.name }}</h2>
