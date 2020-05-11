@@ -3,9 +3,9 @@ layout: base
 ---
 
 {% for user_hash in site.data.users %}
-  {% if page.author == user_hash[1].name %}
-    {% assign author = user_hash[1] %}
-  {% endif %}
+{% if page.author == user_hash[1].name %}
+{% assign author = user_hash[1] %}
+{% endif %}
 {% endfor %}
 
 <div class="header header-post shadow-sm d-flex align-items-center justify-content-center mb-5" style="background-image: url('{{page.header_image}}');">
@@ -20,7 +20,7 @@ layout: base
       <div class="col-md-12 col-lg-8 mb-2">
         <h1 class="header-post-title">{{ page.title }}</h1>
         <span>{{ page.author }}</span>
-          <span class="ml-1 mr-1">•</span>
+        <span class="ml-1 mr-1">•</span>
         {% include _reading_time.html text=page.content %}
       </div>
     </div>
@@ -28,7 +28,7 @@ layout: base
 </div>
 
 <main role="main">
-  <div class="container">
+  <article lang="{{ page.language }}" class="container">
 
     <div class="row mb-5">
       <div class="col-lg-3 d-none d-lg-block">
@@ -41,8 +41,8 @@ layout: base
         <p class="text-muted">
           <small>
             {% for category in page.categories %}
-              <span class="text-uppercase">{{category}}</span>
-              {% unless forloop.last %}<span class="ml-1 mr-1">•</span>{% endunless %}
+            <span class="text-uppercase">{{category}}</span>
+            {% unless forloop.last %}<span class="ml-1 mr-1">•</span>{% endunless %}
             {% endfor %}
             <span class="ml-1 mr-1">|</span>
             {{ page.author }} <span class="ml-1 mr-1">•</span> <time>{{ page.published_at | date: "%d.%m.%Y" }}</time>
@@ -78,7 +78,7 @@ layout: base
       </div>
     </div>
 
-  </div>
+  </article>
 
   <div class="row justify-content-md-center no-gutters my-6">
     {% include _related_posts.html %}
