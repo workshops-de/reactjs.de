@@ -20,7 +20,7 @@ Fork and clone repository:
 
 1. Login to your GitHub account or create one by following the instructions given
    [here](https://github.com/signup/free).
-2. [Fork](http://help.github.com/forking) the [main repository](https://github.com/symetics/reactjs.de).
+2. [Fork](http://help.github.com/forking) the [main repository](https://github.com/workshops-de/reactjs.de).
 3. Clone your fork of the repository and define an `upstream` remote pointing back to
    the main repository that you forked in the first place.
 
@@ -32,7 +32,7 @@ git clone git@github.com:<github username>/reactjs.de.git
 cd reactjs.de
 
 # Add the main repository as an upstream remote to your repository:
-git remote add upstream https://github.com/symetics/reactjs.de.git
+git remote add upstream https://github.com/workshops-de/reactjs.de.git
 ```
 
 ### 2. Install the project dependencies
