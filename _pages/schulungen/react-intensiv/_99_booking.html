@@ -61,6 +61,7 @@
                           </span>
                         </span>
                         <meta itemprop="name" content="⚛️ React Intensiv Kurs">
+                        <meta itemprop="description" content="{{ event.description }}">
                         <meta itemprop="url" content="{{ event.url }}">
                         <span itemprop="organizer" itemscope itemtype="http://schema.org/Organization">
                           <meta itemprop="name" content="Workshops.DE">
@@ -69,6 +70,8 @@
                         <meta itemprop="eventStatus" content="https://schema.org/EventScheduled">
                         {% if event.location.address.addressLocality == 'Remote' %}
                         <meta itemprop="eventAttendanceMode" content="https://schema.org/OnlineEventAttendanceMode">
+                        {% else %}
+                        <meta itemprop="eventAttendanceMode" content="https://schema.org/OfflineEventAttendanceMode">
                         {% endif %}
                         <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                           {% if event.bookingsStatus == 'TICKETS_LEFT' %}
@@ -79,7 +82,7 @@
                           <link itemprop="url" content="{{event.offers.url}}">
                           <meta itemprop="price" content="{{event.offers.price.coef}}">
                           <meta itemprop="priceCurrency" content="{{event.offers.priceCurrency}}">
-                          <!-- <meta itemprop="validFrom" content="<%= Calendar.Strftime.strftime!(event.inserted_at, "%Y-%m-%d") %>"> -->
+                          <meta itemprop="validFrom" content="{{event.validFrom}}">
                         </span>
                         <!-- <link itemprop="image" href="<%= Routes.static_url(@conn, "/images/workshops-de-social-share.png") %>" /> -->
                         {% if event.performer %}
