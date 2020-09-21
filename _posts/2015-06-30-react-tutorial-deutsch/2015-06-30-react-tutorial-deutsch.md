@@ -51,7 +51,7 @@ Das Ziel von React ist es, _einfacheren_ Code schreiben zu können, dessen Besta
 ### Eine Bibliothek, kein Framework
 React tritt als Bewerber im sogenannten [Javascript MV\*-Feld](http://todomvc.com) an, folgt jedoch weder der populärsten Ausprägung MVC, noch besteht es aus viel mehr als dem was der View in MV\* entspräche.
 
-React ist als Bibliothek konzipiert und möchte kein mächtiges Framework sein. So bleibt es ein flexibles Werkzeug sein, das es erlaubt Anwendungen in der Sprache ihrer eigenen Problemdomäne &ndash; und nicht der Sprache eines Frameworks &ndash; zu modellieren.
+React ist als Bibliothek konzipiert und möchte kein mächtiges Framework sein. So bleibt es ein flexibles Werkzeug, dass es erlaubt Anwendungen in der Sprache ihrer eigenen Problemdomäne &ndash; und nicht der Sprache eines Frameworks &ndash; zu modellieren.
 
 Da React einem nicht die Grundstruktur seiner Anwendung vorschreibt (vgl. ["Architecture the Lost Years"](https://www.youtube.com/watch?v=WpkDN78P884) &ndash; [Robert Martin](https://twitter.com/unclebobmartin)), schränkt es einen weniger ein und lässt sich hervorragend in bestehende Codebasen integrieren, ohne dass dort alles umgestrickt werden müsste.
 
