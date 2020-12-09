@@ -2,7 +2,7 @@
 Website for the german React Community [ReactJS.de](https://reactjs.de/).
 
 ## Build Status
-![Build Status](https://travis-ci.org/workshops-de/reactjs.de.svg?branch=master "Travis Build Status")
+![Build Status](https://github.com/workshops-de/reactjs.de/workflows/Build%20Jekyll%20and%20Deploy%20to%20Firebase/badge.svg?branch=master)
 
 ## Development
 
