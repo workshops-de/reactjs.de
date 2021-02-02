@@ -25,6 +25,9 @@
       {% if author.twitter %}
         <a href="https://twitter.com/{{ author.twitter }}" class="btn btn-sm btn-outline-info" target="_blank">Twitter</a>
       {% endif %}
+      {% if author.discord %}
+        <a href="{{ author.discord }}" class="btn btn-sm btn-outline-secondary" target="_blank" rel="noopener noreferrer">Discord</a>
+      {% endif %}
     </div>
   </div>
 </div>
