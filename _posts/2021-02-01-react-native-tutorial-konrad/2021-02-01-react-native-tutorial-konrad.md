@@ -4,6 +4,7 @@ description: "In the first part of our React Native (Step by Step) series, we wi
 author: "Konrad Abe (AllBitsEqual)"
 published_at: 2021-02-01 10:00:00
 header_source: "https://i.imgur.com/UYSyTVN.jpg"
+header_image: header.jpg
 categories: "react-native typescript linting expo best-practise series"
 canonical_url: "https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793"
 series: "React Native (Step by Step)"
