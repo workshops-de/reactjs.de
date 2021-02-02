@@ -17,8 +17,8 @@ series: "React Native (Step by Step)"
 _Wie immer findest du den fertigen Code am Ende des Artikels auf GitHub verlinkt._
 
 **Reihe: React Native (Schritt für Schritt)**  
-1) => **du bist hier** <=
-2) [React Redux + Toolkit mit Typescript](https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13)
+1. => **du bist hier** <=
+2. [React Redux + Toolkit mit Typescript](https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13)
 
 ![](https://i.imgur.com/UYSyTVN.jpg)
 
