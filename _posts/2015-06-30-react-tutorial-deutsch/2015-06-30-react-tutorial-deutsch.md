@@ -19,10 +19,10 @@ Danach schauen wir uns die beiden wichtigsten Ideen hinter React an &ndash; die 
     <div class="col-xs-12 col-md-6">
       <p>
         Nicht jeder lernt am besten aus Büchern und Artikeln. Lernen darf interaktiv sein und Spaß machen. Wir bieten euch auch
-        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=reactjs.de&utm_campaign=tutorial&utm_medium=link&utm_content=text-top">React Intensiv Schulungen</a> an, falls Ihr tiefer in die Thematik einsteigen wollt.
+        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=link&utm_content=text-top">React Intensiv Schulungen</a> an, falls Ihr tiefer in die Thematik einsteigen wollt.
       </p>
       <p class="">
-        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=reactjs.de&utm_campaign=tutorial&utm_medium=button&utm_content=text-top">
+        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=button&utm_content=text-top">
           <button class="btn btn-danger">Mehr Informationen zur Schulung</button>
         </a>
       </p>
@@ -404,11 +404,11 @@ Mehr zur Implementierung des virtuellen DOMs in unserem Artikel [Virtuelles DOM 
   <div class="h3">Hat dir das Tutorial geholfen?</div>
   <div class="row mb-2">
     <div class="col-xs-12 col-md-6">
-      <p> Wir bieten auch <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=reactjs.de&utm_campaign=tutorial&utm_medium=link&utm_content=text-buttom">React Intesiv Schulungen</a>        an um dich möglichst effektiv in das Thema React zu begleiten. Im Kurs kannst Du die Fragen stellen, die Du nur
+      <p> Wir bieten auch <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=link&utm_content=text-buttom">React Intesiv Schulungen</a>        an um dich möglichst effektiv in das Thema React zu begleiten. Im Kurs kannst Du die Fragen stellen, die Du nur
         schlecht googlen kannst, z.B. “Besserer Weg, um meine Applikation zu strukturieren”. Wir können sie Dir beantworten.
       </p>
       <p class="text-center">
-        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=reactjs.de&utm_campaign=tutorial&utm_medium=button&utm_content=text-buttom">
+        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=button&utm_content=text-buttom">
           <button class="btn btn-danger">Jetzt weiter lernen</button>
         </a>
       </p>
