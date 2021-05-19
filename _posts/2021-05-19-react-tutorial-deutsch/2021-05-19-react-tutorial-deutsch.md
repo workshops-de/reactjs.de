@@ -112,9 +112,9 @@ All diese Berechnungen kosten Zeit. Da jede Änderung des DOM diese teuren Berec
 
 **Wie macht das React?**: Mit der von Browsern bereitgestellten Web-API greift React auf das aktuelle DOM zu und erstellt daraus ein **virtuelles DOM** - eine im Browser-Zwischenspeicher angelegte Repräsentation des User Interfaces. Soll es zu einer Änderung kommen, vergleicht React den aktuellen Zustand mit dem gewünschten im Zwischenspeicher bevor das tatsächliche DOM geändert wird. Dieser Vergleich ist perfomance-technisch günstig. React beauftragt den Browser nach dem Vergleich bloß die Bereiche der DOM nochmals zu rendern, die von der Änderung betroffen sind.
 
-**Randnotiz**:
-
-- [Svelte](https://svelte.dev/) ist eine neuere Technologie, die die Nutzung eines **virtuellen DOMs** kritisiert. Svelte ist sehr stark von React inspiriert, geht aber einen anderen, interessanten Weg. React als Grundlage für Svelte zu lernen, ist meiner Meinung nach auch eine sehr gute Idee.
+> **Randnotiz**:
+>
+> - [Svelte](https://svelte.dev/) ist eine neuere Technologie, die die Nutzung eines **virtuellen DOMs** kritisiert. Svelte ist sehr stark von React inspiriert, geht aber einen anderen, interessanten Weg. React als Grundlage für Svelte zu lernen, ist meiner Meinung nach auch eine sehr gute Idee.
 
 ### React ist nicht nur im Web zu Hause
 
@@ -722,10 +722,10 @@ Ersetze deine `App`-Komponente mit diesem Code.
 - Innerhalb einer `async` Funktion kann mittels `await` Befehlen auf das Ergebnis von Promises gewartet werden. Falls der `fetch` erfolgreich verläuft, wird die `response` Variable mit der Antwort des Servers befüllt.
 - Die Fragezeichen `?` hinter jedem Feld im `ImageDataT` Type drücken aus, dass es sich hierbei um optionale Felder handelt. Das heißt, neben dem angegebenen Wert, ist auch `undefined` als Wert zulässig.
 
-- **Randnotizen**:
-
-  1. Vielleicht ist dir aufgefallen, dass ich `console.log({ data });` und nicht `console.log(data);` geschrieben habe. Dadurch wird die Log Ausgabe etwas lesbarer, da der Name des geloggten Objekts gleich mit dabei steht. `console.log('data', data);` ginge natürlich auch, ist aber etwas mehr zu schreiben.
-  2. Ein `T` ans Ende des Types zu schreiben, wie bei `ImageDataT` ist eine Konvention mancher TypeScript-Entwickler:innen, an die man sich halten kann oder auch nicht.
+> **Randnotizen**:
+>
+>  1. Vielleicht ist dir aufgefallen, dass ich `console.log({ data });` und nicht `console.log(data);` geschrieben habe. Dadurch wird die Log Ausgabe etwas lesbarer, da der Name des geloggten Objekts gleich mit dabei steht. `console.log('data', data);` ginge natürlich auch, ist aber etwas mehr zu schreiben.
+>  2. Ein `T` ans Ende des Types zu schreiben, wie bei `ImageDataT` ist eine Konvention mancher TypeScript-Entwickler:innen, an die man sich halten kann oder auch nicht.
 
 ### `fetchImageData` dem `onClick` Event-Handler übergeben
 
@@ -819,16 +819,16 @@ Der `useState`-Hook ist eine Funktion, die (optional) einen initialen State übe
 
 Da ein Array zurückgegeben wird, kann man die zwei Elemente nennen wie man möchte. Die Schreibweise `foo` und `setFoo` für einen State namens `foo` ist aber strenge Konvention.
 
-- **Randnotizen**:
-
-  - Wir nutzen hier [array destructuring](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) (deutsch: Destrukturierende Zuweisung), um direkt auf die zwei Elemente im Array zuzugreifen, die der `useState` Hook zurückgibt.
-  - Ohne Array-Destructuring könnten wir so das gleiche Resultat erzielen:
-
-    ```tsx
-    const imageDataHook = useState<ImageDataT>({});
-    const imageData = imageDataHook[0];
-    const setImageData = imageDataHook[1];
-    ```
+> **Randnotizen**:
+>
+>  - Wir nutzen hier [array destructuring](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) (deutsch: Destrukturierende Zuweisung), um direkt auf die zwei Elemente im Array zuzugreifen, die der `useState` Hook zurückgibt.
+>  - Ohne Array-Destructuring könnten wir so das gleiche Resultat erzielen:
+>
+>    ```tsx
+>    const imageDataHook = useState<ImageDataT>({});
+>    const imageData = imageDataHook[0];
+>    const setImageData = imageDataHook[1];
+>    ```
 
 #### Lokale Variable durch State ersetzen
 
