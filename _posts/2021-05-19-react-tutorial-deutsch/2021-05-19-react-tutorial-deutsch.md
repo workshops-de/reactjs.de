@@ -22,51 +22,51 @@ Wir werden eine Web-App programmieren, die Bild-Informationen von einem Server e
 
 ## Inhaltsverzeichnis: Was werden wir lernen?
 
-+ [React Tutorial](#react-tutorial)
-  + [Einführung](#einführung)
-  + [Inhaltsverzeichnis: Was werden wir lernen?](#inhaltsverzeichnis-was-werden-wir-lernen)
-  + [Warum nicht ganz ohne Bibliotheken (Libraries) und Frameworks?](#warum-nicht-ganz-ohne-bibliotheken-libraries-und-frameworks)
-  + [Was ist und kann React?](#was-ist-und-kann-react)
-  + [Was ist React?](#was-ist-react)
-    + [React macht es anders](#react-macht-es-anders)
-    + [React ist schnell - dank des virtuellen DOM](#react-ist-schnell---dank-des-virtuellen-dom)
-    + [React ist nicht nur im Web zu Hause](#react-ist-nicht-nur-im-web-zu-hause)
-  + [Anbindung von React](#anbindung-von-react)
-    + [Wie kommt React ins Spiel?](#wie-kommt-react-ins-spiel)
-  + [Das Herzstück von React: Die Komponente](#das-herzstück-von-react-die-komponente)
-    + [React-Elemente und JSX](#react-elemente-und-jsx)
-    + [React Komponente](#react-komponente)
-  + [Vorteile von JSX](#vorteile-von-jsx)
-    + [JavaScript Ausdrücke in JSX](#javascript-ausdrücke-in-jsx)
-    + [Bedingtes Rendern](#bedingtes-rendern)
-  + [React Props](#react-props)
-    + [Props in React Komponenten](#props-in-react-komponenten)
-    + [Props in React-Elementen](#props-in-react-elementen)
-    + [Die spezielle `children` prop](#die-spezielle-children-prop)
-  + [Inline Styles in React](#inline-styles-in-react)
-    + [Inline styles](#inline-styles)
-  + [TypeScript: Komponenten sicher machen](#typescript-komponenten-sicher-machen)
-    + [Was ist TypeScript?](#was-ist-typescript)
-    + [TypeScript anwenden](#typescript-anwenden)
-  + [Interaktion mit `onClick` Event-Handlern](#interaktion-mit-onclick-event-handlern)
-  + [Organisation eines React Projekts](#organisation-eines-react-projekts)
-  + [API Requests](#api-requests)
-    + [Promises](#promises)
-    + [`fetchImageData` dem `onClick` Event-Handler übergeben](#fetchimagedata-dem-onclick-event-handler-übergeben)
-    + [User Interface der Bild-Anzeige](#user-interface-der-bild-anzeige)
-      + [Daten nicht "reactive"](#daten-nicht-reactive)
-  + [React Hooks](#react-hooks)
-    + [Reactivity](#reactivity)
-    + [`useState` Hook](#usestate-hook)
-      + [Lokale Variable durch State ersetzen](#lokale-variable-durch-state-ersetzen)
-    + [Zwei zusätzliche States](#zwei-zusätzliche-states)
-      + [Lade Status](#lade-status)
-      + [Fehler im try-catch Block abfangen und anzeigen](#fehler-im-try-catch-block-abfangen-und-anzeigen)
-  + [Fazit](#fazit)
-    + [Vergleich mit anderen FrontEnd Technologien](#vergleich-mit-anderen-frontend-technologien)
-    + [Die nächsten Schritte](#die-nächsten-schritte)
-    + [Fehler & Typos](#fehler--typos)
-    + [Danksagung](#danksagung)
+- [React Tutorial](#react-tutorial)
+  - [Einführung](#einführung)
+  - [Inhaltsverzeichnis: Was werden wir lernen?](#inhaltsverzeichnis-was-werden-wir-lernen)
+  - [Warum nicht ganz ohne Bibliotheken (Libraries) und Frameworks?](#warum-nicht-ganz-ohne-bibliotheken-libraries-und-frameworks)
+  - [Was ist und kann React?](#was-ist-und-kann-react)
+  - [Was ist React?](#was-ist-react)
+    - [React macht es anders](#react-macht-es-anders)
+    - [React ist schnell - dank des virtuellen DOM](#react-ist-schnell---dank-des-virtuellen-dom)
+    - [React ist nicht nur im Web zu Hause](#react-ist-nicht-nur-im-web-zu-hause)
+  - [Anbindung von React](#anbindung-von-react)
+    - [Wie kommt React ins Spiel?](#wie-kommt-react-ins-spiel)
+  - [Das Herzstück von React: Die Komponente](#das-herzstück-von-react-die-komponente)
+    - [React-Elemente und JSX](#react-elemente-und-jsx)
+    - [React Komponente](#react-komponente)
+  - [Vorteile von JSX](#vorteile-von-jsx)
+    - [JavaScript Ausdrücke in JSX](#javascript-ausdrücke-in-jsx)
+    - [Bedingtes Rendern](#bedingtes-rendern)
+  - [React Props](#react-props)
+    - [Props in React Komponenten](#props-in-react-komponenten)
+    - [Props in React-Elementen](#props-in-react-elementen)
+    - [Die spezielle `children` prop](#die-spezielle-children-prop)
+  - [Inline Styles in React](#inline-styles-in-react)
+    - [Inline styles](#inline-styles)
+  - [TypeScript: Komponenten sicher machen](#typescript-komponenten-sicher-machen)
+    - [Was ist TypeScript?](#was-ist-typescript)
+    - [TypeScript anwenden](#typescript-anwenden)
+  - [Interaktion mit `onClick` Event-Handlern](#interaktion-mit-onclick-event-handlern)
+  - [Organisation eines React Projekts](#organisation-eines-react-projekts)
+  - [API Requests](#api-requests)
+    - [Promises](#promises)
+    - [`fetchImageData` dem `onClick` Event-Handler übergeben](#fetchimagedata-dem-onclick-event-handler-übergeben)
+    - [User Interface der Bild-Anzeige](#user-interface-der-bild-anzeige)
+      - [Daten nicht "reactive"](#daten-nicht-reactive)
+  - [React Hooks](#react-hooks)
+    - [Reactivity](#reactivity)
+    - [`useState` Hook](#usestate-hook)
+      - [Lokale Variable durch State ersetzen](#lokale-variable-durch-state-ersetzen)
+    - [Zwei zusätzliche States](#zwei-zusätzliche-states)
+      - [Lade Status](#lade-status)
+      - [Fehler im try-catch Block abfangen und anzeigen](#fehler-im-try-catch-block-abfangen-und-anzeigen)
+  - [Fazit](#fazit)
+    - [Vergleich mit anderen FrontEnd Technologien](#vergleich-mit-anderen-frontend-technologien)
+    - [Die nächsten Schritte](#die-nächsten-schritte)
+    - [Fehler & Typos](#fehler--typos)
+    - [Danksagung](#danksagung)
 
 
 ## Warum nicht ganz ohne Bibliotheken (Libraries) und Frameworks?
@@ -131,11 +131,11 @@ Bevor wir unsere erste Komponente bauen, schauen wir uns kurz an, wie sich die R
 
 Auf dem Online-Editor [codesandbox.io](https://codesandbox.io/s/) solltest du nach einem Klick auf "Create Sandbox" in der Liste der Vorlagen eine Option namens "React TypeScript" sehen.
 
-![codesandbox new project menu](./images/codesandbox_options.png)
+![codesandbox new project menu](./images/codesandbox-options.png)
 
 Nach einem Klick darauf wird ein neues React Project mit TypeScript-Code gestartet. Das solltet ihr dann zu Beginn sehen:
 
-![codesandbox initial view of new React project](./images/codesandbox_start.png)
+![codesandbox initial view of new React project](./images/codesandbox-start.png)
 
 ### Wie kommt React ins Spiel?
 
@@ -206,7 +206,7 @@ const Title = React.createElement("h1", null, "Hello World.");
 
 Eine Funktion, die ein React-Element zurück gibt, ist eine **React Komponente**. Komponenten sind in React die wiederverwendbaren Bausteine eines User-Interfaces. Wie oben erwähnt kann in React das HTML-Gerüst direkt in JavaScript geschrieben werden. Zum Beispiel:
 
-![html vs. JSX in React](./images/html_react.svg)
+![html vs. JSX in React](./images/html-react.svg)
 
 Genau in solche HTML-Elemente werden die React Komponenten durch die React Render-Engine **React DOM** zur Anzeige im Web-Browser übersetzt.
 
@@ -337,7 +337,7 @@ Genau wie in eigenen Komponenten gibt man React-Elementen (`div`, `h1`, `h2` etc
 
 Im Gegensatz zu HTML heißt die prop zur Referenzierung (Verknüpfung) des Styles `className` und nicht `class`, wie das entsprechende HTML-Attribut.
 
-![React and CSS](./images/react_and_css.svg)
+![React and CSS](./images/react-and-css.svg)
 
 Mittels geschweifter Klammern kann eine Property auch bedingt übergeben werden:
 
@@ -448,7 +448,7 @@ React bricht mit dieser Binsenweisheit, indem es inline styles zurück ins Rampe
 
 In der folgenden Grafik siehst du, wie anstelle eines separaten StyleSheets CSS direkt in JavaScript (JS) mittels einer React `style` **prop** genutzt werden kann:
 
-![Inline styles in React](./images/inline_styles.svg)
+![Inline styles in React](./images/inline-styles.svg)
 
 Im Unterschied zu CSS properties, schreiben sich die **CSS-in-JS** Styles nicht im **Kebab-case** (mit Bindestrichen), sondern im **camelCase** (mit Großschreibungen).
 
@@ -456,7 +456,7 @@ Generell werden in Web-App Projekten, Styles selten direkt in die `style` **prop
 
 React hat die Idee der wiederverwendbaren Komponenten ins Rollen gebracht und die Entwicklung des React Ökosystems forciert die Richtung, neben HTML und JavaScript auch CSS mit in eine JavaScript Datei zu packen.
 
-![React vereinigt HTML, CSS und JavaScript/TypeScript](./images/react_combination.svg)
+![React vereinigt HTML, CSS und JavaScript/TypeScript](./images/react-combination.svg)
 
 ## TypeScript: Komponenten sicher machen
 
@@ -583,7 +583,7 @@ Die `App.tsx` Datei ist bereits etwas unübersichtlich geworden. Üblicherweise 
 
 Das machen wir jetzt auch. So sollte es dann letztendlich ausschauen:
 
-![Folder Struktur](./images/folder_structure.svg)
+![Folder Struktur](./images/folder-structure.svg)
 
 Wir erstellen dazu einen neuen Ordner `components` und kopieren die `LoadingText` Komponente in eine neue Datei `components/LoadingText.tsx`:
 
@@ -778,7 +778,7 @@ Ok, wird sind bereit für einen Test. Der Moment der Wahrheit naht! 🔮 Klicke 
 
 - Ein Blick in die Konsole verrät uns, dass die Daten bei uns im Client (in unserem Browser) angekommen sind. 🤔
 
-  ![CodeSandBox Konsole](./images/codesandbox_konsole.png)
+  ![CodeSandBox Konsole](./images/codesandbox-konsole.png)
 
 - Nur hat die Ankunft der Daten **React** nicht dazu veranlasst, den View nochmal zu rendern, um die Veränderung der Daten auch in der UI sichtbar zu machen.
 
