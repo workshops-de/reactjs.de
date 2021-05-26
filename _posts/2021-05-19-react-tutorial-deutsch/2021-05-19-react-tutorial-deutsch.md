@@ -79,7 +79,7 @@ Komplexe Vorgänge ganz ohne Bibliotheken oder Frameworks umzusetzen, führt zu 
 
 **React.js** (oder kurz **React**) ist im Gegensatz zu Frontend **Frameworks**, die alles gebündelt mitbringen, eine schlanke **Bibliothek**. Ich möchte dir nun ein wenig über die Besonderheit von React erzählen.
 
-Wenn du direkt zum praktischen Teil des Tutorials springen möchtest, überspringe dieses Kapitel und gehe direkt zu [Installation von React](#installation-von-react).
+Wenn du direkt zum praktischen Teil des Tutorials springen möchtest, überspringe dieses Kapitel und gehe direkt zu [Anbindung von React](#anbindung-von-react).
 
 ## Was ist React?
 
