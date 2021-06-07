@@ -1,12 +1,12 @@
 ---
-	title: "SERIES: React Native (Step by Step) - React Redux + Toolkit with Typescript"
-	description: "Setting up React Redux using the Redux Toolkit with Typescript in Expo "
-	author: "Konrad Abe (AllBitsEqual)"
-	published_at: 2021-05-31 10:00:00
-	header_image: "https://i.imgur.com/egaWeWg.jpg"
-	categories: "react-native typescript redux redux-toolkit best-practices series"
-	canonical_url: "https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13"
-  series: "React Native (Step by Step)"
+title: "SERIES: React Native (Step by Step) - React Redux + Toolkit with Typescript"
+description: "Setting up React Redux using the Redux Toolkit with Typescript in Expo "
+author: "Konrad Abe (AllBitsEqual)"
+published_at: 2021-05-31 10:00:00
+header_image: "https://i.imgur.com/egaWeWg.jpg"
+categories: "react-native typescript redux redux-toolkit best-practices series"
+canonical_url: "https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13"
+series: "React Native (Step by Step)"
 ---
 
 # REIHE: React Native (Schritt für Schritt) - React Redux + Toolkit mit Typescript
