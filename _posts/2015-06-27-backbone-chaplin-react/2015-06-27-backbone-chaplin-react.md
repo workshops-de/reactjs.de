@@ -79,13 +79,9 @@ React.render(<MyComponent collection={collection} />, document.body);
 ## Vorteile
 
 Wer mit komplexeren Views bei Backbone arbeitet, wird die Problematik kennen, dass man Events
-von Subviews selbst managen muss. Ein Beispiel: Bei unserem TimeTracking gibt es die TrackingView, auf der viele Trackings in einer Liste angezeigt werden:
+von Subviews selbst managen muss. Ein Beispiel: Bei unserem TimeTracking gibt es die TrackingView, auf der viele Trackings in einer Liste angezeigt werden.
 
-![Tracking View](/uploads/image/file/1/width_650_ot-1.png "Tracking View")
-
-Jedes Tracking kann mit dem Button "Split" in den SplitView-Modus geschaltet werden. Im SplitView-Modus wird aus dem Tracking ein Scheren-Widget, welches interaktiv den Aufteilungspunkt für ein neues Tracking visualisiert:
-
-![SplitView](/uploads/image/file/2/width_650_ot-2.png "Split View")
+Jedes Tracking kann mit dem Button "Split" in den SplitView-Modus geschaltet werden. Im SplitView-Modus wird aus dem Tracking ein Scheren-Widget, welches interaktiv den Aufteilungspunkt für ein neues Tracking visualisiert.
 
 In der alten Backbone-View musste dafür eine Subview erstellt werden. Auf dieser Subview mussten dann dynamisch viele Mouse-Events aufgefangen werden. Beim Verlassen der SplitView mussten diese Events wieder sauber abgeräumt werden.
 
