@@ -16,7 +16,7 @@ series: "React Native (Step by Step)"
 
 _Wie immer findest du den fertigen Code am Ende des Artikels auf GitHub verlinkt._
 
-**Reihe: React Native (Schritt für Schritt)**  
+**Reihe: React Native (Schritt für Schritt)**
 1) [Umgang mit Typescript und Linting](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793)
 2) => **du bist hier** <=
 
@@ -24,7 +24,7 @@ _Wie immer findest du den fertigen Code am Ende des Artikels auf GitHub verlinkt
 
 
 ## Redux - WARUM?
-Ich gehe davon aus, dass du über Grundkenntnisse in React Native und Redux verfügst. [Solltest du eine kleine Auffrischung deines Wissens benötigen, habe ich hier genau den richtigen Artikel für dich!](https://medium.com/@allbitsequal/straightforward-redux-no-strings-attached-e1b5f111bf00) Wir fahren nun mit dem setup aus unserer letzten Session fort und arbeiten weiterhin mit Expo, um unser React Native Build und bundling zu verwalten.
+Ich gehe davon aus, dass du über Grundkenntnisse in React Native und Redux verfügst. [Solltest du eine kleine Auffrischung deines Wissens benötigen, habe ich hier genau den richtigen Artikel für dich!](https://allbitsequal.medium.com/straightforward-redux-no-strings-attached-e1b5f111bf00) Wir fahren nun mit dem setup aus unserer letzten Session fort und arbeiten weiterhin mit Expo, um unser React Native Build und bundling zu verwalten.
 
 Schnapp dir das [aktuelle Projekt auf GitHub](https://github.com/AllBitsEqual/expo-ts-starter/tree/v0.1.0).
 

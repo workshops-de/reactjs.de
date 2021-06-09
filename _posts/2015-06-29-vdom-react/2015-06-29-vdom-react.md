@@ -72,7 +72,7 @@ Mit genau diesen Keys und Verwendung von Hashing macht sich React das Leben einf
 
 ## Zeig mir den DOM
 
-Um die Auswirkung auf den DOM zu beobachten, ist die Chrome Extension [DOMListener](https://chrome.google.com/webstore/detail/domlistener/jlfdgnlpibogjanomigieemaembjeolj) von Konrad Dzwinel hilfreich. Um nicht noch in jedem Framework dieselbe Anwendung schreiben zu müssen, um Unterschiede zu erkennen, bietet [TodoMVC](http://todomvc.com/) mehrere Implementierungen der gleichen ToDo App in allen derzeit relevanten Frameworks.
+Um nicht noch in jedem Framework dieselbe Anwendung schreiben zu müssen, um Unterschiede zu erkennen, bietet [TodoMVC](http://todomvc.com/) mehrere Implementierungen der gleichen ToDo App in allen derzeit relevanten Frameworks.
 
 Zum Vergleich ein simpler Ablauf:
 

@@ -122,7 +122,7 @@ Alles in allem hat auch hier Redux gefühlt die Nase vorn, da sie einen Weg favo
 
 ## Wie realisiert man Middlewares z.B. für Fehlerbehandlung oder Logging?
 
-Bis auf Redux gibt es hier keine standardisierten Mechanismen. Redux hat diese Mechanismen direkt mit in das Framework eingebaut und macht selbst ebenfalls bei Teilkomponenten wie z.B. asynchronen Aktionen davon Gebrauch. Wer mehr über Redux Middlewares erfahren möchte, dem sei diese [Dokumentation](https://github.com/rackt/redux/blob/master/docs/advanced/Middleware.md) ans Herz gelegt.
+Bis auf Redux gibt es hier keine standardisierten Mechanismen. Redux hat diese Mechanismen direkt mit in das Framework eingebaut und macht selbst ebenfalls bei Teilkomponenten wie z.B. asynchronen Aktionen davon Gebrauch.
 
 ## Wo speichert man den globalen State einer Applikation ab, der sich nicht direkt Entitäten zuordnen lässt?
 

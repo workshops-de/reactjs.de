@@ -389,7 +389,7 @@ React ist vor allem performanter da sie präzise DOM-Updates nutzt, obwohl ich s
 Hier ein Beispiel bei dem links React und rechts Backbone auf eine Texteingabe reagieren. Am Ende des Eingabefelds stehen mathematische Formeln, die mit [KaTeX](https://github.com/Khan/KaTeX) TeX-artig gerendert werden &ndash; eine teure Renderingoperation, wie man am Flackern auf der rechten Seite sieht. React brilliert hier, da die KaTeX-Formeln nur einmal in den DOM geschrieben werden &ndash; danach ändern sie sich nicht mehr. In Backbone wird ständig die ganze View neu in den DOM geschrieben und entsprechend flackert es dort.
 
 [React -vs- Backbone Performanzdemo](https://raw.githubusercontent.com/paulwittmann/blog-posts/master/images/monkeys-slow.gif)
-(Quelle: ["Hack Reactor"](http://joelburget.com/backbone-to-react/) &ndash; [Joel Burget](https://twitter.com/dino_joel))
+(Quelle: [Joel Burget](https://twitter.com/dino_joel))
 
 Mehr zur Implementierung des virtuellen DOMs in unserem Artikel [Virtuelles DOM mit React.js](/artikel/vdom-react/).
 

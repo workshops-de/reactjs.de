@@ -322,4 +322,4 @@ Dann kann ich das `tslint --project tsconfig.json` laufen lassen, um mein Projek
 
 #### Credits
 
-Original gepostet von [Jack Franklin](https://twitter.com/jack_franklin) auf [javascriptplayground.com](http://javascriptplayground.com/blog/2017/04/react-typescript/).
+Original gepostet von [Jack Franklin](https://twitter.com/jack_franklin).
