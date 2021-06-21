@@ -962,3 +962,7 @@ Ich freue mich auf Anmerkungen und Kommentare via Twitter oder anderer Kanäle (
 ### Danksagung
 
 Ein großer Dank geht an [Christian Ost](https://twitter.com/_christianost) für das ausführliche Lesen, kritische Begutachten und fleißige Korrigieren des Tutorials!
+
+  
+Wenn Du sehen möchtest, wie das Tutorial live aussieht, schau dir doch an, wie unser Trainer David das Tutorial durcharbeitet:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gk2BbJW0oQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
