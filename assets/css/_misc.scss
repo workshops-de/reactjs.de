@@ -1,20 +1,36 @@
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
+.h4,
 h5,
-h6 {
+.h5,
+h6,
+.h6 {
   word-wrap: break-word; // for mobile
 }
 
-.c-hover-shadow {
-  @extend .shadow-sm;
-  transition: all 0.3s ease;
-  top: 0;
-  &:hover {
-    @extend .shadow-lg;
-    top: -$spacer * 0.25;
-  }
+// Misc
+//==================================================
+.has-navigation-fixed {}
+
+.pt-8, .py-8 {
+  padding-top: 8rem;
+}
+
+.pt-9, .py-9 {
+  padding-top: 9rem;
+}
+
+.mt-8, .my-8 {
+  margin-top: 8rem;
+}
+
+.text-workshops {
+  color: #5ea1ee;
 }
 
 .c-post-categories {
@@ -33,11 +49,21 @@ h6 {
   max-width: calc(100% - $spacer*2);
 }
 
+
 .page-item.active {
   .page-link {
     background-color: $primary !important;
     color: $white;
     border-radius: $border-radius-sm;
+  }
+}
+
+.c-header-dark {
+  color: $light;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $light;
+    text-shadow: 1px 1px 0px $dark;
   }
 }
 
@@ -49,22 +75,6 @@ h6 {
   background-color: #ded;
   color: #060;
   font-weight: 300;
-}
-
-.workshop{
-
-  .card-header {
-    padding: 0.75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: #fff;
-    border-bottom: 1px solid #efefef;
-  }
-
-  .card.events {
-    background-clip: border-box;
-    border: 1px solid #efefef;
-    border-radius: 3px;
-  }
 }
 
 .c-course-img {

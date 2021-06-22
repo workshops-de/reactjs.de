@@ -1,8 +1,7 @@
 .c-content {
   h2, h3 {
-    margin-top: - $paragraph-margin-bottom * 1.5;
-    padding-top: $paragraph-margin-bottom * 3;
-    margin-bottom: $paragraph-margin-bottom * 1.5;
+    margin-top: - $spacer;
+    padding-top: $spacer * 2;
   }
 
   h3 {
