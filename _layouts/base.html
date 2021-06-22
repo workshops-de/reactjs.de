@@ -36,7 +36,7 @@
 
 <!-- Position relative is for Bootstrap TOC Plugin -->
 
-<body class="has-navigation-banner" style="position: relative" data-spy="scroll" data-target="#toc">
+<body class="has-navigation-fixed" style="position: relative" data-spy="scroll" data-target="#toc">
   {% include _navigation.html %}
 
   {{content}}
@@ -49,6 +49,7 @@
   <script src="/assets/js/vendor/jquery-3.2.1.slim.min.js"></script>
   <script src="/assets/js/vendor/bootstrap-4.1.1.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="/assets/js/vendor/fp-3.0.0.min.js"></script>
+  <script src="/assets/js/vendor/headroom-0.9.4.min.js"></script>
   <script src="/assets/js/vendor/cookieconsent-3.1.1.min.js"></script>
   <script src="/assets/js/app.js"></script>
   {% if page.toc %}

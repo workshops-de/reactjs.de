@@ -5,35 +5,30 @@ title: Die deutsche Community zum Thema React
 description: Alles rund um React/JavaScript auf deutsch - Tutorials · Artikel · News · Schulungen.
 permalink: /
 ---
-
-<div class="header header-homepage d-flex align-items-center mb-6">
+<div class="header header-homepage d-flex align-items-center">
   <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-12 col-sm-3  text-center">
-        <img class="img-fluid c-img-rotation" alt="ReactJS.DE Logo" src="/assets/img/atom-sign-alt.svg">
+    <div class="row">
+      <div class="col-3 col-sm-3 text-center mx-auto my-auto">
+        <img class="img img-fluid px-xl-4" alt="ReactJS.DE Logo" src="/assets/img/reactjs-de-logo.svg">
       </div>
-      <div class="col-sm-7 pt-3">
-        <div class="pe-lg-4 me-lg-4 text-center text-sm-left">
-          <h1 class="header-homepage-title">
-            ReactJS.DE
-            <br>
-            <small>Deine Community rund um React!</small>
-          </h1>
-          <p class="mt-sm-2 pt-sm-2 mt-md-3 pt-md-3 h3">
-            <a href="/artikel/">Artikel</a>
-            <span class="ms-1 me-1">•</span>
-            <a href="/schulungen/">Schulungen</a>
+      <div class="col-sm-9 pt-3">
+        <div class="pe-lg-4 me-lg-4">
+          <p class="lead align-self-center text-muted">
+            Deine Community rund um React!
           </p>
-          <br>
-          <br>
+          <h1 class="header-homepage-title">ReactJS.DE</h1>
+          <p class="pt-2 pt-md-4">
+            <a href="/tutorials/" class="btn btn-outline-secondary me-2">Mit einem Tutorial starten &rsaquo;</a>
+            <a href="/schulungen/" class="btn btn-success">Schulung buchen &rsaquo;</a>
+          </p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<main role="main">
-  <div class="container mb-6">
+<main class="container">
+  <section class="container py-5">
     <h2>Hier starten! - Tutorials für Einsteiger</h2>
     <div class="row mb-4">
       {% for post in site.categories.tutorial limit:2 %}
@@ -45,16 +40,14 @@ permalink: /
   </div>
 
   <section class="py-5">
-    <div class="container">
-      <h2>Die neusten Artikel</h2>
-      <div class="row">
-        {% for post in site.posts limit:6 %}
-        <div class="col-sm-6 col-md-4 col-lg-4 mb-4">
-          {% include _post_card.html %}
-        </div>
-        {% endfor %}
+    <h2>Die neuesten Artikel</h2>
+    <div class="row">
+      {% for post in site.posts limit:6 %}
+      <div class="col-sm-6 col-md-4 col-lg-4 mb-4">
+        {% include _post_card.html %}
       </div>
+      {% endfor %}
     </div>
   </section>
-
 </main>
+

@@ -35,6 +35,19 @@ layout: base
         <div class="position-sticky c-top-4 ms-2">
           <p class="text-muted text-uppercase"><small>Inhaltsverzeichnis</small></p>
           <nav id="toc" data-toggle="toc"></nav>
+          <hr>
+          <div class="lead text-center">
+            Nichts verpassen?
+          </div>
+          <div class="text-center">
+            <a class="btn btn-sm btn-primary mt-3" href="https://workshops.us5.list-manage.com/subscribe?u=465db430c1cb88ec6dea2ca40&id=2bee334983&group[21477][32768]=1&group[26094][512]=1" target="_blank">
+              Zum Newsletter anmelden! <br>
+              💌
+            </a>
+          </div>
+        </div>
+        <div class="position-sticky c-top-4">
+
         </div>
       </div>
       <div class="col-md-12 col-lg-8 mb-2">
@@ -45,7 +58,13 @@ layout: base
             {% unless forloop.last %}<span class="ms-1 me-1">•</span>{% endunless %}
             {% endfor %}
             <span class="ms-1 me-1">|</span>
-            {{ page.author }} <span class="ms-1 me-1">•</span> <time>{{ page.published_at | date: "%d.%m.%Y" }}</time>
+            {{ page.author }}
+            {% if author.twitter %}
+            <a href="https://twitter.com/{{ author.twitter }}" target="_blank" style="margin-bottom: 5px;">
+              <img src="/assets/img/twitter-logo.svg" height="12" alt="Twitter Logo" />
+            </a>
+            {% endif %}
+            <span class="ms-1 me-1">•</span> <time>{{ page.published_at | date: "%d.%m.%Y" }}</time>
             <span class="ms-1 me-1">|</span>
             {% include _reading_time.html text=page.content %}
           </small>
@@ -54,9 +73,6 @@ layout: base
 
         <div class="c-content">
           {{ content }}
-          <a class="btn btn-sm btn-primary float-end" href="{{site.repository_url}}/edit/master/{{page.path}}" target="_blank">
-            Diesen Artikel auf GitHub verbessern
-          </a>
         </div>
       </div>
     </div>
@@ -64,8 +80,15 @@ layout: base
       <div class="col-lg-2 d-none d-lg-block"></div>
       <div class="col-md-12 col-lg-8 mb-2">
         <div class="row">
-          <div class="col-sm-12 col-md-12 mb-4">
+          <div class="col-sm-12 col-md-6 mb-2">
             {% include _post_author.html %}
+          </div>
+          <div class="col-sm-12 col-md-6 mb-2">
+            <p>
+              <a class="btn btn-sm btn-primary" href="{{site.repository_url}}/edit/master/{{page.path}}" target="_blank">
+                Diesen Artikel auf GitHub verbessern
+              </a>
+            </p>
           </div>
         </div>
 
@@ -73,7 +96,6 @@ layout: base
 
       </div>
     </div>
-
   </article>
 
   <div class="row justify-content-md-center no-gutters my-6">

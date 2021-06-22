@@ -1,22 +1,18 @@
-<div class="c-navbar-wrapper">
-  {% include _navigation_banner.html %}
-  <nav
-    class="navbar c-navbar-underline c-navbar-{% if page.header %}{{page.header}}{% else %}dark{% endif %} navbar-expand-md">
+<div data-headroom data-offset="105" class="navbar-wrapper headroom headroom--top headroom--not-bottom fixed-top">
+  <nav class="navbar navbar-light navbar-ajs navbar-expand-md">
     <div class="container">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <a class="navbar-brand d-none d-md-block p-0 me-4 img-grayscale-100" href="/">
+        <img alt="ReactJS.DE" src="/assets/img/reactjs-de-logo.svg" width="35">
+      </a>
       <a href="/discord" target="_blank" rel="noopener nofollow" class="btn btn-link link-secondary d-xs-flex d-md-none align-items-center text-secondary">
         <img src="/assets/img/discord-icon.svg" height="24" alt="Discord Logo" class="me-2" />
         <span><span class="d-lg-inline d-md-none">Community</span> Discord</span>
       </a>
-      <ul class="navbar-nav d-none d-md-inline-block">
-        <li class="nav-item">
-          <a class="nav-link" href="/">ReactJS.DE</a>
-        </li>
-      </ul>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse mt-3 mt-sm-0" id="navbarNav">
         <ul class="navbar-nav me-auto">
           <li class="nav-item {% if page.url contains '/artikel' %}active{% endif %}">
             <a class="nav-link" href="/artikel/">Artikel</a>
@@ -38,9 +34,6 @@
               <span><span class="d-lg-inline d-md-none">Community</span> Discord</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/autor-werden/">Neuer Artikel</a>
-          </li>
         </ul>
         <!--<form class="form-inline me-auto" action="/suche/" method="GET" autocomplete="off">
           <input name="q" class="form-control navbar-search" type="text" placeholder="&#xF002;">
@@ -48,4 +41,5 @@
       </div>
     </div><!-- .container -->
   </nav>
+  {% include _navigation_banner.html %}
 </div>

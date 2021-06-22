@@ -1,52 +1,19 @@
-.c-navbar-wrapper {
-  @extend .fixed-top;
-  position: absolute;
+.navbar-wrapper {
+  background-color: #fff;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
 }
 
-.c-navbar-banner {
+.navbar-banner {
   font-size: 1rem;
   text-align: center;
   padding: .6rem 1.2rem;
-  background: #0e1e25;
-
-  a {
-    color: #fdfdfd;
-  }
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
-//
-// c-navbar-light
-//
-.c-navbar-light {
-  @extend .navbar-light;
-  @extend .c-navbar-underline-light;
+.navbar-ajs {
+  background-color: #fff;
 
-  background-color: rgba(#fff, 0);
-  transition: background-color 0.8s ease;
-
-  &:hover {
-    background-color: rgba(#fff, 1);
-  }
-}
-
-.c-navbar-dark {
-  @extend .navbar-dark;
-  @extend .c-navbar-underline-dark;
-
-  background-color: rgba(#fff, 0);
-  transition: background-color 0.8s ease;
-
-  &:hover {
-    @extend .navbar-light;
-    @extend .c-navbar-underline-light;
-    background-color: rgba(#fff, 1);
-  }
-}
-
-//
-// c-navbar-underline
-//
-.c-navbar-underline {
   .nav-link {
     position: relative;
     display: inline-block;
@@ -58,6 +25,7 @@
       height: 2px;
       bottom: 6px;
       left: 0;
+      background-color: $navbar-light-hover-color;
       visibility: hidden;
       transform: scaleX(0);
       transition: all 0.2s ease-in-out 0s;
@@ -71,20 +39,31 @@
 
   .nav-item.active {
     .nav-link:before {
+      // background-color: $red;
       visibility: visible;
       transform: scaleX(0.8);
     }
   }
 }
 
-.c-navbar-underline-light {
-  .nav-link:before {
-    background-color: $navbar-light-active-color;
-  }
-}
+.form-inline .navbar-search {
+  width: 2.5em;
+  border: 0;
+  border-radius: 9999px;
+  transition: all 0.2s;
 
-.c-navbar-underline-dark {
-  .nav-link:before {
-    background-color: $navbar-dark-active-color;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+
+  &:focus, &:not(:placeholder-shown) {
+    background-color: rgba(#000, 0.1);
+    font-family: inherit;
+    width: 15em;
+
+    &::placeholder {
+      color: transparent;
+    }
   }
 }

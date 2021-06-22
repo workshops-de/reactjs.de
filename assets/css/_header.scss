@@ -1,9 +1,10 @@
 .header {
   position: relative;
+  margin-bottom: 20px;
 
   .page-header {
     color: #eee;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, .30);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, .15);
   }
 
   &.header-default {
@@ -13,33 +14,31 @@
     color: #fff;
   }
 
-  &.header-team, &.header-tutorials {
+  &.header-tutorials {
     background-color: #fcfcfc;
     border-bottom: 1px solid #efefef;
     color: #333;
     padding-bottom: 15px;
-    padding-top: 100px;
+    padding-top: 140px;
     margin-bottom: 40px;
   }
 
-  &.header-team, &.header-tutorials {
-    padding: $spacer*8 0 $spacer*4;
+  &.header-tutorials {
+    padding: $spacer*11 0 $spacer*4;
     margin-bottom: $spacer*4;
   }
 
   &.header-post {
     color: #fff;
-    text-shadow: 1px 1px 0px #000;
+    text-shadow: 2px 2px 2px #000;
     background-size: cover;
     background-position: center;
     min-height: 200px;
 
     .header-post-title {
-      margin-top: 40px;
       color: #fff;
       padding-top: 15px;
-      font-size: 300%;
-      max-width: 40rem;
+      font-size: 250%;
     }
     .header-post-author {
       margin-bottom: 30px;
@@ -47,39 +46,25 @@
   }
 
   &.header-homepage {
-    background-image: linear-gradient(-180deg, #10161E 0%, #243348 100%);
+    background-color: #fcfcfc;
     border-bottom: 1px solid #efefef;
-    color: $body-color;
+    color: #333;
     padding-bottom: 15px;
-    padding-top: 100px;
-    color: $light;
-    padding: $spacer*8 0 $spacer*6;
-    height: 100vh;
+    padding-top: 140px;
+    margin-bottom: 40px;
+    background: url('/assets/img/headers/header-bg-home.png');
+    background-size: cover;
+    background-position: center center;
+    color: #333;
+    padding: $spacer*11 0 $spacer*6;
 
     .header-homepage-title {
       line-height: 4.5rem;
       font-weight: 600;
-      white-space: nowrap;
-
-      small {
-        font-size: 0.4em;
-      }
     }
   }
 
-}
-
-.header-workshop {
-  padding-top: 100px;
-  background: url('/assets/img/courses/header-bg.jpg');
-  background-size: cover;
-  background-position: center center;
-
-  .header-intro {
-    font-size: 1.4rem
-  }
-
-  &.header-workshop-gradient-overlay {
+  &.header-gradient-overlay {
     &:before {
       content: "";
       position: absolute;
@@ -87,29 +72,86 @@
       right: 0;
       bottom: 0;
       left: 0;
-      opacity: .94;
-      background-image: linear-gradient(-180deg, #fefefe 0%, #efefef 100%);
+      background-image: linear-gradient(to bottom, transparent, #333);
+      opacity: .4;
     }
   }
 }
+
+.header-workshop {
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #efefef;
+  color: #333;
+  padding-top: 140px;
+  padding-bottom: 100px;
+  margin-bottom: 0px;
+  background: url('/assets/img/headers/header-bg-neutral.png');
+  background-size: cover;
+  background-position: center center;
+
+  .header-intro {
+    font-size: 1.4rem
+  }
+
+  h1, h2 {
+    color: #fff;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .9;
+    background-color: #0d47a1;
+    background: linear-gradient(145deg,#0a387e,#126eb9);
+  }
+}
+
+
+.header-workshop-advanced {
+  padding-top: 140px;
+  background: url('/assets/img/headers/header-bg-team.jpg');
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 0px;
+
+  .header-intro {
+    font-size: 1.4rem
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .94;
+    background-image: linear-gradient(-180deg, #fefefe 0%, #efefef 100%);
+  }
+}
+
+
+
+
 
 .header-team {
   background: url('/assets/img/headers/team.jpg');
   background-size: cover;
   background-position: center center;
+  padding-top: 200px;
+  padding-bottom: 100px;
 }
 
-.header-author {
-  background: url('/assets/img/headers/autor-werden.jpg');
+.header-tutorials {
+  background: url('/assets/img/headers/header-bg-neutral.png');
   background-size: cover;
   background-position: center center;
 }
 
-.header-training {
-  background: url('/assets/img/headers/schulungen.jpg');
-  background-size: cover;
-  background-position: center center;
-}
 
 @include media-breakpoint-up(sm) {
   .header {
@@ -146,39 +188,25 @@
   }
 }
 
-// basic settings for headers
-.c-header {
+.clients-list {
   position: relative;
-  min-height: 15rem;
-}
-
-@include media-breakpoint-up(sm) {
-  .c-header {
-    min-height: 20rem;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  .c-header {
-    min-height: 25rem;
-  }
-}
-
-// colors
-.c-header-light {
-  color: $dark;
-
-  h1, h2, h3, h4, h5, h6 {
-    color: $dark;
-    text-shadow: 1px 1px 0px $light;
-  }
-}
-
-.c-header-dark {
-  color: $light;
-
-  h1, h2, h3, h4, h5, h6 {
-    color: $light;
-    text-shadow: 1px 1px 0px $dark;
+  border-bottom: 1px solid rgba(63,66,83,.1);
+  position: relative;
+  &:after {
+    content: 'Unsere Kunden';
+    position: absolute;
+    -webkit-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    bottom: -12px;
+    left: 50%;
+    background: #fff;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(63,66,83,.7);
+    letter-spacing: 3px;
+    text-align: center;
   }
 }
