@@ -3,7 +3,8 @@ _site
 .jekyll-metadata
 .jekyll-cache
 .DS_Store
-_data/events.json
+_data/events/*.json
+_data/related_events/*.json
 _data/course.json
 _includes/_course_reviews.json
 firebase-debug.log
