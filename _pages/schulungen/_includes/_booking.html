@@ -27,19 +27,19 @@
       <div class="col-8 col-md-7">
         <div class="row">
           <div class="col-sm-9">
-            <a class="text-unstyled" href="https://workshops.de/seminare-schulungen-kurse/react-typescript/inhouse?utm_source=reactjs_de&utm_campaign=undefined&utm_medium=button&utm_content=workshops-list" target="_blank"> <span class="visually-hidden">React</span> Firmenschulung Inhouse</a>
+            <a class="text-unstyled" href="https://workshops.de/seminare-schulungen-kurse/{{ include.slug }}/inhouse?utm_source={{ site.utm_source }}&utm_campaign=undefined&utm_medium=button&utm_content=workshops-list" target="_blank"> <span class="visually-hidden">{{ include.topic }}</span> Firmenschulung Inhouse</a>
             <span class="small d-block d-lg-inline">
               Termine und Preise auf Anfrage
             </span>
             <span class="small d-inline d-sm-none"> Auf Anfrage </span>
           </div>
           <div class="col-sm-3 text-end">
-            <a class="btn btn-primary btn-sm btn-cta shadow" href="https://workshops.de/seminare-schulungen-kurse/react-typescript/inhouse?utm_source=reactjs_de&utm_campaign=undefined&utm_medium=button&utm_content=workshops-list" target="_blank"><span class="visually-hidden">React Inhouse</span> &nbsp;anfragen&nbsp;</a>
+            <a class="btn btn-primary btn-sm btn-cta shadow" href="https://workshops.de/seminare-schulungen-kurse/{{ include.slug }}/inhouse?utm_source={{ site.utm_source }}&utm_campaign=undefined&utm_medium=button&utm_content=workshops-list" target="_blank"><span class="visually-hidden">{{ include.topic }} Inhouse</span> &nbsp;anfragen&nbsp;</a>
           </div>
         </div>
       </div>
     </div>
-    {% for event in site.data.events.react %}
+    {% for event in site.data.events[include.data_key] %}
     <div class="row mb-2" itemscope="" itemtype="http://schema.org/Event">
       <div class="d-none d-md-block col-1">
         KW{{ event.startDate | date: "%W" }}
@@ -61,7 +61,7 @@
       <div class="col-8 col-md-7">
         <div class="row">
           <div class="col-sm-9">
-            <a class="underlined" href="{{ event.url }}&utm_source=reactjs_de&utm_campaign=website-link-event-date&utm_medium=button&utm_content=workshops-list" target="_blank">
+            <a class="underlined" href="{{ event.url }}&utm_source={{ site.utm_source }}&utm_campaign=website-link-event-date&utm_medium=button&utm_content=workshops-list" target="_blank">
               {{event.topic}} {{event.type}}
             </a>
             <span class="d-block d-lg-inline">
@@ -90,7 +90,7 @@
             <meta itemprop="name" content="⚛️ {{ event.topic }} {{ event.type }}">
             <meta itemprop="description" content="{{ event.description }}">
             <meta itemprop="url" content="{{ event.url }}">
-            <meta itemprop="image" content="{{site.url}}/assets/img/workshops/logo-react-typescript.svg">
+            <meta itemprop="image" content="{{site.url}}/assets/img/courses/logo-{{ include.logo }}.svg">
             <span itemprop="organizer" itemscope itemtype="http://schema.org/Organization">
               <meta itemprop="name" content="Workshops.DE">
               <meta itemprop="url" content="https://workshops.de">
@@ -120,18 +120,18 @@
             {% endif %}
           </div>
           <div class="col-sm-3 text-end">
-            <a class="btn btn-success btn-sm btn-cta shadow" href="{{ event.offers.url }}?utm_source=reactjs_de&utm_campaign=website-link-event-date&utm_medium=button&utm_content=workshops-list#booking" target="_blank">anmelden</a>
+            <a class="btn btn-success btn-sm btn-cta shadow" href="{{ event.offers.url }}?utm_source={{ site.utm_source }}&utm_campaign=website-link-event-date&utm_medium=button&utm_content=workshops-list#booking" target="_blank">anmelden</a>
           </div>
         </div>
       </div>
     </div>
     {% endfor %}
-    {% if site.data.related_events.react %}
+    {% if site.data.related_events[include.data_key] %}
       <div class="text-center mt-4">
         <button class="btn btn-link btn-lg | fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#related_events" aria-expanded="false" aria-controls="collapseExample">» Termine aus verwandten Themen anzeigen</button>
       </div>
       <div class="collapse mt-2" id="related_events">
-        {% for event in site.data.related_events.react limit:6 %}
+        {% for event in site.data.related_events[include.data_key] limit:6 %}
         <div class="row mb-2" itemscope="" itemtype="http://schema.org/Event">
           <div class="d-none d-md-block col-1">
             KW{{ event.startDate | date: "%W" }}
@@ -153,7 +153,7 @@
           <div class="col-8 col-md-7">
             <div class="row">
               <div class="col-sm-9">
-                <a class="underlined" href="{{ event.url }}&utm_source=reactjs_de&utm_campaign=website-link-event-date&utm_medium=button&utm_content=workshops-list" target="_blank">
+                <a class="underlined" href="{{ event.url }}&utm_source={{ site.utm_source }}&utm_campaign=website-link-event-date&utm_medium=button&utm_content=workshops-list" target="_blank">
                   {{event.topic}} {{event.type}}
                 </a>
                 <span class="d-block d-lg-inline">
@@ -182,7 +182,7 @@
                 <meta itemprop="name" content="⚛️ {{ event.topic }} {{ event.type }}">
                 <meta itemprop="description" content="{{ event.description }}">
                 <meta itemprop="url" content="{{ event.url }}">
-                <meta itemprop="image" content="{{site.url}}/assets/img/workshops/logo-react-typescript.svg">
+                <meta itemprop="image" content="{{site.url}}/assets/img/courses/logo-{{ include.logo }}.svg">
                 <span itemprop="organizer" itemscope itemtype="http://schema.org/Organization">
                   <meta itemprop="name" content="Workshops.DE">
                   <meta itemprop="url" content="https://workshops.de">
@@ -212,7 +212,7 @@
                 {% endif %}
               </div>
               <div class="col-sm-3 text-end">
-                <a class="btn btn-success btn-sm btn-cta shadow" href="{{ event.offers.url }}?utm_source=reactjs_de&utm_campaign=website-link-event-date&utm_medium=button&utm_content=workshops-list#booking" target="_blank">anmelden</a>
+                <a class="btn btn-success btn-sm btn-cta shadow" href="{{ event.offers.url }}?utm_source={{ site.utm_source }}&utm_campaign=website-link-event-date&utm_medium=button&utm_content=workshops-list#booking" target="_blank">anmelden</a>
               </div>
             </div>
           </div>
@@ -221,7 +221,7 @@
       </div>
     {% endif %}
     <hr>
-    <div class="text-muted smaller text-end d-flex justify-content-end">Unsere Workshops werden durchgeführt von <span class="d-inline-flex align-items-center"><img class="ms-1 me-1" alt="Workshops Logo" src="/assets/img/workshops-de-logo.svg" height="16"> <a class="text-workshops" href="https://workshops.de/?utm_source=reactjs_de&utm_campaign=website-link-right-bottom&utm_medium=link&utm_content=workshops-list" target="_blank" rel="noopener">Workshops.DE</a></span></div>
+    <div class="text-muted smaller text-end d-flex justify-content-end">Unsere Workshops werden durchgeführt von <span class="d-inline-flex align-items-center"><img class="ms-1 me-1" alt="Workshops Logo" src="/assets/img/workshops-de-logo.svg" height="16"> <a class="text-workshops" href="https://workshops.de/?utm_source={{ site.utm_source }}&utm_campaign=website-link-right-bottom&utm_medium=link&utm_content=workshops-list" target="_blank" rel="noopener">Workshops.DE</a></span></div>
     <!-- /.col~ -->
     <!-- /.row -->
   </div>

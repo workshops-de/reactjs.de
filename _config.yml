@@ -5,6 +5,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 ga_property: "UA-97181121-5"
 gtm_property: "GTM-NHL7XVK"
+utm_source: "reactjs_de"
 permalink: /artikel/:slug/
 repository_url: "https://github.com/symetics/reactjs.de"
 ws_course_id: 17
