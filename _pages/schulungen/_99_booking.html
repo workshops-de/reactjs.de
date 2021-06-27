@@ -12,7 +12,7 @@
           Die genauen Start- und Endzeiten findest du, wenn du auf einen Termin klickst.
         </p>
         <p>
-          <strong>Remote:</strong> Unsere öffentlichen Remote Schulungen finden in der Regel über 6 halbe Tage am Vormittag von 9 bis 13 Uhr statt.
+          <strong>Remote:</strong> Unsere öffentlichen Remote Schulungen finden in der Regel über {{ include.duration | times: "2") }} halbe Tage am Vormittag von 9 bis 13 Uhr statt.
         </p>
         <p>
           Andere Variationen sind natürlich auch sehr flexibel umzusetzen und können gerne gemeinsam erarbeitet werden.
@@ -22,7 +22,7 @@
 
     <div class="row mb-3">
       <div class="col-4 col-md-5">
-        <span>Individuell <span class="small d-block d-lg-inline">(Standarddauer 3-6 Tage)</span></span>
+        <span>Individuell <span class="small d-block d-lg-inline">(Standarddauer {{ include.duration }}-{{ include.duration | times: "2") }} Tage)</span></span>
       </div>
       <div class="col-8 col-md-7">
         <div class="row">
@@ -87,7 +87,7 @@
                 {% endif %}
               </span>
             </span>
-            <meta itemprop="name" content="⚛️ {{ event.topic }} {{ event.type }}">
+            <meta itemprop="name" content="{% if include.icon %}{{ include.icon }}{% else %}📅{% endif %} {{ event.topic }} {{ event.type }}">
             <meta itemprop="description" content="{{ event.description }}">
             <meta itemprop="url" content="{{ event.url }}">
             <meta itemprop="image" content="{{site.url}}/assets/img/courses/logo-{{ include.logo }}.svg">
@@ -179,7 +179,7 @@
                     {% endif %}
                   </span>
                 </span>
-                <meta itemprop="name" content="⚛️ {{ event.topic }} {{ event.type }}">
+                <meta itemprop="name" content="📅 {{ event.topic }} {{ event.type }}">
                 <meta itemprop="description" content="{{ event.description }}">
                 <meta itemprop="url" content="{{ event.url }}">
                 <meta itemprop="image" content="{{site.url}}/assets/img/courses/logo-{{ include.logo }}.svg">
