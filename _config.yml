@@ -1,5 +1,6 @@
 title: ReactJS.DE
 description: ""
+topic: React
 url: "https://reactjs.de"
 twitter_username: reactjs_de
 github_username:  jekyll
@@ -8,6 +9,11 @@ gtm_property: "GTM-NHL7XVK"
 utm_source: "reactjs_de"
 permalink: /artikel/:slug/
 repository_url: "https://github.com/symetics/reactjs.de"
+
+navigation:
+  banner:
+    message: "10% Rabatt auf alle Workshops.DE Schulungen mit dem Code: <b>REACTJSDE10</b>"
+    href: "https://workshops.de/schulungsthemen/react?utm_source=reactjs_de&utm_campaign=portal-discount&utm_medium=banner&utm_content=workshops-overview"
 
 plugins_dir: ["_plugins/", "shared/plugins/"]
 
