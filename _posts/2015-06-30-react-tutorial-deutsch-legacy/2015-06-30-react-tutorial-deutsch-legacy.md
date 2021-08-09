@@ -28,7 +28,7 @@ Danach schauen wir uns die beiden wichtigsten Ideen hinter React an &ndash; die 
       </p>
     </div>
     <div class="col-xs-12 col-md-6">
-      <img class="img-fluid img-rounded" src="workshops-attendees.png" alt="Teilnehmer in der Veranstaltung React Intensiv Workshop/Schulung">
+      <img class="img-fluid img-rounded" src="workshops-attendees.png" alt="Teilnehmer:innen in der Veranstaltung React Intensiv Workshop/Schulung">
     </div>
   </div>
 </div>
@@ -414,7 +414,7 @@ Mehr zur Implementierung des virtuellen DOMs in unserem Artikel [Virtuelles DOM 
       </p>
     </div>
     <div class="col-xs-12 col-md-6">
-      <img class="img-fluid img-rounded" src="workshops-attendees.png" alt="Teilnehmer in der Veranstaltung React Intensiv Workshop/Schulung">
+      <img class="img-fluid img-rounded" src="workshops-attendees.png" alt="Teilnehmer:innen in der Veranstaltung React Intensiv Workshop/Schulung">
     </div>
   </div>
 </div>
