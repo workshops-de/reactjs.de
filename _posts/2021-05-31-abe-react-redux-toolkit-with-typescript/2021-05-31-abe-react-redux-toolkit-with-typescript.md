@@ -6,7 +6,6 @@ published_at: 2021-05-31 10:00:00
 header_source: "https://i.imgur.com/egaWeWg.jpg"
 header_image: header.jpeg
 categories: "react-native typescript redux redux-toolkit best-practices series"
-canonical_url: "https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13"
 series: "React Native (Step by Step)"
 ---
 
@@ -232,3 +231,5 @@ Es ist nicht viel und es nicht hübsch, aber es funktioniert und ist typisiert u
 In den kommenden Sessions werden wir uns angucken, wie wir unseren redux store dauerhaft bestehend machen. Außerdem sehen wir uns ein paar grundlegende Lösungen für die Navigation und die Dateistruktur des Projekts an.
 
 Hier ist der versprochene [Link zum (Pre-)Release tag auf Github](https://github.com/AllBitsEqual/expo-ts-starter/tree/v0.2.0).
+
+[Hier zum Orginal-Artikel auf English](https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13).
