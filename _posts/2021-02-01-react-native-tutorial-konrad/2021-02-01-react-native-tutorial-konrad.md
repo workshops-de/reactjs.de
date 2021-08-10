@@ -6,7 +6,6 @@ published_at: 2021-02-01 10:00:00
 header_source: "https://i.imgur.com/KgYFDs5.jpg"
 header_image: header.jpg
 categories: "react-native typescript linting expo best-practise series"
-canonical_url: "https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793"
 series: "React Native (Step by Step)"
 ---
 
@@ -16,7 +15,7 @@ series: "React Native (Step by Step)"
 
 _Wie immer findest du den fertigen Code am Ende des Artikels auf GitHub verlinkt._
 
-**Reihe: React Native (Schritt für Schritt)**  
+**Reihe: React Native (Schritt für Schritt)**
 1. => **du bist hier** <=
 2. [React Redux + Toolkit mit Typescript](https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13)
 
@@ -76,7 +75,7 @@ Wenn du auf Nummer sicher gehen willst, dass bisher alles so funktioniert, wie e
 npm start
 ```
 
-Expo Web Interface 
+Expo Web Interface
 ![](https://i.imgur.com/jcM8df5.png)
 
 
@@ -114,7 +113,7 @@ trim_trailing_whitespace = false
 ```
 
 ### Linting und Prettier
-Um mit dem linting anzufangen, müssen wir eslint und ein paar weitere Presets installieren, die wir für unser development nutzen werden.  
+Um mit dem linting anzufangen, müssen wir eslint und ein paar weitere Presets installieren, die wir für unser development nutzen werden.
 Wir werden außerdem Prettier benutzen, um die einfachereren Formatierungsprozesse automatisch reparieren zu lassen. Somit müssen wir nicht alle Einrückungen und Semikolons aus kopierten Code-Schnipseln aus dem Web anpassen.
 
 #### eslint
@@ -124,7 +123,7 @@ Wir werden das Airbnb ESLint setup verwenden, für das mehrere packages notwendi
 npx install-peerdeps --dev eslint-config-airbnb
 ```
 
-Damit installierst du alle folgenden packages in deine projects dev dependencies: 
+Damit installierst du alle folgenden packages in deine projects dev dependencies:
 + eslint@7.2.0
 + eslint-config-airbnb@18.2.1
 + eslint-plugin-react@7.22.0
@@ -258,14 +257,14 @@ Um den Linter auszuführen und Gebrauch von den Prettier Autokorrekturen machen 
 
 Beide Befehle führen den Typescript Compiler aus, ohne dabei Veränderungen am Code zu machen (tsc --noEmit) und führen dann eslint auf allen passenden Dateien aus, beginnend am root level.
 
-Noch eine kurze Warnung, beziehungsweise ein Ratschlag zu meinen Skripten: Ich leite allen fehlerhaften Output weg (|| true), da das Skript beim Ausführen und Finden von Linting Errors einen Fehler aufzeigt. Das ist das erwartete Verhalten und sehr nützlich, wenn du deine Befehle aneinanderreihst. Füge am Ende nicht "|| true" hinzu, wenn du diese Skripte später einmal in Kombination mit anderen Skripten verwenden möchtest.  
+Noch eine kurze Warnung, beziehungsweise ein Ratschlag zu meinen Skripten: Ich leite allen fehlerhaften Output weg (|| true), da das Skript beim Ausführen und Finden von Linting Errors einen Fehler aufzeigt. Das ist das erwartete Verhalten und sehr nützlich, wenn du deine Befehle aneinanderreihst. Füge am Ende nicht "|| true" hinzu, wenn du diese Skripte später einmal in Kombination mit anderen Skripten verwenden möchtest.
 Ich persönlich habe es nicht so gerne, jedes mal 10 Linien nutzlose "npm ERR!" zu sehen, wenn ich meinen Linter ausführe. Ich möchte meine Linting Errors in meinem Terminal untersuchen und feststellen, wo ich Probleme beheben muss. Deshalb hat dieser console output in diesem Szenario keinen Wert für mich.
 
 ![](https://i.imgur.com/8alvUed.png)
 
 
 ## Zusammenfassung
-Wenn du jetzt die Linter Skripte ausführst, wirst du zwei Dinge beobachten.  
+Wenn du jetzt die Linter Skripte ausführst, wirst du zwei Dinge beobachten.
 Das Ausführen von `npm run lint` wird dir eine lange Liste kleinerer Probleme zeigen. Dies liegt nicht daran, dass das basic template Fehler enthält, sondern dass unsere selbst definierten Regeln unterschiedliche Paradigmen aufweisen (wie meine Präferenz, keine Semikolons zu verwenden, trailing comma zu erzwingen und einen Einzug von 4 zu verwenden).
 
 ![](https://i.imgur.com/QzKirSj.png)
@@ -285,4 +284,6 @@ Wir haben ein neues Projekt mit einem Typescript Template gestartet, haben linti
 In unserer nächsten Session werden wir einen Blick auf grundlegende Lösungen für die Navigation, das state management und die Struktur der Projektdateien werfen.
 
 Hier ist der versprochene [Link zum (Pre-)Release tag auf Github](https://github.com/AllBitsEqual/expo-ts-starter/tree/v0.1.0).
+
+[Hier zum Orginal-Artikel auf English](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793).
 
