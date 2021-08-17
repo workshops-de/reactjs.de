@@ -83,7 +83,7 @@ Unsere Didaktik behandelt dabei die Motivation, die Theorie und dann den Praxis-
      </p>
      <p class="text-center">
        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=button&utm_content=text-article-top">
-         <button class="btn btn-danger">Jetzt weiter lernen</button>
+         <button class="btn btn-danger">Zur React Intensiv Schulung</button>
        </a>
      </p>
    </div>
@@ -256,7 +256,7 @@ render(<App />, rootElement);
      </p>
      <p class="text-center">
        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=button&utm_content=text-article">
-         <button class="btn btn-danger">Jetzt weiter lernen</button>
+         <button class="btn btn-danger">Zur React Intensiv Schulung</button>
        </a>
      </p>
    </div>
@@ -1032,7 +1032,7 @@ Wenn Du sehen möchtest, wie das Tutorial live aussieht, schau dir doch an, wie 
      </p>
      <p class="text-center">
        <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=button&utm_content=text-buttom">
-         <button class="btn btn-danger">Jetzt weiter lernen</button>
+         <button class="btn btn-danger">Zur React Intensiv Schulung</button>
        </a>
      </p>
    </div>
