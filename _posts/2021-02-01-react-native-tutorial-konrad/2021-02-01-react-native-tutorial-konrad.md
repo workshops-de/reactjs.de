@@ -285,5 +285,5 @@ In unserer nächsten Session werden wir einen Blick auf grundlegende Lösungen f
 
 Hier ist der versprochene [Link zum (Pre-)Release tag auf Github](https://github.com/AllBitsEqual/expo-ts-starter/tree/v0.1.0).
 
-[Hier zum Orginal-Artikel auf English](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793).
+[Hier zum Original-Artikel auf English](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793).
 

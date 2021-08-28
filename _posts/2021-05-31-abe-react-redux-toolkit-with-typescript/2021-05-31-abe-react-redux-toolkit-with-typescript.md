@@ -16,28 +16,27 @@ series: "React Native (Step by Step)"
 _Wie immer findest du den fertigen Code am Ende des Artikels auf GitHub verlinkt._
 
 **Reihe: React Native (Schritt für Schritt)**
+
 1) [Umgang mit Typescript und Linting](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793)
 2) => **du bist hier** <=
 
 ![](https://i.imgur.com/egaWeWg.jpg)
 
-
 ## Redux - WARUM?
+
 Ich gehe davon aus, dass du über Grundkenntnisse in React Native und Redux verfügst. [Solltest du eine kleine Auffrischung deines Wissens benötigen, habe ich hier genau den richtigen Artikel für dich!](https://allbitsequal.medium.com/straightforward-redux-no-strings-attached-e1b5f111bf00) Wir fahren nun mit dem setup aus unserer letzten Session fort und arbeiten weiterhin mit Expo, um unser React Native Build und bundling zu verwalten.
 
 Schnapp dir das [aktuelle Projekt auf GitHub](https://github.com/AllBitsEqual/expo-ts-starter/tree/v0.1.0).
-
 
 Ich weiß, dass es momentan einen großen Hype darum gibt, Redux und andere dependencies vollständig aus allen Projekten zu entfernen und mit React Hooks zu ersetzen. Ich glaube aber immer noch fest an die Ideen hinter Redux und besonders mit der neuesten Version (5.x zur Zeit des Schreibens dieses Artikels) wurde die Integration von Redux im Navigator verbessert. Davon werden wir in späteren Sessions noch profitieren, wenn wir React Navigation in unser Projekt einfügen.
 
 > Bitte denk aber daran, dass nicht jedes Projekt Redux BRAUCHT, viele davon aber profitieren KÖNNEN.
 
-
 ### Redux Toolkit - WARUM?
+
 In der Vergangenheit hatte ich mich dazu entschieden, nicht mit Redux Toolkit zu arbeiten. Ich bevorzugte damals die hands-on-Herangehensweise, doch Redux ist gar nicht so angsteinflößend und kompliziert, sobald du die grundlegenden Prinzipien verstanden hast. Ich konnte damals nichts gegen das Boilerplate-Argument einwenden, aber letztendlich ist es nicht so schlecht und du verbringst am Ende gar nicht SO VIEL Zeit damit, redux code zu schreiben.
 
 Das war mein „altes Ich“. Das „heutige Ich“ hat dem toolset eine zweite Chance gegeben und einige Prototypen damit erstellt, die in einem größeren Projekt verwendet wurden. Jetzt muss das „heutige Ich“ leicht schmunzeln, wenn es an das „alte Ich“ denkt, das sich vehement gegen die Verwendung des toolsets gesträubt hat. Im Endeffekt schreibst du mit dem toolset nämlich die gleiche Logik und mehr oder weniger den gleichen Code, aber du schreibst wesentlich weniger Code und deine files sind viel kompakter und einfacher zu lesen.
-
 
 ## Redux - WIE?
 
@@ -216,8 +215,8 @@ Das war's. Wenn du die App mit `npm start` ausführst und die Buttons klickst, g
 
 Stell sicher, dass du `npm run fix` ausführst, um kleinere code style errors zu beheben und zu bestätigen, dass wir alles gemäß unserer linting und rules gemacht haben. Fertig!
 
-
 ## Zusammenfassung
+
 Wir haben unser React Native Typescript Projekt vom letzten Mal fortgesetzt und einen voll funktionsfähigen und komplett typisierten Redux Store in ungefähr 30 Zeilen redux code (imports ausgeschlossen) und einige lines tsx hinzugefügt. Das bedeutet wohl, dass ich meinen ursprünglichen redux Artikel umschreiben sollte und die neue Version deutlich kürzer sein wird...
 
 ![](https://i.imgur.com/qy76I16.png)
@@ -232,4 +231,4 @@ In den kommenden Sessions werden wir uns angucken, wie wir unseren redux store d
 
 Hier ist der versprochene [Link zum (Pre-)Release tag auf Github](https://github.com/AllBitsEqual/expo-ts-starter/tree/v0.2.0).
 
-[Hier zum Orginal-Artikel auf English](https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13).
+[Hier zum Original-Artikel auf English](https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13).
