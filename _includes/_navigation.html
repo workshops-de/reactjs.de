@@ -22,9 +22,22 @@
           <li class="nav-item">
             <a class="nav-link" href="https://workshops.de/consulting" target="_blank">Consulting</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/discord" target="_blank"><span class="d-lg-inline d-md-none">Community</span> Discord</a>
+          <li class="nav-item dropdown{% if page.url contains '/ng-de-konferenz' %} active{% endif %}">
+            <a class="nav-link" href="#" id="navbarCourseDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Community
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarCourseDropdown">
+              <a class="dropdown-item" href="/meetups/">Meetups</a>
+              <!-- <a class="dropdown-item" href="/videos/">Videos</a> -->
+              <a class="dropdown-item" href="/discord" target="_blank"><span class="visually-hidden">Community </span>Discord</a>
+            </div>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://workshops.de/jobs" target="_blank">Jobs</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="/discord" target="_blank"><span class="visually-hidden">Community </span>Discord</a>
+          </li> -->
         </ul>
         <form class="form-inline d-none d-md-inline" action="/suche/" method="GET">
           <input name="q" class="form-control navbar-search" type="text" placeholder="&#xF002;" autocomplete="off">
