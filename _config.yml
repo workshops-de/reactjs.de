@@ -6,6 +6,7 @@ twitter_username: reactjs_de
 github_username:  jekyll
 ga_property: "UA-97181121-5"
 gtm_property: "GTM-NHL7XVK"
+hotjar_id: "2596715"
 utm_source: "reactjs_de"
 permalink: /artikel/:slug/
 repository_url: "https://github.com/symetics/reactjs.de"
