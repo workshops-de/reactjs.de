@@ -1002,7 +1002,7 @@ Bei **Frameworks**, wie [Angular](https://angular.io/) oder [Vue.js](https://vue
 
 ### Die nächsten Schritte
 
-Ein sicherer Umgang mit **Hooks** ist ein zentraler Punkt jeder modernen React App. Neben dem `useState` Hook, spielt der `useEffect` Hook die wichtigste Rolle. Mit dem `useEffect` Hook können Prozesse programatisch in Gang gebracht werden. Zum Beispiel kann der `useEffect` Hook genutzt werdne, um den API Call beim ersten Anzeigen (d.h. Mounten) der Komponente auszuführen.
+Ein sicherer Umgang mit **Hooks** ist ein zentraler Punkt jeder modernen React App. Neben dem `useState` Hook, spielt der `useEffect` Hook die wichtigste Rolle. Mit dem `useEffect` Hook können Prozesse programatisch in Gang gebracht werden. Zum Beispiel kann der `useEffect` Hook genutzt werden, um den API Call beim ersten Anzeigen (d.h. Mounten) der Komponente auszuführen.
 
 Bei größeren Applikationen reicht der `useState` Hook zum Verwalten von State nicht aus. Dort muss dann React Context (mittels des `useContext` Hooks) oder weiterführende State-Management Bibliotheken hinzugefügt werden.
 
