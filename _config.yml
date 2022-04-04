@@ -4,12 +4,11 @@ topic: React
 url: "https://reactjs.de"
 twitter_username: reactjs_de
 github_username:  jekyll
-ga_property: "UA-97181121-5"
 gtm_property: "GTM-NHL7XVK"
-hotjar_id: "2596715"
 utm_source: "reactjs_de"
 permalink: /artikel/:slug/
 repository_url: "https://github.com/symetics/reactjs.de"
+og_generator_enabled: true
 
 navigation:
   banner:
@@ -32,9 +31,9 @@ defaults:
       toc: true
       language: "de"
   - scope:
-      path:            "_posts/**/*.html"
+      path: "_posts/**/*.html"
     values:
-      sitemap:         false
+      sitemap: false
   - scope:
       path: "_pages" # an empty string here means all files in the project
     values:
@@ -55,6 +54,8 @@ sass:
   style: :compressed
   sass_dir: assets/css
   sourcemap: never
+autoprefixer:
+  only_production: true
 plugins:
   - jekyll-feed
   - jekyll-sitemap

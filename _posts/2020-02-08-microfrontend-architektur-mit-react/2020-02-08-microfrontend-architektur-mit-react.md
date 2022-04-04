@@ -321,7 +321,7 @@ Schauen wir zunächst auf unsere Verzeichnisstruktur. Eine kleine Änderung bei 
 
 Die Applikation besteht nun aus einem Client und einem Server Teil. Die gemeinsame Logik platzieren wir in einem neuen Common Modul.
 
-Alle statischen Resourcen werden nun in `dist/static` ausgegben. Der Server wird direkt in `dist` geschrieben.
+Alle statischen Ressourcen werden nun in `dist/static` ausgegben. Der Server wird direkt in `dist` geschrieben.
 
 Auch für den Bau des Node.js mit Express basierten Servers können wir Parcel verwenden. Hierfür müssen wir nur den Kommandozeilenparameter `--target node` angeben. Zusätzlich sollten wir die Module über `--bundle-node-modules` ins selbe Paket stecken.
 
@@ -393,7 +393,7 @@ Die magischen Ersetzungen sorgen dafür, dass wir unser ursprüngliches HTML Dok
 
 Durch die Verwendung des `StaticRouter`s mit der `location` können wir bereits zur serverseitigen Renderzeit die richtigen Komponenten ausgeben.
 
-Der Rest vom kleinen Node.js Server sorgt nur dafür, dass alle Resourcen entsprechend transportiert werden.
+Der Rest vom kleinen Node.js Server sorgt nur dafür, dass alle Ressourcen entsprechend transportiert werden.
 
 ```js
 const express = require(express);
