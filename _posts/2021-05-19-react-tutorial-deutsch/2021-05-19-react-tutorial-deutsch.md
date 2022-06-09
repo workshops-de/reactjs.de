@@ -948,7 +948,7 @@ Um die `SeverityMessage` nur dann anzuzeigen, wenn es auch wirklich einen Fehler
     <SeverityMessage severity={"error"}>
       Es gab einen Fehler während des API Calls
     </SeverityMessage>
-  );
+  )
 }
 ```
 
