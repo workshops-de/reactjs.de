@@ -35,7 +35,7 @@ cd reactjs.de
 git remote add upstream https://github.com/workshops-de/reactjs.de.git
 ```
 
-### 2. Install the project dependencies
+### 2. Install the project dependencies 
 ```bash
 # install bundler as ruby package manager
 gem install bundler
