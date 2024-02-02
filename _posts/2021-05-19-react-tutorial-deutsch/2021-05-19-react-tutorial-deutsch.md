@@ -979,7 +979,7 @@ const fetchImageData = async () => {
 ```
 
 > - Falls der API Call scheitert, springt die JavaScript Runtime nun in den `catch` Block und man kann dem Nutzer anzeigen, dass etwas schief gelaufen ist. Den Fehler zeigen wir auch gleich mal
-> - Im Fehlerfall setzen wir den Fehler-Status auf `true`. Sobald ein neuer Daten-Fetch initiert wird, setzen wir den Fehler-Status auf `false` zurück.
+> - Im Fehlerfall setzen wir den Fehler-Status auf `true`. Sobald ein neuer Daten-Fetch initiiert wird, setzen wir den Fehler-Status auf `false` zurück.
 > - `setIsLoading` ist im `finally` block zu finden, da wir den Lade-Zustand unabhängig vom Resultat immer zurücksetzen wollen.
 >
 > Teste einmal den Fehler-Status, in dem du zum Beispiel die genutzte URL `https://picsum.photos/id/237/info` fehlerhaft veränderst. Wenn du jetzt nochmal auf den Button klickst, solltest du die Fehlermeldung sehen können.
