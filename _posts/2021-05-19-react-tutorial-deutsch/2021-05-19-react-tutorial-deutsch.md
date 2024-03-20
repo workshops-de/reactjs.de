@@ -2,7 +2,7 @@
 title: "React Tutorial für Einsteiger"
 description: "Tutorial zur React.js Bibliothek. Schritt für Schritt die Konzepte anhand einer Beispiel-App lernen."
 author: "André Kovac"
-published_at: 2021-05-19 00:00:00.000000Z
+published_at: 2024-02-19 00:00:00.000000Z
 categories: "tutorial reactjs javascript typescript"
 header_image: "./images/header.jpg"
 tutorial_page_order: "1"
@@ -105,6 +105,29 @@ Ohne eine JavaScript-Bibliothek, wie zum Beispiel **React** ist es aber viel sch
 JavaScript-Frameworks bringen daneben auch noch eingebaute Mechanismen für die Verwaltung komplexer Business-Logik oder komplexe Updates des User Interfaces (UI) mit. Bei **React** kann man bei Bedarf weitere Bibliotheken für diese komplexeren Aufgaben Schritt-für-Schritt hinzufügen.
 
 Komplexe Vorgänge ganz ohne Bibliotheken oder Frameworks umzusetzen, führt zu schwer wartbarem Code und ist viel fehleranfälliger, da für fast jedes Problem eigene Lösungen geschaffen werden müssen. Gute Lösungen für Probleme, die es bei jeder Web-App gibt, sind durch die Unterstützung großer Communities an Entwicklern, die sich rund um verschiedene Frameworks versammeln, entstanden. Damit kommt man viel schneller dahin auch als Anfänger robuste und performante Web-Apps zu programmieren.
+
+Es gibt allerdings Technologien wie Astro welche unter anderem React als Basis nutzen.
+
+## Kurzer Einblick in Astro als Static Site Generator
+
+Im Laufe des letzten Jahres hat sich Astro als würdiger Nachfolger von Gatsby etabliert und ist in die Fußstapfen getreten, um die Art und Weise, wie wir über Webentwicklung denken, neu zu definieren. Ursprünglich für statische Websites konzipiert, hat seine steigende Popularität Astro dazu bewogen, seinen Horizont zu erweitern und sich in die Welt der Webanwendungen und API-Endpunkte zu wagen. Diese Entwicklung hat dazu geführt, dass Entwickler Astro nun für eine breitere Palette von Anwendungsfällen in Betracht ziehen, weit über seine ursprüngliche Bestimmung hinaus.
+
+### Die Philosophie hinter Astro: Performance von Anfang an
+
+Astro unterscheidet sich von anderen Frameworks durch seinen Ansatz, mit dem es Performanz an erste Stelle setzt. Websites, die mit Astro entwickelt werden, starten mit dem Prinzip von Null JavaScript, wodurch unnötige Ladezeiten vermieden und eine schnelle Auslieferung garantiert wird. Diese Herangehensweise, kombiniert mit der Möglichkeit, zwischen statischer Seitengenerierung (SSG) und serverseitigem Rendering (SSR) zu wählen, macht Astro zu einem mächtigen Werkzeug im Arsenal eines jeden Webentwicklers.
+
+Doch Astro geht noch einen Schritt weiter. Es bindet sich nicht an ein spezifisches UI-Framework, was Entwicklern die Freiheit gibt, ohne Einschränkungen zu arbeiten. Obwohl es möglich ist, Astro ohne jedes UI-Framework zu nutzen, indem man seine einheimische Methode zum Erstellen von UI-Komponenten in ".astro"-Dateien verwendet, unterstützt Astro auch die Integration von beliebten Komponenten-Frameworks wie React. Diese Flexibilität ermöglicht es Entwicklern, bestehende Kenntnisse und Erfahrungen zu nutzen, um ansprechende und funktionale UI-Komponenten zu erstellen.
+
+### Island Architecture: Das Geheimnis hinter Astros Performance
+
+Wenn Astro in Kombination mit einem Komponenten-Framework verwendet wird, behält es sein Versprechen von Null JavaScript bei und liefert zunächst nur HTML und CSS an den Browser aus. JavaScript wird nur dann an den Client gesendet, wenn Komponenten interaktiv werden müssen. Diese Strategie ist ein zentraler Bestandteil von Astros "fast-by-default performance"-Narrativ, das durch ein innovatives Rendering-Paradigma namens Island Architecture unterstützt wird. Diese Architektur ermöglicht es, die Vorteile von sowohl statischem Rendering als auch clientseitiger Dynamik zu kombinieren, ohne die Leistung zu beeinträchtigen.
+
+### Der auf Astros Zukunft in der Webentwicklung
+
+Die einfache Integration von Themen und die nahtlose Einbindung von Dokumentationen durch Astro Starlight haben den Prozess erheblich vereinfacht. Angesichts dieser Erfolge bin ich gespannt darauf, Astros Fähigkeiten in zukünftigen Projekten weiter zu erkunden, insbesondere im Bereich Webanwendungen mit Funktionen wie Authentifizierung, API-Endpunkten und servergerenderten Inhalten.
+
+Astro steht am Anfang einer vielversprechenden Entwicklung in der Webentwicklung. Es ist nur eine Frage der Zeit, bis die Ansätze und Technologien, die Astro vorantreibt, zum neuen Standard in der Erstellung von Webseiten und Anwendungen werden.
+
 
 ## Was ist und kann React?
 
