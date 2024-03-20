@@ -2,7 +2,7 @@
 title: "Einführung in Next.js: Das React-basierte Framework"
 description: "Erfahren Sie alles über Next.js, das leistungsstarke Framework für React-Entwickler, inklusive Hot Code Reloading, Code-Splitting und mehr."
 author: "Robin Böhm"
-published_at: 2024-06-18 08:00:00
+published_at: 2024-03-18 08:00:00
 categories: "nextjs einführung"
 ---
 
