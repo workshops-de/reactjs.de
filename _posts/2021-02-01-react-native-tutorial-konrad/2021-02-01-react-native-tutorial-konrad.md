@@ -19,7 +19,7 @@ _Wie immer findest du den fertigen Code am Ende des Artikels auf GitHub verlinkt
 1. => **du bist hier** <=
 2. [React Redux + Toolkit mit Typescript](https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13)
 
-![](https://i.imgur.com/UYSyTVN.jpg)
+![](./intro.jpeg)
 
 ## Typescript - WARUM?
 Es gibt viele verschiedene Meinungen zum Thema Typescript. Die eingefleischten Fans schwören darauf, dass ihr Code dank Typescript weniger fehlerhaft, stabiler, leichter zu handhaben und einfacher zu erweitern, besser zu teilen und geeigneter für die Zusammenarbeit ist. Auf der anderen Seite gibt es Menschen, die Typescript als störend empfinden, weil es viel unnötigen Overhead und in einigen Fällen sogar Duplizierungen verursache, während Fehler zur Runtime nicht behoben werden würden.
@@ -55,7 +55,7 @@ Mit Expo zur Initialisierung unseres Projekts müssen wir Templates typescripten
 expo init yourProjectName
 ```
 
-![](https://i.imgur.com/ZY4lyX1.png "test")
+![](./init.png "test")
 
 Es kann einen Moment dauern, bis die expo-cli alle dependencies von npm heruntergeladen und installiert hat. Sobald dies erledigt ist, kannst du einfach mit `cd yourProjectName` in den neuen Ordner wechseln und mit der Arbeit beginnen.
 
@@ -76,7 +76,7 @@ npm start
 ```
 
 Expo Web Interface
-![](https://i.imgur.com/jcM8df5.png)
+![](./webinterface.png)
 
 
 
@@ -260,22 +260,22 @@ Beide Befehle führen den Typescript Compiler aus, ohne dabei Veränderungen am 
 Noch eine kurze Warnung, beziehungsweise ein Ratschlag zu meinen Skripten: Ich leite allen fehlerhaften Output weg (|| true), da das Skript beim Ausführen und Finden von Linting Errors einen Fehler aufzeigt. Das ist das erwartete Verhalten und sehr nützlich, wenn du deine Befehle aneinanderreihst. Füge am Ende nicht "|| true" hinzu, wenn du diese Skripte später einmal in Kombination mit anderen Skripten verwenden möchtest.
 Ich persönlich habe es nicht so gerne, jedes mal 10 Linien nutzlose "npm ERR!" zu sehen, wenn ich meinen Linter ausführe. Ich möchte meine Linting Errors in meinem Terminal untersuchen und feststellen, wo ich Probleme beheben muss. Deshalb hat dieser console output in diesem Szenario keinen Wert für mich.
 
-![](https://i.imgur.com/8alvUed.png)
+![](./console.png)
 
 
 ## Zusammenfassung
 Wenn du jetzt die Linter Skripte ausführst, wirst du zwei Dinge beobachten.
 Das Ausführen von `npm run lint` wird dir eine lange Liste kleinerer Probleme zeigen. Dies liegt nicht daran, dass das basic template Fehler enthält, sondern dass unsere selbst definierten Regeln unterschiedliche Paradigmen aufweisen (wie meine Präferenz, keine Semikolons zu verwenden, trailing comma zu erzwingen und einen Einzug von 4 zu verwenden).
 
-![](https://i.imgur.com/QzKirSj.png)
+![](./console-2.png)
 
 Das Ausführen von `npm run fix` lässt die meisten dieser Fehler auf magische Weise verschwinden. Fühlt sich gut an, oder?
 
-![](https://i.imgur.com/d4lTTfv.png)
+![](./console-3.png)
 
 Der verbleibende Fehler ist ein fehlender return type, also lasst uns diesen Fehler schnell beheben und nach Hause gehen. App() returned ein React Element an, also können wir einfach auf React.ReactElement tippen und das als return type unserer App Component hinzufügen.
 
-![](https://i.imgur.com/1sVdJ9B.png)
+![](./console-4.png)
 
 
 ## Fazit
