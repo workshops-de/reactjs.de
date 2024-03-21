@@ -20,7 +20,7 @@ _Wie immer findest du den fertigen Code am Ende des Artikels auf GitHub verlinkt
 1) [Umgang mit Typescript und Linting](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793)
 2) => **du bist hier** <=
 
-![](https://i.imgur.com/egaWeWg.jpg)
+![](./intro.jpeg)
 
 ## Redux - WARUM?
 
@@ -219,11 +219,11 @@ Stell sicher, dass du `npm run fix` ausführst, um kleinere code style errors zu
 
 Wir haben unser React Native Typescript Projekt vom letzten Mal fortgesetzt und einen voll funktionsfähigen und komplett typisierten Redux Store in ungefähr 30 Zeilen redux code (imports ausgeschlossen) und einige lines tsx hinzugefügt. Das bedeutet wohl, dass ich meinen ursprünglichen redux Artikel umschreiben sollte und die neue Version deutlich kürzer sein wird...
 
-![](https://i.imgur.com/qy76I16.png)
+![](./structure.png)
 
 Kleine Bemerkung am Rande: Wenn du deine redux config ganz einfach testen möchtest, nutze die Browser-Version des Expo Web Interfaces und öffne deine dev tools. Wenn du die richtigen Erweiterungen installiert hast (react + redux), kannst du dir alle components und store/state mit einem einfach nutzbaren Interface angucken.
 
-![](https://i.imgur.com/5my0HKg.png)
+![](./emulator.png)
 
 Es ist nicht viel und es nicht hübsch, aber es funktioniert und ist typisiert und skalierbar.
 
