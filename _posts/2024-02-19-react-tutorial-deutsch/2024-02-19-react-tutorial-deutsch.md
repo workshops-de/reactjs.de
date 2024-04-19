@@ -30,6 +30,10 @@ Unsere Didaktik behandelt dabei die Motivation, die Theorie und dann den Praxis-
 - [Einführung](#einführung)
 - [Inhaltsverzeichnis: Was werden wir lernen?](#inhaltsverzeichnis-was-werden-wir-lernen)
 - [Warum nicht ganz ohne Bibliotheken (Libraries) und Frameworks?](#warum-nicht-ganz-ohne-bibliotheken-libraries-und-frameworks)
+- [Kurzer Einblick in Astro als Static Site Generator](#kurzer-einblick-in-astro-als-static-site-generator)
+  - [Die Philosophie hinter Astro: Performance von Anfang an](#die-philosophie-hinter-astro-performance-von-anfang-an)
+  - [Island Architecture: Das Geheimnis hinter Astros Performance](#island-architecture-das-geheimnis-hinter-astros-performance)
+  - [Der auf Astros Zukunft in der Webentwicklung](#der-auf-astros-zukunft-in-der-webentwicklung)
 - [Was ist und kann React?](#was-ist-und-kann-react)
 - [Was ist React?](#was-ist-react)
   - [React macht es anders](#react-macht-es-anders)
@@ -69,7 +73,7 @@ Unsere Didaktik behandelt dabei die Motivation, die Theorie und dann den Praxis-
 - [Fazit](#fazit)
   - [Vergleich mit anderen FrontEnd Technologien](#vergleich-mit-anderen-frontend-technologien)
   - [Die nächsten Schritte](#die-nächsten-schritte)
-  - [Fehler & Typos](#fehler--typos)
+  - [Fehler \& Typos](#fehler--typos)
   - [Danksagung](#danksagung)
 
 
@@ -78,11 +82,11 @@ Unsere Didaktik behandelt dabei die Motivation, die Theorie und dann den Praxis-
  <div class="h3">React noch schneller lernen?</div>
  <div class="row mb-2">
    <div class="col-xs-12 col-md-6">
-     <p> Wir bieten auch <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=link&utm_content=text-article-top">React und TypeScript Schulungen</a>        an um dich möglichst effektiv in das Thema React zu begleiten. Im Kurs kannst Du die Fragen stellen, die Du nur
+     <p> Wir bieten auch <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source={{ site.utm_source }}&utm_campaign=tutorial&utm_medium=portal&utm_content=text-article-top">React und TypeScript Schulungen</a>        an um dich möglichst effektiv in das Thema React zu begleiten. Im Kurs kannst Du die Fragen stellen, die Du nur
        schlecht googlen kannst, z.B. “Besserer Weg, um meine Applikation zu strukturieren”. Wir können sie Dir beantworten.
      </p>
      <p class="text-center">
-       <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=button&utm_content=text-article-top">
+       <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source={{ site.utm_source }}&utm_campaign=tutorial&utm_medium=portal&utm_content=text-article-top">
          <button class="btn btn-danger">Zur React Intensiv Schulung</button>
        </a>
      </p>
@@ -274,11 +278,11 @@ render(<App />, rootElement);
  <div class="h3">Hat dir das Tutorial geholfen?</div>
  <div class="row mb-2">
    <div class="col-xs-12 col-md-6">
-     <p> Wir bieten auch <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=link&utm_content=text-article">React und TypeScript Schulungen</a>        an um dich möglichst effektiv in das Thema React zu begleiten. Im Kurs kannst Du die Fragen stellen, die Du nur
+     <p> Wir bieten auch <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source={{ site.utm_source }}&utm_campaign=tutorial&utm_medium=portal&utm_content=text-article">React und TypeScript Schulungen</a>        an um dich möglichst effektiv in das Thema React zu begleiten. Im Kurs kannst Du die Fragen stellen, die Du nur
        schlecht googlen kannst, z.B. “Besserer Weg, um meine Applikation zu strukturieren”. Wir können sie Dir beantworten.
      </p>
      <p class="text-center">
-       <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=button&utm_content=text-article">
+       <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source={{ site.utm_source }}&utm_campaign=tutorial&utm_medium=portal&utm_content=text-article">
          <button class="btn btn-danger">Zur React Intensiv Schulung</button>
        </a>
      </p>
@@ -1050,11 +1054,11 @@ Wenn Du sehen möchtest, wie das Tutorial live aussieht, schau dir doch an, wie 
  <div class="h3">Hat dir das Tutorial geholfen?</div>
  <div class="row mb-2">
    <div class="col-xs-12 col-md-6">
-     <p> Wir bieten auch <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=link&utm_content=text-bottom">React und TypeScript Schulungen</a>        an um dich möglichst effektiv in das Thema React zu begleiten. Im Kurs kannst Du die Fragen stellen, die Du nur
+     <p> Wir bieten auch <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source={{ site.utm_source }}&utm_campaign=tutorial&utm_medium=portal&utm_content=text-bottom">React und TypeScript Schulungen</a>        an um dich möglichst effektiv in das Thema React zu begleiten. Im Kurs kannst Du die Fragen stellen, die Du nur
        schlecht googlen kannst, z.B. “Besserer Weg, um meine Applikation zu strukturieren”. Wir können sie Dir beantworten.
      </p>
      <p class="text-center">
-       <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=button&utm_content=text-bottom">
+       <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source={{ site.utm_source }}&utm_campaign=tutorial&utm_medium=portal&utm_content=text-bottom">
          <button class="btn btn-danger">Zur React Intensiv Schulung</button>
        </a>
      </p>
