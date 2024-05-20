@@ -7,9 +7,7 @@ Jekyll::Hooks.register :site, :after_init do |site|
     'ReactJS-and-React-Native-Berlin',
     'React-Berlin-Meetup',
     'Hamburg-React-js-Meetup',
-    'reactmunich',
-    'React-Native-Stammtisch-Munich',
-    'gatsbyjs'
+    'reactmunich'
   ]
 
   if(ENV["JEKYLL_ENV"] == "production") then
