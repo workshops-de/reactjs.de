@@ -5,7 +5,7 @@ author: "Felix Rau"
 published_at: 2015-10-06 14:43:48
 header: light
 header_source: https://unsplash.com/photos/4TodkZIJkrY
-categories: [react, konferenz]
+categories: [react, conference]
 ---
 
 Die Reactive 2015 ist die erste React-Konferenz in Mitteleuropa. Sie findet vom 2.- 4. November in Bratislava in der Slowakei statt. In den zwei Tagen werden werden über 25 internationale Speaker aus Firmen wie GitHub, Facebook, Twitter oder Netflix Vorträge halten und Workshops geben. Hier ein Interview mit Mark Dalgleish von der größten Australischen Jobseite SEEK:
