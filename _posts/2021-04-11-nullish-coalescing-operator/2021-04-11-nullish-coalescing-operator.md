@@ -3,14 +3,14 @@ title: "Nullish coalescing operator / ES2020-Feature"
 description: "Der Nullish coalescing operator ist ein neuer und zusätzlicher JavaScript-Operator, der seit Juni 2020 mit ECMAScript 2020 (ES2020) der Programmiersprache zur Verfügung steht."
 author: "Thomas Scharke"
 published_at: 2021-04-11 00:00:00.000000Z
-categories: "reactjs javascript education ES2020 feature"
+categories: "react javascript education ES2020 feature"
 tutorial_page_order: '1'
 header_image: header.jpg
 canonical_url: "https://dev.to/tscharke/nullish-coalescing-operator-erklart-german-only-2m6d"
 header_source: https://unsplash.com/@scienceinhd
 categories: [basics, javascript, react]
 ---
- 
+
 Der **Nullish coalescing operator** ist ein neuer und zusätzlicher JavaScript-Operator, der seit Juni 2020 mit ECMAScript 2020 (ES2020) der Programmiersprache zur Verfügung steht.
 
 Er ist neben den (vielleicht) bekannten _binären_ logische Operatoren (_Binary Logical Operators_) `&&` (AND) und `||` (ODER) der dritte Operator **nicht binäre** und hat die Schreibweise `??`.
@@ -306,5 +306,4 @@ doSomethingAmazingWithAConfiguration({ online: false }); // false ✅
 ## Anmerkung
 
 - Dieser Artikel ist am 29.03.2021 zuerst bei [Dev.to](http://bit.ly/tscharke-nullish-coalescing-operator){:target="_blank"} erschienen.
-- Das Hintergrundbild stammt von [Science in HD](https://unsplash.com/@scienceinhd){:target="_blank"} auf [Unsplash](https://unsplash.com){:target="_blank"} 
-  
+- Das Hintergrundbild stammt von [Science in HD](https://unsplash.com/@scienceinhd){:target="_blank"} auf [Unsplash](https://unsplash.com){:target="_blank"}

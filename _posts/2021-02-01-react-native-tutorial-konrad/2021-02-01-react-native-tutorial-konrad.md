@@ -5,7 +5,7 @@ author: "Konrad Abe (AllBitsEqual)"
 published_at: 2021-02-01 10:00:00
 header_source: "https://i.imgur.com/KgYFDs5.jpg"
 header_image: header.jpg
-categories: "react-native typescript linting expo best-practise series"
+categories: "react-native typescript linting expo best-practices series"
 series: "React Native (Step by Step)"
 ---
 

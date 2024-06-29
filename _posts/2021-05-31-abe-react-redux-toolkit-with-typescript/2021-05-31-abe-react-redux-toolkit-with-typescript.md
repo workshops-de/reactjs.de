@@ -5,7 +5,7 @@ author: "Konrad Abe (AllBitsEqual)"
 published_at: 2021-05-31 10:00:00
 header_source: "https://i.imgur.com/egaWeWg.jpg"
 header_image: header.jpeg
-categories: "react-native typescript redux redux-toolkit best-practices series"
+categories: "react-native typescript redux best-practices series"
 series: "React Native (Step by Step)"
 ---
 

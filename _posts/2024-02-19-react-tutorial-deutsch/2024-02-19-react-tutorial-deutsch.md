@@ -3,7 +3,7 @@ title: "React Tutorial für Einsteiger"
 description: "Tutorial zur React.js Bibliothek. Schritt für Schritt die Konzepte anhand einer Beispiel-App lernen."
 author: "André Kovac"
 published_at: 2024-02-19 00:00:00.000000Z
-categories: "tutorial reactjs javascript typescript"
+categories: "tutorial react javascript typescript"
 header_image: "./images/header.jpg"
 tutorial_page_order: "1"
 ---

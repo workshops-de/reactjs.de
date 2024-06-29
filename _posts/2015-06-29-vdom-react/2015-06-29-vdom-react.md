@@ -3,7 +3,7 @@ title: "Virtuelles DOM mit React.js"
 description: "Ein Überblick zum virtuellen DOM von React.js für Einsteiger"
 author: "Marcin Skirzynski"
 published_at: 2015-07-06 15:47:03.580416
-categories: [reactjs, vdom]
+categories: [react, vdom]
 ---
 
 React ist schnell. Soweit das Stereotyp. Ein Grund dafür ist das virtuelle DOM. Soweit die Erklärung. Doch was genau macht diese Technik so schnell und verhalf damit nicht nur React zu schnellen Ruhm, sondern auch zu [einigen Nachahmern in der JavaScript Framework Landschaft](https://github.com/emberjs/rfcs/pull/15)?

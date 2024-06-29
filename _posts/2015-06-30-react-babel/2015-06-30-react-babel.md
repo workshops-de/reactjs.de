@@ -4,7 +4,7 @@ description: "Mit ES6 und ES7 wird eurer React noch lesbarer"
 author: "Oliver Zeigermann"
 published_at: 2015-06-30 09:03:56.211567
 header_source: "https://unsplash.com/photos/Zpdb7-owcpw"
-categories: [reactjs, babel]
+categories: [react, babel]
 ---
 
 ## Einleitung
