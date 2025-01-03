@@ -9,7 +9,7 @@ categories: [react]
 Ich bin neulich auf den Geschmack von TypeScript gekommen und habe darüber in vielen Blogs von [Tom Dale](https://medium.com/@tomdale/glimmer-js-whats-the-deal-with-typescript-f666d1a3aad0)
 und anderen gelesen. Heute zeige ich dir wie ich ein TypeScript Projekt von Grund auf mit React und Webpack, um den Build-Process zu verwalten, neu eingerichtet habe. Ich werde dir auch meine ersten Eindrücke von TypeScript geben und insbesondere wie du React mit TypeScript nutzen kannst.
 
-Ich werde nicht zu sehr ins Detail der Besonderheiten der TypeScript Syntax eingehen, aber du kannst entweder das [TypeScript Handbook](https://www.typescriptlang.org/docs/tutorial.html) oder das kostenlose Buch [TypeScript Deep Dive](https://basarat.gitbooks.io/typescript/content/docs/getting-started.html), welches dir auch eine großartige Einführung in die Sprache geben wird, lesen.
+Ich werde nicht zu sehr ins Detail der Besonderheiten der TypeScript Syntax eingehen, aber du kannst entweder das [TypeScript Handbook](https://www.typescriptlang.org/docs/tutorial.html) oder das kostenlose Buch [TypeScript Deep Dive](https://basarat.gitbooks.io/typescript/content/getting-started.html), welches dir auch eine großartige Einführung in die Sprache geben wird, lesen.
 
 ## TypeScript installieren und konfigurieren
 
@@ -66,11 +66,11 @@ function log(thing) {
 }
 ```
 
-Du kannst darüber mehr in [TypeScript Deep Dive](https://basarat.gitbooks.io/typescript/docs/options/noImplicitAny.html) lesen.
+Du kannst darüber mehr in [TypeScript Deep Dive](https://basarat.gitbook.io/typescript/intro/noimplicitany) lesen.
 
 ### strictNullChecks
 
-Das ist eine weitere Option, um den TypeScript-Compiler strikter zu gestalten. Das TypeScript Deep Dive Buch beinhaltet eine [große Sektion über diese Option](https://basarat.gitbooks.io/typescript/docs/options/strictNullChecks.html).
+Das ist eine weitere Option, um den TypeScript-Compiler strikter zu gestalten. Das TypeScript Deep Dive Buch beinhaltet eine [große Sektion über diese Option](https://basarat.gitbook.io/typescript/intro/strictnullchecks).
 
 Mit dieser Option wird TypeScript mehr Fälle erkennen, bei denen du auf einen Wert verweist, der undefiniert sein könnte. Es wird dir, zum Beispiel, ein Fehler zurückgeben:
 

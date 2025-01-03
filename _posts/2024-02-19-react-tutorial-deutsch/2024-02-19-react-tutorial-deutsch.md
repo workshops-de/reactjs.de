@@ -531,7 +531,7 @@ In der folgenden Grafik siehst du, wie anstelle eines separaten StyleSheets CSS 
 
 Im Unterschied zu CSS properties, schreiben sich die **CSS-in-JS** Styles nicht im **Kebab-case** (mit Bindestrichen), sondern im **camelCase** (mit Großschreibungen).
 
-Generell werden in Web-App Projekten, Styles selten direkt in die `style` **prop** geschrieben und [React empfielt dies auch nicht zu oft zu tun](https://reactjs.org/docs/dom-elements.html#style). Jedoch werden immer weniger separate CSS Dateien geschrieben und die Nutzung von **CSS-in-JS** Bibliotheken und **Komponenten-Bibliotheken** nimmt zu. Oder es werden eigene **Design Systeme** geschrieben. CSS-in-JS Bibliotheken, wie [styled components](https://styled-components.com/) oder Komponenten Libaries, wie [Chakra-UI](https://chakra-ui.com/) nutzen intern die `style` prop und machen externe CSS-Dateien (und die damit einhergehende Komplexität der CSS Kaskade) überflüssig.
+Generell werden in Web-App Projekten, Styles selten direkt in die `style` **prop** geschrieben und [React empfielt dies auch nicht zu oft zu tun](https://legacy.reactjs.org/docs/dom-elements.html#style). Jedoch werden immer weniger separate CSS Dateien geschrieben und die Nutzung von **CSS-in-JS** Bibliotheken und **Komponenten-Bibliotheken** nimmt zu. Oder es werden eigene **Design Systeme** geschrieben. CSS-in-JS Bibliotheken, wie [styled components](https://styled-components.com/) oder Komponenten Libaries, wie [Chakra-UI](https://chakra-ui.com/) nutzen intern die `style` prop und machen externe CSS-Dateien (und die damit einhergehende Komplexität der CSS Kaskade) überflüssig.
 
 React hat die Idee der wiederverwendbaren Komponenten ins Rollen gebracht und die Entwicklung des React Ökosystems forciert die Richtung, neben HTML und JavaScript auch CSS mit in eine JavaScript Datei zu packen.
 
@@ -622,7 +622,7 @@ const SeverityMessage: FC<SeverityMessageProps> = ({ severity, children }) => (
 
 Ja, wir können den ganzen Ternary-Ausdruck löschen, da die zwei Klassen genauso heißen, wie die möglichen `severity` Werte.
 
-> **Randnotiz**: Neben dem Überprüfen von Typen mittels TypeScript, könnte man (anstelle von TypeScript) auch [React PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html) nutzen. Durch die immer größere Verbreitung und die vielen weiteren Vorteile, die TypeScript mit sich bringt, wird es immer seltener genutzt und wir verzichten auch hier im Tutorial darauf.
+> **Randnotiz**: Neben dem Überprüfen von Typen mittels TypeScript, könnte man (anstelle von TypeScript) auch [React PropTypes](https://legacy.reactjs.org/docs/typechecking-with-proptypes.html) nutzen. Durch die immer größere Verbreitung und die vielen weiteren Vorteile, die TypeScript mit sich bringt, wird es immer seltener genutzt und wir verzichten auch hier im Tutorial darauf.
 
 Lasst uns jetzt Interaktion in die App bringen.
 
@@ -1033,7 +1033,7 @@ Ein sicherer Umgang mit **Hooks** ist ein zentraler Punkt jeder modernen React A
 
 Bei größeren Applikationen reicht der `useState` Hook zum Verwalten von State nicht aus. Dort muss dann React Context (mittels des `useContext` Hooks) oder weiterführende State-Management Bibliotheken hinzugefügt werden.
 
-Als nächsten Schritt empfehle ich einen Blick in die offizielle [React Dokumentation zum Thema Hooks](https://reactjs.org/docs/hooks-overview.html) zu wagen.
+Als nächsten Schritt empfehle ich einen Blick in die offizielle [React Dokumentation zum Thema Hooks](https://legacy.reactjs.org/docs/hooks-overview.html) zu wagen.
 
 Ich wünsche dir viel Spaß und Erfolg auf deinem weiteren Weg mit React!
 

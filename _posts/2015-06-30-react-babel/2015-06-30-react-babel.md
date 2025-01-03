@@ -13,7 +13,7 @@ React mit seinem JSX-Format erfordert einen Übersetzer in ein vom Browser ausf�
 Dieser Übersetzer nennt sich Babel.
 Da Babel _der_ Übersetzer für React ist, können wir neben JSX auch alle tollen neuen Eigenschaften von ECMAScript 2015 (auch bekannt als ES6) nutzen. Es hört aber nicht dort auf, [Babel unterstützt bereits jetzt eine ganze Reihe von ES7-Features](https://babeljs.io/docs/en/plugins#experimental), die gerade für React sehr praktisch sind und sogar [zum Teil von den React-Entwicklern kommen](https://github.com/sebmarkbage/ecmascript-rest-spread).
 
-Diese wollen wir uns hier einmal kurz angucken. Damit du den Artikel ganz verstehen kannst, solltest du zumindest schon einmal ein [Hello-World mit React](https://reactjs.org/docs/hello-world.html) gebaut haben, es reicht aber Kenntnis über die alte ES5-Variante.
+Diese wollen wir uns hier einmal kurz angucken. Damit du den Artikel ganz verstehen kannst, solltest du zumindest schon einmal ein [Hello-World mit React](https://legacy.reactjs.org/docs/hello-world.html) gebaut haben, es reicht aber Kenntnis über die alte ES5-Variante.
 
 Falls ihr noch nichts mit React gemacht habt, guckt euch am besten die [Einführung in React](/artikel/react-tutorial-deutsch/) auf diesem Blog an.
 
@@ -58,7 +58,7 @@ export default class HelloMessage extends React.Component {
   }
 }
 ```
-Die [Callback-Methoden sind aber leider noch nicht an `this` gebunden, wenn ihr ES6-Klassen schreibt](https://reactjs.org/blog/2015/01/27/react-v0.13.0-beta-1.html). Stattdessen binden wir diese Callbacks einmalig im Konstruktor. Es wäre auch möglich, dies direkt bei der Angabe des Callbacks im JSX zu tun, dann würden wir aber bei jedem Re-Rendering erneut ein Binding durchführen.
+Die [Callback-Methoden sind aber leider noch nicht an `this` gebunden, wenn ihr ES6-Klassen schreibt](https://legacy.reactjs.org/blog/2015/01/27/react-v0.13.0-beta-1.html). Stattdessen binden wir diese Callbacks einmalig im Konstruktor. Es wäre auch möglich, dies direkt bei der Angabe des Callbacks im JSX zu tun, dann würden wir aber bei jedem Re-Rendering erneut ein Binding durchführen.
 
 React selber wird durch ein ES6-Import eingebunden, und Unterkomponente sind jeweils nur ein weiteres ES6-Modul. In unserem Fall wäre das die Komponente `MessageDisplay` und die sieht so aus:
 
@@ -131,7 +131,7 @@ Unsere Komponente `MessageDisplay` bekommt von `HelloMessage` das Property `gree
      {...this.state}
      />
 ```
-Das sieht für unseren Fall noch nicht so viel besser aus, aber für viele Properties ist das durchaus eine Option. In der [React-Dokumentation](https://reactjs.org/docs/jsx-in-depth.html) wird ausdrücklich auf diese Option verwiesen und  sie wird auch empfohlen.
+Das sieht für unseren Fall noch nicht so viel besser aus, aber für viele Properties ist das durchaus eine Option. In der [React-Dokumentation](https://legacy.reactjs.org/docs/jsx-in-depth.html) wird ausdrücklich auf diese Option verwiesen und  sie wird auch empfohlen.
 
 Unserer komplett auf ES7 umgebaute Komponente sieht nun so aus:
 
