@@ -22,7 +22,7 @@ Es gibt nicht viel, das du brauchst, um einen Bot für Discord mit JavaScript zu
 
 ## Erste Schritte - Discord Developer Portal
 
-Um einen Bot zu schreiben und zu benutzen, musst du ihn als neue Applikation/Bot User mit deinem Discord Account registrieren. Geh zum [Discord Developers Portal](https://discordapp.com/developers/applications/) (Log-in) und erstelle eine "New Application".
+Um einen Bot zu schreiben und zu benutzen, musst du ihn als neue Applikation/Bot User mit deinem Discord Account registrieren. Geh zum [Discord Developers Portal](https://discord.com/developers/applications/) (Log-in) und erstelle eine "New Application".
 
 ![](./images/2.png)
 

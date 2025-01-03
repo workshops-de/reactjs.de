@@ -159,7 +159,7 @@ Beim Bauen der Web-App (sprich: Während des Build-Prozesses) werden aus dem Rea
 
 Damit React performant unsere Komponenten im Browser darstellen kann, nutzt React unter der Haube einen sogenannten **Reconciliation Algorithmus**. Er optimiert das Rendern, also die grafische Anzeige der Web-App im Browser und damit die Geschwindigkeit der Web-App.
 
-Beim Rendern werden unsere Komponenten in das sogenannte **Domain Object Model** (**DOM**) übersetzt - eine baum-artige Struktur aller HTML-Elemente der Web-App. Jede Änderung des DOM sorgt dafür, dass der Browser ein Teil der CSS-Styles sowie die Anordnung der HTML-Elemente neu berechnen muss. Und das muss dann noch in die einzelnen Pixel-Werte umgewandelt werden. (Neben dem DOM gibt es auch einen CSSOM für Styles, die React nicht optimiert. [Hier](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction) kannst du mehr über den gesamten Zyklus des Renderns lesen).
+Beim Rendern werden unsere Komponenten in das sogenannte **Domain Object Model** (**DOM**) übersetzt - eine baum-artige Struktur aller HTML-Elemente der Web-App. Jede Änderung des DOM sorgt dafür, dass der Browser ein Teil der CSS-Styles sowie die Anordnung der HTML-Elemente neu berechnen muss. Und das muss dann noch in die einzelnen Pixel-Werte umgewandelt werden. (Neben dem DOM gibt es auch einen CSSOM für Styles, die React nicht optimiert. [Hier](https://web.dev/articles/critical-rendering-path/render-tree-construction) kannst du mehr über den gesamten Zyklus des Renderns lesen).
 
 All diese Berechnungen kosten Zeit. Da jede Änderung des DOM diese teuren Berechnungen in Gang setzt, möchte man die Anzahl der DOM Manipulationen so gering wie möglich halten.
 
