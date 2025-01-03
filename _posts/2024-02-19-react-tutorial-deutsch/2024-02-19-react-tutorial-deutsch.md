@@ -184,7 +184,7 @@ Bevor wir unsere erste Komponente bauen, schauen wir uns kurz an, wie sich die R
 
 ## Anbindung von React
 
-Auf dem Online-Editor [codesandbox.io](https://codesandbox.io/s/) solltest du nach einem Klick auf "Create Sandbox" in der Liste der Vorlagen eine Option namens "React TypeScript" sehen.
+Auf dem Online-Editor [codesandbox.io](https://codesandbox.io/templates) solltest du nach einem Klick auf "Create Sandbox" in der Liste der Vorlagen eine Option namens "React TypeScript" sehen.
 
 ![codesandbox new project menu](./images/codesandbox-options.png)
 
@@ -1015,7 +1015,7 @@ Sehr schön! Wir haben eine kleine App gebaut, die Daten von einer API abruft un
 
 ## Fazit
 
-Den finalen Code dieses Tutorials findest du in diesem CodeSandBox repository: <https://codesandbox.io/s/react-tutorial-deutsch-5jmm5>.
+Den finalen Code dieses Tutorials findest du in diesem CodeSandBox repository: <https://codesandbox.io/p/sandbox/react-tutorial-deutsch-5jmm5?file=%2Fsrc%2FApp.tsx>.
 
 Forke das Projekt in CodeSandBox und spiele dann damit herum. Extrahiere doch zum Beispiel mal den Code der Bild-Anzeige in eine eigene Komponente. 😉
 
@@ -1023,7 +1023,7 @@ Forke das Projekt in CodeSandBox und spiele dann damit herum. Extrahiere doch zu
 
 Ganz zu Beginn habe ich erwähnt, dass React als Bibliothek sehr flexibel in der Anwendung ist. Wir haben gesehen, dass wir bei Ordner- und Datei-Struktur, Data-Fetching und State-Management sehr frei entscheiden können.
 
-Bei **Frameworks**, wie [Angular](https://angular.io/) oder [Vue.js](https://vuejs.org/) ist das anders. Dort ist im Gegensatz zur React **Bibliothek** eine relativ feste Struktur vorgegeben. Für komplexere Funktionalität, wie Formulare, Seiten-Navigation, Sprach-Übersetzung etc. bediene ich mich direkt bei den mitgelieferten Bauteilen.
+Bei **Frameworks**, wie [Angular](https://angular.dev/) oder [Vue.js](https://vuejs.org/) ist das anders. Dort ist im Gegensatz zur React **Bibliothek** eine relativ feste Struktur vorgegeben. Für komplexere Funktionalität, wie Formulare, Seiten-Navigation, Sprach-Übersetzung etc. bediene ich mich direkt bei den mitgelieferten Bauteilen.
 
 [Web Components](https://developer.mozilla.org/de/docs/Web/Web_Components) sind wie React Komonenten wiederverwendbare UI-Elemente. Im Gegensatz zu **React**, sind Web Components aber Komponenten, die an keine Bibliothek und an kein Framework gebunden sind. Man erstellt eigene HTML Elemente, z.B. einen eigenen text button `<text-button>Click here</text-button>`, der dann überall genutzt werden kann. Dafür fehlt die Einbettung in ein reaktives Updaten der Komponenten, wie z.B. **Hooks** und **Props** in React.
 

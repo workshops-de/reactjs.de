@@ -6,7 +6,7 @@ published_at: 2017-05-29 15:00:00.000000Z
 categories: [react]
 ---
 
-Ich bin neulich auf den Geschmack von TypeScript gekommen und habe darüber in vielen Blogs von [Tom Dale](https://medium.com/@tomdale/glimmer-js-whats-the-deal-with-typescript-f666d1a3aad0)
+Ich bin neulich auf den Geschmack von TypeScript gekommen und habe darüber in vielen Blogs von [Tom Dale](https://medium.com/@tomdale/glimmer-js-whats-the-deal-with-typescript-f666d1a3aad0){:rel="noopener noreferrer nofollow"}
 und anderen gelesen. Heute zeige ich dir wie ich ein TypeScript Projekt von Grund auf mit React und Webpack, um den Build-Process zu verwalten, neu eingerichtet habe. Ich werde dir auch meine ersten Eindrücke von TypeScript geben und insbesondere wie du React mit TypeScript nutzen kannst.
 
 Ich werde nicht zu sehr ins Detail der Besonderheiten der TypeScript Syntax eingehen, aber du kannst entweder das [TypeScript Handbook](https://www.typescriptlang.org/docs/tutorial.html) oder das kostenlose Buch [TypeScript Deep Dive](https://basarat.gitbooks.io/typescript/content/getting-started.html), welches dir auch eine großartige Einführung in die Sprache geben wird, lesen.
@@ -271,7 +271,7 @@ Zuerst erstelle ich ein TypeScript Interface für die Eigenschaften, welche die 
 
 ## Testen
 
-Zum Schluss wollte ich auch ein gutes Testing Setup mit TypeScript haben. Ich bin ein großer Fan von Facebooks [Jest](https://jestjs.io/) und habe ein bisschen gegooglet, um herauszufinden, ob ich es mit TypeScript starten kann. Es hat sich herausgestellt, dass es sehr gut möglich ist, und da gibt es sogar das [ts-jest](https://www.npmjs.com/package/ts-jest) Paket, dass all die schweren Arbeiten erledigt. Darüber hinaus gibt es da noch das `@types/jest` Paket, damit kannst du auch all deine Tests type-checken lassen kannst.
+Zum Schluss wollte ich auch ein gutes Testing Setup mit TypeScript haben. Ich bin ein großer Fan von Facebooks [Jest](https://jestjs.io/) und habe ein bisschen gegooglet, um herauszufinden, ob ich es mit TypeScript starten kann. Es hat sich herausgestellt, dass es sehr gut möglich ist, und da gibt es sogar das [ts-jest](https://www.npmjs.com/package/ts-jest){:rel="noopener noreferrer nofollow"} Paket, dass all die schweren Arbeiten erledigt. Darüber hinaus gibt es da noch das `@types/jest` Paket, damit kannst du auch all deine Tests type-checken lassen kannst.
 
 Großes Dankeschön an RJ Zaworski, [dessen Post über TypeScript und Jest](https://rjzaworski.com/2016/12/testing-typescript-with-jest) der mich in dieses Thema eingeführt hat. Sobald du `ts-jest` installiert hast, musst du Jest nur noch konfigurieren, das machst du in `package.json` mit diesen Einstellungen:
 

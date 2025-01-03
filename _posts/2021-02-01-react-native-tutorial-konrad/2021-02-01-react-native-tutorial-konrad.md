@@ -17,7 +17,7 @@ _Wie immer findest du den fertigen Code am Ende des Artikels auf GitHub verlinkt
 
 **Reihe: React Native (Schritt für Schritt)**
 1. => **du bist hier** <=
-2. [React Redux + Toolkit mit Typescript](https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13)
+2. [React Redux + Toolkit mit Typescript](https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13){:rel="noopener noreferrer nofollow"}
 
 ![](./intro.jpeg)
 
@@ -49,7 +49,7 @@ Während des Schreibens nutze ich expo-cli@4.0.17. Für denn Fall, dass du diese
 npm install -g expo-cli
 ```
 
-Mit Expo zur Initialisierung unseres Projekts müssen wir Templates typescripten, aus denen wir dann wählen können. In unserem Fall bauen wir alles Schritt für Schritt von Grund auf neu. Dafür wählen wir das leere Typescript Template aus dem [managed workflow](https://docs.expo.io/introduction/managed-vs-bare/). Der folgende Befehl erstellt, wenn er von deinem gewünschten Ort über die Befehlszeile eingegeben wird, einen neuen Ordner mit dem Namen, den du in der Init angegeben hast, und füllt ihn mit den Template-Dateien, die du aus dem folgenden Menü auswählst.
+Mit Expo zur Initialisierung unseres Projekts müssen wir Templates typescripten, aus denen wir dann wählen können. In unserem Fall bauen wir alles Schritt für Schritt von Grund auf neu. Dafür wählen wir das leere Typescript Template aus dem [managed workflow](https://medium.com/@mehro_z/choosing-between-managed-and-bare-workflow-in-expo-a-comprehensive-difference-7086305f1480){:rel="noopener noreferrer nofollow"}. Der folgende Befehl erstellt, wenn er von deinem gewünschten Ort über die Befehlszeile eingegeben wird, einen neuen Ordner mit dem Namen, den du in der Init angegeben hast, und füllt ihn mit den Template-Dateien, die du aus dem folgenden Menü auswählst.
 
 ```bash
 expo init yourProjectName
@@ -285,5 +285,5 @@ In unserer nächsten Session werden wir einen Blick auf grundlegende Lösungen f
 
 Hier ist der versprochene [Link zum (Pre-)Release tag auf Github](https://github.com/AllBitsEqual/expo-ts-starter/tree/v0.1.0).
 
-[Hier zum Original-Artikel auf English](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793).
+[Hier zum Original-Artikel auf English](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793){:rel="noopener noreferrer nofollow"}.
 

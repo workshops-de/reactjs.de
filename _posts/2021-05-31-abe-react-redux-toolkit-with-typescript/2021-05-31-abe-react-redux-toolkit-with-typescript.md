@@ -17,14 +17,14 @@ _Wie immer findest du den fertigen Code am Ende des Artikels auf GitHub verlinkt
 
 **Reihe: React Native (Schritt für Schritt)**
 
-1) [Umgang mit Typescript und Linting](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793)
+1) [Umgang mit Typescript und Linting](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793){:rel="noopener noreferrer nofollow"}
 2) => **du bist hier** <=
 
 ![](./intro.jpeg)
 
 ## Redux - WARUM?
 
-Ich gehe davon aus, dass du über Grundkenntnisse in React Native und Redux verfügst. [Solltest du eine kleine Auffrischung deines Wissens benötigen, habe ich hier genau den richtigen Artikel für dich!](https://allbitsequal.medium.com/straightforward-redux-no-strings-attached-e1b5f111bf00) Wir fahren nun mit dem setup aus unserer letzten Session fort und arbeiten weiterhin mit Expo, um unser React Native Build und bundling zu verwalten.
+Ich gehe davon aus, dass du über Grundkenntnisse in React Native und Redux verfügst. [Solltest du eine kleine Auffrischung deines Wissens benötigen, habe ich hier genau den richtigen Artikel für dich!](https://allbitsequal.medium.com/straightforward-redux-no-strings-attached-e1b5f111bf00){:rel="noopener noreferrer nofollow"} Wir fahren nun mit dem setup aus unserer letzten Session fort und arbeiten weiterhin mit Expo, um unser React Native Build und bundling zu verwalten.
 
 Schnapp dir das [aktuelle Projekt auf GitHub](https://github.com/AllBitsEqual/expo-ts-starter/tree/v0.1.0).
 
@@ -231,4 +231,4 @@ In den kommenden Sessions werden wir uns angucken, wie wir unseren redux store d
 
 Hier ist der versprochene [Link zum (Pre-)Release tag auf Github](https://github.com/AllBitsEqual/expo-ts-starter/tree/v0.2.0).
 
-[Hier zum Original-Artikel auf English](https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13).
+[Hier zum Original-Artikel auf English](https://allbitsequal.medium.com/series-react-native-step-by-step-react-redux-toolkit-with-typescript-4818504bba13){:rel="noopener noreferrer nofollow"}.

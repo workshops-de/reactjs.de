@@ -227,4 +227,4 @@ Ich glaube, wir haben heute ziemlich viel Stoff behandelt und du hast, zusätzli
 
 In den folgenden Sessions werden wir die if-/else-Anweisungen mit skalierbaren und flexibleren Befehlsmodul-Strukturen ersetzen, uns Setups angucken, die mehrere Bots von einem Projekt erlauben und uns mit Verwaltungsbefehlen beschäftigen, die Benutzer mit Warnungen, Kicks und anderen Methoden managen.
 
-[Hier zum Original-Artikel auf English](https://allbitsequal.medium.com/build-a-bot-discordjs-javascript-chatbots-made-easy-bb31f6738a85).
+[Hier zum Original-Artikel auf English](https://allbitsequal.medium.com/build-a-bot-discordjs-javascript-chatbots-made-easy-bb31f6738a85){:rel="noopener noreferrer nofollow"}.

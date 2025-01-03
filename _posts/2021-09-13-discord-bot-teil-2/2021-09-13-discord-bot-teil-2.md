@@ -415,4 +415,4 @@ Wir haben unsere zentrale Indexdatei aufgeräumt, eine klare Trennung von Codeab
 
 Nächstes Mal werde ich dich durch den Prozess des Schreibens eines skalierbaren und sich selbst aktualisierenden Hilfe-Befehls sowie des Hinzufügens unserer ersten Befehle für die Benutzerverwaltung/Administration führen, um den Bot etwas nützlicher zu machen.
 
-[Hier zum Original-Artikel auf English](https://allbitsequal.medium.com/build-a-bot-discordjs-a-scalable-setup-with-command-modules-7fecdda27b40).
+[Hier zum Original-Artikel auf English](https://allbitsequal.medium.com/build-a-bot-discordjs-a-scalable-setup-with-command-modules-7fecdda27b40){:rel="noopener noreferrer nofollow"}.

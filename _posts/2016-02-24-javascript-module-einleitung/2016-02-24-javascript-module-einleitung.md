@@ -7,7 +7,7 @@ header_source: https://unsplash.com/photos/o8cViW56BZQ
 categories: [javascript, module, es6]
 ---
 
-Eine Übersetzung aus dem Englischen. Der Artikel im Original ist [HIER](https://medium.com/@preethikasireddy) zu finden.
+Eine Übersetzung aus dem Englischen. Der Artikel im Original ist [HIER](https://medium.com/@preethikasireddy){:rel="noopener noreferrer nofollow"} zu finden.
 
 *Anmerkung: Der Artikel ist in zwei Teile aufgeteilt: Teil 1 beschäftigt sich damit, was Module sind und wieso wir sie benutzen. Teil 2 erklärt euch, was es bedeutet Module zu bündeln und zeigt verschiedene Wege auf, wie dies geschehen kann.*
 
