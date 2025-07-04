@@ -2,7 +2,7 @@
 title: "React 19 ist da: Die wichtigsten neuen Features im Überblick"
 description: "React 19 wurde offiziell veröffentlicht! Entdecke die revolutionären neuen Features wie den React Compiler, Actions, neue Hooks und vieles mehr in diesem umfassenden Guide."
 author: "Robin Böhm"
-published_at: 2024-12-19 09:00:00
+published_at: 2025-02-20 09:00:00
 categories: "react release update javascript"
 header_image: "./header.jpg"
 ---
