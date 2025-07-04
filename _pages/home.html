@@ -35,6 +35,17 @@ permalink: /
 
 <main class="container">
   <section class="my-5">
+    <h2>Die neuesten Artikel</h2>
+    <div class="row row-cols-1 row-cols-md-3 gy-4 gx-5">
+      {% for post in site.posts limit:6 %}
+      <div class="col">
+        {% include shared/_post_card.html %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="my-5">
     <h2>Community</h2>
     <div class="row row-cols-1 row-cols-md-3 gy-4 gx-5">
       <div class="col">
@@ -78,17 +89,6 @@ permalink: /
           </a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="my-5">
-    <h2>Die neuesten Artikel</h2>
-    <div class="row row-cols-1 row-cols-md-3 gy-4 gx-5">
-      {% for post in site.posts limit:6 %}
-      <div class="col">
-        {% include shared/_post_card.html %}
-      </div>
-      {% endfor %}
     </div>
   </section>
 </main>
