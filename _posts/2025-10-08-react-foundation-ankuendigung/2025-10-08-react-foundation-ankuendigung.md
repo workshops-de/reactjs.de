@@ -181,5 +181,4 @@ Es ist ein aufregendes Zeit, React-Entwickler zu sein. Die Foundation verspricht
 ## Weiterführende Links
 
 - [Offizielle Ankündigung der React Foundation](https://react.dev/blog/2025/10/07/introducing-the-react-foundation)
-- [React Foundation Website](https://reactfoundation.org) (Coming Soon)
 - [React GitHub Repository](https://github.com/facebook/react)
