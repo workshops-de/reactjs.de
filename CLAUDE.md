@@ -151,6 +151,53 @@ The site uses a lazy loading pattern for images:
 
 Requires Ruby 2.5+ (specified in `.ruby-version` and Gemfile)
 
+## Automated Article Generation
+
+The repository includes a Claude-powered workflow for generating articles from GitHub issues.
+
+### How to Use
+
+1. Create a GitHub issue with the article topic and relevant information
+2. Add the `article` label to the issue
+3. The workflow will:
+   - Analyze the issue content for quality and relevance
+   - Post an analysis report with a recommendation
+   - If approved, generate a complete German article (5-10 min read)
+   - Create a pull request with the new article
+
+### Requirements
+
+- Issue creator must be a repository OWNER, MEMBER, or COLLABORATOR
+- Issue should include:
+  - Clear React-related topic
+  - Sufficient context or external links
+  - Relevance to German React community
+
+### Workflow Stages
+
+**Stage 1 - Analysis**: Claude analyzes the issue and checks:
+- Topic relevance for React community
+- Content depth and quality
+- Available resources and context
+- Posts detailed analysis as issue comment
+
+**Stage 2 - Generation** (if approved):
+- Writes comprehensive German article
+- Creates proper directory structure in `_posts/`
+- Generates article with correct front matter
+- Creates git branch and pull request
+- Links PR to original issue
+
+### Article Quality Standards
+
+Generated articles follow these guidelines:
+- Length: 1500-2500 words (5-10 minute read)
+- Language: German
+- Style: Informative, friendly, practical
+- Code examples in JSX/TypeScript where relevant
+- Proper markdown structure with headers
+- Front matter with all required fields
+
 ## Common Gotchas
 
 - Open Graph images only generate in production mode (`JEKYLL_ENV=production`)
@@ -158,3 +205,4 @@ Requires Ruby 2.5+ (specified in `.ruby-version` and Gemfile)
 - API credentials required for fetching external data (meetups, events, reviews)
 - Post assets must be in same directory as markdown file for postfiles plugin to work
 - The `shared/` submodule may appear empty - this is normal for local development
+- Article generation workflow only runs for repository members/collaborators

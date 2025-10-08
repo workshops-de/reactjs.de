@@ -1,0 +1,178 @@
+name: Claude Article Generator
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  analyze-and-generate:
+    # Only run when "article" label is added and by repo members
+    if: |
+      github.event.label.name == 'article' && (
+        github.event.issue.author_association == 'OWNER' ||
+        github.event.issue.author_association == 'MEMBER' ||
+        github.event.issue.author_association == 'COLLABORATOR'
+      )
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+          bundler-cache: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          npm install
+          bundle install
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "Claude Bot"
+          git config --global user.email "claude-bot@reactjs.de"
+
+      - name: Analyze Issue Content
+        id: analyze
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            REPO: ${{ github.repository }}
+            ISSUE NUMBER: ${{ github.event.issue.number }}
+            ISSUE TITLE: ${{ github.event.issue.title }}
+
+            Analyze this issue to determine if it has enough content to write a React community article in German.
+
+            Use `gh issue view ${{ github.event.issue.number }}` to read the full issue content.
+
+            Check for:
+            1. Clear topic related to React, React ecosystem, or React development practices
+            2. Sufficient context or external links with relevant content
+            3. Topic relevance for the German React community
+            4. Estimated content depth (should allow 5-10 minute read)
+
+            Look at existing articles in _posts/ to understand the quality bar and topic style.
+
+            Post your analysis as a comment to the issue using:
+            `gh issue comment ${{ github.event.issue.number }} --body "your analysis"`
+
+            Your analysis should include:
+            - ✅ or ❌ for each criterion
+            - Suggested article title in German
+            - Key points to cover
+            - Estimated reading time
+            - Final recommendation: APPROVED or REJECTED
+
+            End your comment with exactly "RECOMMENDATION: APPROVED" or "RECOMMENDATION: REJECTED" on the last line.
+
+          claude_args: '--allowed-tools "Bash(gh issue *),Read,Glob"'
+
+      - name: Check Analysis Result
+        id: check_approval
+        run: |
+          # Get the last comment from the issue
+          LAST_COMMENT=$(gh issue view ${{ github.event.issue.number }} --json comments --jq '.comments[-1].body')
+
+          if echo "$LAST_COMMENT" | grep -q "RECOMMENDATION: APPROVED"; then
+            echo "approved=true" >> $GITHUB_OUTPUT
+            echo "Article request approved!"
+          else
+            echo "approved=false" >> $GITHUB_OUTPUT
+            echo "Article request rejected or needs revision."
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate Article
+        if: steps.check_approval.outputs.approved == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            REPO: ${{ github.repository }}
+            ISSUE NUMBER: ${{ github.event.issue.number }}
+
+            Generate a high-quality German article for the React community based on the issue content.
+
+            Steps:
+            1. Read the issue content: `gh issue view ${{ github.event.issue.number }}`
+            2. Review CLAUDE.md for article structure and format
+            3. Look at 2-3 recent articles in _posts/ to match the writing style
+            4. Generate a comprehensive article (5-10 minute read, ~1500-2500 words)
+
+            Article requirements:
+            - Language: German
+            - Target audience: German React developers (all levels)
+            - Writing style: Informative, friendly, practical
+            - Include code examples where relevant (use JSX/TypeScript)
+            - Use proper markdown formatting with headers, lists, code blocks
+            - Front matter must include: title, description, author (use "Claude Bot" or from issue), published_at (today's date), categories, header_image (use "header.jpg")
+
+            File structure:
+            - Create directory: _posts/YYYY-MM-DD-slug/
+            - Create file: _posts/YYYY-MM-DD-slug/YYYY-MM-DD-slug.md
+            - Use current date in ISO format (YYYY-MM-DD)
+            - Create a URL-friendly slug from the title (lowercase, hyphens, no special chars)
+
+            Article structure:
+            - Start with an engaging introduction explaining the topic's relevance
+            - Use clear section headers (##, ###)
+            - Include practical examples and code snippets
+            - Explain concepts thoroughly but concisely
+            - End with a conclusion or call-to-action
+            - Consider linking to relevant resources or documentation
+
+            After creating the article:
+            1. Create a new branch: `git checkout -b article/issue-${{ github.event.issue.number }}`
+            2. Add and commit: `git add _posts/ && git commit -m "Add article from issue #${{ github.event.issue.number }}"`
+            3. Push branch: `git push origin article/issue-${{ github.event.issue.number }}`
+            4. Create PR with gh CLI:
+               ```
+               gh pr create \
+                 --title "New Article: [Article Title]" \
+                 --body "This article was generated based on issue #${{ github.event.issue.number }}.
+
+               ## Article Details
+               - Topic: [Brief topic description]
+               - Reading time: ~5-10 minutes
+               - Language: German
+
+               ## Review Checklist
+               - [ ] Content accuracy
+               - [ ] German grammar and spelling
+               - [ ] Code examples work correctly
+               - [ ] Links are valid
+               - [ ] Front matter is correct
+
+               Closes #${{ github.event.issue.number }}" \
+                 --base master
+               ```
+            5. Comment on the issue with the PR link
+
+            Note: For the header image, just reference "header.jpg" in front matter. A default/placeholder image will be used initially and can be updated later.
+
+          claude_args: '--allowed-tools "Bash(gh issue view:*),Bash(gh issue comment:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(git status:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Read,Write,Glob,Grep"'
+
+      - name: Post Failure Comment
+        if: failure()
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --body "❌ Article generation failed. Please check the workflow logs for details."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
