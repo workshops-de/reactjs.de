@@ -209,45 +209,122 @@ Partial Pre-rendering ist ein fortgeschrittenes Feature, das vor allem für Serv
 
 ### Was ist Partial Pre-rendering?
 
-Die Idee ist einfach: React kann jetzt Teile deiner App schon auf dem Server vorrendern (pre-render), während andere Teile erst später im Browser fertig gerendert werden. Das Beste daran: Der Nutzer sieht sofort einen Teil der Seite, auch wenn noch nicht alles fertig ist.
+Das neue Partial Pre-rendering in React 19.2 kombiniert die Vorteile von Static Site Generation (SSG) und Server-Side Rendering (SSR). Die Idee: React rendert statische Teile deiner Seite komplett vor und sendet sie als HTML-Shell sofort an den Browser, während dynamische Teile als "Platzhalter" (holes) markiert werden. Diese dynamischen Teile werden dann über Streaming nachgeladen, sobald sie fertig sind.
+
+**Der entscheidende Unterschied zu vorher:** Mit Partial Pre-rendering muss der Server nicht mehr auf alle Daten warten, bevor er überhaupt irgendetwas senden kann. Die statische Shell wird sofort gesendet und ist interaktiv!
 
 ### Ein anschauliches Beispiel
 
-Stell dir eine Blog-Seite vor:
+Stell dir eine E-Commerce-Produktseite vor. Mit React 19.2 kannst du definieren, welche Teile statisch vorgerendert werden sollen:
 
 ```jsx
-function BlogPost({ postId }) {
+// app/product/[id]/page.tsx (Next.js mit React 19.2)
+import { Suspense } from 'react';
+
+export default async function ProductPage({ params }) {
+  // Dieser Teil wird STATISCH vorgerendert
+  // React generiert hier vollständiges HTML zur Build-Zeit
   return (
-    <article>
-      {/* Dieser Teil ist statisch und kann vorgerendert werden */}
+    <div className="product-page">
+      {/* Statischer Header - sofort sichtbar */}
       <header>
-        <h1>Mein Blog</h1>
         <nav>
-          <a href="/">Home</a>
-          <a href="/about">Über uns</a>
+          <Logo />
+          <MainMenu />
         </nav>
       </header>
 
-      {/* Dieser Teil ist dynamisch und wird später geladen */}
-      <Suspense fallback={<Skeleton />}>
-        <PostContent postId={postId} />
-      </Suspense>
+      {/* Statisches Layout - sofort sichtbar */}
+      <aside className="filter-sidebar">
+        <CategoryFilter />
+        <PriceRangeFilter />
+      </aside>
 
-      {/* Kommentare sind auch dynamisch */}
-      <Suspense fallback={<div>Kommentare werden geladen...</div>}>
-        <Comments postId={postId} />
-      </Suspense>
-    </article>
+      <main>
+        {/* DYNAMISCHER Teil - wird gestreamt */}
+        <Suspense fallback={<ProductSkeleton />}>
+          {/* Dieser Teil lädt Daten vom Server und wird nachgeliefert */}
+          <ProductDetails productId={params.id} />
+        </Suspense>
+
+        {/* DYNAMISCHER Teil - wird gestreamt */}
+        <Suspense fallback={<div>Bewertungen laden...</div>}>
+          {/* Bewertungen brauchen eine Datenbank-Abfrage */}
+          <ProductReviews productId={params.id} />
+        </Suspense>
+
+        {/* DYNAMISCHER Teil - wird gestreamt */}
+        <Suspense fallback={<div>Empfehlungen laden...</div>}>
+          {/* Empfehlungen basieren auf User-Daten */}
+          <RecommendedProducts productId={params.id} />
+        </Suspense>
+      </main>
+
+      {/* Statischer Footer - sofort sichtbar */}
+      <footer>
+        <FooterLinks />
+        <Copyright />
+      </footer>
+    </div>
+  );
+}
+
+// Dynamische Komponente mit async/await
+async function ProductDetails({ productId }) {
+  // Diese Datenabfrage blockiert NICHT das initiale HTML
+  const product = await fetchProduct(productId);
+
+  return (
+    <div className="product-details">
+      <h1>{product.name}</h1>
+      <img src={product.image} alt={product.name} />
+      <p className="price">{product.price}€</p>
+      <button>In den Warenkorb</button>
+    </div>
   );
 }
 ```
 
-Mit Partial Pre-rendering kann React:
-1. Den statischen Header sofort als HTML senden
-2. Skeleton-Loader für die dynamischen Teile einbauen
-3. Den Content und die Kommentare nachladen, wenn sie fertig sind
+### Was passiert beim Laden?
 
-Das Ergebnis: Der Nutzer sieht sofort die Seiten-Struktur und muss nicht auf eine leere Seite starren.
+Mit Partial Pre-rendering in React 19.2 läuft der Ladevorgang so ab:
+
+1. **Initiale HTML-Shell (sofort)**: Der Browser erhält sofort das vorgerenderte HTML für Header, Sidebar und Footer. Diese Teile sind **vollständig interaktiv** - Buttons funktionieren, Navigation ist klickbar!
+
+2. **Platzhalter für dynamische Teile**: An den Stellen mit `<Suspense>` sieht der Nutzer die Fallback-UI (Skeleton-Loader). React markiert diese als "holes" im HTML.
+
+3. **Streaming der dynamischen Teile**: Sobald die Server-Komponenten ihre Daten geladen haben, streamt React die fertigen HTML-Chunks zum Browser. Diese "füllen" die Platzhalter - ohne dass die Seite neu laden muss.
+
+4. **Hydration**: React macht die nachgeladenen Teile interaktiv.
+
+**Das Ergebnis:** Der Nutzer sieht sofort eine funktionsfähige Seiten-Struktur (First Contentful Paint), kann direkt interagieren, und die dynamischen Inhalte erscheinen schrittweise - statt auf eine leere Seite oder einen Fullscreen-Loader zu starren.
+
+### Konfiguration in Next.js 15+
+
+Um Partial Pre-rendering zu aktivieren (in Next.js mit React 19.2):
+
+```javascript
+// next.config.js
+module.exports = {
+  experimental: {
+    ppr: true, // Partial Pre-rendering aktivieren
+  },
+}
+```
+
+Oder nur für bestimmte Seiten:
+
+```jsx
+// app/product/[id]/page.tsx
+export const experimental_ppr = true;
+```
+
+### Vorteile auf einen Blick
+
+- **Schnellere Time-to-First-Byte (TTFB)**: Statisches HTML wird sofort gesendet
+- **Bessere Core Web Vitals**: First Contentful Paint (FCP) und Largest Contentful Paint (LCP) verbessern sich
+- **Sofortige Interaktivität**: Die statische Shell ist sofort benutzbar
+- **Flexibilität**: Du entscheidest, welche Teile statisch vs. dynamisch sind
 
 ## Server-Side Rendering Verbesserungen
 
