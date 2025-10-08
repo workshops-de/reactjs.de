@@ -25,23 +25,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          submodules: recursive
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.0'
-          bundler-cache: true
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: |
-          npm install
-          bundle install
 
       - name: Configure Git
         run: |
@@ -113,9 +96,11 @@ jobs:
 
             Steps:
             1. Read the issue content: `gh issue view ${{ github.event.issue.number }}`
-            2. Review CLAUDE.md for article structure and format
-            3. Look at 2-3 recent articles in _posts/ to match the writing style
-            4. Generate a comprehensive article (5-10 minute read, ~1500-2500 words)
+            2. Review CLAUDE.md for article structure and format requirements
+            3. Look at 2-3 recent articles in _posts/ directories to match the writing style
+            4. Create a comprehensive article (5-10 minute read, ~1500-2500 words)
+
+            IMPORTANT: You only need to create the markdown file. Don't try to build or test the Jekyll site.
 
             Article requirements:
             - Language: German
@@ -139,9 +124,9 @@ jobs:
             - End with a conclusion or call-to-action
             - Consider linking to relevant resources or documentation
 
-            After creating the article:
+            After creating the markdown file in _posts/:
             1. Create a new branch: `git checkout -b article/issue-${{ github.event.issue.number }}`
-            2. Add and commit: `git add _posts/ && git commit -m "Add article from issue #${{ github.event.issue.number }}"`
+            2. Add and commit the markdown file: `git add _posts/ && git commit -m "Add article from issue #${{ github.event.issue.number }}"`
             3. Push branch: `git push origin article/issue-${{ github.event.issue.number }}`
             4. Create PR with gh CLI:
                ```
