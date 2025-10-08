@@ -203,128 +203,180 @@ Wenn deine App langsam läuft, schaue dir besonders die Components Track an. Suc
 
 Diese Informationen helfen dir, gezielt Optimierungen vorzunehmen - zum Beispiel durch Memoization oder bessere State-Strukturierung.
 
-## Partial Pre-rendering: Das Beste aus beiden Welten
+## Partial Pre-rendering: Vorrendern und später fortsetzen
 
-Partial Pre-rendering ist ein fortgeschrittenes Feature, das vor allem für Server-Side Rendering (SSR) relevant ist. Auch wenn du als Anfänger vielleicht noch nicht mit SSR arbeitest, ist es gut zu wissen, was möglich ist.
+Partial Pre-rendering ist ein völlig neues Feature in React 19.2, das besonders für fortgeschrittene Server-Rendering-Szenarien interessant ist. Auch wenn du als Anfänger vielleicht noch nicht damit arbeitest, lohnt es sich zu verstehen, welche Möglichkeiten es bietet.
 
 ### Was ist Partial Pre-rendering?
 
-Das neue Partial Pre-rendering in React 19.2 kombiniert die Vorteile von Static Site Generation (SSG) und Server-Side Rendering (SSR). Die Idee: React rendert statische Teile deiner Seite komplett vor und sendet sie als HTML-Shell sofort an den Browser, während dynamische Teile als "Platzhalter" (holes) markiert werden. Diese dynamischen Teile werden dann über Streaming nachgeladen, sobald sie fertig sind.
+Die Kernidee: Du kannst Teile deiner App **im Voraus rendern** und das Rendering später **fortsetzen**. Das ist besonders nützlich, wenn du statische Teile deiner Seite auf einem CDN cachen möchtest, aber dynamische Teile erst zur Laufzeit (pro Request) rendern willst.
 
-**Der entscheidende Unterschied zu vorher:** Mit Partial Pre-rendering muss der Server nicht mehr auf alle Daten warten, bevor er überhaupt irgendetwas senden kann. Die statische Shell wird sofort gesendet und ist interaktiv!
+**Was ist neu?** React 19.2 führt drei neue APIs ein:
+- `prerender()` - Rendert Teile der App im Voraus
+- `resume()` - Setzt das Rendering später fort (für SSR Streaming)
+- `resumeAndPrerender()` - Setzt das Rendering fort und generiert statisches HTML
 
-### Ein anschauliches Beispiel
+### Wie funktioniert es?
 
-Stell dir eine E-Commerce-Produktseite vor. Mit React 19.2 kannst du definieren, welche Teile statisch vorgerendert werden sollen:
+#### Schritt 1: Vorrendern (Pre-render)
 
-```jsx
-// app/product/[id]/page.tsx (Next.js mit React 19.2)
-import { Suspense } from 'react';
-
-export default async function ProductPage({ params }) {
-  // Dieser Teil wird STATISCH vorgerendert
-  // React generiert hier vollständiges HTML zur Build-Zeit
-  return (
-    <div className="product-page">
-      {/* Statischer Header - sofort sichtbar */}
-      <header>
-        <nav>
-          <Logo />
-          <MainMenu />
-        </nav>
-      </header>
-
-      {/* Statisches Layout - sofort sichtbar */}
-      <aside className="filter-sidebar">
-        <CategoryFilter />
-        <PriceRangeFilter />
-      </aside>
-
-      <main>
-        {/* DYNAMISCHER Teil - wird gestreamt */}
-        <Suspense fallback={<ProductSkeleton />}>
-          {/* Dieser Teil lädt Daten vom Server und wird nachgeliefert */}
-          <ProductDetails productId={params.id} />
-        </Suspense>
-
-        {/* DYNAMISCHER Teil - wird gestreamt */}
-        <Suspense fallback={<div>Bewertungen laden...</div>}>
-          {/* Bewertungen brauchen eine Datenbank-Abfrage */}
-          <ProductReviews productId={params.id} />
-        </Suspense>
-
-        {/* DYNAMISCHER Teil - wird gestreamt */}
-        <Suspense fallback={<div>Empfehlungen laden...</div>}>
-          {/* Empfehlungen basieren auf User-Daten */}
-          <RecommendedProducts productId={params.id} />
-        </Suspense>
-      </main>
-
-      {/* Statischer Footer - sofort sichtbar */}
-      <footer>
-        <FooterLinks />
-        <Copyright />
-      </footer>
-    </div>
-  );
-}
-
-// Dynamische Komponente mit async/await
-async function ProductDetails({ productId }) {
-  // Diese Datenabfrage blockiert NICHT das initiale HTML
-  const product = await fetchProduct(productId);
-
-  return (
-    <div className="product-details">
-      <h1>{product.name}</h1>
-      <img src={product.image} alt={product.name} />
-      <p className="price">{product.price}€</p>
-      <button>In den Warenkorb</button>
-    </div>
-  );
-}
-```
-
-### Was passiert beim Laden?
-
-Mit Partial Pre-rendering in React 19.2 läuft der Ladevorgang so ab:
-
-1. **Initiale HTML-Shell (sofort)**: Der Browser erhält sofort das vorgerenderte HTML für Header, Sidebar und Footer. Diese Teile sind **vollständig interaktiv** - Buttons funktionieren, Navigation ist klickbar!
-
-2. **Platzhalter für dynamische Teile**: An den Stellen mit `<Suspense>` sieht der Nutzer die Fallback-UI (Skeleton-Loader). React markiert diese als "holes" im HTML.
-
-3. **Streaming der dynamischen Teile**: Sobald die Server-Komponenten ihre Daten geladen haben, streamt React die fertigen HTML-Chunks zum Browser. Diese "füllen" die Platzhalter - ohne dass die Seite neu laden muss.
-
-4. **Hydration**: React macht die nachgeladenen Teile interaktiv.
-
-**Das Ergebnis:** Der Nutzer sieht sofort eine funktionsfähige Seiten-Struktur (First Contentful Paint), kann direkt interagieren, und die dynamischen Inhalte erscheinen schrittweise - statt auf eine leere Seite oder einen Fullscreen-Loader zu starren.
-
-### Konfiguration in Next.js 15+
-
-Um Partial Pre-rendering zu aktivieren (in Next.js mit React 19.2):
+Zuerst renderst du deine App und speicherst den "aufgeschobenen" Zustand (postponed state):
 
 ```javascript
-// next.config.js
-module.exports = {
-  experimental: {
-    ppr: true, // Partial Pre-rendering aktivieren
-  },
+import { prerender } from 'react-dom/static';
+
+// Während der Build-Zeit oder beim ersten Request
+const controller = new AbortController();
+
+const { prelude, postponed } = await prerender(<App />, {
+  signal: controller.signal,
+});
+
+// Das 'prelude' ist das HTML für die statischen Teile
+// Das 'postponed' enthält den Zustand für dynamische Teile
+
+// Speichere den postponed state für später (z.B. auf dem Server)
+await savePostponedState(postponed);
+
+// Sende das prelude an den Client (kann gecacht werden!)
+return prelude;
+```
+
+#### Schritt 2: Fortsetzen (Resume)
+
+Später, wenn ein Request kommt, kannst du das Rendering fortsetzen:
+
+**Option A - Mit SSR Streaming:**
+
+```javascript
+import { resume } from 'react-dom/server';
+
+// Bei einem späteren Request
+const postponed = await getPostponedState(request);
+
+// Erstelle einen Stream, der das Rendering fortsetzt
+const resumeStream = await resume(<App />, postponed, {
+  onError(error) {
+    console.error('Resume error:', error);
+  }
+});
+
+// Sende den Stream an den Client
+return new Response(resumeStream);
+```
+
+**Option B - Als statisches HTML:**
+
+```javascript
+import { resumeAndPrerender } from 'react-dom/static';
+
+// Für statische Generierung
+const postponedState = await getPostponedState(request);
+
+const { prelude } = await resumeAndPrerender(<App />, postponedState);
+
+// Jetzt hast du vollständiges statisches HTML
+return prelude;
+```
+
+### Ein praktisches Beispiel
+
+Stell dir eine Blog-Plattform vor. Das Layout ist immer gleich, aber der Content ändert sich:
+
+```jsx
+import { Suspense } from 'react';
+
+function BlogApp() {
+  return (
+    <html>
+      <head>
+        <title>Mein Blog</title>
+      </head>
+      <body>
+        {/* Diese Teile sind statisch - werden beim prerender() erfasst */}
+        <header>
+          <h1>Mein Blog</h1>
+          <nav>
+            <a href="/">Home</a>
+            <a href="/about">Über mich</a>
+          </nav>
+        </header>
+
+        {/* Dieser Teil ist dynamisch - wird beim resume() gerendert */}
+        <main>
+          <Suspense fallback={<div>Lädt...</div>}>
+            <BlogPost />
+          </Suspense>
+        </main>
+
+        {/* Statischer Footer */}
+        <footer>
+          <p>&copy; 2025 Mein Blog</p>
+        </footer>
+      </body>
+    </html>
+  );
+}
+
+async function BlogPost() {
+  // Dieser Code läuft erst beim resume()
+  const post = await fetchLatestPost();
+
+  return (
+    <article>
+      <h2>{post.title}</h2>
+      <p>{post.content}</p>
+    </article>
+  );
 }
 ```
 
-Oder nur für bestimmte Seiten:
+**Workflow:**
 
-```jsx
-// app/product/[id]/page.tsx
-export const experimental_ppr = true;
+1. **Build-Zeit:** `prerender(<BlogApp />)` generiert das HTML für Header und Footer → wird auf CDN gespeichert
+2. **Request-Zeit:** `resume(<BlogApp />, postponed)` lädt die aktuellen Blog-Daten und rendert nur den dynamischen Teil
+3. **Ergebnis:** Schnelle Auslieferung (CDN) + aktuelle Daten (Server)
+
+### Warum ist das nützlich?
+
+#### Vorteile:
+
+1. **CDN-Caching für statische Teile**: Das `prelude` (statische Shell) kann global gecacht werden
+2. **Dynamische Teile bleiben frisch**: Nur was sich ändert, wird pro Request gerendert
+3. **Bessere Performance**: Nutzer sehen sofort die statische Shell, während dynamischer Content nachgeladen wird
+4. **Flexible Deployment-Strategien**: Kombiniere Static Site Generation mit Server-Side Rendering
+
+#### Use Cases:
+
+- **E-Commerce**: Statisches Layout + dynamische Produktdaten
+- **Dashboards**: Statische Navigation + aktuelle Metriken
+- **Content-Sites**: Statisches Design + frischer Content
+- **Personalisierung**: Statische Basis + personalisierte Widgets
+
+### Der Unterschied zu Suspense
+
+**Wichtig zu verstehen:** Das ist nicht einfach nur Suspense! Suspense gibt es schon lange für Client-Side Rendering und Server-Streaming.
+
+**Partial Pre-rendering ist neu**, weil es erlaubt:
+- Rendering-Arbeit aufzuteilen zwischen Build-Zeit und Request-Zeit
+- Den Zustand zwischen beiden Phasen zu speichern
+- Verschiedene Deployment-Strategien zu kombinieren
+
+### Für Framework-Entwickler
+
+Diese APIs sind hauptsächlich für **Framework-Autoren** gedacht (Next.js, Remix, etc.). Als normaler React-Entwickler wirst du vermutlich höhere Abstraktionen verwenden, die dein Framework anbietet.
+
+Beispiel Next.js:
+```javascript
+// Next.js könnte in Zukunft etwas wie PPR so unterstützen:
+export const config = {
+  runtime: 'partial-prerender'
+};
 ```
 
-### Vorteile auf einen Blick
+### Zusammenfassung
 
-- **Schnellere Time-to-First-Byte (TTFB)**: Statisches HTML wird sofort gesendet
-- **Bessere Core Web Vitals**: First Contentful Paint (FCP) und Largest Contentful Paint (LCP) verbessern sich
-- **Sofortige Interaktivität**: Die statische Shell ist sofort benutzbar
-- **Flexibilität**: Du entscheidest, welche Teile statisch vs. dynamisch sind
+Partial Pre-rendering ist ein mächtiges Tool für hybride Rendering-Strategien. Es erlaubt dir, das Beste aus Static Site Generation (Geschwindigkeit, CDN-Caching) und Server-Side Rendering (Aktualität, Personalisierung) zu kombinieren - mit drei neuen APIs: `prerender()`, `resume()`, und `resumeAndPrerender()`.
 
 ## Server-Side Rendering Verbesserungen
 
