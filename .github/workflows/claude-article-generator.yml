@@ -28,7 +28,7 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "Claude Bot"
+          git config --global user.name "Agent Alpha"
           git config --global user.email "claude-bot@reactjs.de"
 
       - name: Analyze Issue Content
@@ -108,7 +108,7 @@ jobs:
             - Writing style: Informative, friendly, practical
             - Include code examples where relevant (use JSX/TypeScript)
             - Use proper markdown formatting with headers, lists, code blocks
-            - Front matter must include: title, description, author (use "Claude Bot" or from issue), published_at (today's date), categories, header_image (use "header.jpg")
+            - Front matter must include: title, description, author (use "Robin Böhm"), published_at (today's date), categories, header_image (use "header.jpg")
 
             File structure:
             - Create directory: _posts/YYYY-MM-DD-slug/
