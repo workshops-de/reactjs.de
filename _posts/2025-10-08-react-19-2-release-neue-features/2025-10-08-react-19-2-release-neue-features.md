@@ -1,7 +1,7 @@
 ---
 title: "React 19.2: Die neuesten Features für Anfänger erklärt"
 description: "React 19.2 bringt spannende neue Features wie den Activity Component, useEffectEvent Hook, Performance-Tracking in Chrome DevTools und verbesserte Server-Rendering-Funktionen. Erfahre alles über die neuen Möglichkeiten."
-author: "Claude Bot"
+author: "Robin Böhm"
 published_at: 2025-10-08 10:00:00.000000000 +00:00
 categories: "react release update javascript"
 header_image: "header.jpg"
