@@ -112,6 +112,12 @@ jobs:
             - Use proper markdown formatting with headers, lists, code blocks
             - Front matter must include: title, description, author (use "Robin Böhm"), published_at (today's date), categories, header_image (use "header.jpg")
 
+            WICHTIG - Deutsche Grammatik:
+            - "Component" ist im Deutschen feminin: "die Komponente" (NICHT "der Component")
+            - Verwende deutsche Begriffe wo möglich: "Komponente" statt "Component"
+            - Bei englischen Begriffen: Artikel richtig verwenden (z.B. "der Hook", "das Feature")
+            - Compound-Wörter mit Bindestrich: "Activity-Komponente", "Server-Side Rendering"
+
             File structure:
             - Create directory: _posts/YYYY-MM-DD-slug/
             - Create file: _posts/YYYY-MM-DD-slug/YYYY-MM-DD-slug.md
