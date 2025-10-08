@@ -86,6 +86,8 @@ jobs:
       - name: Generate Article
         if: steps.check_approval.outputs.approved == 'true'
         uses: anthropics/claude-code-action@v1
+        env:
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
@@ -116,6 +118,28 @@ jobs:
             - Use current date in ISO format (YYYY-MM-DD)
             - Create a URL-friendly slug from the title (lowercase, hyphens, no special chars)
 
+            Header Image (WICHTIG):
+            1. Search for a relevant image on Unsplash using their API
+            2. Use the UNSPLASH_ACCESS_KEY environment variable for authentication
+            3. Unsplash API endpoint: https://api.unsplash.com/search/photos?query=YOUR_SEARCH_TERM&per_page=1&orientation=landscape
+               - Add header: "Authorization: Client-ID $UNSPLASH_ACCESS_KEY"
+               - Choose search terms based on article topic (in English, e.g., "react javascript code", "web development", "programming")
+            4. Download the image from the "urls.regular" field in the API response
+            5. Save as: _posts/YYYY-MM-DD-slug/header.jpg
+            6. Reference it in front matter as: header_image: "header.jpg"
+
+            Example curl command:
+            ```bash
+            # Search for image
+            SEARCH_TERM="react javascript"
+            IMAGE_URL=$(curl -s -H "Authorization: Client-ID $UNSPLASH_ACCESS_KEY" \
+              "https://api.unsplash.com/search/photos?query=${SEARCH_TERM}&per_page=1&orientation=landscape" | \
+              jq -r '.results[0].urls.regular')
+
+            # Download image
+            curl -o _posts/YYYY-MM-DD-slug/header.jpg "$IMAGE_URL"
+            ```
+
             Article structure:
             - Start with an engaging introduction explaining the topic's relevance
             - Use clear section headers (##, ###)
@@ -124,9 +148,9 @@ jobs:
             - End with a conclusion or call-to-action
             - Consider linking to relevant resources or documentation
 
-            After creating the markdown file in _posts/:
+            After creating the markdown file and downloading the header image in _posts/:
             1. Create a new branch: `git checkout -b article/issue-${{ github.event.issue.number }}`
-            2. Add and commit the markdown file: `git add _posts/ && git commit -m "Add article from issue #${{ github.event.issue.number }}"`
+            2. Add and commit both the markdown file and header image: `git add _posts/ && git commit -m "Add article with header image from issue #${{ github.event.issue.number }}"`
             3. Push branch: `git push origin article/issue-${{ github.event.issue.number }}`
             4. Create PR with gh CLI:
                ```
@@ -151,9 +175,9 @@ jobs:
                ```
             5. Comment on the issue with the PR link
 
-            Note: For the header image, just reference "header.jpg" in front matter. A default/placeholder image will be used initially and can be updated later.
+            Note: The header image will be automatically downloaded from Unsplash based on the article topic.
 
-          claude_args: '--allowed-tools "Bash(gh issue view:*),Bash(gh issue comment:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(git status:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Read,Write,Glob,Grep"'
+          claude_args: '--allowed-tools "Bash(gh issue view:*),Bash(gh issue comment:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(git status:*),Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(curl:*),Bash(jq:*),Read,Write,Glob,Grep"'
 
       - name: Post Failure Comment
         if: failure()
