@@ -13,21 +13,21 @@ Die React-Community kann sich freuen: React 19.2 ist da! Diese Version bringt ei
 
 React 19.2 ist ein bedeutendes Update, das sich auf Performance-Verbesserungen, bessere Entwickler-Tools und neue Möglichkeiten zur Strukturierung deiner Anwendungen konzentriert. Die neuen Features machen es einfacher, performante und gut strukturierte React-Anwendungen zu entwickeln - auch wenn du noch nicht so viel Erfahrung hast.
 
-## Der Activity Component: Apps besser strukturieren
+## Die Activity-Komponente: Apps besser strukturieren
 
-Eines der spannendsten neuen Features ist der `<Activity />` Component. Aber was macht er eigentlich?
+Eines der spannendsten neuen Features ist die `<Activity />`-Komponente. Aber was macht sie eigentlich?
 
-### Was ist ein Activity Component?
+### Was ist eine Activity-Komponente?
 
-Stell dir vor, du baust eine Anwendung mit mehreren "Bereichen" oder "Aktivitäten" - zum Beispiel eine Dashboard-Ansicht, eine Detailansicht und eine Einstellungsseite. Mit dem Activity Component kannst du diese Bereiche besser kontrollieren und verwalten, insbesondere wenn es um Sichtbarkeit und Rendering-Performance geht.
+Stell dir vor, du baust eine Anwendung mit mehreren "Bereichen" oder "Aktivitäten" - zum Beispiel eine Dashboard-Ansicht, eine Detailansicht und eine Einstellungsseite. Mit der Activity-Komponente kannst du diese Bereiche besser kontrollieren und verwalten, insbesondere wenn es um Sichtbarkeit und Rendering-Performance geht.
 
-Der Activity Component unterstützt zwei Modi:
+Die Activity-Komponente unterstützt zwei Modi:
 - **`visible`**: Die Aktivität ist aktiv und für den Nutzer sichtbar
 - **`hidden`**: Die Aktivität ist im Hintergrund, aber bereits vorgerendert
 
 ### Praktisches Beispiel
 
-Hier siehst du, wie du den Activity Component in einer einfachen Anwendung verwenden kannst:
+Hier siehst du, wie du die Activity-Komponente in einer einfachen Anwendung verwenden kannst:
 
 ```jsx
 import { Activity } from 'react';
@@ -307,9 +307,9 @@ Nach dem Update: Führe deine Tests aus und prüfe, ob alles funktioniert. In de
 
 ## Praktische Tipps für den Einstieg
 
-### 1. Experimentiere mit Activity Components
+### 1. Experimentiere mit Activity-Komponenten
 
-Wenn du eine App mit mehreren Views hast (z.B. Tabs), probiere den Activity Component aus:
+Wenn du eine App mit mehreren Views hast (z.B. Tabs), probiere die Activity-Komponente aus:
 
 ```jsx
 function TabApp() {
@@ -361,7 +361,7 @@ Kleine Übung:
 
 React 19.2 ist ein solides Update mit praktischen neuen Features:
 
-- **Activity Component**: Bessere Kontrolle über verschiedene App-Bereiche
+- **Activity-Komponente**: Bessere Kontrolle über verschiedene App-Bereiche
 - **useEffectEvent**: Löst das Dependency-Problem in useEffect
 - **Performance Tracking**: Neue DevTools-Integration für bessere Einblicke
 - **Partial Pre-rendering**: Schnellere Ladezeiten für SSR-Apps
@@ -374,7 +374,7 @@ Für Anfänger ist besonders wichtig: Du musst nicht alle Features sofort verste
 Bist du bereit, React 19.2 auszuprobieren? Hier sind konkrete Empfehlungen:
 
 1. **Erstelle ein neues Projekt** mit React 19.2 und experimentiere mit den neuen Features
-2. **Schaue dir den Activity Component** genauer an, wenn du mit Tabs oder mehreren Views arbeitest
+2. **Schaue dir die Activity-Komponente** genauer an, wenn du mit Tabs oder mehreren Views arbeitest
 3. **Probiere useEffectEvent** aus, wenn du das nächste Mal Probleme mit useEffect-Dependencies hast
 4. **Öffne die Chrome DevTools** und erkunde die neuen Performance Tracks
 5. **Lies die offizielle Dokumentation** für noch mehr Details
