@@ -65,7 +65,7 @@ jobs:
 
             End your comment with exactly "RECOMMENDATION: APPROVED" or "RECOMMENDATION: REJECTED" on the last line.
 
-          claude_args: '--allowed-tools "Bash(gh issue *),Read,Glob"'
+          claude_args: '--allowed-tools "Bash(gh issue:*),Read,Glob"'
 
       - name: Check Analysis Result
         id: check_approval
