@@ -4,7 +4,7 @@ description: "Meta gibt React und React Native an die neu gegründete React Foun
 author: "Robin Böhm"
 published_at: 2025-10-08 09:00:00
 categories: "react foundation governance open-source"
-header_image: "header.png"
+header_image: "header.jpg"
 ---
 
 Gestern, am 7. Oktober 2025, wurde eine der bedeutendsten Veränderungen in der Geschichte von React angekündigt: **Meta übergibt React und React Native an die neu gegründete React Foundation**. Diese Entscheidung markiert einen historischen Wendepunkt für das beliebte JavaScript-Framework und verspricht eine demokratischere, transparentere Zukunft für das gesamte React-Ökosystem.
