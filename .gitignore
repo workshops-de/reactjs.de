@@ -6,6 +6,16 @@ node_modules
 dist/
 .astro/
 
+# Old Jekyll artifacts (migrated to Astro)
+_posts/
+_site/
+_plugins/
+_pages/
+_data/
+_layouts/
+_includes/
+.jekyll-cache/
+
 # Generated OG images (created during build)
 public/og/*
 !public/og/.gitkeep
