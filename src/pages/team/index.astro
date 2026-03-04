@@ -6,7 +6,7 @@ import { getCollection } from 'astro:content';
 const allUsers = await getCollection('users');
 const teamMembers = allUsers.filter(user => user.data.team === true);
 
-const teamOrder = ['Sebastian Deutsch', 'Robin Böhm'];
+const teamOrder = ['Robin Böhm', 'Sebastian Deutsch', 'Britta Lenzen', 'Sascha Nuissl'];
 const featuredTeam = teamOrder
   .map(name => teamMembers.find(m => m.data.name === name))
   .filter(Boolean);

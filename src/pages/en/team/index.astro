@@ -9,7 +9,7 @@ const { branding } = siteConfig;
 const allUsers = await getCollection('users');
 const teamMembers = allUsers.filter(user => user.data.team === true);
 
-const teamOrder = ['Robin Böhm', 'Britta Lenzen', 'Sascha Nuissl'];
+const teamOrder = ['Robin Böhm', 'Sebastian Deutsch', 'Britta Lenzen', 'Sascha Nuissl'];
 const sortedTeam = teamOrder
   .map(name => teamMembers.find(m => m.data.name === name))
   .filter(Boolean);
