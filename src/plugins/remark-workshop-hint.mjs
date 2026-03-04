@@ -15,7 +15,7 @@ const ctas = {
       en: "More information about React Training",
     },
     buttonUrl:
-      "https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=portal&utm_content=text-top",
+      "https://workshops.de/seminare-schulungen-kurse/react-modul-1?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=portal&utm_content=text-top",
     image: "/assets/img/courses/attendees.jpg",
     imageAlt: {
       de: "Teilnehmer:innen in der Veranstaltung React & TypeScript Intensiv Workshop",
@@ -36,7 +36,7 @@ const ctas = {
       en: "Continue learning now",
     },
     buttonUrl:
-      "https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=portal&utm_content=text-bottom",
+      "https://workshops.de/seminare-schulungen-kurse/react-modul-1?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=portal&utm_content=text-bottom",
     image: "/assets/img/courses/attendees.jpg",
     imageAlt: {
       de: "Teilnehmer:innen der Veranstaltung React & TypeScript Intensiv Workshop",

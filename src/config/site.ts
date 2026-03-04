@@ -90,29 +90,35 @@ export const siteConfig = {
     providerUrl: "https://workshops.de",
     courses: [
       {
-        id: "react-typescript",
-        title: { de: "React & TypeScript", en: "React & TypeScript" },
-        description: {
-          de: "Grundlagen-Intensivkurs für den Einstieg in React v19 und TypeScript. Perfekt für Einsteiger:innen.",
-          en: "Intensive beginner course for getting started with React v19 and TypeScript. Perfect for beginners.",
+        id: "react-modul-1",
+        title: {
+          de: "React: Modul 1 - Komponenten, Reaktivität & Schnittstellen",
+          en: "React: Module 1 - Components, Reactivity & Interfaces",
         },
-        duration: { de: "3-6 Tage", en: "3-6 Days" },
-        format: { de: "Vor Ort oder Remote", en: "On-Site or Remote" },
-        icon: "/assets/img/courses/logo-react-typescript.svg",
-        url: "/seminare-schulungen-kurse/react-typescript",
-        level: "beginner",
-      },
-      {
-        id: "react-advanced",
-        title: { de: "React Advanced", en: "React Advanced" },
         description: {
-          de: "Fortgeschrittene Konzepte für erfahrene React-Entwickler:innen. Performance, Testing und Architektur.",
-          en: "Advanced concepts for experienced React developers. Performance, testing and architecture.",
+          de: "Intensiv-Schulung für den Einstieg in React v19 und TypeScript. Komponenten, Hooks, Routing und API-Anbindung.",
+          en: "Intensive training for getting started with React v19 and TypeScript. Components, Hooks, Routing and API integration.",
         },
         duration: { de: "3 Tage", en: "3 Days" },
         format: { de: "Vor Ort oder Remote", en: "On-Site or Remote" },
-        icon: "/assets/img/courses/jsx-logo.svg",
-        url: "/seminare-schulungen-kurse/react-advanced",
+        icon: "/assets/img/courses/react-logo.svg",
+        url: "/seminare-schulungen-kurse/react-modul-1",
+        level: "beginner",
+      },
+      {
+        id: "react-modul-2",
+        title: {
+          de: "React: Modul 2 - Architektur & Qualität",
+          en: "React: Module 2 - Architecture & Quality",
+        },
+        description: {
+          de: "Intensiv-Schulung für fortgeschrittene React-Entwickler:innen. Architektur, Testing, Performance und State Management.",
+          en: "Intensive training for advanced React developers. Architecture, Testing, Performance and State Management.",
+        },
+        duration: { de: "3 Tage", en: "3 Days" },
+        format: { de: "Vor Ort oder Remote", en: "On-Site or Remote" },
+        icon: "/assets/img/courses/react-logo.svg",
+        url: "/seminare-schulungen-kurse/react-modul-2",
         level: "advanced",
       },
       {

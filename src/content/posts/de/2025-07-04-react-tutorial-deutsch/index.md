@@ -21,7 +21,7 @@ Dieses Tutorial setzt keine Vorkenntnisse in React voraus und richtet sich an al
 
 Wir werden eine Web-App programmieren, die Bild-Informationen von einem Server erfragt und diese dann anzeigt - dabei nutzen wir die neuesten React 19 Features wie Actions, useOptimistic und mehr.
 
-Diese Einführung ist für Anfänger gedacht, die gerade mit React beginnen. Das Beispiel orientiert sich an den ersten Aufgaben unserer Workshop-Inhalte der [React Intensiv Schulung](https://workshops.de/seminare-schulungen-kurse/react-typescript).
+Diese Einführung ist für Anfänger gedacht, die gerade mit React beginnen. Das Beispiel orientiert sich an den ersten Aufgaben unserer Workshop-Inhalte der [React Intensiv Schulung](https://workshops.de/seminare-schulungen-kurse/react-modul-1).
 
 Unsere Didaktik behandelt dabei die Motivation, die Theorie und dann den Praxis-Teil. Ihr könnt hierbei alle Aufgaben selber programmieren und über unseren Workshops.DE Classroom Hilfestellungen und Musterlösungen für die Aufgaben erhalten.
 

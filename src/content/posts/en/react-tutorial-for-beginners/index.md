@@ -22,7 +22,7 @@ This tutorial assumes no prior knowledge of React and is aimed at everyone who w
 
 We will build a web app that requests image information from a server and displays it — using the latest React 19 features like Actions, useOptimistic, and more.
 
-This introduction is intended for beginners who are just getting started with React. The example is based on the first exercises from our workshop content in the [React Intensive Training](https://workshops.de/seminare-schulungen-kurse/react-typescript).
+This introduction is intended for beginners who are just getting started with React. The example is based on the first exercises from our workshop content in the [React Intensive Training](https://workshops.de/seminare-schulungen-kurse/react-modul-1).
 
 Our teaching approach covers the motivation, the theory, and then the hands-on part. You can code all exercises yourself and get hints and sample solutions through our Workshops.DE Classroom.
 
