@@ -7,12 +7,16 @@ interface NavItem {
   label: string;
   pattern: string;
   external?: boolean;
+  icon?: string;
 }
 
 interface CommunityLink {
   name: string;
   href: string;
 }
+
+export type I18nText = { de: string; en: string };
+export type Lang = "de" | "en";
 
 export const siteConfig = {
   title: "ReactJS.DE",
@@ -86,14 +90,70 @@ export const siteConfig = {
     providerUrl: "https://workshops.de",
     courses: [
       {
-        slug: "react-intensiv",
-        name: "React & TypeScript Intensiv",
-        courseId: 32,
-        duration: "6 Tage",
+        id: "react-typescript",
+        title: { de: "React & TypeScript", en: "React & TypeScript" },
+        description: {
+          de: "Grundlagen-Intensivkurs für den Einstieg in React v19 und TypeScript. Perfekt für Einsteiger:innen.",
+          en: "Intensive beginner course for getting started with React v19 and TypeScript. Perfect for beginners.",
+        },
+        duration: { de: "3-6 Tage", en: "3-6 Days" },
+        format: { de: "Vor Ort oder Remote", en: "On-Site or Remote" },
+        icon: "/assets/img/courses/logo-react-typescript.svg",
+        url: "/seminare-schulungen-kurse/react-typescript",
+        level: "beginner",
+      },
+      {
+        id: "react-advanced",
+        title: { de: "React Advanced", en: "React Advanced" },
+        description: {
+          de: "Fortgeschrittene Konzepte für erfahrene React-Entwickler:innen. Performance, Testing und Architektur.",
+          en: "Advanced concepts for experienced React developers. Performance, testing and architecture.",
+        },
+        duration: { de: "3 Tage", en: "3 Days" },
+        format: { de: "Vor Ort oder Remote", en: "On-Site or Remote" },
+        icon: "/assets/img/courses/jsx-logo.svg",
+        url: "/seminare-schulungen-kurse/react-advanced",
+        level: "advanced",
+      },
+      {
+        id: "frontend-architektur",
+        title: { de: "Frontend Architektur", en: "Frontend Architecture" },
+        description: {
+          de: "Moderne Webentwicklung und Frontend-Architektur. Lerne nachhaltige und skalierbare Konzepte.",
+          en: "Modern web development and frontend architecture. Learn sustainable and scalable concepts.",
+        },
+        duration: { de: "4 Tage", en: "4 Days" },
+        format: { de: "Vor Ort oder Remote", en: "On-Site or Remote" },
+        icon: "/assets/img/courses/logo-frontend-architecture.svg",
+        url: "/seminare-schulungen-kurse/frontend-architektur",
+        level: "advanced",
+      },
+      {
+        id: "react-native",
+        title: { de: "React Native", en: "React Native" },
+        description: {
+          de: "Mobile App-Entwicklung mit React Native. Erstelle native Apps für iOS und Android.",
+          en: "Mobile app development with React Native. Build native apps for iOS and Android.",
+        },
+        duration: { de: "3 Tage", en: "3 Days" },
+        format: { de: "Vor Ort oder Remote", en: "On-Site or Remote" },
+        icon: "/assets/img/courses/logo-react-native.svg",
+        url: "/seminare-schulungen-kurse/react-native",
+        level: "advanced",
       },
     ],
   },
 };
+
+export function getLocalizedCourses(lang: Lang = "de") {
+  return siteConfig.training.courses.map((course) => ({
+    ...course,
+    title: course.title[lang],
+    description: course.description[lang],
+    duration: course.duration[lang],
+    format: course.format[lang],
+  }));
+}
 
 export function buildUtmUrl(
   baseUrl: string,
