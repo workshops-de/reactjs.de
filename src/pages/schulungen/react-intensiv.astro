@@ -1,0 +1,336 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TeamMember from '../../components/TeamMember.astro';
+import { siteConfig, buildUtmUrl } from '../../config/site';
+import { getCollection } from 'astro:content';
+
+const { topic } = siteConfig;
+const { providerUrl, courses } = siteConfig.training;
+
+const clients = [
+  { name: 'RWE', logo: '/shared/assets/img/clients/rwe.svg' },
+  { name: 'Commerzbank', logo: '/shared/assets/img/clients/commerzbank.svg' },
+  { name: 'Allianz', logo: '/shared/assets/img/clients/allianz.svg' },
+  { name: 'Bosch', logo: '/shared/assets/img/clients/bosch.svg' },
+  { name: 'Galeria Kaufhof', logo: '/shared/assets/img/clients/galeria-kaufhof.svg' },
+  { name: 'SWR', logo: '/shared/assets/img/clients/swr.svg' },
+];
+
+const testimonials = [
+  {
+    quote: 'Die Trainer:innen sind absolute Profis und übermitteln ihre Begeisterung für das Thema. Unsere Mitarbeiter profitieren von intensiven, praktischen Trainings, in denen auf ihre Bedürfnisse eingegangen wird.',
+    name: 'Annika Stille',
+    role: 'Verantwortliche für interne Weiterbildung',
+    company: 'Adesso AG',
+  },
+  {
+    quote: 'Die Schulungen sind immer an die aktuellen Themen am Markt gerichtet und passen maßgeschneidert auf unsere Bedarfe. Sie helfen unseren Mitarbeitern sich schnell und effizient auf bevorstehende Projekte vorzubereiten.',
+    name: 'Christian Janz',
+    role: 'Lead Softwarearchitekt',
+    company: 'bridgingIT',
+  },
+];
+
+const agendaItems = [
+  { title: 'JavaScript Essentials', desc: 'Grundlagen für den React-Einstieg' },
+  { title: 'React Grundlagen', desc: 'Komponenten, JSX und das virtuelle DOM' },
+  { title: 'Hooks & State Management', desc: 'useState, useEffect und komplexere State-Logik' },
+  { title: 'Build Tools (Vite/Next.js)', desc: 'Moderne Entwicklungs- und Build-Workflows' },
+  { title: 'Routing', desc: 'Client-seitige Navigation in React Apps' },
+  { title: 'Form Handling & Testing', desc: 'Formulare und Qualitätssicherung' },
+];
+
+const bookingUrl = buildUtmUrl(`${providerUrl}/seminare-schulungen-kurse/react-typescript`, 'schulungen_2025', 'portal', 'schulung_page');
+
+const teamMembers = (await getCollection('users')).filter(u => u.data.trainer === true);
+---
+
+<BaseLayout
+  title={`${topic} & TypeScript Intensiv-Schulung (Vor-Ort / Remote)`}
+  description={`Du möchtest ${topic} lernen? Ganz entspannt Vor Ort oder Remote gemeinsam lernen. Erfahre mehr über unsere Intensiv-Schulung!`}
+>
+  <!-- Hero Header -->
+  <section class="relative py-20 md:py-28 overflow-hidden dark:bg-gray-950">
+    <!-- Gradient - React cyan/blue -->
+    <div class="absolute inset-0 dark:hidden" style="background: radial-gradient(at 20% 30%, rgba(97, 218, 251, 0.08) 0px, transparent 50%), radial-gradient(at 80% 20%, rgba(59, 130, 246, 0.1) 0px, transparent 50%), radial-gradient(at 40% 80%, rgba(97, 218, 251, 0.06) 0px, transparent 50%), linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);"></div>
+    <div class="absolute inset-0 hidden dark:block" style="background: radial-gradient(at 20% 30%, rgba(97, 218, 251, 0.2) 0px, transparent 50%), radial-gradient(at 80% 20%, rgba(59, 130, 246, 0.15) 0px, transparent 50%), radial-gradient(at 40% 80%, rgba(97, 218, 251, 0.12) 0px, transparent 50%);"></div>
+    <div class="absolute inset-0 dark:opacity-30" style="background-image: radial-gradient(circle, rgba(0, 0, 0, 0.08) 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-600 text-primary-700 dark:text-primary-400 rounded-full text-sm font-medium mb-6 dark:bg-gray-800/50">
+        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+        Nächste Termine verfügbar
+      </div>
+
+      <div class="w-28 h-28 md:w-36 md:h-36 mx-auto mb-8">
+        <img
+          src="/assets/img/courses/logo-react-typescript.svg"
+          alt={`${topic} & TypeScript Schulung`}
+          class="w-full h-full drop-shadow-lg"
+          loading="lazy"
+        />
+      </div>
+
+      <h1 class="text-gray-900 dark:text-white mb-6">
+        Der beste Weg mit<br />
+        <span class="text-primary">{topic}</span> zu starten.
+      </h1>
+
+      <p class="text-xl text-gray-600 dark:text-gray-400 mb-4 max-w-2xl mx-auto">
+        Unsere Schulungen machen dich fit für den produktiven Einsatz von {topic}.
+        Vertraue wie über <span class="font-semibold text-gray-900 dark:text-white">100+ Teilnehmer:innen</span> vor dir auf unsere Expertise.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <span class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-sm text-gray-600 dark:text-gray-300 shadow-sm">
+          <svg class="w-4 h-4 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          Vor Ort
+        </span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-sm text-gray-600 dark:text-gray-300 shadow-sm">
+          <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+          Remote
+        </span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-sm text-gray-600 dark:text-gray-300 shadow-sm">
+          <svg class="w-4 h-4 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+          Inhouse
+        </span>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href={bookingUrl}
+          target="_blank"
+          rel="noopener"
+          class="inline-flex items-center justify-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-semibold px-8 py-4 rounded-full hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors shadow-lg"
+        >
+          Schulung buchen
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+        <a
+          href="#agenda"
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-gray-300 dark:border-gray-600 rounded-full font-semibold text-gray-700 dark:text-gray-300 hover:border-primary hover:text-primary transition-colors"
+        >
+          Agenda ansehen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Logos -->
+  <section class="bg-gray-50 dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-8 md:gap-12 items-center">
+        {clients.map(client => (
+          <img
+            src={client.logo}
+            alt={client.name}
+            loading="lazy"
+            class="h-10 md:h-14 lg:h-30 w-auto mx-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all dark:invert dark:opacity-60 dark:hover:opacity-70 dark:hover:grayscale"
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-20 dark:bg-gray-950">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wide mb-3">Interaktiver Workshop</p>
+        <h2 class="text-4xl md:text-5xl text-gray-900 dark:text-white mb-8 leading-tight">
+          Schneller und angenehmer lernen.
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+          Bücher und Videokurse sind heute nicht mehr wegzudenken. Allerdings kannst du in unserer Schulung:
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+        <ul class="space-y-4">
+          {[
+            'Durch direktes Feedback schneller lernen.',
+            'Trainer:in nach konkreten Lösungsansätzen für dein Projekt fragen.',
+            'Gemeinsam Lernhürden überwinden.',
+            'Einfach eine gute Zeit mit anderen Entwicklern in der gleichen Situation haben.',
+          ].map(item => (
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-gray-700 dark:text-gray-300">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="grid grid-cols-2 gap-4">
+          <img src="/shared/assets/img/meetups.png" alt="Community" loading="lazy" class="rounded-lg shadow-lg object-cover h-48" />
+          <img src="/shared/assets/img/discord.png" alt="Remote Session" loading="lazy" class="rounded-lg shadow-lg object-cover h-48" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agenda Section -->
+  <section id="agenda" class="py-20 bg-white dark:bg-gray-900 scroll-mt-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto mb-16">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wide mb-3">Agenda</p>
+        <h2 class="text-4xl md:text-5xl text-gray-900 dark:text-white mb-8 leading-tight">
+          Wissen aus der Praxis.
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+          Wir sind selbst Entwickler:innen und wissen, welche Probleme zuerst in der echten Welt auftreten werden.
+          <strong class="text-gray-900 dark:text-white">Der Praxis-Anteil liegt dabei bei 60%</strong>.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {agendaItems.map(item => (
+          <div class="flex gap-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+            <div class="w-10 h-10 rounded-lg bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">{item.title}</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 dark:bg-gray-950">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wide mb-3">Bewertungen</p>
+        <h2 class="text-4xl md:text-5xl text-gray-900 dark:text-white mb-12 leading-tight">
+          Die Meinung unserer Teilnehmer:innen zählt.
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          {testimonials.map(testimonial => (
+            <blockquote class="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-100 dark:border-gray-700">
+              <p class="text-gray-700 dark:text-gray-300 italic mb-4">"{testimonial.quote}"</p>
+              <footer>
+                <p class="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}, {testimonial.company}</p>
+              </footer>
+            </blockquote>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trainers -->
+  {teamMembers.length > 0 && (
+    <section class="py-20 bg-white dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <p class="text-sm font-semibold text-primary uppercase tracking-wide mb-3">Trainer:innen</p>
+          <h2 class="text-4xl md:text-5xl text-gray-900 dark:text-white mb-12 leading-tight">
+            Lerne von den Besten.
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {teamMembers.slice(0, 6).map(member => (
+              <TeamMember user={member.data} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Requirements -->
+  <section class="py-20 dark:bg-gray-950">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wide mb-3">Voraussetzungen</p>
+        <h2 class="text-4xl md:text-5xl text-gray-900 dark:text-white mb-8 leading-tight">
+          Ohne viel Vorwissen direkt starten.
+        </h2>
+        <div class="space-y-6 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p>
+            Voraussetzung sind <strong class="text-gray-900 dark:text-white">Grundlagenkenntnisse in JavaScript und HTML</strong>.
+            Innerhalb des Workshops gehen wir auf die individuelle Situation der Gruppe ein und passen
+            sowohl den Fokus als auch die Geschwindigkeit an.
+          </p>
+          <p>
+            <strong class="text-gray-900 dark:text-white">Technische Voraussetzung</strong> für die Schulung ist ein Notebook
+            mit Windows, Linux oder MacOS. Du bekommst eine Schritt-für-Schritt-Anleitung nach deiner Anmeldung.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Remote Benefits -->
+  <section class="py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl mx-auto">
+        <p class="text-sm font-semibold text-primary uppercase tracking-wide mb-3">Remote Workshop</p>
+        <h2 class="text-4xl md:text-5xl text-gray-900 dark:text-white mb-8 leading-tight">
+          Lerne von überall.
+        </h2>
+        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+          Unsere Remote-Schulungen bieten dir die gleiche Qualität wie vor Ort. Mit unserem virtuellen Klassenraum,
+          gemeinsamen Codierungssessions und direkter Betreuung durch die Trainer:innen.
+        </p>
+        <ul class="space-y-4">
+          {[
+            'Voller Zugriff auf alle Unterlagen und Beispielprojekte',
+            'Live-Coding und gemeinsame Übungen',
+            'Persönliche Betreuung durch unsere Trainer:innen',
+            'Keine Anreise – spart Zeit und Kosten',
+          ].map(item => (
+            <li class="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+              <svg class="w-6 h-6 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-5xl text-white mb-4">Bereit für {topic}?</h2>
+      <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+        Starte jetzt mit unserer React & TypeScript Intensiv-Schulung.
+      </p>
+      <a
+        href={bookingUrl}
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-colors"
+      >
+        Schulung buchen
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+      <p class="text-gray-500 mt-6">
+        Alle Schulungen werden von
+        <img src="/shared/assets/img/workshops-de-logo.svg" alt="workshops.de" class="inline h-5 mx-1 align-middle" loading="lazy" />
+        <a href={buildUtmUrl(providerUrl, 'schulungen_2025', 'portal', 'cta')} target="_blank" rel="noopener" class="text-white hover:underline font-medium">workshops.de</a>
+        durchgeführt.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import TeamMember from '../../../components/TeamMember.astro';
+import { getCollection } from 'astro:content';
+import { siteConfig } from '../../../config/site';
+
+const { branding } = siteConfig;
+
+const allUsers = await getCollection('users');
+const teamMembers = allUsers.filter(user => user.data.team === true);
+
+const teamOrder = ['Robin Böhm', 'Britta Lenzen', 'Sascha Nuissl'];
+const sortedTeam = teamOrder
+  .map(name => teamMembers.find(m => m.data.name === name))
+  .filter(Boolean);
+---
+
+<BaseLayout
+  title="The Team behind reactjs.de - Trainers & Authors"
+  description="We are a team of React enthusiasts sharing our knowledge at meetups, conferences and training courses."
+>
+  <section class="relative py-20 md:py-28 overflow-hidden dark:bg-gray-950">
+    <div class="absolute inset-0 dark:hidden" style={`background: ${branding.heroGradientLight}`}></div>
+    <div class="absolute inset-0 hidden dark:block" style={`background: ${branding.heroGradientDark}`}></div>
+    <div class="absolute inset-0 dark:opacity-30" style="background-image: radial-gradient(circle, rgba(0, 0, 0, 0.08) 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+    <div class="container mx-auto px-4 relative text-center z-10">
+      <h1 class="text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white mb-4">
+        <span class="block">The Team behind</span>
+        <span class="text-primary">reactjs.de</span>
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        We are React enthusiasts sharing our knowledge<br />
+        at meetups, conferences and training courses.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 dark:bg-gray-950">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <div>
+          <h2 class="text-2xl text-gray-900 dark:text-white mb-4">Who are we?</h2>
+          <div class="prose max-w-none dark:prose-invert">
+            <p>
+              We are a German trainer community. Our workshops cover
+              technologies like React, TypeScript and AI Engineering that make us
+              productive in web projects.
+            </p>
+            <p>
+              Through small learning groups and interactive exercises, the learning progress
+              of each participant can be optimally supported.
+            </p>
+          </div>
+        </div>
+        <div class="aspect-video rounded-xl overflow-hidden shadow-lg">
+          <iframe
+            class="w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/i_I-yVT7ajU"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <h2 class="text-2xl text-gray-900 dark:text-white mb-8">Meet the Team</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {sortedTeam.map(member => member && (
+          <TeamMember user={member.data} />
+        ))}
+      </div>
+
+      <div class="mt-16 bg-gray-50 dark:bg-gray-900 rounded-xl p-8">
+        <h3 class="text-xl text-gray-900 dark:text-white mb-4">Partnerships</h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          We work with various partners to provide you with the best learning experience.
+          Interested in a partnership? <a href="mailto:info@reactjs.de" class="text-primary hover:underline">Contact us!</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

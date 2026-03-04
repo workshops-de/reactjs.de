@@ -1,0 +1,26 @@
+---
+import { getCollection, render } from 'astro:content';
+import PostLayout from '../../layouts/PostLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => {
+    const idParts = post.id.split('/');
+    const folderName = idParts.length > 1 ? idParts[1] : idParts[0];
+    const slug = folderName.replace(/^\d{4}-\d{2}-\d{2}-/, '');
+
+    return {
+      params: { slug },
+      props: { post, slug, folderName: `de/${folderName}` },
+    };
+  });
+}
+
+const { post, slug, folderName } = Astro.props;
+
+const { Content } = await render(post);
+---
+
+<PostLayout {...post.data} slug={slug} folderName={folderName}>
+  <Content />
+</PostLayout>
