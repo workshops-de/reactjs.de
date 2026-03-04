@@ -25,8 +25,7 @@ Diese Einführung ist für Anfänger gedacht, die gerade mit React beginnen. Das
 
 Unsere Didaktik behandelt dabei die Motivation, die Theorie und dann den Praxis-Teil. Ihr könnt hierbei alle Aufgaben selber programmieren und über unseren Workshops.DE Classroom Hilfestellungen und Musterlösungen für die Aufgaben erhalten.
 
-<img src="/shared/assets/img/placeholder-image.svg" alt="Beispiel für Aufgaben zum Tutorial in unserem Classroom  auf Workshops.de" class="lazy img-fluid img-rounded" data-src="classroom-example.png" data-srcset="classroom-example.png"
-/>
+![Beispiel für Aufgaben zum Tutorial in unserem Classroom auf Workshops.de](classroom-example.png)
 
 ## Inhaltsverzeichnis: Was werden wir lernen?
 
@@ -86,29 +85,7 @@ Unsere Didaktik behandelt dabei die Motivation, die Theorie und dann den Praxis-
   - [Danksagung](#danksagung)
 
 
-<hr>
-<div class="workshop-hint text-center">
- <div class="h3">React noch schneller lernen?</div>
- <div class="row mb-2">
-   <div class="col-xs-12 col-md-6">
-     <p> Wir bieten auch <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=portal&utm_content=text-article-top">React und TypeScript Schulungen</a>        an um dich möglichst effektiv in das Thema React zu begleiten. Im Kurs kannst Du die Fragen stellen, die Du nur
-       schlecht googlen kannst, z.B. "Besserer Weg, um meine Applikation zu strukturieren". Wir können sie Dir beantworten.
-     </p>
-     <p class="text-center">
-       <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=portal&utm_content=text-article-top">
-         <button class="btn btn-danger">Zur React Intensiv Schulung</button>
-       </a>
-     </p>
-   </div>
-   <div class="col-xs-12 col-md-6">
-     <img
-     class="lazy img-fluid img-rounded"
-     src="/shared/assets/img/placeholder-image.svg" alt="Teilnehmer:innen in der Veranstaltung React &amp; Typescript Intensiv Workshop/Schulung" data-src="workshops-attendees.png" data-srcset="workshops-attendees.png"
-     />
-   </div>
- </div>
-</div>
-<hr>
+[[cta:training-top]]
 
 ## Was ist neu in React 19?
 
@@ -344,29 +321,7 @@ Erinnerst du dich? In `index.tsx` wird die `App` Komponente genau so verwendet:
 render(<App />, rootElement);
 ```
 
-<hr>
-<div class="workshop-hint text-center">
- <div class="h3">Hat dir das Tutorial geholfen?</div>
- <div class="row mb-2">
-   <div class="col-xs-12 col-md-6">
-     <p> Wir bieten auch <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=portal&utm_content=text-bottom">React und TypeScript Schulungen</a>        an um dich möglichst effektiv in das Thema React zu begleiten. Im Kurs kannst Du die Fragen stellen, die Du nur
-       schlecht googlen kannst, z.B. "Besserer Weg, um meine Applikation zu strukturieren". Wir können sie Dir beantworten.
-     </p>
-     <p class="text-center">
-       <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=portal&utm_content=text-bottom">
-         <button class="btn btn-danger">Zur React Intensiv Schulung</button>
-       </a>
-     </p>
-   </div>
-   <div class="col-xs-12 col-md-6">
-     <img
-     class="lazy img-fluid img-rounded"
-     src="/shared/assets/img/placeholder-image.svg" alt="Teilnehmer:innen in der Veranstaltung React &amp; Typescript Intensiv Workshop/Schulung" data-src="workshops-attendees.png" data-srcset="workshops-attendees.png"
-     />
-   </div>
- </div>
-</div>
-<hr>
+[[cta:training-bottom]]
 
 ## Vorteile von JSX
 
@@ -1267,26 +1222,4 @@ Ein großer Dank geht an [Christian Ost](https://twitter.com/_christianost) für
 Wenn Du sehen möchtest, wie das Tutorial live aussieht, schau dir doch an, wie unser Trainer David das Tutorial durcharbeitet:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gk2BbJW0oQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<hr>
-<div class="workshop-hint text-center">
- <div class="h3">Hat dir das Tutorial geholfen?</div>
- <div class="row mb-2">
-   <div class="col-xs-12 col-md-6">
-     <p> Wir bieten auch <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=portal&utm_content=text-bottom">React und TypeScript Schulungen</a>        an um dich möglichst effektiv in das Thema React zu begleiten. Im Kurs kannst Du die Fragen stellen, die Du nur
-       schlecht googlen kannst, z.B. "Besserer Weg, um meine Applikation zu strukturieren". Wir können sie Dir beantworten.
-     </p>
-     <p class="text-center">
-       <a target="_blank" href="https://workshops.de/seminare-schulungen-kurse/react-typescript?utm_source=reactjs_de&utm_campaign=tutorial&utm_medium=portal&utm_content=text-bottom">
-         <button class="btn btn-danger">Zur React Intensiv Schulung</button>
-       </a>
-     </p>
-   </div>
-   <div class="col-xs-12 col-md-6">
-     <img
-     class="lazy img-fluid img-rounded"
-     src="/shared/assets/img/placeholder-image.svg" alt="Teilnehmer:innen in der Veranstaltung React &amp; Typescript Intensiv Workshop/Schulung" data-src="workshops-attendees.png" data-srcset="workshops-attendees.png"
-     />
-   </div>
- </div>
-</div>
-<hr>
+[[cta:training-bottom]]
