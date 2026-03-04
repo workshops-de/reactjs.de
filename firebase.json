@@ -39,6 +39,16 @@
         "type": 301
       },
       {
+        "source": "/artikel/react-tutorial-deutsch-legacy/**",
+        "destination": "/artikel/react-tutorial-deutsch/",
+        "type": 301
+      },
+      {
+        "source": "/artikel/react-tutorial-deutsch-legacy",
+        "destination": "/artikel/react-tutorial-deutsch/",
+        "type": 301
+      },
+      {
         "source": "/artikel/react-und-babel-mit-es6-und-es7/",
         "destination": "/artikel/react-babel/",
         "type": 301
