@@ -5,7 +5,7 @@ import { getLangFromUrl, useTranslatedPath, getRouteFromUrl } from "../i18n/util
 const currentLang = getLangFromUrl(Astro.url);
 const route = getRouteFromUrl(Astro.url);
 
-const translationSlug = (Astro.locals as Record<string, unknown>).translationSlug as string | undefined;
+const translationSlug = Astro.locals.translationSlug;
 
 const pathParts = Astro.url.pathname.split("/").filter(Boolean);
 const langIndex = currentLang !== defaultLang ? 1 : 0;

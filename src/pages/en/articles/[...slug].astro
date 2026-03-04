@@ -18,6 +18,9 @@ export async function getStaticPaths() {
 
 const { post, slug, folderName } = Astro.props;
 const { Content } = await render(post);
+
+Astro.locals.currentSlug = slug;
+Astro.locals.translationSlug = post.data.translation_slug;
 ---
 
 <PostLayout {...post.data} slug={slug} folderName={folderName} lang="en">
