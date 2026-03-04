@@ -101,7 +101,7 @@ const hasThinContent = !user.bio || user.bio.trim().length < 50;
 
         <!-- Author's Posts -->
         {authorPosts.length > 0 && (
-          <div>
+          <div class="mb-16">
             <h2 class="text-2xl text-gray-900 dark:text-white mb-6">
               Artikel von {user.name}
             </h2>
@@ -112,6 +112,45 @@ const hasThinContent = !user.bio || user.bio.trim().length < 50;
             </div>
           </div>
         )}
+
+        {user.trainer && (
+          <div class="mb-16 bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800 rounded-xl p-8">
+            <h2 class="text-2xl text-gray-900 dark:text-white mb-4">
+              React Schulungen mit {user.name.split(' ')[0]}
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-6">
+              {user.name.split(' ')[0]} gibt als Trainer bei Workshops.DE praxisnahe React-Schulungen für
+              Entwicklerteams. Die Kurse decken alles ab – von den Grundlagen moderner Komponentenarchitektur
+              über Hooks und State Management bis hin zu fortgeschrittenen Themen wie Server Components,
+              Testing und Performance-Optimierung.
+            </p>
+            <a
+              href="/schulungen/react-intensiv/"
+              class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors"
+            >
+              Schulungen ansehen
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </div>
+        )}
+
+        <div class="bg-gray-50 dark:bg-gray-900 rounded-xl p-8">
+          <h2 class="text-2xl text-gray-900 dark:text-white mb-4">Über ReactJS.DE</h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-4">
+            ReactJS.DE ist das deutschsprachige Community-Portal für React-Entwickler. Hier findest du
+            Tutorials, Fachartikel und Best Practices rund um React, TypeScript und moderne Frontend-Entwicklung.
+            Das Portal wird von einem engagierten Team betrieben, das sich zum Ziel gesetzt hat, die
+            deutschsprachige React-Community zu stärken und Wissen zugänglich zu machen.
+          </p>
+          <p class="text-gray-600 dark:text-gray-400">
+            Neben dem Blog bietet ReactJS.DE eine Übersicht der React-Meetups in der DACH-Region,
+            professionelle Schulungsangebote über Workshops.DE und eine aktive
+            <a href={siteConfig.discord_invite} class="text-primary hover:underline" target="_blank" rel="noopener">Discord-Community</a>
+            mit Tausenden von Mitgliedern.
+          </p>
+        </div>
       </div>
     </div>
   </section>
