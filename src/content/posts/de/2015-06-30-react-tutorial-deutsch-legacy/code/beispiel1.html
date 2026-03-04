@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="react-tutorial.css">
+<script src="JSXTransformer.js"></script>
+<script src="react.min.js"></script>
+
+<div class='clearfix example'>
+  <div class='half-width'>
+    <h5>Reactkomponente im DOM</h4>
+    <div id='example-1'></div>
+  </div>
+  <div class='half-width'>
+    <h5>Ausgabe in der JavaScript-Konsole</h4>
+    <div id='example-1-pseudo-console'></div>
+  </div>
+</div>
+
+<script type='text/jsx'>
+  var Example1 = React.createClass({
+    pseudoConsole: document.querySelector('#example-1-pseudo-console'),
+
+    add: function() {
+      console.log('add 1!');
+      this.pseudoConsole.innerHTML += 'add 1!<br>'; // nicht-idiomatisches React, aber an dieser Stelle am einfachsten, um die Konsole anzuzeigen :)
+    },
+
+    render: function() {
+      return(
+        <div>
+          <h1>Counter</h1>
+          <button onClick={this.add}>+</button>
+        </div>
+      );
+    }
+  });
+
+  React.render(<Example1 />, document.querySelector('#example-1'));
+</script>

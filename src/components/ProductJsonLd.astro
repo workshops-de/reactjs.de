@@ -1,0 +1,49 @@
+---
+/**
+ * Product JSON-LD Schema for courses/products
+ * Adapted for React course (course ID 32)
+ */
+import { siteConfig } from '../config/site';
+
+interface Props {
+  name?: string;
+  description?: string;
+  image?: string;
+  sku?: string;
+}
+
+const {
+  name = 'React & TypeScript Intensiv',
+  description = 'React Grundlagen-Intensivkurs – von Anfänger bis Experte. Lerne React, TypeScript und moderne Frontend-Entwicklung.',
+  image = `${siteConfig.url}/assets/img/courses/logo-react.svg`,
+  sku = 'react-intensiv',
+} = Astro.props;
+
+// Build the product schema for React course
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": name,
+  "description": description,
+  "image": Array.isArray(image) ? image : [image],
+  "sku": sku,
+  "brand": {
+    "@type": "Brand",
+    "name": "workshops.de"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.7,
+    "reviewCount": 2500
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "1119",
+    "highPrice": "1679",
+    "priceCurrency": "EUR",
+    "offerCount": 6
+  }
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />

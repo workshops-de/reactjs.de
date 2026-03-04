@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import PostCard from './PostCard.astro';
+
+interface Props {
+  currentSlug?: string;
+  categories?: string[];
+  limit?: number;
+  lang?: 'de' | 'en';
+}
+
+const { currentSlug, categories = [], limit = 3, lang = 'de' } = Astro.props;
+
+const allPosts = await getCollection(lang === 'en' ? 'posts-en' : 'posts');
+
+// Filter and sort related posts
+let relatedPosts = allPosts
+  .filter(post => {
+    const idParts = post.id.split('/');
+    const folderName = idParts[1] === 'index' ? idParts[0] : (idParts.length > 1 ? idParts[1] : idParts[0]);
+    const postSlug = folderName.replace(/^\d{4}-\d{2}-\d{2}-/, '');
+    return postSlug !== currentSlug;
+  })
+  .sort((a, b) => {
+    // Prioritize posts with matching categories
+    const aCategories = a.data.categories?.split(' ') || [];
+    const bCategories = b.data.categories?.split(' ') || [];
+
+    const aMatches = aCategories.filter(c => categories.includes(c)).length;
+    const bMatches = bCategories.filter(c => categories.includes(c)).length;
+
+    if (aMatches !== bMatches) {
+      return bMatches - aMatches;
+    }
+
+    // Then sort by date
+    return b.data.published_at.getTime() - a.data.published_at.getTime();
+  })
+  .slice(0, limit);
+---
+
+{relatedPosts.length > 0 && (
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-2xl text-gray-900 dark:text-white mb-6">{lang === 'en' ? 'More Articles' : 'Weitere Artikel'}</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {relatedPosts.map(post => (
+        <PostCard post={post} lang={lang} />
+      ))}
+    </div>
+  </div>
+)}

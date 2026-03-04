@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostCard from '../../../components/PostCard.astro';
+import Pagination from '../../../components/Pagination.astro';
+import { getCollection } from 'astro:content';
+import { siteConfig } from '../../../config/site';
+
+const { topic, branding } = siteConfig;
+
+const allPosts = await getCollection('posts-en');
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.published_at.getTime() - a.data.published_at.getTime()
+);
+
+const postsPerPage = 12;
+const currentPage = 1;
+const totalPages = Math.ceil(sortedPosts.length / postsPerPage);
+const paginatedPosts = sortedPosts.slice(0, postsPerPage);
+---
+
+<BaseLayout
+  title={`All ${topic} Articles & Tutorials`}
+  description={`All articles about ${topic}, TypeScript and modern web development.`}
+>
+  <section class="relative py-20 md:py-28 overflow-hidden dark:bg-gray-950">
+    <div class="absolute inset-0 dark:hidden" style={`background: ${branding.heroGradientLight}`}></div>
+    <div class="absolute inset-0 hidden dark:block" style={`background: ${branding.heroGradientDark}`}></div>
+    <div class="absolute inset-0 dark:opacity-30" style="background-image: radial-gradient(circle, rgba(0, 0, 0, 0.08) 1px, transparent 1px); background-size: 24px 24px;"></div>
+
+    <div class="container mx-auto px-4 relative text-center z-10">
+      <h1 class="text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white mb-4">
+        <span class="block">News, Tutorials,</span>
+        <span class="text-primary">Insights.</span>
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        News, tutorials and best practices from<br />
+        our {topic} community.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 dark:bg-gray-950">
+    <div class="container mx-auto px-4">
+      {sortedPosts.length > 0 ? (
+        <>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {paginatedPosts.map(post => (
+              <PostCard post={post} showReadingTime={true} />
+            ))}
+          </div>
+
+          {totalPages > 1 && (
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              basePath="/en/articles"
+            />
+          )}
+        </>
+      ) : (
+        <div class="text-center py-12">
+          <p class="text-gray-600 dark:text-gray-400 text-lg">
+            More English articles coming soon!
+          </p>
+          <p class="text-gray-500 dark:text-gray-500 mt-2">
+            In the meantime, check out our <a href="/en/articles/react-tutorial-for-beginners/" class="text-primary hover:underline">React Tutorial for Beginners</a>.
+          </p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

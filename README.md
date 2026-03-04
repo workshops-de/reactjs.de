@@ -1,63 +1,70 @@
-# ReactJS.DE
-Website for the german React Community [ReactJS.de](https://reactjs.de/).
+# ReactJS.DE - Astro Migration
 
-## Build Status
-![Build Status](https://github.com/workshops-de/reactjs.de/workflows/Build%20Jekyll%20and%20Deploy%20to%20Firebase/badge.svg?branch=master)
+This is the Astro-based version of ReactJS.DE, migrated from Jekyll.
 
-## Development
-
-### 0. Prerequisite Software
-
-* [Git](http://git-scm.com) and/or the **GitHub app** (for [Mac](http://mac.github.com) or
-  [Windows](http://windows.github.com)); [GitHub's Guide to Installing
-  Git](https://help.github.com/articles/set-up-git) is a good source of information.
-
-* [Ruby](https://www.ruby-lang.org/en/)
-
-### 1. Getting the Sources
-
-Fork and clone repository:
-
-1. Login to your GitHub account or create one by following the instructions given
-   [here](https://github.com/signup/free).
-2. [Fork](http://help.github.com/forking) the [main repository](https://github.com/workshops-de/reactjs.de).
-3. Clone your fork of the repository and define an `upstream` remote pointing back to
-   the main repository that you forked in the first place.
-
-```shell
-# Clone your GitHub repository:
-git clone git@github.com:<github username>/reactjs.de.git
-
-# Go to the directory:
-cd reactjs.de
-
-# Add the main repository as an upstream remote to your repository:
-git remote add upstream https://github.com/workshops-de/reactjs.de.git
-```
-
-### 2. Install the project dependencies 
-```bash
-# install bundler as ruby package manager
-gem install bundler
-# install the project depdencies defined int the Gemfile
-bundle install
-```
-
-### 3. Run the jekyll instance
+## Quick Start
 
 ```bash
-# start the web page at http://localhost:4000
-bundle exec jekyll serve --incremental
+npm install
+npm run migrate   # Run once to migrate content from Jekyll
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview production build
 ```
 
-## 4. Update/Pull shared module
-
-We're using a git submodule to share files like templates, images and themes across all workshops_de portals. Use following command to pull and update the repository including submodule.
+## Project Structure
 
 ```
-$ git pull --recurse-submodules
+├── public/              # Static assets
+├── src/
+│   ├── components/      # Reusable Astro components
+│   ├── config/          # Site configuration
+│   ├── content/         # Content collections (posts, users)
+│   ├── data/            # JSON data files
+│   ├── layouts/         # Page layouts
+│   ├── pages/           # File-based routing
+│   ├── plugins/         # Remark plugins
+│   ├── styles/          # Global styles (Tailwind CSS)
+│   └── utils/           # Utility functions
+├── scripts/             # Build & migration scripts
+├── astro.config.mjs
+├── firebase.json        # Firebase hosting (dist/)
+└── package.json
 ```
 
-### 5. Pull Request
-Createa a [Pull Request](https://help.github.com/articles/creating-a-pull-request/) to describe and propose your changes to this repository.
-If you don't know what Pull Requests(PR) all about you should check out [this article](https://help.github.com/articles/about-pull-requests/).
+## Migration from Jekyll
+
+The migration script (`scripts/migrate-content.js`) copies:
+
+| Source (Jekyll)     | Destination (Astro)          |
+|---------------------|------------------------------|
+| `_posts/`           | `src/content/posts/de/`      |
+| `_data/users/`      | `src/content/users/`         |
+| `assets/img/`       | `public/assets/img/`         |
+| `shared/assets/`    | `public/shared/assets/`      |
+| `_data/*.json`      | `src/data/`                  |
+
+Run migration: `npm run migrate`
+
+## Features
+
+- Astro 5 with Content Collections & Zod schemas
+- Tailwind CSS v4 with dark mode support
+- SEO: meta tags, sitemap, RSS feed, JSON-LD
+- Pagefind search
+- OG image generation (Node.js Canvas)
+- Firebase Hosting with GitHub Actions CI/CD
+
+## Content Management
+
+Posts: `src/content/posts/de/YYYY-MM-DD-slug/index.md`
+Authors: `src/content/users/*.yaml`
+
+## Deployment
+
+Firebase Hosting via GitHub Actions on push to master.
+
+```bash
+npm run build          # Build site
+firebase deploy        # Deploy manually
+```

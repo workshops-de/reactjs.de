@@ -1,0 +1,168 @@
+---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Newsletter from '../components/Newsletter.astro';
+import SocialMetaTags from '../components/SocialMetaTags.astro';
+import OrganizationJsonLd from '../components/OrganizationJsonLd.astro';
+import WebsiteJsonLd from '../components/WebsiteJsonLd.astro';
+import BreadcrumbsJsonLd from '../components/BreadcrumbsJsonLd.astro';
+import { siteConfig } from '../config/site';
+import '../styles/global.css';
+
+import sourceSansWoff2 from '@fontsource-variable/source-sans-3/files/source-sans-3-latin-wght-normal.woff2?url';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalUrl?: string;
+  noindex?: boolean;
+  ogImage?: string;
+  ogType?: string;
+  publishedTime?: Date;
+  author?: string;
+  slug?: string;
+}
+
+const {
+  title,
+  description,
+  canonicalUrl,
+  noindex = false,
+  ogImage,
+  ogType = 'website',
+  publishedTime,
+  author,
+  slug,
+} = Astro.props;
+
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || siteConfig.url;
+const fullTitle = `${title} | ${siteConfig.title}`;
+const currentUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl).toString();
+
+const isProd = import.meta.env.PROD;
+const gtmProperty = siteConfig.gtm_property;
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8">
+
+  {isProd && (
+    <Fragment>
+      <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+      <link rel="preconnect" href="https://sa.workshops.de" crossorigin />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    </Fragment>
+  )}
+
+  <link rel="preload" as="font" type="font/woff2" href={sourceSansWoff2} crossorigin="anonymous" />
+
+  <script is:inline>
+    document.documentElement.classList.toggle(
+      "dark",
+      localStorage.theme === "dark" ||
+        (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+    );
+  </script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{fullTitle}</title>
+  {description && <meta name="description" content={description} />}
+
+  {noindex ? (
+    <meta name="robots" content="noindex, follow">
+  ) : (
+    <link rel="canonical" href={currentUrl}>
+  )}
+
+  <SocialMetaTags
+    title={title}
+    description={description}
+    url={currentUrl}
+    image={ogImage}
+    type={ogType}
+    publishedTime={publishedTime}
+    author={author}
+    slug={slug}
+  />
+
+  <link rel="icon" href="/assets/img/favicon.ico?v=2" type="image/x-icon" />
+
+  {isProd && (
+    <script is:inline define:vars={{ gtmProperty }}>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer', gtmProperty);
+    </script>
+  )}
+
+  <OrganizationJsonLd />
+  <WebsiteJsonLd />
+  <BreadcrumbsJsonLd />
+</head>
+
+<body class="min-h-screen flex flex-col">
+  {isProd && (
+    <noscript>
+      <iframe src={`https://www.googletagmanager.com/ns.html?id=${gtmProperty}`}
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+  )}
+
+  <Navigation />
+
+  <main class="flex-1">
+    <slot />
+  </main>
+
+  <Newsletter />
+  <Footer />
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const copyIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>';
+      const checkIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><polyline points="9 14 11 16 15 12"></polyline></svg>';
+
+      document.querySelectorAll('pre').forEach(pre => {
+        if (pre.querySelector('.copy-button') || !pre.querySelector('code')) return;
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.innerHTML = copyIcon;
+        button.type = 'button';
+        button.setAttribute('aria-label', 'Code kopieren');
+        button.addEventListener('click', async () => {
+          const code = pre.querySelector('code');
+          if (code) {
+            try {
+              await navigator.clipboard.writeText(code.innerText);
+              button.innerHTML = checkIcon;
+              button.classList.add('copied');
+              setTimeout(() => {
+                button.innerHTML = copyIcon;
+                button.classList.remove('copied');
+              }, 2000);
+            } catch (err) {
+              console.error('Copy failed:', err);
+            }
+          }
+        });
+        pre.appendChild(button);
+      });
+    });
+  </script>
+
+  {isProd && (
+    <Fragment>
+      <script is:inline async defer src="https://sa.workshops.de/latest.js"></script>
+      <script is:inline async data-collect="outbound,emails,downloads" data-extensions="pdf,csv,docx,xlsx,zip,doc,xls" data-use-title="true" data-full-urls="false" src="https://sa.workshops.de/auto-events.js"></script>
+      <noscript>
+        <img src="https://sa.workshops.de/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" />
+      </noscript>
+    </Fragment>
+  )}
+</body>
+</html>

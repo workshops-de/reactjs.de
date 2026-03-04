@@ -51,7 +51,7 @@ jobs:
             3. Topic relevance for the German React community
             4. Estimated content depth (should allow 5-10 minute read)
 
-            Look at existing articles in _posts/ to understand the quality bar and topic style.
+            Look at existing articles in src/content/posts/de/ to understand the quality bar and topic style.
 
             Post your analysis as a comment to the issue using:
             `gh issue comment ${{ github.event.issue.number }} --body "your analysis"`
@@ -99,10 +99,10 @@ jobs:
             Steps:
             1. Read the issue content: `gh issue view ${{ github.event.issue.number }}`
             2. Review CLAUDE.md for article structure and format requirements
-            3. Look at 2-3 recent articles in _posts/ directories to match the writing style
+            3. Look at 2-3 recent articles in src/content/posts/de/ directories to match the writing style
             4. Create a comprehensive article (5-10 minute read, ~1500-2500 words)
 
-            IMPORTANT: You only need to create the markdown file. Don't try to build or test the Jekyll site.
+            IMPORTANT: You only need to create the markdown file. Don't try to build or test the Astro site.
 
             Article requirements:
             - Language: German
@@ -110,7 +110,7 @@ jobs:
             - Writing style: Informative, friendly, practical
             - Include code examples where relevant (use JSX/TypeScript)
             - Use proper markdown formatting with headers, lists, code blocks
-            - Front matter must include: title, description, author (use "Robin Böhm"), published_at (today's date), categories, header_image (use "header.jpg")
+            - Front matter must include: title, description, author (use "Robin Böhm"), published_at (today's date), categories, header_image (use "./header.jpg")
 
             WICHTIG - Deutsche Grammatik:
             - "Component" ist im Deutschen feminin: "die Komponente" (NICHT "der Component")
@@ -118,9 +118,9 @@ jobs:
             - Bei englischen Begriffen: Artikel richtig verwenden (z.B. "der Hook", "das Feature")
             - Compound-Wörter mit Bindestrich: "Activity-Komponente", "Server-Side Rendering"
 
-            File structure:
-            - Create directory: _posts/YYYY-MM-DD-slug/
-            - Create file: _posts/YYYY-MM-DD-slug/YYYY-MM-DD-slug.md
+            File structure (Astro content collection):
+            - Create directory: src/content/posts/de/YYYY-MM-DD-slug/
+            - Create file: src/content/posts/de/YYYY-MM-DD-slug/index.md
             - Use current date in ISO format (YYYY-MM-DD)
             - Create a URL-friendly slug from the title (lowercase, hyphens, no special chars)
 
@@ -131,8 +131,8 @@ jobs:
                - Add header: "Authorization: Client-ID $UNSPLASH_ACCESS_KEY"
                - Choose search terms based on article topic (in English, e.g., "react javascript code", "web development", "programming")
             4. Download the image from the "urls.regular" field in the API response
-            5. Save as: _posts/YYYY-MM-DD-slug/header.jpg
-            6. Reference it in front matter as: header_image: "header.jpg"
+            5. Save as: src/content/posts/de/YYYY-MM-DD-slug/header.jpg
+            6. Reference it in front matter as: header_image: "./header.jpg"
 
             Example curl command:
             ```bash
@@ -143,7 +143,7 @@ jobs:
               jq -r '.results[0].urls.regular')
 
             # Download image
-            curl -o _posts/YYYY-MM-DD-slug/header.jpg "$IMAGE_URL"
+            curl -o src/content/posts/de/YYYY-MM-DD-slug/header.jpg "$IMAGE_URL"
             ```
 
             Article structure:
@@ -154,9 +154,9 @@ jobs:
             - End with a conclusion or call-to-action
             - Consider linking to relevant resources or documentation
 
-            After creating the markdown file and downloading the header image in _posts/:
+            After creating the markdown file and downloading the header image:
             1. Create a new branch: `git checkout -b article/issue-${{ github.event.issue.number }}`
-            2. Add and commit both the markdown file and header image: `git add _posts/ && git commit -m "Add article with header image from issue #${{ github.event.issue.number }}"`
+            2. Add and commit both the markdown file and header image: `git add src/content/posts/de/ && git commit -m "Add article with header image from issue #${{ github.event.issue.number }}"`
             3. Push branch: `git push origin article/issue-${{ github.event.issue.number }}`
             4. Create PR with gh CLI:
                ```
