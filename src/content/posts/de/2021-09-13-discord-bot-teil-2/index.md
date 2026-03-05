@@ -14,7 +14,7 @@ In unserer letzten Session haben wir einen funktionalen Discord-Bot mit einigen 
 
 Heute werden wir unsere zentrale index.js-Datei aufräumen, sie lesbarer und skalierbarer machen und all unsere existierenden Befehle für den Import in einen separaten Ordner bewegen. Wenn das geschafft ist, werden wir auch die Funktionalität unseres Bots erweitern, indem wir einen komplexeren Befehl hinzufügen, um damit auf unserem Test-Server herumzuspielen und dir ein besseres Verständnis für die breite Palette an Funktionen, Tools und Befehlen zu geben, die mit Discord-Bots möglich sind.
 
-![](./images/1.jpeg)
+![Discord-Bot Teil 2: Skalierbares Setup mit Befehlsmodulen](./images/1.jpeg)
 
 Wenn du dir den Code aus der letzten Session schnappen oder ihn vergleichen möchtest: Hier ist der [GitHub link zum jeweiligen Tag](https://github.com/AllBitsEqual/allbotsequal/releases/tag/v0.0.1).
 
@@ -40,7 +40,7 @@ const bot = {
 
 Zum Vergleich habe ich die diff in unserer alten Datei mit inbegriffen. Am Ende eines jeden Schrittes findest du einen GitHub-Link zu den Commits/Changes, um sie mit deinem eigenen Code zu vergleichen.
 
-![](./images/2.png)
+![Code-Diff der index.js nach dem Aufräumen der Bot-Struktur](./images/2.png)
 
 Der nächste Punkt auf unserer Liste ist das Hinzufügen einiger Funktionen, die von den Event-Handlern ausgelöst werden und das Rückgrat unseres Bots bilden. Im Moment mag dies als "Overkill" oder verfrühte Optimierung erscheinen, aber wenn wir dies jetzt tun, wird der Code einfacher zu lesen UND einfacher zu erweitern und darauf aufzubauen sein.
 
@@ -65,7 +65,7 @@ bot.onConnect = async function onConnect() {
 
 Wir werden das Gleiche mit unserem "on message" Event-Listener-Code machen. Im Moment werden wir keine einzige Zeile Code in diesem Abschnitt ändern, aber wir werden ihn in eine Funktion verpacken, bevor wir ihn an die eigentlichen Event-Listener binden.
 
-![](./images/3.png)
+![Bot-Struktur mit load(), onConnect() und onMessage() in index.js](./images/3.png)
 
 ```javascript
 // Check and react to messages
@@ -113,7 +113,7 @@ Für eine sauberere Trennung in unserer Datei haben wir jetzt die folgende Reihe
 
 Das Ausführen von `npm start` auf der Befehls-Zeile wird unseren Bot wie beim letzten Mal booten. So weit, so gut.
 
-![](./images/4.png)
+![Struktur der index.js nach dem Refactoring mit Event-Handlern](./images/4.png)
 
 [GitHub Commit](https://github.com/AllBitsEqual/allbotsequal/commit/2bfb4a8a7f7dbc148a2a48d1e414381332fa83d7)
 
@@ -394,7 +394,7 @@ const getDiceResult = args => {
 
 Um zu überprüfen, ob unser Bot mit allen Fällen so umgeht wie wir es erwarten, sind hier ein paar Variationen und deren Ergebnisse.
 
-![](./images/5.jpeg)
+![Beispielausgaben des !whois-Befehls mit verschiedenen Eingaben im Discord-Chat](./images/5.jpeg)
 
 ### Verfolgen wir unsere Schritte zurück
 

@@ -9,18 +9,16 @@ categories: "react-native typescript redux best-practices series"
 series: "React Native (Step by Step)"
 ---
 
-# REIHE: React Native (Schritt für Schritt) - React Redux + Toolkit mit Typescript
-
 **In unserer letzten Session haben wir ein neues und cleanes React Native Project mit Typescript und Linting Support aufgesetzt. Heute werden wir React Redux hinzufügen, ein vorhersehbarer state container, mit dem wir den global state an einem zentralen Ort verwalten können.**
 
 _Wie immer findest du den fertigen Code am Ende des Artikels auf GitHub verlinkt._
 
 **Reihe: React Native (Schritt für Schritt)**
 
-1) [Umgang mit Typescript und Linting](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793){:rel="noopener noreferrer nofollow"}
-2) => **du bist hier** <=
+1. [Umgang mit Typescript und Linting](https://allbitsequal.medium.com/series-react-native-step-by-step-working-with-typescript-and-linting-3961c4226793){:rel="noopener noreferrer nofollow"}
+2. => **du bist hier** <=
 
-![](./intro.jpeg)
+![React Native mit React Redux und Redux Toolkit in TypeScript – Tutorial Teil 2](./intro.jpeg)
 
 ## Redux - WARUM?
 
@@ -219,11 +217,11 @@ Stell sicher, dass du `npm run fix` ausführst, um kleinere code style errors zu
 
 Wir haben unser React Native Typescript Projekt vom letzten Mal fortgesetzt und einen voll funktionsfähigen und komplett typisierten Redux Store in ungefähr 30 Zeilen redux code (imports ausgeschlossen) und einige lines tsx hinzugefügt. Das bedeutet wohl, dass ich meinen ursprünglichen redux Artikel umschreiben sollte und die neue Version deutlich kürzer sein wird...
 
-![](./structure.png)
+![Projektstruktur mit Redux Store und typisierten Slices](./structure.png)
 
 Kleine Bemerkung am Rande: Wenn du deine redux config ganz einfach testen möchtest, nutze die Browser-Version des Expo Web Interfaces und öffne deine dev tools. Wenn du die richtigen Erweiterungen installiert hast (react + redux), kannst du dir alle components und store/state mit einem einfach nutzbaren Interface angucken.
 
-![](./emulator.png)
+![React Native App im Emulator – Redux Store funktionsfähig](./emulator.png)
 
 Es ist nicht viel und es nicht hübsch, aber es funktioniert und ist typisiert und skalierbar.
 

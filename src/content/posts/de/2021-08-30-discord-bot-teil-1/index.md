@@ -10,7 +10,7 @@ header_image: "header.jpg"
 
 JavaScript Chatbots einfach gemacht: Discord Bots können in JavaScript oder Python geschrieben werden und deinen ersten Bot zu bauen und zum Laufen zu kriegen ist ein super Weg, um deine Vanilla JS Skills zu trainieren und ein bisschen Spaß zu haben. Wir werden hier den gesamten Prozess abdecken. Du erfährst, wie du den Bot mit Discord registrierst, welches Basis-Setup du benötigst und wie du den Bot auf deinen Server bringst.
 
-![](./images/1.jpeg)
+![Discord-Bot mit JavaScript: Chatbots einfach gemacht – Tutorial Teil 1](./images/1.jpeg)
 
 ## Voraussetzungen
 
@@ -25,43 +25,43 @@ Es gibt nicht viel, das du brauchst, um einen Bot für Discord mit JavaScript zu
 
 Um einen Bot zu schreiben und zu benutzen, musst du ihn als neue Applikation/Bot User mit deinem Discord Account registrieren. Geh zum [Discord Developers Portal](https://discord.com/developers/applications/) (Log-in) und erstelle eine "New Application".
 
-![](./images/2.png)
+![Discord Developer Portal – New Application anlegen](./images/2.png)
 
 Wähle einen Namen, der dir gefällt und fahre mit dem Erstellen der Applikation fort. Für meinen Server AllBitsEqual, werde ich das wunderbare Wortspiel "AllBotsEqual" verwenden... verurteilt mich nicht!
 
-![](./images/3.png)
+![Discord App – Name, Beschreibung und Avatar festlegen](./images/3.png)
 
 Auf der nächsten Seite kannst du eine kurze Beschreibung und ein Avatar-Bild hinzufügen und deine ID, Key und Secret sehen. Vergiss nicht, deine Änderungen zu speichern, sobald du fertig bist.
 
-![](./images/4.png)
+![Discord App – Allgemeine Einstellungen und ID](./images/4.png)
 
 Gehe in der linken Leiste auf "Bot" und wähle dann "Add Bot" aus, um deiner neu erstellen Applikation einen Bot-User zuzuweisen.
 
-![](./images/5.png)
+![Discord Developer Portal – Add Bot zur Applikation](./images/5.png)
 
 Ok, das war auch schon der schwerste Teil... jetzt haben wir einen Bot mit Nutzer-ID, können uns den Token für später schnappen und die grundlegenden Berechtigungen definieren.
 
-![](./images/6.png)
+![Discord Bot – Token und Berechtigungen](./images/6.png)
 
 Um mit den Berechtigungen fortzufahren, geh in den OAuth2-Bereich, den du wieder in der linken Leiste findest.
 
 Wähle in der ersten Box "bot" aus. Dadurch öffnet sich darunter eine zweite Box mit den Bot-Berechtigungen, in der du auswählen kannst, was der Bot machen soll und darf. Für dieses Tutorial musst du mindestens "Send Messages" und "Read Message History" erlauben, aber in späteren Artikeln werden wir noch mehr Funktionen, wie zum Beispiel eine Moderator-Funktion, hinzufügen.
 
-![](./images/7.png)
+![OAuth2 – Bot-Berechtigungen und generierte Einladungs-URL](./images/7.png)
 
 Kopiere die URL, die mit unserer Bot-ID und den ausgewählten Berechtigungen generiert wurde. Deine Auswahl ist Teil der URL und wird als Nummer hinter dem Berechtigungs-Attribut codiert.
 
 Wenn du diese URL im Web-Browser deine Wahl eingibst und mit deinem Discord-Account eingeloggt bist, kannst du den gewünschten Server auswählen, zu dem du den Bot hinzufügen möchtest (nur dort, wo du "manage server"- Berechtigungen hast) und in mit einem Klick auf "Authorise" autorisieren.
 
-![](./images/8.png)
+![Discord – Server auswählen und Bot autorisieren](./images/8.png)
 
 Dir wird die Liste deiner ausgewählten Berechtigungen angezeigt, die du bestätigen musst. Wenn du mit der Bestätigung fertig bist, solltest du diesen Bildschirm angezeigt bekommen.
 
-![](./images/9.png)
+![Discord – Berechtigungen bestätigen und Autorisation abschließen](./images/9.png)
 
 Wenn du dir jetzt deinen ausgewählten Server anguckst, solltest du eine Nachricht sehen, in der steht, dass dein Bot soeben den Server betreten hat.
 
-![](./images/10.png)
+![Discord Server – Bot ist dem Server beigetreten](./images/10.png)
 
 ## Projekt Setup
 
@@ -83,7 +83,7 @@ Ohne auch nur eine einzige Zeile Code zu verändern, könntest du jetzt den Bot 
 
 Jetzt wirst du den Bot online auf deinem Server sehen und deine Konsole sollte dir diese Zeile mit dem Namen des Bots und der ID-Nummer zeigen.
 
-![](./images/11.png)
+![Konsole – Bot gestartet und online, Bot-Name und ID angezeigt](./images/11.png)
 
 > *Eine kurze Randnotiz: Wenn du den Bot auf einem regulären Server mit anderen Benutzern konfigurieren und testen möchtest, wird empfohlen, einen Chat nur für Administratoren/Mods zu erstellen und den Bot direkt über Channel-Berechtigungen hinzuzufügen. Auf diese Weise wird dein Testen von Befehlen die normalen Nutzer nicht stören.*
 
@@ -173,7 +173,7 @@ if (message.content === 'ping') {
 Der erste Teil hört alle Nachrichten, die exakt "ping" lauten, nicht mehr und nicht weniger. Der Bot reagiert auf diese Nachrichten, indem er mit der Antwort-Funktion eine Antwort an den Autor der Nachricht sendet. Dazu berechnet er die vergangene Zeit zwischen dem Zeitstempel "message sent" (createdAt) und der aktuellen Zeit in Millisekunden und postet das Ergebnis in seiner Antwort als Pong.
 Wenn wir hier `return` verwenden, überspringen wir den ganzen anderen Code, weil unsere Bedingung bereits erfüllt ist. Wir wollen ja keine Zeit verschwenden.
 
-![](./images/12.png)
+![Discord-Chat – Bot antwortet auf „ping“ mit Pong und Latenz](./images/12.png)
 
 ### 2) Überprüfe das prefix
 
@@ -192,7 +192,7 @@ if (message.content === `${prefix}who`) {
 ```
 Wenn der Bot auf eine Nachricht trifft, die (genau) mit `!who` übereinstimmt, wird er mit einer kurzen Nachricht antworten, in der sein eigener Name (wieder aus der Konfiguration) und ein von uns geschriebener Flair-Text stehen.
 
-![](./images/13.png)
+![Discord-Chat – Bot antwortet auf !who mit Namen und Flair-Text](./images/13.png)
 
 ### 4) !whois asking?
 
@@ -220,7 +220,7 @@ if (message.content.startsWith(`${prefix}whois`)) {
 
 Der letzte Befehl, den ich eingefügt habe, ist etwas ausgefeilter. Wir suchen nach Nachrichten, die mit `!whois` anfangen und überprüfen den Rest der Nachricht auf eine User-Erwähnung (@username). Wenn ein Benutzer gefunden wird, antwortet der Bot mit einer kurzen Nachricht, die den Benutzernamen und das Datum der Benutzererstellung enthält. Wenn nach dem Befehl kein Text eingegeben wird oder kein Benutzer erwähnt wird, macht der Bot dasselbe für den Autor der Nachricht.
 
-![](./images/14.png)
+![Discord-Chat – Bot antwortet auf !whois mit User-Infos](./images/14.png)
 
 ## Zusammenfassung
 
