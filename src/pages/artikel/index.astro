@@ -45,8 +45,22 @@ const paginatedPosts = sortedPosts.slice(0, postsPerPage);
     </div>
   </section>
 
-  <!-- Articles Grid -->
-  <section class="py-16 dark:bg-gray-950">
+  <section class="py-12 dark:bg-gray-950">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="prose prose-lg max-w-none dark:prose-invert mb-12">
+        <p>
+          Willkommen im {topic}-Artikelarchiv auf ReactJS.DE. Hier findest du News, praxisnahe Tutorials
+          und tiefgehende Insights aus unserer Community – von Einsteiger-Guides über Hooks und Komponenten
+          bis hin zu fortgeschrittenen Themen wie Server Components, State Management und Testing-Strategien.
+        </p>
+        <p>
+          Alle Artikel werden von erfahrenen Entwicklern aus der deutschsprachigen {topic}-Community verfasst.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-8 dark:bg-gray-950">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {paginatedPosts.map(post => (

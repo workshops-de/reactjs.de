@@ -8,7 +8,7 @@ categories: [javascript, module, es6]
 header_image: "header.jpg"
 ---
 
-Eine Übersetzung aus dem Englischen. Der Artikel im Original ist [HIER](https://medium.com/@preethikasireddy){:rel="noopener noreferrer nofollow"} zu finden.
+Diese Einleitung in das Thema JavaScript Module ist eine Übersetzung aus dem Englischen. Der Artikel im Original ist [HIER](https://medium.com/@preethikasireddy){:rel="noopener noreferrer nofollow"} zu finden.
 
 *Anmerkung: Der Artikel ist in zwei Teile aufgeteilt: Teil 1 beschäftigt sich damit, was Module sind und wieso wir sie benutzen. Teil 2 erklärt euch, was es bedeutet Module zu bündeln und zeigt verschiedene Wege auf, wie dies geschehen kann.*
 

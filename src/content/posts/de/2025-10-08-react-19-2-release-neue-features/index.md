@@ -7,7 +7,7 @@ categories: "react release update javascript"
 header_image: "header.jpg"
 ---
 
-Die React-Community kann sich freuen: React 19.2 ist da! Diese Version bringt einige spannende neue Features mit sich, die besonders für Anfänger interessant sind. In diesem Artikel schauen wir uns die wichtigsten Neuerungen genauer an und zeigen dir anhand von praktischen Beispielen, wie du sie in deinen Projekten einsetzen kannst.
+Die React-Community kann sich freuen: React 19.2 ist da! Diese Version bringt einige spannende neue Features mit sich, die besonders für Anfänger interessant sind. In diesem Artikel werden die wichtigsten Neuerungen verständlich erklärt und anhand von praktischen Beispielen gezeigt, wie du sie in deinen Projekten einsetzen kannst.
 
 ## Was ist neu in React 19.2?
 

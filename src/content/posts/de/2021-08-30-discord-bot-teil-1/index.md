@@ -8,7 +8,7 @@ series: "Baue einen Bot (DiscordJS)"
 header_image: "header.jpg"
 ---
 
-Discord Bots können in JavaScript oder Python geschrieben werden und deinen ersten Bot zu bauen und zum Laufen zu kriegen ist ein super Weg, um deine Vanilla JS Skills zu trainieren und ein bisschen Spaß zu haben. Wir werden hier den gesamten Prozess abdecken. Du erfährst, wie du den Bot mit Discord registrierst, welches Basis-Setup du benötigst und wie du den Bot auf deinen Server bringst.
+JavaScript Chatbots einfach gemacht: Discord Bots können in JavaScript oder Python geschrieben werden und deinen ersten Bot zu bauen und zum Laufen zu kriegen ist ein super Weg, um deine Vanilla JS Skills zu trainieren und ein bisschen Spaß zu haben. Wir werden hier den gesamten Prozess abdecken. Du erfährst, wie du den Bot mit Discord registrierst, welches Basis-Setup du benötigst und wie du den Bot auf deinen Server bringst.
 
 ![](./images/1.jpeg)
 

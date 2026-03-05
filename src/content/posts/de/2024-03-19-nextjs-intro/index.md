@@ -7,7 +7,7 @@ categories: "nextjs einführung"
 header_image: "header.jpg"
 ---
 
-Next.js hat sich als führenden Plattformen in der Webentwicklung etabliert und ist ein unverzichtbares Werkzeug für Entwickler geworden, die moderne, effiziente und skalierbare Webanwendungen erstellen möchten. Für Entwickler mit Vorkenntnissen in React, die tiefer in das React-Ökosystem eintauchen möchten, ist ein Verständnis des Next.js-Frameworks unerlässlich. In diesem Artikel geben wir eine kurze Einführung in Next.js und beleuchten einige seiner Hauptmerkmale.
+Next.js hat sich als eines der führenden React-basierten Frameworks in der Webentwicklung etabliert und ist ein unverzichtbares Werkzeug für Entwickler geworden, die moderne, effiziente und skalierbare Webanwendungen erstellen möchten. Für Entwickler mit Vorkenntnissen in React, die tiefer in das React-Ökosystem eintauchen möchten, ist ein Verständnis des Next.js-Frameworks unerlässlich. In diesem Artikel geben wir eine kurze Einführung in Next.js und beleuchten einige seiner Hauptmerkmale.
 
 ## Was ist Next.js?
 

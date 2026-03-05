@@ -1,5 +1,5 @@
 ---
-title: "SERIES: React Native (Step by Step) - Working with Typescript and Linting"
+title: "Reihe: React Native (Schritt für Schritt) - Umgang mit Typescript und Linting"
 description: "Im ersten Teil unserer React Native (Schritt für Schritt)-Reihe, gucken wir uns an, wie wir ein neues Projekt mit Expo und Typescript starten und wie wir unseren Linter konfigurieren. Außerdem reden wir über das „Wie“ und „Warum.“ Schnapp dir einen Kaffee, lehn dich zurück und mach dich bereit für eine faszinierende Reise."
 author: "Konrad Abe (AllBitsEqual)"
 published_at: 2021-02-01T10:00:00.000Z
@@ -8,8 +8,6 @@ header_image: header.jpg
 categories: "react-native typescript linting expo best-practices series"
 series: "React Native (Step by Step)"
 ---
-
-# Reihe: React Native (Schritt für Schritt) - Umgang mit Typescript und Linting
 
 **Im ersten Teil unserer *React Native (Schritt für Schritt)*-Reihe, gucken wir uns an, wie wir ein neues Projekt mit Expo und Typescript starten und wie wir unseren Linter konfigurieren. Außerdem reden wir über das „Wie“ und „Warum.“ Schnapp dir einen Kaffee, lehn dich zurück und mach dich bereit für eine faszinierende Reise.**
 

@@ -17,7 +17,7 @@ React 19 bringt viele spannende neue Features mit, die die Entwicklung noch einf
 
 Gespickt mit TypeScript und moderner JavaScript-Syntax ergibt sich sehr eleganter Code.
 
-Dieses Tutorial setzt keine Vorkenntnisse in React voraus und richtet sich an alle Menschen, die es lernen und gut verstehen möchten. Ein Grundwissen in HTML, CSS und JavaScript sollte man aber mitbringen.
+Dieses Tutorial setzt keine Vorkenntnisse in React voraus und ist speziell für Einsteiger geschrieben, die React lernen und gut verstehen möchten. Ein Grundwissen in HTML, CSS und JavaScript sollte man aber mitbringen.
 
 Wir werden eine Web-App programmieren, die Bild-Informationen von einem Server erfragt und diese dann anzeigt - dabei nutzen wir die neuesten React 19 Features wie Actions, useOptimistic und mehr.
 

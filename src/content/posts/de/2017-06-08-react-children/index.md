@@ -10,7 +10,7 @@ header_image: "header.jpg"
 
 > Info: Wir haben den Begriff "Children" -Kinder, bewusst nicht übersetzt.
 
-Nehmen wir an, wir haben eine `<Grid />` Komponente, die `<Row />` Komponenten enthalten kann. Diese würdest du so verwenden:
+Um Children in React wirklich zu verstehen, schauen wir uns zunächst ein praktisches Beispiel an. Nehmen wir an, wir haben eine `<Grid />` Komponente, die `<Row />` Komponenten enthalten kann. Diese würdest du so verwenden:
 
 ```html
 <Grid>

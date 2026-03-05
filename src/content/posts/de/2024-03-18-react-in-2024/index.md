@@ -8,7 +8,7 @@ header_image: "header.jpg"
 ---
 React hat sich seit dem ersten Release ständig weiterentwickelt.
 Im Jahr 2024 sehen wir einige spannende Veränderungen in diesem beliebten JavaScript-Framework.
-Hier ist, was ihr wissen müsst.
+Hier ist eine einfache Übersicht über alles, was ihr wissen müsst.
 
 ## ReactJS Release Strategie hat sich geändert
 

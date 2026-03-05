@@ -7,7 +7,7 @@ categories: "react release update javascript"
 header_image: "header.jpg"
 ---
 
-Nach fast zwei Jahren intensiver Entwicklung ist es endlich soweit: **React 19 ist da!** Am 5. Dezember 2024 wurde die neue Version offiziell als stabil veröffentlicht und bringt einige der revolutionärsten Veränderungen mit sich, die wir seit der Einführung von Hooks gesehen haben. Wenn du dich fragst, was sich für dich als Entwickler:in ändert und wie diese neuen Features deine tägliche Arbeit beeinflussen werden, dann bist du hier genau richtig.
+Nach fast zwei Jahren intensiver Entwicklung ist es endlich soweit: **React 19 ist da!** Am 5. Dezember 2024 wurde die neue Version offiziell als stabil veröffentlicht und bringt einige der revolutionärsten Veränderungen mit sich, die wir seit der Einführung von Hooks gesehen haben. In diesem Überblick zeigen wir dir die wichtigsten neuen Features und erklären, was sich für dich als Entwickler:in ändert und wie diese Neuerungen deine tägliche Arbeit beeinflussen werden.
 
 ## Warum React 19 ein Game-Changer ist
 
