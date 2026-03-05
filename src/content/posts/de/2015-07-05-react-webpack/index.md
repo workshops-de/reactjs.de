@@ -10,7 +10,7 @@ header_image: "header.jpg"
 
 ## Einleitung
 
-Wenn ihr mit React Anwendungen bauen wollt, müsst ihr zur Ausführung der Anwendung Euren JSX-Code nach ECMAScript 5 übersetzen, damit der Browser den Code versteht. Gleiches gilt ebenfalls für ECMAScript 2015 (ES6) Features, die ihr in Eurer Anwendung verwendet, da auch diese noch nicht vollständig von allen Browsern unterstützt werden.
+Wenn ihr React Anwendungen mit Webpack entwickeln wollt, müsst ihr zur Ausführung der Anwendung Euren JSX-Code nach ECMAScript 5 übersetzen, damit der Browser den Code versteht. Gleiches gilt ebenfalls für ECMAScript 2015 (ES6) Features, die ihr in Eurer Anwendung verwendet, da auch diese noch nicht vollständig von allen Browsern unterstützt werden.
 
 In der Vergangenheit gab es dafür im Wesentlichen zwei Tools, die ihr zur Verfügung hattet: den JSTransformer, der Bestandteil von React war, und [Babel](http://babeljs.io), einen Transformer, der nicht nur JSX sondern auch [ECMAScript 2015](http://babeljs.io/docs/en/learn) und schon einige [experimentelle ES7-Features](https://babeljs.io/docs/en/plugins#experimental]) übersetzen kann. Ab [Version 0.14](https://legacy.reactjs.org/blog/2015/07/03/react-v0.14-beta-1.html) von React wird der eigene [JSTransformer eingestellt](https://legacy.reactjs.org/blog/2015/06/12/deprecating-jstransform-and-react-tools.html), so dass künftig Babel das Tool der Wahl wird.
 

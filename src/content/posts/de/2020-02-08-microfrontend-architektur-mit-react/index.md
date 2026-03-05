@@ -8,7 +8,7 @@ categories: [react, microfrontends]
 header_image: "header.jpg"
 ---
 
-Microfrontends sind mittlerweile ein fest etabliertes Muster, um größere Frontend Applikationen in kleinere Teile aufzuspalten. Im Gegensatz zu klassischen Komponenten geht es bei Microfrontends nicht in erster Linie um die technische Basis, sondern eher um eine Zerteilung auf Feature-Ebene. Sie sind daher erst auf einer höheren Ebene anzustoßen.
+Die Microfrontend-Architektur ist mittlerweile ein fest etabliertes Muster, um größere Frontend Applikationen in kleinere Teile aufzuspalten. Im Gegensatz zu klassischen Komponenten geht es bei Microfrontends nicht in erster Linie um die technische Basis, sondern eher um eine Zerteilung auf Feature-Ebene. Sie sind daher erst auf einer höheren Ebene anzustoßen.
 
 (Anmerkung: Die Feature-Ebene ist nicht unbedingt die Domain-Ebene. Im Prinzip geht hier um Business Capabilities - wie genau das ausgelebt wird ist dem jeweiligen Team überlassen. Wichtig ist nur, dass es nicht um technische Komponenten geht, sondern diese eine Ebene höher angesiedelt sind. Dies kann natürlich eine fachliche Domäne sein - muss aber keineswegs so gelebt werden.)
 

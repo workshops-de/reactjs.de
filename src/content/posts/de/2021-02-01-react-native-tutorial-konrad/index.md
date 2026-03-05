@@ -9,7 +9,7 @@ categories: "react-native typescript linting expo best-practices series"
 series: "React Native (Step by Step)"
 ---
 
-**Im ersten Teil unserer *React Native (Schritt für Schritt)*-Reihe, gucken wir uns an, wie wir ein neues Projekt mit Expo und Typescript starten und wie wir unseren Linter konfigurieren. Außerdem reden wir über das „Wie“ und „Warum.“ Schnapp dir einen Kaffee, lehn dich zurück und mach dich bereit für eine faszinierende Reise.**
+**Im ersten Teil unserer *React Native (Schritt für Schritt)*-Reihe geht es um den Umgang mit Typescript und Linting. Wir gucken uns an, wie wir ein neues Projekt mit Expo und Typescript starten und wie wir unseren Linter konfigurieren. Außerdem reden wir über das „Wie“ und „Warum.“ Schnapp dir einen Kaffee, lehn dich zurück und mach dich bereit für eine faszinierende Reise.**
 
 _Wie immer findest du den fertigen Code am Ende des Artikels auf GitHub verlinkt._
 

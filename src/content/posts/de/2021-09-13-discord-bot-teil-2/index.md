@@ -10,7 +10,7 @@ header_image: "header.jpg"
 
 ## Zuletzt bei „Baue einen Bot“
 
-In unserer letzten Session haben wir einen funktionalen Discord-Bot mit einigen grundlegenden Befehlen und einer kleinen Konfiguration kreiert und alles mit unserer Discord-App/unserem Bot-Setup im Discord Developer Portal verlinkt, indem wir einen generierten Token verwendeten.
+In unserer letzten Session haben wir einen funktionalen Discord-Bot mit einigen grundlegenden Befehlen und einer kleinen Konfiguration kreiert und alles mit unserer Discord-App/unserem Bot-Setup im Discord Developer Portal verlinkt, indem wir einen generierten Token verwendeten. In diesem Teil bauen wir ein skalierbares Setup mit Befehlsmodulen auf.
 
 Heute werden wir unsere zentrale index.js-Datei aufräumen, sie lesbarer und skalierbarer machen und all unsere existierenden Befehle für den Import in einen separaten Ordner bewegen. Wenn das geschafft ist, werden wir auch die Funktionalität unseres Bots erweitern, indem wir einen komplexeren Befehl hinzufügen, um damit auf unserem Test-Server herumzuspielen und dir ein besseres Verständnis für die breite Palette an Funktionen, Tools und Befehlen zu geben, die mit Discord-Bots möglich sind.
 
