@@ -322,7 +322,7 @@ Remember? In `index.tsx`, the `App` component is used exactly like this:
 render(<App />, rootElement);
 ```
 
-[[cta:training-bottom]]
+[[cta:training-middle-1]]
 
 ## Advantages of JSX
 
