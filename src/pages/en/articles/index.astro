@@ -65,7 +65,7 @@ const paginatedPosts = sortedPosts.slice(0, postsPerPage);
         <>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {paginatedPosts.map(post => (
-              <PostCard post={post} showReadingTime={true} />
+              <PostCard post={post} showReadingTime={true} lang="en" />
             ))}
           </div>
 
