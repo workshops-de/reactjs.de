@@ -42,6 +42,7 @@ export const ui = {
     "articles.title": "Artikel",
     "articles.description":
       "Alle Artikel rund um React, TypeScript und moderne Webentwicklung",
+    "articles.minRead": "min Lesezeit",
 
     "home.hero.title": "React lernen",
 
@@ -87,6 +88,7 @@ export const ui = {
     "articles.title": "Articles",
     "articles.description":
       "All articles about React, TypeScript and modern web development",
+    "articles.minRead": "min read",
 
     "home.hero.title": "Learn React",
 
