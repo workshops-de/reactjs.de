@@ -14,7 +14,7 @@ async function fetchCourse() {
   console.log('📥 Fetching course...');
 
   try {
-    const response = await fetch('https://workshops.de/api/course/32');
+    const response = await fetch('https://workshops.de/api/courses/32');
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}: ${response.statusText}`);
     }
