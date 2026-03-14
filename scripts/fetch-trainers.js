@@ -6,9 +6,9 @@ import path from 'path';
 const DATA_DIR = path.join(process.cwd(), 'src/data');
 
 const TRAINER_ENDPOINTS = [
-  { url: 'https://workshops.de/api/portal/reactjs-de/trainers', file: 'trainers.json' },
-  { url: 'https://workshops.de/api/course/32/trainers', file: 'course_trainers/react-intensiv.json' },
-  { url: 'https://workshops.de/api/course/18/trainers', file: 'course_trainers/react-native-intensiv.json' },
+  { url: 'https://workshops.de/api/portals/reactjs-de/trainers', file: 'trainers.json' },
+  { url: 'https://workshops.de/api/courses/32/trainers', file: 'course_trainers/react-intensiv.json' },
+  { url: 'https://workshops.de/api/courses/18/trainers', file: 'course_trainers/react-native-intensiv.json' },
 ];
 
 async function fetchTrainers() {
