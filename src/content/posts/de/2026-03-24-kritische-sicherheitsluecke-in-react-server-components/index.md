@@ -4,7 +4,7 @@ description: "CVE-2025-55182: Remote Code Execution in React 19.x Server Compone
 author: "Robin Böhm"
 published_at: 2026-03-24T12:00:00.000Z
 categories: "react javascript frontend"
-header_image: "header.jpg"
+header_image: "https://images.pexels.com/photos/5380610/pexels-photo-5380610.jpeg"
 ---
 
 **TL;DR:** React Server Components weisen eine kritische Sicherheitslücke (CVE-2025-55182, CVSS 10.0) auf, die unauthentifizierte Remote Code Execution ermöglicht. Betroffen sind React 19.0.0 bis 19.2.0 sowie Next.js 15.x/16.x. Patches sind verfügbar - sofortiges Update auf React 19.2.1+ dringend empfohlen.

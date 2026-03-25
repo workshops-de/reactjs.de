@@ -1,24 +1,11 @@
 ---
 title: "React Conf 2025: Activity Component, React Compiler 1.0 & Foundation Launch"
-description: "React Conf 2025: Activity Component, React Compiler 1.0 & Foundation Launch"
+description: "React Conf 2025 bringt bahnbrechende Features: Activity Component für bessere Performance, stabiler React Compiler und die neue React Foundation."
 author: "Robin Böhm"
 published_at: 2026-03-24T12:00:00.000Z
 categories: "react javascript frontend"
-header_image: "header.jpg"
----
-
-layout: '../../../layouts/BlogLayout.astro'
-title: 'React Conf 2025: Activity Component, React Compiler 1.0 & Foundation Launch'
-description: 'React Conf 2025 bringt bahnbrechende Features: Activity Component für bessere Performance, stabiler React Compiler und die neue React Foundation.'
-pubDate: '2025-10-22'
-author: 'Robin Böhm'
-tags: ['React 19', 'React Conf', 'Performance', 'React Compiler', 'Community']
-category: 'News'
-readTime: '6 min read'
-image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg'
+header_image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg"
 source: 'https://react.dev/blog/2025/10/16/react-conf-2025-recap'
-portal: 'reactjs.de'
-spreadsheetRow: '24'
 ---
 # React Conf 2025: Activity Component, React Compiler 1.0 & Foundation Launch
 **TL;DR:** React Conf 2025 präsentierte revolutionäre Performance-Features wie die neue Activity Component und Sibling Pre-Warming, während der React Compiler endlich stabil wurde. Die größte Überraschung: Die Gründung der React Foundation für mehr Community-Governance.
@@ -89,7 +76,7 @@ Evan Bacon von Expo präsentierte beeindruckende Demos, wie die neuen React-Feat
 - Alle Kernaussagen wurden gegen offizielle Quellen verifiziert
 - Code-Beispiele: Keine vorhanden (reiner News-Artikel)
 **Reviewed by**: Technical Review Agent
-**Verification Sources**: 
+**Verification Sources**:
 - react.dev/blog (Official React Blog)
 - GitHub react/releases
 - React Conf 2025 Recap (react.dev/blog/2025/10/16/react-conf-2025-recap)
