@@ -27,6 +27,6 @@ export async function GET(context: APIContext) {
         categories: post.data.categories?.split(' ').filter(Boolean) || [],
       };
     }),
-    customData: `<language>${siteConfig.language}-${siteConfig.language}</language>`,
+    customData: `<language>${siteConfig.language}-${siteConfig.language.toUpperCase()}</language>`,
   });
 }
