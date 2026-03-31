@@ -1,5 +1,5 @@
 ---
-title: "Kritische Sicherheitslücke in React Server Components: CVE-2025-55182 erfordert sofortiges Handeln"
+title: "Kritische Sicherheitslücke in React Server Components"
 description: "CVE-2025-55182: Remote Code Execution in React 19.x Server Components - Sofortiges Update erforderlich!"
 author: "Robin Böhm"
 published_at: 2026-03-24T12:00:00.000Z
