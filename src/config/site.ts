@@ -120,33 +120,7 @@ export const siteConfig = {
         icon: "/assets/img/courses/react-logo.svg",
         url: "/seminare-schulungen-kurse/react-modul-2",
         level: "advanced",
-      },
-      {
-        id: "frontend-architektur",
-        title: { de: "Frontend Architektur", en: "Frontend Architecture" },
-        description: {
-          de: "Moderne Webentwicklung und Frontend-Architektur. Lerne nachhaltige und skalierbare Konzepte.",
-          en: "Modern web development and frontend architecture. Learn sustainable and scalable concepts.",
-        },
-        duration: { de: "4 Tage", en: "4 Days" },
-        format: { de: "Vor Ort oder Remote", en: "On-Site or Remote" },
-        icon: "/assets/img/courses/logo-frontend-architecture.svg",
-        url: "/seminare-schulungen-kurse/frontend-architektur",
-        level: "advanced",
-      },
-      {
-        id: "react-native",
-        title: { de: "React Native", en: "React Native" },
-        description: {
-          de: "Mobile App-Entwicklung mit React Native. Erstelle native Apps für iOS und Android.",
-          en: "Mobile app development with React Native. Build native apps for iOS and Android.",
-        },
-        duration: { de: "3 Tage", en: "3 Days" },
-        format: { de: "Vor Ort oder Remote", en: "On-Site or Remote" },
-        icon: "/assets/img/courses/logo-react-native.svg",
-        url: "/seminare-schulungen-kurse/react-native",
-        level: "advanced",
-      },
+      }
     ],
   },
 };
