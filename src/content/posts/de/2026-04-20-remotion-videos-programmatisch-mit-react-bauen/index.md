@@ -4,7 +4,8 @@ description: "Remotion: Videos programmatisch mit React bauen"
 author: "Robin Böhm"
 published_at: 2026-04-20T12:00:00.000Z
 categories: "react javascript frontend"
-header_image: "header.jpg"
+header_image: "https://images.unsplash.com/photo-1764557175375-9e2bea91530e?fm=jpg&q=80&w=1800&auto=format&fit=crop"
+header_source: "https://unsplash.com/photos/video-editing-software-interface-with-color-grading-tools-NqPUto5vS10"
 ---
 
 **TL;DR:** Remotion ist ein Open-Source-Framework, das React-Komponenten als Bausteine für Videos nutzt. Statt Videoschnitt-Software setzt du CSS, SVG, Canvas, WebGL und TypeScript ein – und renderst daraus serverseitig echte MP4-Dateien. Mit über 42.000 GitHub-Stars und aktiver Entwicklung bis Version 4.0.448 ist Remotion längst kein Nischen-Experiment mehr.
