@@ -90,10 +90,10 @@ export const siteConfig = {
     providerUrl: "https://workshops.de",
     courses: [
       {
-        id: "react-modul-1",
+        id: "react-typescript",
         title: {
-          de: "React: Modul 1 - Komponenten, Reaktivität & Schnittstellen",
-          en: "React: Module 1 - Components, Reactivity & Interfaces",
+          de: "React & TypeScript - Komponenten, Reaktivität & Schnittstellen",
+          en: "React & TypeScript - Components, Reactivity & Interfaces",
         },
         description: {
           de: "Intensiv-Schulung für den Einstieg in React v19 und TypeScript. Komponenten, Hooks, Routing und API-Anbindung.",
@@ -102,7 +102,7 @@ export const siteConfig = {
         duration: { de: "3 Tage", en: "3 Days" },
         format: { de: "Vor Ort oder Remote", en: "On-Site or Remote" },
         icon: "/assets/img/courses/react-logo.svg",
-        url: "/seminare-schulungen-kurse/react-modul-1",
+        url: "/seminare-schulungen-kurse/react-typescript",
         level: "beginner",
       },
       {
