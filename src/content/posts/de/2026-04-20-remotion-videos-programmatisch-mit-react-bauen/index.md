@@ -86,5 +86,5 @@ Das CLI richtet eine vollständige TypeScript-Projekt-Struktur ein. Die Grundstr
 - 📚 [Offizielle Dokumentation](https://www.remotion.dev/docs)
 - 🎬 [Remotion 4.0 Changelog](https://www.remotion.dev/blog/4-0)
 - 🎓 **Workshops & Kurse** (via API verifiziert):
-  - [React: Modul 1 - Komponenten, Reaktivität & Schnittstellen](https://workshops.de/seminare-schulungen-kurse/react-modul-1) — Solides React-Fundament als Basis für Remotion-Projekte
+  - [React: Modul 1 - Komponenten, Reaktivität & Schnittstellen](https://workshops.de/seminare-schulungen-kurse/react-typescript) — Solides React-Fundament als Basis für Remotion-Projekte
   - [React: Modul 2 - Architektur & Qualität](https://workshops.de/seminare-schulungen-kurse/react-modul-2) — Fortgeschrittene React-Patterns, die sich direkt auf komplexe Remotion-Kompositionen übertragen lassen
