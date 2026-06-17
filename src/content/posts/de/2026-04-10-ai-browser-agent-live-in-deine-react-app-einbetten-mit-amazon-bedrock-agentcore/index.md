@@ -100,7 +100,7 @@ Amazon Bedrock AgentCore Browser-Sessions laufen auf Stundenbasis ab – eine la
 - 🔗 [Bedrock AgentCore TypeScript SDK auf GitHub](https://github.com/aws/bedrock-agentcore-sdk-typescript)
 - 🔗 [Sample-App Repository](https://github.com/awslabs/bedrock-agentcore-samples-typescript/tree/main/use-cases/browser-live-view-agent)
 - 🎓 **Workshops & Kurse**:
-  - [React: Modul 1 – Komponenten, Reaktivität & Schnittstellen](https://workshops.de/kurse/react-modul-1) — Fundament für moderne React-Entwicklung
+  - [React & TypeScript – Komponenten, Reaktivität & Schnittstellen](https://workshops.de/kurse/react-typescript) — Fundament für moderne React-Entwicklung
   - [React: Modul 2 – Architektur & Qualität](https://workshops.de/kurse/react-modul-2) — Fortgeschrittene Patterns für anspruchsvolle Projekte
 
 ---
