@@ -120,7 +120,7 @@ Die Lehren aus diesem Deep-Dive sind direkt auf andere React-Projekte übertragb
 - 📚 [Web.dev: INP (Interaction to Next Paint)](https://web.dev/articles/inp)
 - 📚 [MDN: JavaScript Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - 🎓 **Workshops & Kurse** (via API verifiziert):
-  - [React: Modul 1 – Komponenten, Reaktivität & Schnittstellen](https://workshops.de/kurse/react-modul-1) — Grundlagen für performantes React-Wissen
+  - [React & TypeScript – Komponenten, Reaktivität & Schnittstellen](https://workshops.de/kurse/react-typescript) — Grundlagen für performantes React-Wissen
   - [React: Modul 2 – Architektur & Qualität](https://workshops.de/kurse/react-modul-2) — Fortgeschrittene Architekturmuster, Performance & Testing
 
 ---
@@ -148,7 +148,7 @@ Die Lehren aus diesem Deep-Dive sind direkt auf andere React-Projekte übertragb
   - TanStack Virtual Docs  
   - Web.dev INP Artikel
   - MDN Map Dokumentation
-- ⚠️ 2 workshops.de Kurs-Links vorhanden (react-modul-1, react-modul-2)
+- ⚠️ 2 workshops.de Kurs-Links vorhanden (react-typescript, react-modul-2)
   - **Hinweis**: API-Verifikation via Perplexity nicht möglich (benötigt direkten HTTP-Aufruf)
   - Empfehlung: Manuelle Prüfung via curl oder Browser durchführen
 
